@@ -29,6 +29,7 @@ public class ReadVariablesValues {
         List<TestCase> testCases = readTestCasesFromPath(testCasesPath);
         List<InvariantData> invariantDataList = getInvariantsDataFromPath(invariantsPath);
 
+        // TODO: convert into a for loop
         TestCase testCase = testCases.get(0);
 
         for(InvariantData invariantData: invariantDataList) {
@@ -52,7 +53,7 @@ public class ReadVariablesValues {
     }
 
 
-    private static Map<String, List<JsonNode>> getVariableValues(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static Map<String, List<JsonNode>> getVariableValues(TestCase testCase, InvariantData invariantData) throws Exception {
         Map<String, List<JsonNode>> res = new HashMap<>();
 
         for(String variableName: invariantData.getVariables()) {
@@ -73,7 +74,7 @@ public class ReadVariablesValues {
 
         if(variableName.startsWith("input.")){
 
-            System.out.println(testCase);
+//            System.out.println(testCase);
 
             List<String> hierarchy = Arrays.asList(variableName.split("\\."));
 
@@ -84,12 +85,12 @@ public class ReadVariablesValues {
             return res;
 
 
-
+        // TODO: Consider special null values (e.g., N/A)
         } else if(variableName.startsWith("return.")) {
 
             // Locate variable in path established by ppt (.array and &)
             String pptname = invariantData.getPptname();
-            System.out.println(pptname);
+//            System.out.println(pptname);
 
             // TODO: Consider .array
             // TODO: An array variable name contains either "[]" or "[..]"
@@ -112,10 +113,10 @@ public class ReadVariablesValues {
 
             res = getVariableValuesFromHierarchy(variableHierarchy, nestingLevels);
 
-            for(JsonNode node: res) {
-                System.out.println(node);
-            }
-            System.out.println(res);
+//            for(JsonNode node: res) {
+//                System.out.println(node);
+//            }
+//            System.out.println(res);
 
         } else {
             throw new Exception("Invalid variable format");
