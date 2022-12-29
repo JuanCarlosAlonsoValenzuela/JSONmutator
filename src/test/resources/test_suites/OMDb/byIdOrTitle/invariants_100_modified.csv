@@ -1,0 +1,34 @@
+pptname;invariant;invariantType;variables;tp;fp;enter;bug;nullValue;fixedValues;arithmeticComparison;stringComparison
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::ENTER;"input.type one of { ""episode"", ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::ENTER;"input.plot one of { ""full"", ""short"" }";daikon.inv.unary.string.OneOfString;(input.plot);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::ENTER;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::ENTER;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;"input.type one of { ""episode"", ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;"input.plot one of { ""full"", ""short"" }";daikon.inv.unary.string.OneOfString;(input.plot);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;"return.Source one of { ""Internet Movie Database"", ""Metacritic"", ""Rotten Tomatoes"" }";daikon.inv.unary.string.OneOfString;(return.Source);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::ENTER;"input.type one of { ""episode"", ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::ENTER;"input.plot one of { ""full"", ""short"" }";daikon.inv.unary.string.OneOfString;(input.plot);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::ENTER;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::ENTER;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;input.i == return.imdbID;daikon.inv.binary.twoString.StringEqual;(input.i, return.imdbID);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;"input.type one of { ""episode"", ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;"input.plot one of { ""full"", ""short"" }";daikon.inv.unary.string.OneOfString;(input.plot);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;"return.Response == ""True""";daikon.inv.unary.string.OneOfString;(return.Response);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Response)==4;daikon.inv.unary.string.FixedLengthString;(return.Response);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.Released)==11;daikon.inv.unary.string.FixedLengthString;(return.Released);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Poster is Url;daikon.inv.unary.string.IsUrl;(return.Poster);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Metascore is Numeric;daikon.inv.unary.string.IsNumeric;(return.Metascore);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.imdbRating)==3;daikon.inv.unary.string.FixedLengthString;(return.imdbRating);0;0;0;1;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.imdbRating is Numeric;daikon.inv.unary.string.IsNumeric;(return.imdbRating);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.imdbVotes is Numeric;daikon.inv.unary.string.IsNumeric;(return.imdbVotes);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;"return.Type one of { ""episode"", ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(return.Type);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.DVD)==11;daikon.inv.unary.string.FixedLengthString;(return.DVD);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Episode is Numeric;daikon.inv.unary.string.IsNumeric;(return.Episode);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.Season is Numeric;daikon.inv.unary.string.IsNumeric;(return.Season);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;LENGTH(return.seriesID)==9;daikon.inv.unary.string.FixedLengthString;(return.seriesID);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;return.totalSeasons is Numeric;daikon.inv.unary.string.IsNumeric;(return.totalSeasons);1;0;0;0;0;0;0;0
+main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;input.y > size(return.Ratings[]);daikon.inv.binary.twoScalar.IntGreaterThan;(input.y, size(return.Ratings[..]));0;1;0;0;0;0;1;0
