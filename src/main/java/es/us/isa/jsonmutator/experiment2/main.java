@@ -2,15 +2,14 @@ package es.us.isa.jsonmutator.experiment2;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import es.us.isa.jsonmutator.JsonMutator;
 
 import java.io.IOException;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 import static org.junit.Assert.fail;
 
 public class main {
+
+    public static String[] stringsToConsiderAsNull = {"N/A"};
 
 //    private static ObjectMapper objectMapper;   // TODO: Consider removing static
 //    private static JsonNode jsonNode = null;
