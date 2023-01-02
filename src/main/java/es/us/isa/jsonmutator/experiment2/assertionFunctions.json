@@ -1,3 +1,5 @@
 {
-  "daikon.inv.unary.string.OneOfString": "oneOfStringAssertion"
+  "daikon.inv.unary.string.OneOfString": "oneOfStringAssertion",
+  "daikon.inv.binary.twoString.StringEqual": "twoStringEqualAssertion",
+  "daikon.inv.unary.string.FixedLengthString": "fixedLengthStringAssertion"
 }
