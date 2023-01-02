@@ -17,6 +17,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import static es.us.isa.jsonmutator.experiment2.ReadInvariants.getInvariantsDataFromPath;
 import static es.us.isa.jsonmutator.experiment2.ReadTestCases.readTestCasesFromPath;
@@ -185,9 +187,7 @@ public class GenerateAssertions {
     public static AssertionReport fixedLengthStringAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
 
         String invariant = invariantData.getInvariant();
-
         int expectedLength = Integer.parseInt(invariant.split("==")[1].trim());
-
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
         // Check that there is only one variable
@@ -215,7 +215,41 @@ public class GenerateAssertions {
                 }
             }
         }
-        
+
+        return new AssertionReport();
+    }
+
+    public static AssertionReport isUrlAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        Pattern pattern = Pattern.compile("^(?:(?:https?|ftp)://)(?:\\S+(?::\\S*)?@)?(?:(?!10(?:\\.\\d{1,3}){3})(?!127(?:\\.\\d{1,3}){3})(?!169\\.254(?:\\.\\d{1,3}){2})(?!192\\.168(?:\\.\\d{1,3}){2})(?!172\\.(?:1[6-9]|2\\d|3[0-1])(?:\\.\\d{1,3}){2})(?:[1-9]\\d?|1\\d\\d|2[01]\\d|22[0-3])(?:\\.(?:1?\\d{1,2}|2[0-4]\\d|25[0-5])){2}(?:\\.(?:[1-9]\\d?|1\\d\\d|2[0-4]\\d|25[0-4]))|(?:(?:[\\w\\x{00a1}-\\x{ffff}0-9]+-?)*[\\w\\x{00a1}-\\x{ffff}0-9]+)(?:\\.(?:[\\w\\x{00a1}-\\x{ffff}0-9]+-)*[\\w\\x{00a1}-\\x{ffff}0-9]+)*(?:\\.(?:[a-zA-Z\\x{00a1}-\\x{ffff}]{2,})))(?::\\d{2,5})?(?:/[^\\s]*)?$");
+
+        // Check that the assertion is satisfied for every value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue != null) {
+                    String variableValueString = variableValue.textValue();
+                    Matcher matcher = pattern.matcher(variableValueString);
+
+                    // Return false if the assertion is violated
+                    if(!matcher.matches()) {
+                        String description = "The value " + variableValueString + " for the variable " + variableName
+                                + " is not a valid URL";
+                        return new AssertionReport(description);
+                    }
+
+
+                }
+            }
+        }
+
         return new AssertionReport();
     }
 
