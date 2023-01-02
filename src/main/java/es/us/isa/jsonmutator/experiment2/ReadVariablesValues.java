@@ -1,6 +1,7 @@
 package es.us.isa.jsonmutator.experiment2;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.JsonNodeFactory;
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
@@ -97,7 +98,13 @@ public class ReadVariablesValues {
             // [] characters and remove size()
             String newVariableName = variableName.substring("size(".length(), variableName.length()-1);
             System.out.println(newVariableName);
-            // TODO: IMPLEMENT
+            List<JsonNode> arrays = getValueOfReturnVariable(invariantData, testCase, newVariableName);
+            for(JsonNode array: arrays) {
+                // Add the size of the array to the list to return
+                ObjectMapper mapper = new ObjectMapper();
+                res.add(mapper.valueToTree(((ArrayNode) array).size()));
+            }
+
         } else {
             throw new Exception("Invalid variable format");
         }

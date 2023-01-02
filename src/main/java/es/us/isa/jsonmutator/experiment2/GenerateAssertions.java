@@ -7,7 +7,6 @@ import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
 import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
 
-
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -423,6 +422,58 @@ public class GenerateAssertions {
                     }
                 }
             }
+        }
+
+
+        // Return true if the assertion has been satisfied
+        // Assertion report where satisfied = true and description = null
+        return new AssertionReport();
+    }
+
+    // ############################# BINARY SCALAR #############################
+    public static AssertionReport twoScalarIntGreaterEqual(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        List<String> variables = invariantData.getVariables();
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+
+        if(variables.size() != 2) {
+            throw new Exception("Unexpected number of variables (expected 2, got " + variables.size() + ")");
+        }
+
+        // Get the names of the variables
+        String inputVariableName = variables.get(0);
+        String returnVariableName = variables.get(1);
+
+        // Get the value of the input variable
+        List<JsonNode> inputVariableValueList = variableValuesMap.get(inputVariableName);
+        if(inputVariableValueList.size() != 1) {
+            throw new Exception("The input variable should only have one value");
+        }
+
+        if(inputVariableValueList.get(0) != null) {
+
+            Integer inputVariableValue = null;
+            if(inputVariableValueList.get(0).isInt()) {
+                inputVariableValue = inputVariableValueList.get(0).intValue();
+            } else {
+                inputVariableValue = Integer.parseInt(inputVariableValueList.get(0).textValue());
+            }
+
+
+            for(JsonNode returnVariableValue: variableValuesMap.get(returnVariableName)) {
+                // Take null values into account
+                if(returnVariableValue != null) {
+                    Integer returnVariableValueInteger = returnVariableValue.intValue();
+                    // If assertion is not satisfied, return false
+                    if (!(inputVariableValue >= returnVariableValueInteger)) {
+                        String description = "The value of " + returnVariableName + " should be lesser or equal than " +
+                                inputVariableName + " (" +  inputVariableValue + "), but got " + returnVariableValueInteger;
+                        return new AssertionReport(description);
+                    }
+                }
+            }
+
         }
 
 
