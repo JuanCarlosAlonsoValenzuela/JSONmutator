@@ -14,10 +14,10 @@ public class MutantTestCaseReport {
         this.description = null;
     }
 
-    public MutantTestCaseReport(InvariantData invariantData) {
+    public MutantTestCaseReport(InvariantData invariantData, AssertionReport assertionReport) {
         this.killed = true;
         this.killedBy = invariantData;
-        this.description = null;
+        this.description = assertionReport.getDescription();
     }
 
 

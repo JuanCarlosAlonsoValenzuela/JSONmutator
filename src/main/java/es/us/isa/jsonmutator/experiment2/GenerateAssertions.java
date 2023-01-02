@@ -13,10 +13,7 @@ import org.reflections.Reflections;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -33,9 +30,11 @@ public class GenerateAssertions {
     //      Generate an assertion
     //      Consider null values
 
+    public static List<String> valuesToConsiderNull = Arrays.asList("N/A", null);
+
     private static String invariantsPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test-case-omdb.csv";
-//    private static String testCasesPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv";
+//    private static String testCasesPath = "src/test/resources/test-case-omdb.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -48,6 +47,14 @@ public class GenerateAssertions {
         for(TestCase testCase: testCases) {
             MutantTestCaseReport mutantTestCaseReport = generateAssertions(testCase, invariantDataList);
             // TODO: Add the assertion report as row to the report csv file
+
+            if(mutantTestCaseReport.isKilled()) {
+                System.out.println("MUTANT TEST CASE REPORT:");
+                System.out.println("Killed: " + mutantTestCaseReport.isKilled());
+                System.out.println("Killed by: " + mutantTestCaseReport.getKilledBy());
+                System.out.println("Description: " + mutantTestCaseReport.getDescription());
+            }
+
         }
 
     }
@@ -61,7 +68,7 @@ public class GenerateAssertions {
         // Check whether any of the invariants is able to kill the mutant
         for(InvariantData invariantData: invariantDataList) {
             try {
-                System.out.println(invariantData.getInvariant());
+//                System.out.println(invariantData.getInvariant());
                 // If a single invariant is violated, the mutant is killed
                 // Return AssertionReport where killed=true and killedBy=invariantData
                 MutantTestCaseReport mutantTestCaseReport = generateAssertionsForSingleInvariantData(testCase, invariantData);
@@ -101,14 +108,15 @@ public class GenerateAssertions {
             Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class);
             AssertionReport assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData);
 
+//            System.out.println(assertionReport.isSatisfied());
+//            System.out.println("Description: " + assertionReport.getDescription());
+
             // If the Assertion is not satisfied
             if(!assertionReport.isSatisfied()) {
                 // Return a MutantTestCaseReport that specifies that the mutant has been KILLED by InvariantData provided as input
                 // Return AssertionReport where killed=true and killedBy=invariantData
-                return new MutantTestCaseReport(invariantData);
+                return new MutantTestCaseReport(invariantData, assertionReport);
             }
-
-            System.out.println(assertionReport.isSatisfied());
 
         } catch (Exception e) {
             throw new Exception("Could not find the assertion function for " + invariantType);
@@ -165,7 +173,7 @@ public class GenerateAssertions {
         for(String variableName: variableValuesMap.keySet()) {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
-                if(variableValue != null) { // Check that the value is not null
+                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) { // Check that the value is not null
                     String variableValueString = variableValue.textValue(); // Convert to string (textNode)
                     if(!acceptedValues.contains(variableValueString)) {
                         // Return false if assertion is violated
@@ -200,7 +208,7 @@ public class GenerateAssertions {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
                 // Take null values into account
-                if(variableValue != null) {
+                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
                     // Obtain value length
                     int variableValueLength = variableValue.textValue().length();
 
@@ -234,7 +242,7 @@ public class GenerateAssertions {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
                 // Take null values into account
-                if(variableValue != null) {
+                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
                     String variableValueString = variableValue.textValue();
                     Matcher matcher = pattern.matcher(variableValueString);
 
@@ -251,6 +259,43 @@ public class GenerateAssertions {
         }
 
         return new AssertionReport();
+    }
+
+    // TODO: Take into account that length may be zero
+    public static AssertionReport isNumericAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        Pattern pattern = Pattern.compile("^[+-]{0,1}(0|([1-9](\\d*|\\d{0,2}(,\\d{3})*)))?(\\.\\d*[0-9])?$");
+
+        // Check that the assertion is satisfied for every value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                    String variableValueString = variableValue.textValue();
+
+                    if(variableValueString.length() != 0) {
+                        Matcher matcher = pattern.matcher(variableValueString);
+
+                        // Return false if the assertion is violated
+                        if (!matcher.matches()) {
+                            String description = "The value " + variableValueString + " for the variable " + variableName
+                                    + " is not a valid number";
+                            return new AssertionReport(description);
+                        }
+                    }
+                }
+            }
+        }
+
+        return new AssertionReport();
+
     }
 
     // ############################# BINARY #############################
@@ -272,18 +317,22 @@ public class GenerateAssertions {
         if(inputVariableValueList.size() != 1) {
             throw new Exception("The input variable should only have one value");
         }
-        String inputVariableValue = inputVariableValueList.get(0).textValue();
 
-        // Check that the assertion is satisfied for every possible value of the RETURN variable
-        for(JsonNode returnVariableValue: variableValuesMap.get(returnVariableName)) {
+        // Take null values into account
+        if(inputVariableValueList.get(0) != null && !valuesToConsiderNull.contains(inputVariableValueList.get(0).textValue())) {
 
-            // Take null values into account
-            if(returnVariableValue != null) {
-                // If the input and return values are NOT equal, the assertion is not satisfied
-                if(!inputVariableValue.equals(returnVariableValue.textValue())){
-                    String description = "Expected value of " + returnVariableName + " to be " + inputVariableValue +
-                            ", but got " + returnVariableValue.textValue() + " instead";
-                    return new AssertionReport(description);
+            String inputVariableValue = inputVariableValueList.get(0).textValue();
+            // Check that the assertion is satisfied for every possible value of the RETURN variable
+            for(JsonNode returnVariableValue: variableValuesMap.get(returnVariableName)) {
+
+                // Take null values into account
+                if(returnVariableValue != null && !valuesToConsiderNull.contains(returnVariableValue.textValue())) {
+                    // If the input and return values are NOT equal, the assertion is not satisfied
+                    if(!inputVariableValue.equals(returnVariableValue.textValue())){
+                        String description = "Expected value of " + returnVariableName + " to be " + inputVariableValue +
+                                ", but got " + returnVariableValue.textValue() + " instead";
+                        return new AssertionReport(description);
+                    }
                 }
             }
         }

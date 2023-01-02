@@ -2,5 +2,6 @@
   "daikon.inv.unary.string.OneOfString": "oneOfStringAssertion",
   "daikon.inv.binary.twoString.StringEqual": "twoStringEqualAssertion",
   "daikon.inv.unary.string.FixedLengthString": "fixedLengthStringAssertion",
-  "daikon.inv.unary.string.IsUrl": "isUrlAssertion"
+  "daikon.inv.unary.string.IsUrl": "isUrlAssertion",
+  "daikon.inv.unary.string.IsNumeric": "isNumericAssertion"
 }
