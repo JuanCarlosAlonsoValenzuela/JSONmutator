@@ -20,6 +20,7 @@ import java.util.regex.Pattern;
 import static es.us.isa.jsonmutator.experiment2.ReadInvariants.getInvariantsDataFromPath;
 import static es.us.isa.jsonmutator.experiment2.ReadTestCases.readTestCasesFromPath;
 import static es.us.isa.jsonmutator.experiment2.ReadVariablesValues.getVariableValues;
+import static es.us.isa.jsonmutator.experiment2.ReadVariablesValues.jsonNodeToList;
 
 public class GenerateAssertions {
 
@@ -32,9 +33,9 @@ public class GenerateAssertions {
 
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", null);
 
-    private static String invariantsPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_100_modified.csv";
+    private static String invariantsPath = "src/test/resources/test_suites/Yelp/invariants_100_modified.csv";
 //    private static String testCasesPath = "src/test/resources/test-case-omdb.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/Yelp/Yelp_BusinessSearch_1.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -48,12 +49,12 @@ public class GenerateAssertions {
             MutantTestCaseReport mutantTestCaseReport = generateAssertions(testCase, invariantDataList);
             // TODO: Add the assertion report as row to the report csv file
 
-            if(mutantTestCaseReport.isKilled()) {
-                System.out.println("MUTANT TEST CASE REPORT:");
-                System.out.println("Killed: " + mutantTestCaseReport.isKilled());
-                System.out.println("Killed by: " + mutantTestCaseReport.getKilledBy());
-                System.out.println("Description: " + mutantTestCaseReport.getDescription());
-            }
+//            if(mutantTestCaseReport.isKilled()) {
+            System.out.println("MUTANT TEST CASE REPORT:");
+            System.out.println("Killed: " + mutantTestCaseReport.isKilled());
+            System.out.println("Killed by: " + mutantTestCaseReport.getKilledBy());
+            System.out.println("Description: " + mutantTestCaseReport.getDescription());
+//            }
 
         }
 
@@ -68,7 +69,7 @@ public class GenerateAssertions {
         // Check whether any of the invariants is able to kill the mutant
         for(InvariantData invariantData: invariantDataList) {
             try {
-//                System.out.println(invariantData.getInvariant());
+                System.out.println(invariantData.getInvariant());
                 // If a single invariant is violated, the mutant is killed
                 // Return AssertionReport where killed=true and killedBy=invariantData
                 MutantTestCaseReport mutantTestCaseReport = generateAssertionsForSingleInvariantData(testCase, invariantData);
@@ -87,7 +88,6 @@ public class GenerateAssertions {
         return new MutantTestCaseReport();
     }
 
-    // TODO: Take null values into account
     // For a single invariant (InvariantData)
     private static MutantTestCaseReport generateAssertionsForSingleInvariantData(TestCase testCase, InvariantData invariantData) throws Exception {
 
@@ -108,8 +108,8 @@ public class GenerateAssertions {
             Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class);
             AssertionReport assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData);
 
-//            System.out.println(assertionReport.isSatisfied());
-//            System.out.println("Description: " + assertionReport.getDescription());
+            System.out.println(assertionReport.isSatisfied());
+            System.out.println("Description: " + assertionReport.getDescription());
 
             // If the Assertion is not satisfied
             if(!assertionReport.isSatisfied()) {
@@ -145,7 +145,7 @@ public class GenerateAssertions {
         // Extract accepted variable values from the invariant
         List<String> acceptedValues = new ArrayList<>();
         int startIndex = invariant.indexOf("{");
-        int endIndex = invariant.indexOf("}");
+        int endIndex = invariant.lastIndexOf("}");
         if (startIndex != -1 && endIndex != -1) {
             // Format: return.Source one of { "value1", "value2", "value3" }
             String valuesString = invariant.substring(startIndex + 1, endIndex);
@@ -261,7 +261,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    // TODO: Take into account that length may be zero
+
     public static AssertionReport isNumericAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
@@ -296,6 +296,58 @@ public class GenerateAssertions {
 
         return new AssertionReport();
 
+    }
+
+    // ############################# UNARY STRING SEQUENCE #############################
+    public static AssertionReport stringSequenceEltOneOfString(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        // TODO: Take into account null values
+        // TODO: Take into account empty arrays
+
+        List<String> variables = invariantData.getVariables();
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+        String invariant = invariantData.getInvariant();
+        if(variables.size() != 1) {
+            throw new Exception("Unexpected number of variables (expected 2, got " + variables.size() + ")");
+        }
+
+        // Extract accepted variable values from the invariant
+        List<String> acceptedValues = new ArrayList<>();
+        int startIndex = invariant.indexOf("{");
+        int endIndex = invariant.lastIndexOf("}");
+        String valuesString = invariant.substring(startIndex+1, endIndex);
+        String[] values = valuesString.split(", ");
+        for (String value : values) {
+            acceptedValues.add(value.replace("\"", "").trim());
+        }
+        // Check that the number of values is correct
+        if(acceptedValues.size() == 0 || acceptedValues.size() > 3) {
+            throw new Exception("Invalid invariant, no variables found");
+        }
+
+        // Check that the assertion is satisfied for every possible value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                if(variableValue != null) {
+
+                    List<String> variableValuesString = jsonNodeToList(variableValue);
+
+                    for(String variableValueString: variableValuesString) {
+                        // If the assertion is not satisfied
+                        if(!acceptedValues.contains(variableValueString)) {
+                            String description = "The value " + variableValueString +
+                                    " is not contained in the list of accepted values " + acceptedValues;
+                            return new AssertionReport(description);
+                        }
+                    }
+
+                }
+
+            }
+        }
+
+        return new AssertionReport();
     }
 
     // ############################# BINARY #############################
@@ -342,6 +394,8 @@ public class GenerateAssertions {
         // Assertion report where satisfied = true and description = null
         return new AssertionReport();
     }
+
+
 
 
 }

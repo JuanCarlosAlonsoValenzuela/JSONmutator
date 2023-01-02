@@ -88,41 +88,66 @@ public class ReadVariablesValues {
         // TODO: Consider special null values (e.g., N/A)
         } else if(variableName.startsWith("return.")) {
 
-            // Locate variable in path established by ppt (.array and &)
-            String pptname = invariantData.getPptname();
-//            System.out.println(pptname);
+            res = getValueOfReturnVariable(invariantData, testCase, variableName);
 
-            // TODO: Consider .array
-            // TODO: An array variable name contains either "[]" or "[..]"
-            // Get route to variable
-            String reducedPptname = pptname.substring(pptname.indexOf(testCase.getStatusCode())+3, pptname.indexOf('('));
-            List<String> jsonHierarchy = new ArrayList<>();
-            if(reducedPptname.length() > 0 && reducedPptname.charAt(0) == '&') {
-                jsonHierarchy = Arrays.asList(reducedPptname.substring(1, reducedPptname.length()).split("&"));
-            }
+        } else if(variableName.startsWith("size(input.")) {
+            // TODO: IMPLEMENT
 
-
-            List<String> variableHierarchy = Arrays.asList(variableName.substring("return.".length()).split("\\."));
-
-            // Get response body
-            String responseString = testCase.getResponseBody();
-            JsonNode responseJsonNode = getJsonNode(responseString);
-
-            // Get value in hierarchy
-            List<JsonNode> nestingLevels = getNestingLevels(responseJsonNode, jsonHierarchy);
-
-            res = getVariableValuesFromHierarchy(variableHierarchy, nestingLevels);
-
-//            for(JsonNode node: res) {
-//                System.out.println(node);
-//            }
-//            System.out.println(res);
-
+        } else if(variableName.startsWith("size(return.")) {
+            // [] characters and remove size()
+            String newVariableName = variableName.substring("size(".length(), variableName.length()-1);
+            System.out.println(newVariableName);
+            // TODO: IMPLEMENT
         } else {
             throw new Exception("Invalid variable format");
         }
 
         return res;
+    }
+
+    public static List<String> jsonNodeToList(JsonNode jsonNode) throws Exception {
+        List<String> list = new ArrayList<>();
+        if (jsonNode.isArray()) {
+            for (JsonNode node : jsonNode) {
+                list.add(node.textValue().trim());
+            }
+        } else {
+            throw new Exception("Invalid format");
+        }
+        return list;
+    }
+
+    private static List<JsonNode> getValueOfReturnVariable(InvariantData invariantData, TestCase testCase, String variableName) {
+        // Locate variable in path established by ppt (.array and &)
+        String pptname = invariantData.getPptname();
+//            System.out.println(pptname);
+
+        // TODO: Consider .array
+        // TODO: An array variable name contains either "[]" or "[..]"
+        // Get route to variable
+        String reducedPptname = pptname.substring(pptname.indexOf(testCase.getStatusCode())+3, pptname.indexOf('('));
+        List<String> jsonHierarchy = new ArrayList<>();
+        if(reducedPptname.length() > 0 && reducedPptname.charAt(0) == '&') {
+            jsonHierarchy = Arrays.asList(reducedPptname.substring(1).split("&"));
+        }
+
+
+        variableName = variableName.replace("[..]", "");
+        List<String> variableHierarchy = Arrays.asList(variableName.substring("return.".length()).split("\\."));
+
+        // Get response body
+        String responseString = testCase.getResponseBody();
+        JsonNode responseJsonNode = getJsonNode(responseString);
+
+        // Get value in hierarchy
+        List<JsonNode> nestingLevels = getNestingLevels(responseJsonNode, jsonHierarchy);
+
+        return getVariableValuesFromHierarchy(variableHierarchy, nestingLevels);
+
+//            for(JsonNode node: res) {
+//                System.out.println(node);
+//            }
+//            System.out.println(res);
     }
 
 
@@ -187,9 +212,6 @@ public class ReadVariablesValues {
 
         return res;
     }
-
-
-
 
 
 }
