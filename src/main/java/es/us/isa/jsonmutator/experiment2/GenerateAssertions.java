@@ -6,8 +6,6 @@ import es.us.isa.jsonmutator.experiment2.generateAssertions.AssertionReport;
 import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport;
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
 import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
-import org.checkerframework.checker.units.qual.A;
-import org.reflections.Reflections;
 
 
 import java.lang.reflect.Method;
@@ -349,6 +347,44 @@ public class GenerateAssertions {
 
         return new AssertionReport();
     }
+
+    // ############################# UNARY SCALAR #############################
+    public static AssertionReport unaryScalarLowerBound(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        String invariant = invariantData.getInvariant();
+        int lowerBound = Integer.parseInt(invariant.split(">=")[1].trim());
+        System.out.println(lowerBound);
+
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue != null) {
+                    // Obtain Integer value
+                    int variableValueInt = variableValue.asInt();
+                    System.out.println(variableValueInt);
+
+                    // Return false if the assertion has been violated
+                    if(!(variableValueInt>=lowerBound)) {
+                        String description = "The value of " + variableName + " should be greater or equal than "
+                                + lowerBound + " but got " + variableValueInt;
+                        return new AssertionReport(description);
+
+                    }
+                }
+            }
+        }
+
+        // Return true
+        return new AssertionReport();
+    }
+
 
     // ############################# BINARY #############################
     // ############################# BINARY STRING #############################
