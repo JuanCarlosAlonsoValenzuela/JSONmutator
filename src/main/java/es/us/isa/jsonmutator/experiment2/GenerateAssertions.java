@@ -2,6 +2,7 @@ package es.us.isa.jsonmutator.experiment2;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import es.us.isa.jsonmutator.experiment2.generateAssertions.AssertionReport;
 import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport;
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
@@ -402,20 +403,105 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
+    public static AssertionReport oneOfScalar(TestCase testCase, InvariantData invariantData) throws Exception {
 
-    // ############################# BINARY #############################
-    // ############################# BINARY STRING #############################
+        String invariant = invariantData.getInvariant();
+        List<String> variables = invariantData.getVariables();
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
-    private static String twoStringEqualAssertion(String firstVariableValue, String secondVariableValue,
-                                                  String firstVariableName, String secondVariableName) {
-        if(!firstVariableValue.equals(secondVariableValue)) {
-            return "Expected value of " + secondVariableName + " to be " + firstVariableValue +
-                    ", but got " + secondVariableValue + " instead";
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
         }
-        return null;
+
+        // Extract accepted variable values from the invariant
+        List<Integer> acceptedValues = new ArrayList<>();
+        int startIndex = invariant.indexOf("{");
+        int endIndex = invariant.lastIndexOf("}");
+        if (startIndex != -1 && endIndex != -1) {       // TODO: Test this format
+            // Format: return.year one of { 2020, 2021, 2022 }
+            String valuesString = invariant.substring(startIndex + 1, endIndex);
+            String[] values = valuesString.split(", ");
+            for (String value : values) {
+                acceptedValues.add(Integer.parseInt(value.trim()));
+            }
+        } else if(invariant.startsWith(variables.get(0) + " ==")) { // TODO: Test this format
+            String stringValue = invariant.split("==")[1].trim();
+
+            if(stringValue.equals("null")){ // If the value is null
+                acceptedValues.add(null);
+            } else {    // If the value is a number
+                acceptedValues.add(Integer.parseInt(stringValue.trim()));
+            }
+
+        }
+
+        // Check that the number of values is correct
+        if(acceptedValues.size() == 0 || acceptedValues.size() > 3) {
+            throw new Exception("Invalid invariant, no variables found");
+        }
+
+        // Check that the assertion is satisfied for every possible value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                if(variableValue != null) { // Check that the value is not null
+                    if(acceptedValues.contains(null)) {
+                        return new AssertionReport("The value of " + variableName + " should be null, but got " + variableValue);
+                    }
+                    Integer variableValueInteger = getIntegerValue(variableValue);
+                    if(!acceptedValues.contains(variableValueInteger)) {
+                        String description = "Expected one of " + acceptedValues + ", got " + variableValueInteger;
+                        return new AssertionReport(description);
+                    }
+
+                }
+            }
+        }
+
+        return new AssertionReport();
     }
 
 
+    // ############################# UNARY SEQUENCE #############################
+    public static AssertionReport sequenceOneOfSequence(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        String invariant = invariantData.getInvariant();
+        String arrayValue = invariant.split("==")[1].trim();
+
+        if(!arrayValue.equals("[]")) {
+            throw new Exception("Found an invariant in which the array was not empty");
+        }
+
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        // Check that the assertion is satisfied for every possible value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue != null) {
+                    ArrayNode arrayNode = (ArrayNode) variableValue;
+                    int size = arrayNode.size();
+                    if(size!=0) {
+                        String description = "The size of " + variableName + " should be 0, but got " + size;
+                        return new AssertionReport(description);
+                    }
+                }
+            }
+        }
+
+        return new AssertionReport();
+    }
+
+
+    // ############################# BINARY #############################
+    // ############################# BINARY STRING #############################
     public static AssertionReport twoStringEqual(TestCase testCase, InvariantData invariantData) throws Exception {
 
         List<String> variables = invariantData.getVariables();
@@ -491,6 +577,15 @@ public class GenerateAssertions {
         // Return true if the assertion has been satisfied
         // Assertion report where satisfied = true and description = null
         return new AssertionReport();
+    }
+
+    private static String twoStringEqualAssertion(String firstVariableValue, String secondVariableValue,
+                                                  String firstVariableName, String secondVariableName) {
+        if(!firstVariableValue.equals(secondVariableValue)) {
+            return "Expected value of " + secondVariableName + " to be " + firstVariableValue +
+                    ", but got " + secondVariableValue + " instead";
+        }
+        return null;
     }
 
     // ############################# BINARY SCALAR #############################
@@ -656,6 +751,10 @@ public class GenerateAssertions {
         return null;
 
     }
+
+
+
+
 
 
 
