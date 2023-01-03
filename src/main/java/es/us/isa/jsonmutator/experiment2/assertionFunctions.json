@@ -8,7 +8,6 @@
   "daikon.inv.unary.scalar.LowerBound": "unaryScalarLowerBound",
   "daikon.inv.binary.twoScalar.IntGreaterEqual": "twoScalarIntGreaterEqual",
   "daikon.inv.binary.twoScalar.IntEqual": "twoScalarIntEqual",
-  "daikon.inv.unary.sequence.OneOfSequence": "sequenceOneOfSequence",
   "daikon.inv.unary.scalar.OneOfScalar": "oneOfScalar",
   "daikon.inv.binary.twoString.StdString$SubString": "twoStringSubString",
   "daikon.inv.unary.stringsequence.SequenceFixedLengthString": "sequenceFixedLengthString",
@@ -19,5 +18,7 @@
   "daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm": "isTimestampYYYYMMHHThhmmssmm",
   "daikon.inv.unary.scalar.OneOfFloat": "oneOfFloat",
   "daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl": "sequenceStringElementsAreUrl",
-  "daikon.inv.binary.twoScalar.IntLessThan": "twoScalarIntLessThan"
+  "daikon.inv.binary.twoScalar.IntLessThan": "twoScalarIntLessThan",
+  "daikon.inv.unary.sequence.OneOfSequence": "sequenceOneOfSequence",
+  "daikon.inv.unary.stringsequence.OneOfStringSequence": "sequenceOneOfStringSequence"
 }

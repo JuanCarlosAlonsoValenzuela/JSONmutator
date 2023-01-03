@@ -31,8 +31,8 @@ public class GenerateAssertions {
 
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", "", null);
 
-    private static String invariantsPath = "src/test/resources/test_suites/YouTube/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/YouTube/YouTubeGetVideos_50.csv";
+    private static String invariantsPath = "src/test/resources/test_suites/GitHub/createOrganizationRepository/invariants_100_modified.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/GitHub/createOrganizationRepository/GitHub_createOrganizationRepository_50.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -688,12 +688,6 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-
-
-
-
-
-
     public static AssertionReport unaryScalarLowerBoundFloat(TestCase testCase, InvariantData invariantData) throws Exception {
 
         String invariant = invariantData.getInvariant();
@@ -729,6 +723,42 @@ public class GenerateAssertions {
 
     // ############################# UNARY SEQUENCE #############################
     public static AssertionReport sequenceOneOfSequence(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        String invariant = invariantData.getInvariant();
+        String arrayValue = invariant.split("==")[1].trim();
+
+        if(!arrayValue.equals("[]")) {
+            throw new Exception("Found an invariant in which the array was not empty");
+        }
+
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        // Check that the assertion is satisfied for every possible value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue != null) {
+                    ArrayNode arrayNode = (ArrayNode) variableValue;
+                    int size = arrayNode.size();
+                    if(size!=0) {
+                        String description = "The size of " + variableName + " should be 0, but got " + size;
+                        return new AssertionReport(description);
+                    }
+                }
+            }
+        }
+
+        return new AssertionReport();
+    }
+
+
+    public static AssertionReport sequenceOneOfStringSequence(TestCase testCase, InvariantData invariantData) throws Exception {
 
         String invariant = invariantData.getInvariant();
         String arrayValue = invariant.split("==")[1].trim();
