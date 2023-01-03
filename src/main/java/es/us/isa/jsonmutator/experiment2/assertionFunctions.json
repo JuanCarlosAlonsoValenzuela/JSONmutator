@@ -6,5 +6,6 @@
   "daikon.inv.unary.string.IsNumeric": "isNumericAssertion",
   "daikon.inv.unary.stringsequence.EltOneOfString": "stringSequenceEltOneOfString",
   "daikon.inv.unary.scalar.LowerBound": "unaryScalarLowerBound",
-  "daikon.inv.binary.twoScalar.IntGreaterEqual": "twoScalarIntGreaterEqual"
+  "daikon.inv.binary.twoScalar.IntGreaterEqual": "twoScalarIntGreaterEqual",
+  "daikon.inv.binary.twoScalar.IntEqual": "twoScalarIntEqual"
 }

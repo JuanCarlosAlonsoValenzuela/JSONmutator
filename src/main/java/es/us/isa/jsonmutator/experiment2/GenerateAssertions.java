@@ -6,6 +6,7 @@ import es.us.isa.jsonmutator.experiment2.generateAssertions.AssertionReport;
 import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport;
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
 import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
+import org.checkerframework.checker.units.qual.A;
 
 import java.lang.reflect.Method;
 import java.nio.file.Files;
@@ -30,9 +31,9 @@ public class GenerateAssertions {
 
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", null);
 
-    private static String invariantsPath = "src/test/resources/test_suites/Yelp/invariants_100_modified.csv";
+    private static String invariantsPath = "src/test/resources/test_suites/Spotify/createPlaylist/invariants_100_modified.csv";
 //    private static String testCasesPath = "src/test/resources/test-case-omdb.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/Yelp/Yelp_BusinessSearch_1.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/Spotify/createPlaylist/Spotify_CreatePlaylist_50.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -124,6 +125,25 @@ public class GenerateAssertions {
         return new MutantTestCaseReport();
     }
 
+    // ############################# UTILS #############################
+    private static Integer getIntegerValue(JsonNode variableValue) {
+        Integer res;
+        if(variableValue.isInt()) {
+            res = variableValue.intValue();
+        } else if(variableValue.isBoolean()) {
+            res = variableValue.booleanValue() ? 1:0;
+        } else {    // If string
+            String textValue = variableValue.textValue();
+            if(textValue.equals("true")) {
+                return 1;
+            } else if(textValue.equals("false")) {
+                return 0;
+            } else {
+                return Integer.parseInt(textValue);
+            }
+        }
+        return res;
+    }
 
     // TODO: Move to a different class/package
     // ############################# UNARY #############################
@@ -352,7 +372,6 @@ public class GenerateAssertions {
 
         String invariant = invariantData.getInvariant();
         int lowerBound = Integer.parseInt(invariant.split(">=")[1].trim());
-        System.out.println(lowerBound);
 
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
         // Check that there is only one variable
@@ -367,7 +386,6 @@ public class GenerateAssertions {
                 if(variableValue != null) {
                     // Obtain Integer value
                     int variableValueInt = variableValue.asInt();
-                    System.out.println(variableValueInt);
 
                     // Return false if the assertion has been violated
                     if(!(variableValueInt>=lowerBound)) {
@@ -453,7 +471,7 @@ public class GenerateAssertions {
 
         if(inputVariableValueList.get(0) != null) {
 
-            Integer inputVariableValue = null;
+            Integer inputVariableValue;
             if(inputVariableValueList.get(0).isInt()) {
                 inputVariableValue = inputVariableValueList.get(0).intValue();
             } else {
@@ -464,7 +482,13 @@ public class GenerateAssertions {
             for(JsonNode returnVariableValue: variableValuesMap.get(returnVariableName)) {
                 // Take null values into account
                 if(returnVariableValue != null) {
-                    Integer returnVariableValueInteger = returnVariableValue.intValue();
+                    Integer returnVariableValueInteger;
+                    if(returnVariableValue.isInt()) {
+                        returnVariableValueInteger = returnVariableValue.intValue();
+                    } else {
+                        returnVariableValueInteger = Integer.parseInt(returnVariableValue.textValue());
+                    }
+
                     // If assertion is not satisfied, return false
                     if (!(inputVariableValue >= returnVariableValueInteger)) {
                         String description = "The value of " + returnVariableName + " should be lesser or equal than " +
@@ -481,6 +505,92 @@ public class GenerateAssertions {
         // Assertion report where satisfied = true and description = null
         return new AssertionReport();
     }
+
+
+    public static AssertionReport twoScalarIntEqual(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        List<String> variables = invariantData.getVariables();
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        if(variables.size() != 2) {
+            throw new Exception("Unexpected number of variables (expected 2, got " + variables.size() + ")");
+        }
+
+        // Get the names of the variables
+        String firstVariableName = variables.get(0);
+        String secondVariableName = variables.get(1);
+
+        // Get the value of the first variable
+        List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
+
+        if(firstVariableValueList.size() == 1) {    // We are comparing one input value with one or more return values
+            JsonNode firstVariableValue = firstVariableValueList.get(0);
+
+            if(firstVariableValue != null) {
+                // Get value as integer
+                Integer firstVariableValueInteger = getIntegerValue(firstVariableValue);
+                for (JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
+                    // Take null values into account
+                    if(secondVariableValue != null) {
+                        // Get variable value as integer
+                        Integer secondVariableValueInteger = getIntegerValue(secondVariableValue);
+
+                        // If assertion is not satisfied, return false
+                        String description = twoScalarIntEqualAssertion(firstVariableValueInteger, secondVariableValueInteger, firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+                    }
+                }
+
+            }
+
+        } else {    // We are comparing multiple return values
+            List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
+
+            // The first and second variable lists should have the same size
+            if(firstVariableValueList.size() != secondVariableValueList.size()) {
+                throw new Exception("The two lists should have the same size");
+            }
+
+            for(int i=0; i<firstVariableValueList.size();i++){
+                JsonNode firstVariableValue = firstVariableValueList.get(i);
+                JsonNode secondVariableValue = secondVariableValueList.get(i);
+
+                // Take null values into account
+                if(firstVariableValue != null && secondVariableValue != null) {
+                    Integer firstVariableValueInteger = getIntegerValue(firstVariableValue);
+                    Integer secondVariableValueInteger = getIntegerValue(secondVariableValue);
+
+                    // If assertion is not satisfied, return false
+                    String description = twoScalarIntEqualAssertion(firstVariableValueInteger, secondVariableValueInteger, firstVariableName, secondVariableName);
+                    if(description != null) {
+                        return new AssertionReport(description);
+                    }
+                }
+
+            }
+
+        }
+
+        // Return true if the assertion has been satisfied
+        // Assertion report where satisfied = true and description = null
+        return new AssertionReport();
+    }
+
+    private static String twoScalarIntEqualAssertion(Integer firstVariableValue, Integer secondVariableValue,
+                                                     String firstVariableName, String secondVariableName) {
+
+        if(!firstVariableValue.equals(secondVariableValue)) {
+            return firstVariableName + " should be equal to " + secondVariableName + ", but got different values (" +
+                    firstVariableValue + " and " + secondVariableValue + ")";
+        }
+
+        return null;
+
+    }
+
+
 
 
 
