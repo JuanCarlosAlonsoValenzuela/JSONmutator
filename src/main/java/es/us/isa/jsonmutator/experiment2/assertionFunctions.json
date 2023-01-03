@@ -13,5 +13,7 @@
   "daikon.inv.binary.twoString.StdString$SubString": "twoStringSubString",
   "daikon.inv.unary.stringsequence.SequenceFixedLengthString": "sequenceFixedLengthString",
   "daikon.inv.binary.sequenceString.MemberString": "sequenceStringMemberString",
-  "daikon.inv.unary.string.dates.IsDateYYYYMMDD": "isDateYYYYMMDD"
+  "daikon.inv.unary.string.dates.IsDateYYYYMMDD": "isDateYYYYMMDD",
+  "daikon.inv.unary.scalar.LowerBoundFloat": "unaryScalarLowerBoundFloat",
+  "daikon.inv.binary.twoScalar.IntGreaterThan": "twoScalarIntGreaterThan"
 }
