@@ -31,8 +31,8 @@ public class GenerateAssertions {
 
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", "", null);
 
-    private static String invariantsPath = "src/test/resources/test_suites/Marvel/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/Marvel/Marvel_GetComicById_50.csv";
+    private static String invariantsPath = "src/test/resources/test_suites/YouTube/invariants_100_modified.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/YouTube/YouTubeGetVideos_50.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -315,6 +315,39 @@ public class GenerateAssertions {
                     if(!matcher.matches()) {
                         String description = "The value " + variableValueString + " for the variable " + variableName
                                 + " is not a valid Date (format: YYYYMMDD)";
+                        return new AssertionReport(description);
+                    }
+
+                }
+            }
+        }
+
+        return new AssertionReport();
+    }
+
+    public static AssertionReport isTimestampYYYYMMHHThhmmssmm(TestCase testCase, InvariantData invariantData) throws Exception {
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        Pattern pattern = Pattern.compile("^[0-9]{4}-((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01])|(0[469]|11)-(0[1-9]|[12][0-9]|30)|(02)-(0[1-9]|[12][0-9]))T(0[0-9]|1[0-9]|2[0-3]):(0[0-9]|[1-5][0-9]):(0[0-9]|[1-5][0-9])(\\.[0-9]{3}){0,1}Z$");
+
+        // Check that the assertion is satisfied for every value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                    String variableValueString = variableValue.textValue();
+                    Matcher matcher = pattern.matcher(variableValueString);
+
+                    // Return false if the assertion is violated
+                    if(!matcher.matches()) {
+                        String description = "The value " + variableValueString + " for the variable " + variableName
+                                + " is not a valid timestamp (format: YYYYMMHHThhmmssmm)";
                         return new AssertionReport(description);
                     }
 
