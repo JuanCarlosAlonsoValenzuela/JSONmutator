@@ -10,5 +10,6 @@
   "daikon.inv.binary.twoScalar.IntEqual": "twoScalarIntEqual",
   "daikon.inv.unary.sequence.OneOfSequence": "sequenceOneOfSequence",
   "daikon.inv.unary.scalar.OneOfScalar": "oneOfScalar",
-  "daikon.inv.binary.twoString.StdString$SubString": "twoStringSubString"
+  "daikon.inv.binary.twoString.StdString$SubString": "twoStringSubString",
+  "daikon.inv.unary.stringsequence.SequenceFixedLengthString": "sequenceFixedLengthString"
 }

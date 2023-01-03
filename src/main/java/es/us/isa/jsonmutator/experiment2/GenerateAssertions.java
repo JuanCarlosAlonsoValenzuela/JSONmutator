@@ -7,7 +7,6 @@ import es.us.isa.jsonmutator.experiment2.generateAssertions.AssertionReport;
 import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport;
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
 import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
-import org.checkerframework.checker.units.qual.A;
 
 import java.lang.reflect.Method;
 import java.nio.file.Files;
@@ -32,9 +31,8 @@ public class GenerateAssertions {
 
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", null);
 
-    private static String invariantsPath = "src/test/resources/test_suites/Spotify/createPlaylist/invariants_100_modified.csv";
-//    private static String testCasesPath = "src/test/resources/test-case-omdb.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/Spotify/createPlaylist/Spotify_CreatePlaylist_50.csv";
+    private static String invariantsPath = "src/test/resources/test_suites/Spotify/getArtistAlbums/invariants_100_modified.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/Spotify/getArtistAlbums/Spotify_GetArtistAlbums_1.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -336,9 +334,6 @@ public class GenerateAssertions {
     // ############################# UNARY STRING SEQUENCE #############################
     public static AssertionReport stringSequenceEltOneOfString(TestCase testCase, InvariantData invariantData) throws Exception {
 
-        // TODO: Take into account null values
-        // TODO: Take into account empty arrays
-
         List<String> variables = invariantData.getVariables();
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
         String invariant = invariantData.getInvariant();
@@ -380,6 +375,44 @@ public class GenerateAssertions {
                 }
 
             }
+        }
+
+        return new AssertionReport();
+    }
+
+    public static AssertionReport sequenceFixedLengthString(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        String invariant = invariantData.getInvariant();
+        int expectedLength = Integer.parseInt(invariant.split("have LENGTH=")[1].trim());
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        // Check that the assertion is satisfied for every possible value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue !=null) {
+                    // TODO: GET Array as list of strings
+                    // Get as an array
+                    ArrayNode arrayNode = (ArrayNode) variableValue;
+                    // Iterate over arrayNode
+                    for(JsonNode item: arrayNode) {
+                        int itemLength = item.textValue().length();
+                        if(itemLength != expectedLength) {
+                            String description = "The length of all the elements of " + variableName + " should be " + expectedLength
+                                    + ", but the length of the element " + item.textValue() + " is " + itemLength;
+                            return new AssertionReport(description);
+                        }
+                    }
+
+                }
+            }
+
         }
 
         return new AssertionReport();
@@ -698,16 +731,16 @@ public class GenerateAssertions {
     // ############################# BINARY SCALAR #############################
     public static AssertionReport twoScalarIntGreaterEqual(TestCase testCase, InvariantData invariantData) throws Exception {
 
-        List<String> variables = invariantData.getVariables();
+        List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
-        if(variables.size() != 2) {
-            throw new Exception("Unexpected number of variables (expected 2, got " + variables.size() + ")");
+        if(sortedVariables.size() != 2) {
+            throw new Exception("Unexpected number of variables (expected 2, got " + sortedVariables.size() + ")");
         }
 
         // Get the names of the variables
-        String firstVariableName = variables.get(0);
-        String secondVariableName = variables.get(1);
+        String firstVariableName = sortedVariables.get(0);
+        String secondVariableName = sortedVariables.get(1);
 
         // Get the value of the first variable
         List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
