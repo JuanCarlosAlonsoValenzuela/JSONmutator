@@ -146,6 +146,23 @@ public class GenerateAssertions {
         return res;
     }
 
+    private static List<String> getSorted(List<String> variables, String invariant) {
+        Collections.sort(variables, new Comparator<String>() {
+            @Override
+            public int compare(String s1, String s2) {
+                int index1 = invariant.indexOf(s1);
+                int index2 = invariant.indexOf(s2);
+                if (index1 != -1 && index2 != -1) {
+                    return Integer.compare(index1, index2);
+                } else {
+                    return s1.compareTo(s2);
+                }
+            }
+        });
+        return variables;
+    }
+
+
     // TODO: Move to a different class/package
     // ############################# UNARY #############################
     // ############################# UNARY STRING #############################
@@ -514,7 +531,7 @@ public class GenerateAssertions {
         String firstVariableName = variables.get(0);
         String secondVariableName = variables.get(1);
 
-        // Get the value of the input variable
+        // Get the value of the first variable
         List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
 
         if(firstVariableValueList.size() == 1) {    // We are comparing one input value with one or more return values
@@ -529,8 +546,6 @@ public class GenerateAssertions {
 
                     // Take null values into account
                     if(secondVariableValue != null && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
-
-
                         String secondVariableValueString = secondVariableValue.textValue();
                         String description = twoStringEqualAssertion(firstVariableValueString, secondVariableValueString,
                                 firstVariableName, secondVariableName);
@@ -585,6 +600,98 @@ public class GenerateAssertions {
             return "Expected value of " + secondVariableName + " to be " + firstVariableValue +
                     ", but got " + secondVariableValue + " instead";
         }
+        return null;
+    }
+
+
+    public static AssertionReport twoStringSubString(TestCase testCase, InvariantData invariantData) throws Exception {
+        List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        if(sortedVariables.size() != 2) {
+            throw new Exception("Unexpected number of variables (expected 2, got " + sortedVariables.size() + ")");
+        }
+
+        // Get the names of the variables
+        String firstVariableName = sortedVariables.get(0);
+        String secondVariableName = sortedVariables.get(1);
+
+        System.out.println(sortedVariables);
+        System.out.println(variableValuesMap);
+
+        // Get the value of the first variable
+        List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
+
+        if(firstVariableValueList.size() == 1) {    // We are comparing one input value with one or more return values
+            JsonNode firstVariableValue = firstVariableValueList.get(0);
+
+            // Take null values into account
+            if(firstVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())) {
+                // Get value as string
+                String firstVariableValueString = firstVariableValue.textValue();
+                // Check that the assertion is satisfied for every possible value of the RETURN variable
+                for(JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
+
+                    // Take null values into account
+                    if(secondVariableValue != null && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+                        String secondVariableValueString = secondVariableValue.textValue();
+                        String description = twoStringSubstringAssertion(firstVariableValueString, secondVariableValueString,
+                                firstVariableName, secondVariableName);
+
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        } else {    // We are comparing multiple return values
+            List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
+
+            // The first and second variable lists should have the same size
+            if(firstVariableValueList.size() != secondVariableValueList.size()) {
+                throw new Exception("The two lists should have the same size");
+            }
+
+            for(int i=0; i<firstVariableValueList.size();i++){
+                JsonNode firstVariableValue = firstVariableValueList.get(i);
+                JsonNode secondVariableValue = secondVariableValueList.get(i);
+
+                // Take null values into account
+                if(firstVariableValue != null && secondVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())
+                        && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+                    String firstVariableValueString = firstVariableValue.textValue();
+                    String secondVariableValueString = secondVariableValue.textValue();
+
+                    // If assertion is not satisfied, return false
+                    String description = twoStringSubstringAssertion(firstVariableValueString, secondVariableValueString,
+                            firstVariableName, secondVariableName);
+                    if(description != null) {
+                        return new AssertionReport(description);
+                    }
+                }
+
+            }
+
+        }
+
+
+        // Return true if the assertion has been satisfied
+        // Assertion report where satisfied = true and description = null
+        return new AssertionReport();
+    }
+
+    private static String twoStringSubstringAssertion(String firstVariableValue, String secondVariableValue,
+                                                      String firstVariableName, String secondVariableName) {
+
+        if( !secondVariableValue.contains(firstVariableValue)) {
+            return "Expected value of " + firstVariableName + " (" + firstVariableValue + ") to be a substring of " +
+                    secondVariableName + " (" + secondVariableValue + ")";
+        }
+
         return null;
     }
 
