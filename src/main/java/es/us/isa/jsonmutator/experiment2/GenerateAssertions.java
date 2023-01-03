@@ -405,7 +405,18 @@ public class GenerateAssertions {
 
     // ############################# BINARY #############################
     // ############################# BINARY STRING #############################
-    public static AssertionReport twoStringEqualAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
+
+    private static String twoStringEqualAssertion(String firstVariableValue, String secondVariableValue,
+                                                  String firstVariableName, String secondVariableName) {
+        if(!firstVariableValue.equals(secondVariableValue)) {
+            return "Expected value of " + secondVariableName + " to be " + firstVariableValue +
+                    ", but got " + secondVariableValue + " instead";
+        }
+        return null;
+    }
+
+
+    public static AssertionReport twoStringEqual(TestCase testCase, InvariantData invariantData) throws Exception {
 
         List<String> variables = invariantData.getVariables();
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -414,34 +425,68 @@ public class GenerateAssertions {
         }
 
         // Get the names of the variables
-        String inputVariableName = variables.get(0);
-        String returnVariableName = variables.get(1);
+        String firstVariableName = variables.get(0);
+        String secondVariableName = variables.get(1);
 
         // Get the value of the input variable
-        List<JsonNode> inputVariableValueList = variableValuesMap.get(inputVariableName);
-        if(inputVariableValueList.size() != 1) {
-            throw new Exception("The input variable should only have one value");
-        }
+        List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
 
-        // Take null values into account
-        if(inputVariableValueList.get(0) != null && !valuesToConsiderNull.contains(inputVariableValueList.get(0).textValue())) {
+        if(firstVariableValueList.size() == 1) {    // We are comparing one input value with one or more return values
+            JsonNode firstVariableValue = firstVariableValueList.get(0);
 
-            String inputVariableValue = inputVariableValueList.get(0).textValue();
-            // Check that the assertion is satisfied for every possible value of the RETURN variable
-            for(JsonNode returnVariableValue: variableValuesMap.get(returnVariableName)) {
+            // Take null values into account
+            if(firstVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())) {
+                // Get value as string
+                String firstVariableValueString = firstVariableValue.textValue();
+                // Check that the assertion is satisfied for every possible value of the RETURN variable
+                for(JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
+
+                    // Take null values into account
+                    if(secondVariableValue != null && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+
+
+                        String secondVariableValueString = secondVariableValue.textValue();
+                        String description = twoStringEqualAssertion(firstVariableValueString, secondVariableValueString,
+                                firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+
+                    }
+
+                }
+
+            }
+
+        } else { // We are comparing multiple return values
+            List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
+
+            // The first and second variable lists should have the same size
+            if(firstVariableValueList.size() != secondVariableValueList.size()) {
+                throw new Exception("The two lists should have the same size");
+            }
+
+            for(int i=0; i<firstVariableValueList.size();i++){
+                JsonNode firstVariableValue = firstVariableValueList.get(i);
+                JsonNode secondVariableValue = secondVariableValueList.get(i);
 
                 // Take null values into account
-                if(returnVariableValue != null && !valuesToConsiderNull.contains(returnVariableValue.textValue())) {
-                    // If the input and return values are NOT equal, the assertion is not satisfied
-                    if(!inputVariableValue.equals(returnVariableValue.textValue())){
-                        String description = "Expected value of " + returnVariableName + " to be " + inputVariableValue +
-                                ", but got " + returnVariableValue.textValue() + " instead";
+                if(firstVariableValue != null && secondVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())
+                        && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+                    String firstVariableValueString = firstVariableValue.textValue();
+                    String secondVariableValueString = secondVariableValue.textValue();
+
+                    // If assertion is not satisfied, return false
+                    String description = twoStringEqualAssertion(firstVariableValueString, secondVariableValueString,
+                            firstVariableName, secondVariableName);
+                    if(description != null) {
                         return new AssertionReport(description);
                     }
                 }
-            }
-        }
 
+            }
+
+        }
 
         // Return true if the assertion has been satisfied
         // Assertion report where satisfied = true and description = null
@@ -454,56 +499,78 @@ public class GenerateAssertions {
         List<String> variables = invariantData.getVariables();
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
-
         if(variables.size() != 2) {
             throw new Exception("Unexpected number of variables (expected 2, got " + variables.size() + ")");
         }
 
         // Get the names of the variables
-        String inputVariableName = variables.get(0);
-        String returnVariableName = variables.get(1);
+        String firstVariableName = variables.get(0);
+        String secondVariableName = variables.get(1);
 
-        // Get the value of the input variable
-        List<JsonNode> inputVariableValueList = variableValuesMap.get(inputVariableName);
-        if(inputVariableValueList.size() != 1) {
-            throw new Exception("The input variable should only have one value");
-        }
+        // Get the value of the first variable
+        List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
 
-        if(inputVariableValueList.get(0) != null) {
+        if(firstVariableValueList.size() == 1) {    // We are comparing one input value with one or more return values
+            JsonNode firstVariableValue = firstVariableValueList.get(0);
+            if(firstVariableValue != null) {
+                // Get value as integer
+                Integer firstVariableValueInteger = getIntegerValue(firstVariableValue);
+                for (JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
+                    // Take null values into account
+                    if(secondVariableValue != null) {
+                        // Get variable value as integer
+                        Integer secondVariableValueInteger = getIntegerValue(secondVariableValue);
 
-            Integer inputVariableValue;
-            if(inputVariableValueList.get(0).isInt()) {
-                inputVariableValue = inputVariableValueList.get(0).intValue();
-            } else {
-                inputVariableValue = Integer.parseInt(inputVariableValueList.get(0).textValue());
-            }
-
-
-            for(JsonNode returnVariableValue: variableValuesMap.get(returnVariableName)) {
-                // Take null values into account
-                if(returnVariableValue != null) {
-                    Integer returnVariableValueInteger;
-                    if(returnVariableValue.isInt()) {
-                        returnVariableValueInteger = returnVariableValue.intValue();
-                    } else {
-                        returnVariableValueInteger = Integer.parseInt(returnVariableValue.textValue());
-                    }
-
-                    // If assertion is not satisfied, return false
-                    if (!(inputVariableValue >= returnVariableValueInteger)) {
-                        String description = "The value of " + returnVariableName + " should be lesser or equal than " +
-                                inputVariableName + " (" +  inputVariableValue + "), but got " + returnVariableValueInteger;
-                        return new AssertionReport(description);
+                        // If assertion is not satisfied, return false
+                        String description = twoScalarIntGreaterEqualAssertion(firstVariableValueInteger, secondVariableValueInteger, firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
                     }
                 }
             }
 
-        }
+        } else { // We are comparing multiple return values
 
+            List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
+
+            // The first and second variable lists should have the same size
+            if(firstVariableValueList.size() != secondVariableValueList.size()) {
+                throw new Exception("The two lists should have the same size");
+            }
+
+            for(int i=0; i<firstVariableValueList.size();i++){
+                JsonNode firstVariableValue = firstVariableValueList.get(i);
+                JsonNode secondVariableValue = secondVariableValueList.get(i);
+
+                // Take null values into account
+                if(firstVariableValue != null && secondVariableValue != null) {
+                    Integer firstVariableValueInteger = getIntegerValue(firstVariableValue);
+                    Integer secondVariableValueInteger = getIntegerValue(secondVariableValue);
+
+                    // If assertion is not satisfied, return false
+                    String description = twoScalarIntGreaterEqualAssertion(firstVariableValueInteger, secondVariableValueInteger, firstVariableName, secondVariableName);
+                    if(description != null) {
+                        return new AssertionReport(description);
+                    }
+                }
+
+            }
+
+        }
 
         // Return true if the assertion has been satisfied
         // Assertion report where satisfied = true and description = null
         return new AssertionReport();
+    }
+
+    private static String twoScalarIntGreaterEqualAssertion(Integer firstVariableValue, Integer secondVariableValue,
+                                                            String firstVariableName, String secondVariableName) {
+        if (!(firstVariableValue >= secondVariableValue)) {
+            return "The value of " + secondVariableName + " should be lesser or equal than " +
+                    firstVariableName + " (" +  firstVariableName + "), but got " + secondVariableName;
+        }
+        return null;
     }
 
 
