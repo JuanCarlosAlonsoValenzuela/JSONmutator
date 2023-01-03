@@ -75,15 +75,44 @@ public class ReadVariablesValues {
 
         if(variableName.startsWith("input.")){
 
-//            System.out.println(testCase);
+            // If array
+            if(variableName.contains("[..]") || variableName.contains("[]")) {
+                variableName = variableName.replace("[..]", "");
+                variableName = variableName.replace("[]", "");
 
-            List<String> hierarchy = Arrays.asList(variableName.split("\\."));
+                List<String> hierarchy = Arrays.asList(variableName.split("\\."));
 
-            String value = getEnterParameterValue(testCase, hierarchy);
-            JsonNode jsonNode = JsonNodeFactory.instance.textNode(value);
-            res.add(jsonNode);
+                String value = getEnterParameterValue(testCase, hierarchy);
+                if(value == null){
+                    res.add(null);
+                    return res;
+                }
+                List<String> values = Arrays.asList(value.split("%2C"));
 
-            return res;
+                ObjectMapper mapper = new ObjectMapper();
+                ArrayNode arrayNode = mapper.createArrayNode();
+                for (String item : values) {
+                    arrayNode.add(item.trim());
+                }
+
+                res.add(arrayNode);
+                return res;
+
+
+            } else {
+
+                List<String> hierarchy = Arrays.asList(variableName.split("\\."));
+
+                String value = getEnterParameterValue(testCase, hierarchy);
+                JsonNode jsonNode = JsonNodeFactory.instance.textNode(value);
+                res.add(jsonNode);
+
+                return res;
+
+            }
+
+
+
 
 
         // TODO: Consider special null values (e.g., N/A)
@@ -93,6 +122,7 @@ public class ReadVariablesValues {
 
         } else if(variableName.startsWith("size(input.")) {
             // TODO: IMPLEMENT
+            throw new Exception("IMPLEMENT");
 
         } else if(variableName.startsWith("size(return.")) {
             // [] characters and remove size()
@@ -140,6 +170,7 @@ public class ReadVariablesValues {
 
 
         variableName = variableName.replace("[..]", "");
+        variableName = variableName.replace("[]", "");
         List<String> variableHierarchy = Arrays.asList(variableName.substring("return.".length()).split("\\."));
 
         // Get response body
@@ -150,11 +181,6 @@ public class ReadVariablesValues {
         List<JsonNode> nestingLevels = getNestingLevels(responseJsonNode, jsonHierarchy);
 
         return getVariableValuesFromHierarchy(variableHierarchy, nestingLevels);
-
-//            for(JsonNode node: res) {
-//                System.out.println(node);
-//            }
-//            System.out.println(res);
     }
 
 

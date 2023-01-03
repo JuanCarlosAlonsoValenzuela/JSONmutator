@@ -32,7 +32,7 @@ public class GenerateAssertions {
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", null);
 
     private static String invariantsPath = "src/test/resources/test_suites/Spotify/getArtistAlbums/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/Spotify/getArtistAlbums/Spotify_GetArtistAlbums_1.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/Spotify/getArtistAlbums/Spotify_GetArtistAlbums_50.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -56,8 +56,6 @@ public class GenerateAssertions {
         }
 
     }
-
-    // TODO: BOOLEANS ARE CONVERTED INTO NUMBERS (ints)
 
 
     // For all the invariants of a test case
@@ -148,8 +146,8 @@ public class GenerateAssertions {
         Collections.sort(variables, new Comparator<String>() {
             @Override
             public int compare(String s1, String s2) {
-                int index1 = invariant.indexOf(s1);
-                int index2 = invariant.indexOf(s2);
+                int index1 = invariant.indexOf(s1.replace("[..]", "[]"));
+                int index2 = invariant.indexOf(s2.replace("[..]", "[]"));
                 if (index1 != -1 && index2 != -1) {
                     return Integer.compare(index1, index2);
                 } else {
@@ -649,9 +647,6 @@ public class GenerateAssertions {
         String firstVariableName = sortedVariables.get(0);
         String secondVariableName = sortedVariables.get(1);
 
-        System.out.println(sortedVariables);
-        System.out.println(variableValuesMap);
-
         // Get the value of the first variable
         List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
 
@@ -890,6 +885,129 @@ public class GenerateAssertions {
 
         return null;
 
+    }
+
+    // ############################# BINARY SEQUENCE STRING #############################
+    public static AssertionReport sequenceStringMemberString(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        if(sortedVariables.size() != 2) {
+            throw new Exception("Unexpected number of variables (expected 2, got " + sortedVariables.size() + ")");
+        }
+
+        // Get the names of the variables
+        String firstVariableName = sortedVariables.get(0);      // String
+        String secondVariableName = sortedVariables.get(1);     // Array of strings
+
+        // Get values of the first variable (string)
+        List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
+        List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
+
+        if(firstVariableValueList.size() == 1) {    // If there is only one string value, we are comparing one string with multiple arrays
+            JsonNode firstVariableValue = firstVariableValueList.get(0);
+            if(firstVariableValue != null) {
+                // Get value as string
+                String firstVariableValueString = firstVariableValue.textValue();
+                // Check that the assertion is satisfied for every possible value of the RETURN variable
+                for(JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
+
+                    // Take null values into account
+                    if(secondVariableValue != null) {
+                        ArrayNode arrayNode = (ArrayNode) secondVariableValue;
+
+                        List<String> secondVariableList = new ArrayList<>();
+                        // Convert into a list of strings
+                        for(JsonNode item: arrayNode) {
+                            secondVariableList.add(item.textValue());
+                        }
+
+                        String description = sequenceStringMemberStringAssertion(firstVariableValueString,
+                                secondVariableList, firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+                    }
+
+                }
+
+            }
+        } else if (secondVariableValueList.size() == 1) {       // If there is only one array value, we are comparing one array with multiple strings
+            JsonNode secondVariableValue = secondVariableValueList.get(0);
+            if(secondVariableValue != null) {
+                // Second variable as list of strings
+                ArrayNode arrayNode = (ArrayNode) secondVariableValue;
+                List<String> secondVariableList = new ArrayList<>();
+                // Convert into a list of strings
+                for(JsonNode item: arrayNode) {
+                    secondVariableList.add(item.textValue());
+                }
+
+                for(JsonNode firstVariableValue: firstVariableValueList) {
+                    if(firstVariableValue != null) {
+                        String firstVariableValueString = firstVariableValue.textValue();
+
+                        String description = sequenceStringMemberStringAssertion(firstVariableValueString,
+                                secondVariableList, firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+                    }
+                }
+
+            }
+
+        } else {    // We are comparing multiple return values
+
+
+            // The first and second variable lists should have the same size
+            if(firstVariableValueList.size() != secondVariableValueList.size()) {
+                throw new Exception("The two lists should have the same size");
+            }
+
+            for(int i=0; i<firstVariableValueList.size();i++){
+
+                JsonNode firstVariableValue = firstVariableValueList.get(i);        // String
+                JsonNode secondVariableValue = secondVariableValueList.get(i);      // Array
+
+                // Take null values into account
+                if(firstVariableValue != null && secondVariableValue != null) {
+                    // First variable as string
+                    String firstVariableValueString = firstVariableValue.textValue();
+
+                    // Second variable as list of strings
+                    ArrayNode arrayNode = (ArrayNode) secondVariableValue;
+                    List<String> secondVariableList = new ArrayList<>();
+                    // Convert into a list of strings
+                    for(JsonNode item: arrayNode) {
+                        secondVariableList.add(item.textValue());
+                    }
+
+                    String description = sequenceStringMemberStringAssertion(firstVariableValueString,
+                            secondVariableList, firstVariableName, secondVariableName);
+                    if(description != null) {
+                        return new AssertionReport(description);
+                    }
+                }
+
+            }
+
+        }
+
+        // Return true if the assertion has been satisfied
+        // Assertion report where satisfied = true and description = null
+        return new AssertionReport();
+    }
+
+    private static String sequenceStringMemberStringAssertion(String firstVariableValueString, List<String> secondVariableList,
+                                                              String firstVariableName, String secondVariableName){
+        if(!secondVariableList.contains(firstVariableValueString)) {
+            return "Expected " + secondVariableName + " (" + secondVariableList + ") to contain " +
+                    firstVariableName + " (" + firstVariableValueString + ")";
+        }
+
+        return null;
     }
 
 
