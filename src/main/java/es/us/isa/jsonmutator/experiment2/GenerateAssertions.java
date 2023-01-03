@@ -145,6 +145,9 @@ public class GenerateAssertions {
     private static Float getFloatValue(JsonNode variableValue) {
         if(variableValue.isFloat()) {
             return variableValue.floatValue();
+        } else if (variableValue.isInt()) {
+          Integer intValue = variableValue.intValue();
+          return intValue.floatValue();
         } else { // If string
             String textValue = variableValue.textValue();
             return Float.parseFloat(textValue);
@@ -489,7 +492,7 @@ public class GenerateAssertions {
 
         return new AssertionReport();
     }
-    
+
     public static AssertionReport sequenceStringElementsAreUrl(TestCase testCase, InvariantData invariantData) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
@@ -1032,6 +1035,7 @@ public class GenerateAssertions {
 
         // Get the value of the first variable
         List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
+        List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
 
         if(firstVariableValueList.size() == 1) {    // We are comparing one input value with one or more return values
             JsonNode firstVariableValue = firstVariableValueList.get(0);
@@ -1053,9 +1057,27 @@ public class GenerateAssertions {
                 }
             }
 
-        } else { // We are comparing multiple return values
+        } else if (secondVariableValueList.size() == 1) {
+            JsonNode secondVariableValue = secondVariableValueList.get(0);
+            if(secondVariableValue != null) {
+                // Get value as integer
+                Integer secondVariableValueInteger = getIntegerValue(secondVariableValue);
+                for(JsonNode firstVariableValue: variableValuesMap.get(firstVariableName)) {
+                    // Take null values into account
+                    if(firstVariableValue != null) {
+                        // Get variable value as integer
+                        Integer firstVariableValueInteger = getIntegerValue(firstVariableValue);
 
-            List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
+                        // If assertion not satisfied, return false
+                        String description = twoScalarIntGreaterThanAssertion(firstVariableValueInteger, secondVariableValueInteger, firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+                    }
+                }
+            }
+
+        } else { // We are comparing multiple return values
 
             // The first and second variable lists should have the same size
             if(firstVariableValueList.size() != secondVariableValueList.size()) {
@@ -1093,6 +1115,86 @@ public class GenerateAssertions {
         if (!(firstVariableValue > secondVariableValue)) {
             return "The value of " + secondVariableName + " should be lesser than " +
                     firstVariableName + " (" +  firstVariableName + "), but got " + secondVariableName;
+        }
+        return null;
+    }
+
+    public static AssertionReport twoScalarIntLessThan(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        if(sortedVariables.size() != 2) {
+            throw new Exception("Unexpected number of variables (expected 2, got " + sortedVariables.size() + ")");
+        }
+
+        // Get the names of the variables
+        String firstVariableName = sortedVariables.get(0);
+        String secondVariableName = sortedVariables.get(1);
+
+        // Get the value of the first variable
+        List<JsonNode> firstVariableValueList = variableValuesMap.get(firstVariableName);
+
+        if(firstVariableValueList.size() == 1) {    // We are comparing one input value with one or more return values
+            JsonNode firstVariableValue = firstVariableValueList.get(0);
+            if(firstVariableValue != null) {
+                // Get value as integer
+                Integer firstVariableValueInteger = getIntegerValue(firstVariableValue);
+                for (JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
+                    // Take null values into account
+                    if(secondVariableValue != null) {
+                        // Get variable value as integer
+                        Integer secondVariableValueInteger = getIntegerValue(secondVariableValue);
+
+                        // If assertion is not satisfied, return false
+                        String description = twoScalarIntLessThanAssertion(firstVariableValueInteger, secondVariableValueInteger, firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+                    }
+                }
+            }
+
+        } else { // We are comparing multiple return values
+
+            List<JsonNode> secondVariableValueList = variableValuesMap.get(secondVariableName);
+
+            // The first and second variable lists should have the same size
+            if(firstVariableValueList.size() != secondVariableValueList.size()) {
+                throw new Exception("The two lists should have the same size");
+            }
+
+            for(int i=0; i<firstVariableValueList.size();i++){
+                JsonNode firstVariableValue = firstVariableValueList.get(i);
+                JsonNode secondVariableValue = secondVariableValueList.get(i);
+
+                // Take null values into account
+                if(firstVariableValue != null && secondVariableValue != null) {
+                    Integer firstVariableValueInteger = getIntegerValue(firstVariableValue);
+                    Integer secondVariableValueInteger = getIntegerValue(secondVariableValue);
+
+                    // If assertion is not satisfied, return false
+                    String description = twoScalarIntLessThanAssertion(firstVariableValueInteger, secondVariableValueInteger, firstVariableName, secondVariableName);
+                    if(description != null) {
+                        return new AssertionReport(description);
+                    }
+                }
+
+            }
+
+        }
+
+        // Return true if the assertion has been satisfied
+        // Assertion report where satisfied = true and description = null
+        return new AssertionReport();
+
+    }
+
+    private static String twoScalarIntLessThanAssertion(Integer firstVariableValue, Integer secondVariableValue,
+                                                           String firstVariableName, String secondVariableName) {
+        if (!(firstVariableValue < secondVariableValue)) {
+            return firstVariableName + " (" + firstVariableValue + ") should be less than " + secondVariableName +
+                    " (" + secondVariableValue + ")";
         }
         return null;
     }

@@ -18,5 +18,6 @@
   "daikon.inv.binary.twoScalar.IntGreaterThan": "twoScalarIntGreaterThan",
   "daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm": "isTimestampYYYYMMHHThhmmssmm",
   "daikon.inv.unary.scalar.OneOfFloat": "oneOfFloat",
-  "daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl": "sequenceStringElementsAreUrl"
+  "daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl": "sequenceStringElementsAreUrl",
+  "daikon.inv.binary.twoScalar.IntLessThan": "twoScalarIntLessThan"
 }
