@@ -31,8 +31,8 @@ public class GenerateAssertions {
 
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", null);
 
-    private static String invariantsPath = "src/test/resources/test_suites/Spotify/getArtistAlbums/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/Spotify/getArtistAlbums/Spotify_GetArtistAlbums_50.csv";
+    private static String invariantsPath = "src/test/resources/test_suites/AmadeusHotel/invariants_100_modified.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/AmadeusHotel/AmadeusHotel_50.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -292,6 +292,39 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
+    public static AssertionReport isDateYYYYMMDD(TestCase testCase, InvariantData invariantData) throws Exception {
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        Pattern pattern = Pattern.compile("^(?:19\\d{2}|20[01234][0-9]|2050)[-/.](?:0[1-9]|1[012])[-/.](?:0[1-9]|[12][0-9]|3[01])$");
+
+        // Check that the assertion is satisfied for every value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                // Take null values into account
+                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                    String variableValueString = variableValue.textValue();
+                    Matcher matcher = pattern.matcher(variableValueString);
+
+                    // Return false if the assertion is violated
+                    if(!matcher.matches()) {
+                        String description = "The value " + variableValueString + " for the variable " + variableName
+                                + " is not a valid Date (format: YYYYMMDD)";
+                        return new AssertionReport(description);
+                    }
+
+                }
+            }
+        }
+
+        return new AssertionReport();
+    }
+
 
     public static AssertionReport isNumericAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -479,7 +512,13 @@ public class GenerateAssertions {
             if(stringValue.equals("null")){ // If the value is null
                 acceptedValues.add(null);
             } else {    // If the value is a number
-                acceptedValues.add(Integer.parseInt(stringValue.trim()));
+                if(stringValue.equals("true")) {
+                    acceptedValues.add(1);
+                } else if(stringValue.equals("false")) {
+                    acceptedValues.add(0);
+                } else {
+                    acceptedValues.add(Integer.parseInt(stringValue.trim()));
+                }
             }
 
         }

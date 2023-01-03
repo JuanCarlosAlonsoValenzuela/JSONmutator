@@ -75,55 +75,20 @@ public class ReadVariablesValues {
 
         if(variableName.startsWith("input.")){
 
-            // If array
-            if(variableName.contains("[..]") || variableName.contains("[]")) {
-                variableName = variableName.replace("[..]", "");
-                variableName = variableName.replace("[]", "");
+            res = getValueOfInputVariable(testCase, variableName);
 
-                List<String> hierarchy = Arrays.asList(variableName.split("\\."));
-
-                String value = getEnterParameterValue(testCase, hierarchy);
-                if(value == null){
-                    res.add(null);
-                    return res;
-                }
-                List<String> values = Arrays.asList(value.split("%2C"));
-
-                ObjectMapper mapper = new ObjectMapper();
-                ArrayNode arrayNode = mapper.createArrayNode();
-                for (String item : values) {
-                    arrayNode.add(item.trim());
-                }
-
-                res.add(arrayNode);
-                return res;
-
-
-            } else {
-
-                List<String> hierarchy = Arrays.asList(variableName.split("\\."));
-
-                String value = getEnterParameterValue(testCase, hierarchy);
-                JsonNode jsonNode = JsonNodeFactory.instance.textNode(value);
-                res.add(jsonNode);
-
-                return res;
-
-            }
-
-
-
-
-
-        // TODO: Consider special null values (e.g., N/A)
         } else if(variableName.startsWith("return.")) {
 
             res = getValueOfReturnVariable(invariantData, testCase, variableName);
 
         } else if(variableName.startsWith("size(input.")) {
-            // TODO: IMPLEMENT
-            throw new Exception("IMPLEMENT");
-
+            String newVariableName = variableName.substring("size(".length(), variableName.length()-1);
+            List<JsonNode> arrays = getValueOfInputVariable(testCase, newVariableName);
+            for(JsonNode array: arrays) {
+                // Add the size of the array to the list to return
+                ObjectMapper mapper = new ObjectMapper();
+                res.add(mapper.valueToTree(((ArrayNode) array).size()));
+            }
         } else if(variableName.startsWith("size(return.")) {
             // [] characters and remove size()
             String newVariableName = variableName.substring("size(".length(), variableName.length()-1);
@@ -131,8 +96,13 @@ public class ReadVariablesValues {
             List<JsonNode> arrays = getValueOfReturnVariable(invariantData, testCase, newVariableName);
             for(JsonNode array: arrays) {
                 // Add the size of the array to the list to return
-                ObjectMapper mapper = new ObjectMapper();
-                res.add(mapper.valueToTree(((ArrayNode) array).size()));
+                if(array != null) {
+                    ObjectMapper mapper = new ObjectMapper();
+                    res.add(mapper.valueToTree(((ArrayNode) array).size()));
+                } else {
+                    res.add(null);
+                }
+
             }
 
         } else {
@@ -154,10 +124,49 @@ public class ReadVariablesValues {
         return list;
     }
 
+    private static List<JsonNode> getValueOfInputVariable(TestCase testCase, String variableName) {
+
+        List<JsonNode> res = new ArrayList<>();
+
+        // If array
+        if(variableName.contains("[..]") || variableName.contains("[]")) {
+            variableName = variableName.replace("[..]", "");
+            variableName = variableName.replace("[]", "");
+
+            List<String> hierarchy = Arrays.asList(variableName.split("\\."));
+
+            String value = getEnterParameterValue(testCase, hierarchy);
+            if(value == null){
+                res.add(null);
+                return res;
+            }
+            List<String> values = Arrays.asList(value.split("%2C"));
+
+            ObjectMapper mapper = new ObjectMapper();
+            ArrayNode arrayNode = mapper.createArrayNode();
+            for (String item : values) {
+                arrayNode.add(item.trim());
+            }
+
+            res.add(arrayNode);
+            return res;
+
+
+        } else {
+
+            List<String> hierarchy = Arrays.asList(variableName.split("\\."));
+            String value = getEnterParameterValue(testCase, hierarchy);
+            JsonNode jsonNode = JsonNodeFactory.instance.textNode(value);
+            res.add(jsonNode);
+            return res;
+
+        }
+
+    }
+
     private static List<JsonNode> getValueOfReturnVariable(InvariantData invariantData, TestCase testCase, String variableName) {
         // Locate variable in path established by ppt (.array and &)
         String pptname = invariantData.getPptname();
-//            System.out.println(pptname);
 
         // TODO: Consider .array
         // TODO: An array variable name contains either "[]" or "[..]"
@@ -197,6 +206,9 @@ public class ReadVariablesValues {
         }
 
         JsonNode subElement = responseJsonNode.get(jsonHierarchy.get(0));
+        if(subElement==null) {      // If the nesting level is not present for this response
+            return new ArrayList<>();
+        }
         // Base case 1
         if(jsonHierarchy.size() == 1){
 
@@ -236,7 +248,9 @@ public class ReadVariablesValues {
 
             JsonNode element = nestingLevel;
             for(String level: variableHierarchy) {
-                element = element.get(level);
+                if(element != null) {
+                    element = element.get(level);
+                }
             }
 
             res.add(element);
