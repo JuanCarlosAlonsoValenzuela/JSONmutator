@@ -16,5 +16,6 @@
   "daikon.inv.unary.string.dates.IsDateYYYYMMDD": "isDateYYYYMMDD",
   "daikon.inv.unary.scalar.LowerBoundFloat": "unaryScalarLowerBoundFloat",
   "daikon.inv.binary.twoScalar.IntGreaterThan": "twoScalarIntGreaterThan",
-  "daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm": "isTimestampYYYYMMHHThhmmssmm"
+  "daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm": "isTimestampYYYYMMHHThhmmssmm",
+  "daikon.inv.unary.scalar.OneOfFloat": "oneOfFloat"
 }

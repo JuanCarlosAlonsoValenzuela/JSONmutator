@@ -142,6 +142,15 @@ public class GenerateAssertions {
         return res;
     }
 
+    private static Float getFloatValue(JsonNode variableValue) {
+        if(variableValue.isFloat()) {
+            return variableValue.floatValue();
+        } else { // If string
+            String textValue = variableValue.textValue();
+            return Float.parseFloat(textValue);
+        }
+    }
+
     private static List<String> getSorted(List<String> variables, String invariant) {
         Collections.sort(variables, new Comparator<String>() {
             @Override
@@ -583,6 +592,65 @@ public class GenerateAssertions {
     }
 
     // ############################# UNARY FLOAT #############################
+    public static AssertionReport oneOfFloat(TestCase testCase, InvariantData invariantData) throws Exception {
+
+        String invariant = invariantData.getInvariant();
+        List<String> variables = invariantData.getVariables();
+        Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+
+        // Check that there is only one variable
+        if(variableValuesMap.keySet().size() != 1) {
+            throw new Exception("Invalid number of variables");
+        }
+
+        // Extract accepted variable values from the invariant
+        List<Float> acceptedValues = new ArrayList<>();
+        int startIndex = invariant.indexOf("{");
+        int endIndex = invariant.lastIndexOf("}");
+        if (startIndex != -1 && endIndex != -1) {       // TODO: Test this format
+            // Format: return.year one of { 2020, 2021, 2022 }
+            String valuesString = invariant.substring(startIndex + 1, endIndex);
+            String[] values = valuesString.split(", ");
+            for (String value : values) {
+                acceptedValues.add(Float.parseFloat(value.trim()));
+            }
+        } else if(invariant.startsWith(variables.get(0) + " ==")) { // TODO: Test this format
+            String stringValue = invariant.split("==")[1].trim();
+            acceptedValues.add(Float.parseFloat(stringValue.trim()));
+        }
+
+        // Check that the number of values is correct
+        if(acceptedValues.size() == 0 || acceptedValues.size() > 3) {
+            throw new Exception("Invalid invariant, no variables found");
+        }
+
+
+        // Check that the assertion is satisfied for every possible value of the variable
+        for(String variableName: variableValuesMap.keySet()) {
+            List<JsonNode> variableValues = variableValuesMap.get(variableName);
+            for(JsonNode variableValue: variableValues) {
+                if(variableValue != null) { // Check that the value is not null
+                    Float variableValueFloat = getFloatValue(variableValue);
+                    if(!acceptedValues.contains(variableValueFloat)) {
+                        String description = "Expected one of " + acceptedValues + ", got " + variableValueFloat;
+                        return new AssertionReport(description);
+                    }
+
+                }
+            }
+        }
+
+
+
+        return new AssertionReport();
+    }
+
+
+
+
+
+
+
     public static AssertionReport unaryScalarLowerBoundFloat(TestCase testCase, InvariantData invariantData) throws Exception {
 
         String invariant = invariantData.getInvariant();
