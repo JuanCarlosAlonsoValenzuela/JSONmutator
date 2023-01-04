@@ -168,6 +168,14 @@ public class ReadVariablesValues {
         // Locate variable in path established by ppt (.array and &)
         String pptname = invariantData.getPptname();
 
+        if(pptname.equals("main.orgs{org}repos.getOrganizationRepositories&200.array(main.getOrganizationRepositories&Input):::EXIT")){
+            if(variableName.equals("return.array[..]")) {
+                String responseString = testCase.getResponseBody();
+                JsonNode responseJsonNode = getJsonNode(responseString);
+                return Collections.singletonList(responseJsonNode);
+            }
+        }
+
         // TODO: Consider .array
         // TODO: An array variable name contains either "[]" or "[..]"
         // Get route to variable
@@ -201,8 +209,16 @@ public class ReadVariablesValues {
 
         // If there is no nesting (Base case 2)
         if(jsonHierarchy.size() == 0) {
-            res.add(responseJsonNode);
-            return res;
+            if(responseJsonNode.isArray()) {        // If the response is an array
+                ArrayNode arrayNode = (ArrayNode) responseJsonNode;
+                for(JsonNode item: arrayNode) {
+                    res.add(item);
+                }
+                return res;
+            } else {
+                res.add(responseJsonNode);
+                return res;
+            }
         }
 
         JsonNode subElement = responseJsonNode.get(jsonHierarchy.get(0));

@@ -31,8 +31,8 @@ public class GenerateAssertions {
 
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", "", null);
 
-    private static String invariantsPath = "src/test/resources/test_suites/GitHub/createOrganizationRepository/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/GitHub/createOrganizationRepository/GitHub_createOrganizationRepository_50.csv";
+    private static String invariantsPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/invariants_100_modified.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/GitHub_GetOrganizationRepositories_50.csv";
 
 
     public static void main(String[] args) throws Exception {
@@ -68,6 +68,12 @@ public class GenerateAssertions {
                 // If a single invariant is violated, the mutant is killed
                 // Return AssertionReport where killed=true and killedBy=invariantData
                 MutantTestCaseReport mutantTestCaseReport = generateAssertionsForSingleInvariantData(testCase, invariantData);
+                // TODO: BEGIN DELETE
+                Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
+                System.out.println("VARIABLES MAP");
+                System.out.println(variableValuesMap);
+                System.out.println("#########################################");
+                // TODO: END DELETE
                 if(mutantTestCaseReport.isKilled()) {
                     return mutantTestCaseReport;
                 }
@@ -1044,7 +1050,7 @@ public class GenerateAssertions {
                                                             String firstVariableName, String secondVariableName) {
         if (!(firstVariableValue >= secondVariableValue)) {
             return "The value of " + secondVariableName + " should be lesser or equal than " +
-                    firstVariableName + " (" +  firstVariableName + "), but got " + secondVariableName;
+                    firstVariableName + " (" +  firstVariableValue + "), but got " + secondVariableValue;
         }
         return null;
     }
