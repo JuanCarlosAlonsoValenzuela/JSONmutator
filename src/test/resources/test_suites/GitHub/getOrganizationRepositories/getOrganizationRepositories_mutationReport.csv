@@ -1,0 +1,51 @@
+testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType
+test_vbshd4v589wz_getOrganizationRepositories;true;return.stargazers_url is Url;The value T)RF50I: for the variable return.stargazers_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_ubon3xtkn2oy_getOrganizationRepositories;true;return.archive_url is Url;The value l*]dhXi@ for the variable return.archive_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jeiplblflvlf_getOrganizationRepositories;true;return.url is a substring of return.comments_url;Expected value of return.url (https://api.github.com/repos/docker/webpack-bugsnag-plugins) to be a substring of return.comments_url (https://api.github.co/*m/repos/docker/webpack-bugsnag-plugins/comments{/number});main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1jens25aha88j_getOrganizationRepositories;true;return.open_issues_count == return.open_issues;return.open_issues_count should be equal to return.open_issues, but got different values (0 and -21454);main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_qe6nfjd2uh4n_getOrganizationRepositories;true;return.owner.starred_url is Url;The value 58NfFJBb4O for the variable return.owner.starred_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jig399togpr7_getOrganizationRepositories;true;return.url is a substring of return.teams_url;Expected value of return.url (https://api.github.com/repos/Esri/arcgis-cookbook) to be a substring of return.teams_url (https://api.github.com/r7epos/Esri/arcgis-cookbook/teams);main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1jygivk60n8z7_getOrganizationRepositories;true;return.notifications_url is Url;The value +[V for the variable return.notifications_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iv9dnl0phfzl_getOrganizationRepositories;true;return.stargazers_count == return.watchers_count;return.stargazers_count should be equal to return.watchers_count, but got different values (2 and 1);main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_uvbcg2h73wis_getOrganizationRepositories;false;;;;
+test_u87xbevwzxh3_getOrganizationRepositories;false;;;;
+test_s1dyg7tmd5ix_getOrganizationRepositories;true;return.subscription_url is Url;The value W for the variable return.subscription_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t4c9991rqd6e_getOrganizationRepositories;false;;;;
+test_1iun6m1f3jvaq_getOrganizationRepositories;true;return.owner.login is a substring of return.owner.html_url;Expected value of return.owner.login (docker) to be a substring of return.owner.html_url (https://github.com/docer);main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_uvjr9s1j9bg0_getOrganizationRepositories;true;return.forks_count == return.forks;return.forks_count should be equal to return.forks, but got different values (893000 and 0);main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1h7qzj7q7fdcy_getOrganizationRepositories;false;;;;
+test_vf9px9xfwaqr_getOrganizationRepositories;false;;;;
+test_t4hsssu0mtdl_getOrganizationRepositories;true;return.url is Url;The value F/FfW`{ for the variable return.url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_to1sp6bzhueo_getOrganizationRepositories;false;;;;
+test_1h8212k8obl2d_getOrganizationRepositories;true;return.owner.following_url is Url;The value EPhZtL for the variable return.owner.following_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s102332psq40_getOrganizationRepositories;false;;;;
+test_rhr5znzi5zqs_getOrganizationRepositories;false;;;;
+test_1ib0xmlmzvk8o_getOrganizationRepositories;true;return.url is a substring of return.statuses_url;Expected value of return.url (https://api.github.com/repos/ExpediaGroup/flyte-bamboo) to be a substring of return.statuses_url (https://pi.github.com/repos/ExpediaGroup/flyte-bamboo/statuses/{sha});main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1iun6af49qbfl_getOrganizationRepositories;true;return.releases_url is Url;The value hS`t2u for the variable return.releases_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vb9l9o1ic6lh_getOrganizationRepositories;false;;;;
+test_qxzf3dmmyp9i_getOrganizationRepositories;false;;;;
+test_urjlfsle7wx0_getOrganizationRepositories;false;;;;
+test_uv95pqkk9qhu_getOrganizationRepositories;false;;;;
+test_1iun4nk1ung4l_getOrganizationRepositories;false;;;;
+test_1iukvza4ip6wi_getOrganizationRepositories;false;;;;
+test_1iv3s5hixhyr8_getOrganizationRepositories;false;;;;
+test_1jyagxzx3b4u1_getOrganizationRepositories;true;return.assignees_url is Url;The value Iz"BRd) for the variable return.assignees_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jezdevr9dt0x_getOrganizationRepositories;true;return.tags_url is Url;The value ? for the variable return.tags_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iyezy3gd046w_getOrganizationRepositories;false;;;;
+test_t843tzu8ztww_getOrganizationRepositories;false;;;;
+test_qxi8i3pv09pv_getOrganizationRepositories;false;;;;
+test_rhufoqxbu7uc_getOrganizationRepositories;true;return.branches_url is Url;The value https/*://api.github.com/repos/cfpb/inclusive-gh-review/branches{/branch} for the variable return.branches_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1h7wzdurldp2s_getOrganizationRepositories;true;LENGTH(return.created_at)==20;Expected length of 20 for variable return.created_at, got 22 instead.;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyajo5qi2y48_getOrganizationRepositories;true;return.stargazers_url is Url;The value fO=c for the variable return.stargazers_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qe75f96w2q7l_getOrganizationRepositories;false;;;;
+test_urrxlz0ep8oo_getOrganizationRepositories;true;return.owner.type == "Organization";Expected one of [Organization], got Organi1zation;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_skycrxw90l6g_getOrganizationRepositories;true;return.permissions.pull == true;Expected one of [1], got 0;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_rkxbgfstmmgm_getOrganizationRepositories;false;;;;
+test_urpnri7hbpdf_getOrganizationRepositories;true;return.owner.html_url is Url;The value ek,v" for the variable return.owner.html_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rh4y83jpfn07_getOrganizationRepositories;false;;;;
+test_qeey1fhsstph_getOrganizationRepositories;true;return.url is a substring of return.blobs_url;Expected value of return.url (https://api.github.com/repos/github/media) to be a substring of return.blobs_url (https://api.github.com/reposngithub/media/git/blobs{/sha});main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1jed6fonzv7ty_getOrganizationRepositories;true;return.owner.followers_url is Url;The value https,://api.github.com/users/codespecs/followers for the variable return.owner.followers_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vf0v471dcjsk_getOrganizationRepositories;true;return.owner.type == "Organization";Expected one of [Organization], got H;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sknbm4bxrm7p_getOrganizationRepositories;true;return.milestones_url is Url;The value %KML for the variable return.milestones_url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_us064sdc7v3t_getOrganizationRepositories;true;return.owner.url is Url;The value h*ttps://api.github.com/users/cloudflare for the variable return.owner.url is not a valid URL;main.orgs{org}repos.getOrganizationRepositories&200(main.getOrganizationRepositories&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jyiuzqsyq985_getOrganizationRepositories;false;;;;

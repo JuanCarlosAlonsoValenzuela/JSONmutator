@@ -35,7 +35,8 @@ public class GenerateAssertions {
     public static List<String> valuesToConsiderNull = Arrays.asList("N/A", "", null);
 
     private static String invariantsPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/GitHub_GetOrganizationRepositories_50.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/mutated_testCases.csv";
+
     private static String header = "testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType";
 
 
@@ -206,7 +207,7 @@ public class GenerateAssertions {
         return variables;
     }
 
-    private static String getOutputPath(String filename, String folder) {
+    public static String getOutputPath(String filename, String folder) {
         Path path = java.nio.file.Paths.get(folder);      // openApiSpecPath
         Path dir = path.getParent();
         Path fn = path.getFileSystem().getPath(filename);

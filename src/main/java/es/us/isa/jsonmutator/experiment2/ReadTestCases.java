@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static es.us.isa.jsonmutator.experiment2.readTestCases.CSVManager.getCSVRecord;
-import static es.us.isa.jsonmutator.experiment2.main.getJsonNode;
+import static es.us.isa.jsonmutator.experiment2.MutateTestCases.getJsonNode;
 
 public class ReadTestCases {
 

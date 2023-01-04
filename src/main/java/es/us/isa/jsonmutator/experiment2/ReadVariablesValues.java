@@ -13,7 +13,7 @@ import java.util.*;
 import static es.us.isa.jsonmutator.experiment2.ReadInvariants.getInvariantsDataFromPath;
 import static es.us.isa.jsonmutator.experiment2.ReadTestCases.readTestCasesFromPath;
 import static es.us.isa.jsonmutator.experiment2.generateAssertions.DeclsVariable.getEnterParameterValue;
-import static es.us.isa.jsonmutator.experiment2.main.getJsonNode;
+import static es.us.isa.jsonmutator.experiment2.MutateTestCases.getJsonNode;
 
 public class ReadVariablesValues {
 
