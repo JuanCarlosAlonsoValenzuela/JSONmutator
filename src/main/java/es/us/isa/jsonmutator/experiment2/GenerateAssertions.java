@@ -8,8 +8,11 @@ import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
 import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
+import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.*;
 import java.util.regex.Matcher;
@@ -33,6 +36,7 @@ public class GenerateAssertions {
 
     private static String invariantsPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/invariants_100_modified.csv";
     private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/GitHub_GetOrganizationRepositories_50.csv";
+    private static String header = "testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType";
 
 
     public static void main(String[] args) throws Exception {
@@ -40,11 +44,25 @@ public class GenerateAssertions {
         List<TestCase> testCases = readTestCasesFromPath(testCasesPath);
         List<InvariantData> invariantDataList = getInvariantsDataFromPath(invariantsPath);
 
+        String csvPath = getOutputPath(testCases.get(0).getOperationId() + "_mutationReport.csv", testCasesPath);
+
+        // Create csv writer for the report
+        FileWriter csvFile = new FileWriter(csvPath);
+        BufferedWriter csvBuffer = new BufferedWriter(csvFile);
+
+        // Write csv header
+        csvBuffer.write(header);
+
         // TODO: Manage the exceptions properly
         // For every test case, check all the assertions
         for(TestCase testCase: testCases) {
+            // Generate test case report
             MutantTestCaseReport mutantTestCaseReport = generateAssertions(testCase, invariantDataList);
-            // TODO: Add the assertion report as row to the report csv file
+
+            // Add the assertion report as row to the report csv file
+            // COLUMNS: testCaseId; killed(boolean); killedBy_invariant; description; killedBy_pptname; killedBy_invariantType
+            csvBuffer.newLine();
+            csvBuffer.write(getReportCsvRow(testCase, mutantTestCaseReport));
 
 //            if(mutantTestCaseReport.isKilled()) {
             System.out.println("MUTANT TEST CASE REPORT:");
@@ -55,6 +73,18 @@ public class GenerateAssertions {
 
         }
 
+        csvBuffer.close();
+
+    }
+
+    // TODO: Move to a different class
+    private static String getReportCsvRow(TestCase testCase, MutantTestCaseReport mutantTestCaseReport) {
+        if(mutantTestCaseReport.isKilled()) {
+            return testCase.getTestCaseId() + ";" + mutantTestCaseReport.isKilled() + ";" + mutantTestCaseReport.getKilledBy().getInvariant() + ";" + mutantTestCaseReport.getDescription() + ";" +
+                    mutantTestCaseReport.getKilledBy().getPptname() + ";" + mutantTestCaseReport.getKilledBy().getInvariantType();
+        } else {
+            return testCase.getTestCaseId() + ";" + mutantTestCaseReport.isKilled() + ";" + ";" + ";" + ";";
+        }
     }
 
 
@@ -174,6 +204,15 @@ public class GenerateAssertions {
             }
         });
         return variables;
+    }
+
+    private static String getOutputPath(String filename, String folder) {
+        Path path = java.nio.file.Paths.get(folder);      // openApiSpecPath
+        Path dir = path.getParent();
+        Path fn = path.getFileSystem().getPath(filename);
+        Path target = (dir == null) ? fn : dir.resolve(fn);
+
+        return target.toString();
     }
 
 
