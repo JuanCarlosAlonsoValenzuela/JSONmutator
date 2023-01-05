@@ -5,7 +5,7 @@ import org.json.simple.JSONObject;
 
 import java.util.*;
 
-import static es.us.isa.jsonmutator.experiment2.MutateTestCases.stringsToConsiderAsNull;
+import static es.us.isa.jsonmutator.experiment2.GenerateAssertions.stringsToConsiderAsNull;
 import static es.us.isa.jsonmutator.experiment2.readTestCases.JSONManager.stringToJsonObject;
 
 

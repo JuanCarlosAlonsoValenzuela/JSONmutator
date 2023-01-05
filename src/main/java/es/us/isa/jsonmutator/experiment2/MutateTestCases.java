@@ -17,24 +17,30 @@ import static org.junit.Assert.fail;
 
 public class MutateTestCases {
 
-    public static String[] stringsToConsiderAsNull = {"N/A"};
-
-    private static ObjectMapper objectMapper;
-    private static JsonNode jsonNode = null;
-
-    // Test cases file to mutate
-    private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/GitHub_GetOrganizationRepositories_50.csv";
+//    public static void main(String[] args) throws IOException {
+//        // Create "test" directory first
+//        mutateTestCases("test/mutated_test.csv", "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv");
+//    }
 
 
-    public static void main(String[] args) throws IOException {
-        String csvPath = getOutputPath("mutated_testCases.csv", testCasesPath);
+    // TODO: Further configure mutation options (e.g., mutate x times)
+    // Mutates a set of test cases and returns its path
+    public static String mutateTestCases(String mutatedFileName, String testCasesPath) throws IOException {
+
+        String mutatedCsvPath = getOutputPath(mutatedFileName, testCasesPath);
 
         // Create csv writer for the mutated test cases
-        FileWriter csvFile = new FileWriter(csvPath);
+        FileWriter csvFile = null;
+        try {
+            csvFile = new FileWriter(mutatedCsvPath);
+        } catch (IOException e) {
+            throw new IOException("Could not read the CSV file");
+        }
+
         BufferedWriter csvBuffer = new BufferedWriter(csvFile);
 
         // Create objectMapper
-        objectMapper = new ObjectMapper();
+        ObjectMapper objectMapper = new ObjectMapper();
 
         // Read test cases file
         List<List<String>> testCases = readCSV(testCasesPath, true, ',');
@@ -51,6 +57,7 @@ public class MutateTestCases {
             String responseBody = testCase.get(responseBodyIndex);
 
             // Read JSON file
+            JsonNode jsonNode = null;
             try{
                 jsonNode = objectMapper.readTree(responseBody);
             } catch (IOException e) {
@@ -92,6 +99,10 @@ public class MutateTestCases {
         }
 
         csvBuffer.close();
+
+
+        // Returns the path of the mutated file
+        return mutatedCsvPath;
 
     }
 

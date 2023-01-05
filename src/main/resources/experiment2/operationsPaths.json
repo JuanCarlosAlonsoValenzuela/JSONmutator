@@ -1,0 +1,8 @@
+[
+  {
+    "operationName" : "OMDB-byIdOrTitle",
+    "testCasesPath" : "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv",
+    "invariantsPath" : "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_100_modified.csv",
+    "stringsToConsiderAsNull": ["N/A"]
+  }
+]

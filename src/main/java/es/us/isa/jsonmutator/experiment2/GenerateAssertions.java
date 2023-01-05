@@ -32,10 +32,12 @@ public class GenerateAssertions {
     //      Generate an assertion
     //      Consider null values
 
-    public static List<String> valuesToConsiderNull = Arrays.asList("N/A", "", null);
+
+    // TODO: Remove and convert into parameter
+    public static List<String> stringsToConsiderAsNull = Arrays.asList("N/A", "", null);
 
     private static String invariantsPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/mutated_testCases.csv";
+    private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/GitHub_GetOrganizationRepositories_50.csv";
 
     private static String header = "testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType";
 
@@ -130,7 +132,7 @@ public class GenerateAssertions {
 
             // Read configuration file
             ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode jsonProperties = objectMapper.readTree(new String(Files.readAllBytes(Paths.get("src/main/java/es/us/isa/jsonmutator/experiment2/assertionFunctions.json"))));
+            JsonNode jsonProperties = objectMapper.readTree(new String(Files.readAllBytes(Paths.get("src/main/resources/experiment2/assertionFunctions.json"))));
 
             // Obtain the function assigned to the string value
             String functionName = jsonProperties.get(invariantType).textValue();
@@ -262,7 +264,7 @@ public class GenerateAssertions {
         for(String variableName: variableValuesMap.keySet()) {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
-                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) { // Check that the value is not null
+                if(variableValue != null && !stringsToConsiderAsNull.contains(variableValue.textValue())) { // Check that the value is not null
                     String variableValueString = variableValue.textValue(); // Convert to string (textNode)
                     if(!acceptedValues.contains(variableValueString)) {
                         // Return false if assertion is violated
@@ -297,7 +299,7 @@ public class GenerateAssertions {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
                 // Take null values into account
-                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                if(variableValue != null && !stringsToConsiderAsNull.contains(variableValue.textValue())) {
                     // Obtain value length
                     int variableValueLength = variableValue.textValue().length();
 
@@ -331,7 +333,7 @@ public class GenerateAssertions {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
                 // Take null values into account
-                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                if(variableValue != null && !stringsToConsiderAsNull.contains(variableValue.textValue())) {
                     String variableValueString = variableValue.textValue();
                     Matcher matcher = pattern.matcher(variableValueString);
 
@@ -365,7 +367,7 @@ public class GenerateAssertions {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
                 // Take null values into account
-                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                if(variableValue != null && !stringsToConsiderAsNull.contains(variableValue.textValue())) {
                     String variableValueString = variableValue.textValue();
                     Matcher matcher = pattern.matcher(variableValueString);
 
@@ -398,7 +400,7 @@ public class GenerateAssertions {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
                 // Take null values into account
-                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                if(variableValue != null && !stringsToConsiderAsNull.contains(variableValue.textValue())) {
                     String variableValueString = variableValue.textValue();
                     Matcher matcher = pattern.matcher(variableValueString);
 
@@ -432,7 +434,7 @@ public class GenerateAssertions {
             List<JsonNode> variableValues = variableValuesMap.get(variableName);
             for(JsonNode variableValue: variableValues) {
                 // Take null values into account
-                if(variableValue != null && !valuesToConsiderNull.contains(variableValue.textValue())) {
+                if(variableValue != null && !stringsToConsiderAsNull.contains(variableValue.textValue())) {
                     String variableValueString = variableValue.textValue();
 
                     if(variableValueString.length() != 0) {
@@ -861,14 +863,14 @@ public class GenerateAssertions {
             JsonNode firstVariableValue = firstVariableValueList.get(0);
 
             // Take null values into account
-            if(firstVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())) {
+            if(firstVariableValue != null && !stringsToConsiderAsNull.contains(firstVariableValue.textValue())) {
                 // Get value as string
                 String firstVariableValueString = firstVariableValue.textValue();
                 // Check that the assertion is satisfied for every possible value of the RETURN variable
                 for(JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
 
                     // Take null values into account
-                    if(secondVariableValue != null && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+                    if(secondVariableValue != null && !stringsToConsiderAsNull.contains(secondVariableValue.textValue())) {
                         String secondVariableValueString = secondVariableValue.textValue();
                         String description = twoStringEqualAssertion(firstVariableValueString, secondVariableValueString,
                                 firstVariableName, secondVariableName);
@@ -895,8 +897,8 @@ public class GenerateAssertions {
                 JsonNode secondVariableValue = secondVariableValueList.get(i);
 
                 // Take null values into account
-                if(firstVariableValue != null && secondVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())
-                        && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+                if(firstVariableValue != null && secondVariableValue != null && !stringsToConsiderAsNull.contains(firstVariableValue.textValue())
+                        && !stringsToConsiderAsNull.contains(secondVariableValue.textValue())) {
                     String firstVariableValueString = firstVariableValue.textValue();
                     String secondVariableValueString = secondVariableValue.textValue();
 
@@ -946,14 +948,14 @@ public class GenerateAssertions {
             JsonNode firstVariableValue = firstVariableValueList.get(0);
 
             // Take null values into account
-            if(firstVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())) {
+            if(firstVariableValue != null && !stringsToConsiderAsNull.contains(firstVariableValue.textValue())) {
                 // Get value as string
                 String firstVariableValueString = firstVariableValue.textValue();
                 // Check that the assertion is satisfied for every possible value of the RETURN variable
                 for(JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
 
                     // Take null values into account
-                    if(secondVariableValue != null && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+                    if(secondVariableValue != null && !stringsToConsiderAsNull.contains(secondVariableValue.textValue())) {
                         String secondVariableValueString = secondVariableValue.textValue();
                         String description = twoStringSubstringAssertion(firstVariableValueString, secondVariableValueString,
                                 firstVariableName, secondVariableName);
@@ -981,8 +983,8 @@ public class GenerateAssertions {
                 JsonNode secondVariableValue = secondVariableValueList.get(i);
 
                 // Take null values into account
-                if(firstVariableValue != null && secondVariableValue != null && !valuesToConsiderNull.contains(firstVariableValue.textValue())
-                        && !valuesToConsiderNull.contains(secondVariableValue.textValue())) {
+                if(firstVariableValue != null && secondVariableValue != null && !stringsToConsiderAsNull.contains(firstVariableValue.textValue())
+                        && !stringsToConsiderAsNull.contains(secondVariableValue.textValue())) {
                     String firstVariableValueString = firstVariableValue.textValue();
                     String secondVariableValueString = secondVariableValue.textValue();
 
