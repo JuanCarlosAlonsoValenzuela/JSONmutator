@@ -3,25 +3,28 @@ package es.us.isa.jsonmutator.experiment2;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+import org.apache.commons.io.FileUtils;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 
+import static es.us.isa.jsonmutator.experiment2.GenerateAssertions.getOutputPath;
 import static es.us.isa.jsonmutator.experiment2.MutateTestCases.mutateTestCases;
 
 public class MainExperiment2 {
 
     private static int nExecutions = 10;
     private static String mutatedTestCasesFolder = "mutated_test_cases";
-    private static String mutationReportFolder = "mutation_report";
+    private static String mutationReportFolder = "mutation_reports";
 
 
     public static void main(String[] args) throws IOException {
 
-        // TODO: Read invariants and test cases paths from JSON file
+        // Read invariants and test cases paths from JSON file
         ObjectMapper objectMapper = new ObjectMapper();
         ArrayNode operationPathList = null;
         try {
@@ -42,21 +45,47 @@ public class MainExperiment2 {
             String operationName = operationPath.get("operationName").textValue();
             String testCasesPath = operationPath.get("testCasesPath").textValue();
             String invariantsPath = operationPath.get("invariantsPath").textValue();
-            // TODO: IMPLEMENT (AND REMOVE PUBLIC STATIC VARIABLE)
+
             List<String> stringsToConsiderAsNull = new ArrayList<>();
+            JsonNode jsonNullStrings = operationPath.get("stringsToConsiderAsNull");
+            if(jsonNullStrings.isArray()) {
+              for(JsonNode node: jsonNullStrings) {
+                  stringsToConsiderAsNull.add(node.textValue());
+              }
+            }
 
-            // TODO: REMOVE FOLDER BEFOREHAND
+            // Remove directories if exist
+            File mutatedTestCasesFile = new File(getOutputPath(mutatedTestCasesFolder, testCasesPath));
+            File mutationReportFile = new File(getOutputPath(mutationReportFolder, testCasesPath));
 
+            FileUtils.deleteDirectory(mutatedTestCasesFile);
+            FileUtils.deleteDirectory(mutationReportFile);
+
+            // Create empty directories
+            mutatedTestCasesFile.mkdir();
+            mutationReportFile.mkdir();
+
+            List<Double> mutationScores = new ArrayList<>();
             // Generate and kill mutants, total of nExecutions
             for(int i = 0; i<nExecutions; i++) {
-                // Generate mutated_testCases.csv
+                // Generate mutated_testCases.csv, returns the path of the mutants file
                 String mutatedTestCasesPath = mutateTestCases(mutatedTestCasesFolder + "/" + operationName + "_mutants_" + i + ".csv", testCasesPath);
 
                 // Generate mutation reports
-                
-
+                GenerateAssertions generateAssertions = new GenerateAssertions(mutatedTestCasesPath, invariantsPath, stringsToConsiderAsNull);
+                try {
+                    // Returns the percentage of mutants killed and generates a report in csv format
+                    Double percentageKilled = generateAssertions.generateAssertions(mutationReportFolder + "/" + operationName + "_mutation_report_" + i + ".csv");
+                    mutationScores.add(percentageKilled);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
 
             }
+            // Mutation scores for 10 executions
+            System.out.println(mutationScores);
+            Double averageMutationScore = mutationScores.stream().mapToDouble(val ->val).average().orElse(0.0);
+            System.out.println(averageMutationScore);
 
 
 
@@ -65,16 +94,8 @@ public class MainExperiment2 {
 
 
 
-
-
-        // TODO: For every mutated_testCases.csv, generate a mutation report (see GenerateAssertions.java)
-
-        // TODO: Compute the average mutation score
-
-
         // TODO: Generate report as Table
 
-        // TODO: ADD STRINGS TO CONSIDER AS NULL
 
 
     }

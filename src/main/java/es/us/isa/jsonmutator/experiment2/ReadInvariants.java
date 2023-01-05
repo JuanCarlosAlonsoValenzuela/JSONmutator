@@ -11,7 +11,7 @@ import static es.us.isa.jsonmutator.experiment2.readTestCases.CSVManager.readCSV
 public class ReadInvariants {
 
 
-    public static List<InvariantData> getInvariantsDataFromPath(String invariantsPath) throws IOException {
+    public static List<InvariantData> getInvariantsDataFromPath(String invariantsPath) {
 
         // Read the csv file as a list of rows
         List<List<String>> rows = readCSV(invariantsPath, true, ';');
@@ -20,7 +20,12 @@ public class ReadInvariants {
 
         rows = rows.subList(1, rows.size());
 
-        InvariantDataFileManager invariantDataFileManager = new InvariantDataFileManager(header);
+        InvariantDataFileManager invariantDataFileManager = null;
+        try {
+            invariantDataFileManager = new InvariantDataFileManager(header);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
         List<InvariantData> invariantsData = invariantDataFileManager.getInvariantsData(rows);
 

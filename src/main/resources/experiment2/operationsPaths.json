@@ -4,5 +4,23 @@
     "testCasesPath" : "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv",
     "invariantsPath" : "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_100_modified.csv",
     "stringsToConsiderAsNull": ["N/A"]
+  },
+  {
+    "operationName" : "OMDB-bySearch",
+    "testCasesPath" : "src/test/resources/test_suites/OMDb/bySearch/OMDb_bySearch_50.csv",
+    "invariantsPath" : "src/test/resources/test_suites/OMDb/bySearch/invariants_100_modified.csv",
+    "stringsToConsiderAsNull" : ["N/A"]
+  },
+  {
+    "operationName": "Spotify-createPlaylist",
+    "testCasesPath": "src/test/resources/test_suites/Spotify/createPlaylist/Spotify_CreatePlaylist_50.csv",
+    "invariantsPath": "src/test/resources/test_suites/Spotify/createPlaylist/invariants_100_modified.csv",
+    "stringsToConsiderAsNull": []
+  },
+  {
+    "operationName": "Spotify-getAlbumTracks",
+    "testCasesPath": "src/test/resources/test_suites/Spotify/getAlbumTracks/Spotify_GetAlbumTracks_50.csv",
+    "invariantsPath": "src/test/resources/test_suites/Spotify/getAlbumTracks/invariants_100_modified.csv",
+    "stringsToConsiderAsNull": []
   }
 ]

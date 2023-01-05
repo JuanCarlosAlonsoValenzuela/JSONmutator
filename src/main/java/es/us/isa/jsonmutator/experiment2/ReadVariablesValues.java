@@ -92,7 +92,6 @@ public class ReadVariablesValues {
         } else if(variableName.startsWith("size(return.")) {
             // [] characters and remove size()
             String newVariableName = variableName.substring("size(".length(), variableName.length()-1);
-            System.out.println(newVariableName);
             List<JsonNode> arrays = getValueOfReturnVariable(invariantData, testCase, newVariableName);
             for(JsonNode array: arrays) {
                 // Add the size of the array to the list to return

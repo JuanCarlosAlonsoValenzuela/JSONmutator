@@ -10,6 +10,7 @@ import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
+import java.io.IOException;
 import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -25,29 +26,30 @@ import static es.us.isa.jsonmutator.experiment2.ReadVariablesValues.jsonNodeToLi
 
 public class GenerateAssertions {
 
-    // Given a test case/operation
-    // Given a set of invariants
-    // For each invariant
-    //      Extract the variable values
-    //      Generate an assertion
-    //      Consider null values
-
-
-    // TODO: Remove and convert into parameter
-    public static List<String> stringsToConsiderAsNull = Arrays.asList("N/A", "", null);
-
-    private static String invariantsPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/invariants_100_modified.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/GitHub/getOrganizationRepositories/GitHub_GetOrganizationRepositories_50.csv";
 
     private static String header = "testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType";
 
+    private String mutatedTestCasesPath;
+    private String invariantsPath;
+    private List<String> stringsToConsiderAsNull;
 
-    public static void main(String[] args) throws Exception {
 
-        List<TestCase> testCases = readTestCasesFromPath(testCasesPath);
+    public GenerateAssertions(String mutatedTestCasesPath, String invariantsPath, List<String> stringsToConsiderAsNull) {
+        this.mutatedTestCasesPath = mutatedTestCasesPath;
+        this.invariantsPath = invariantsPath;
+
+        stringsToConsiderAsNull.add(null);
+        this.stringsToConsiderAsNull = stringsToConsiderAsNull;
+    }
+
+    public Double generateAssertions(String destinationPath) throws Exception {
+
+        List<TestCase> testCases = readTestCasesFromPath(mutatedTestCasesPath);
         List<InvariantData> invariantDataList = getInvariantsDataFromPath(invariantsPath);
 
-        String csvPath = getOutputPath(testCases.get(0).getOperationId() + "_mutationReport.csv", testCasesPath);
+        String csvPath = getOutputPath(destinationPath, invariantsPath);
+
+        Double nKilled = 0.0;
 
         // Create csv writer for the report
         FileWriter csvFile = new FileWriter(csvPath);
@@ -56,32 +58,31 @@ public class GenerateAssertions {
         // Write csv header
         csvBuffer.write(header);
 
-        // TODO: Manage the exceptions properly
         // For every test case, check all the assertions
         for(TestCase testCase: testCases) {
             // Generate test case report
-            MutantTestCaseReport mutantTestCaseReport = generateAssertions(testCase, invariantDataList);
+            MutantTestCaseReport mutantTestCaseReport = generateAssertionsOfSingleTestCase(testCase, invariantDataList);
+
+            if(mutantTestCaseReport.isKilled()){
+                nKilled = nKilled + 1.0;
+            }
 
             // Add the assertion report as row to the report csv file
             // COLUMNS: testCaseId; killed(boolean); killedBy_invariant; description; killedBy_pptname; killedBy_invariantType
             csvBuffer.newLine();
             csvBuffer.write(getReportCsvRow(testCase, mutantTestCaseReport));
 
-//            if(mutantTestCaseReport.isKilled()) {
-            System.out.println("MUTANT TEST CASE REPORT:");
-            System.out.println("Killed: " + mutantTestCaseReport.isKilled());
-            System.out.println("Killed by: " + mutantTestCaseReport.getKilledBy());
-            System.out.println("Description: " + mutantTestCaseReport.getDescription());
-//            }
-
         }
 
         csvBuffer.close();
 
+        return nKilled/testCases.size();
+
     }
 
+
     // TODO: Move to a different class
-    private static String getReportCsvRow(TestCase testCase, MutantTestCaseReport mutantTestCaseReport) {
+    private String getReportCsvRow(TestCase testCase, MutantTestCaseReport mutantTestCaseReport) {
         if(mutantTestCaseReport.isKilled()) {
             return testCase.getTestCaseId() + ";" + mutantTestCaseReport.isKilled() + ";" + mutantTestCaseReport.getKilledBy().getInvariant() + ";" + mutantTestCaseReport.getDescription() + ";" +
                     mutantTestCaseReport.getKilledBy().getPptname() + ";" + mutantTestCaseReport.getKilledBy().getInvariantType();
@@ -92,21 +93,16 @@ public class GenerateAssertions {
 
 
     // For all the invariants of a test case
-    private static MutantTestCaseReport generateAssertions(TestCase testCase, List<InvariantData> invariantDataList) throws Exception {
+    private MutantTestCaseReport generateAssertionsOfSingleTestCase(TestCase testCase, List<InvariantData> invariantDataList) throws Exception {
 
         // Check whether any of the invariants is able to kill the mutant
         for(InvariantData invariantData: invariantDataList) {
             try {
-                System.out.println(invariantData.getInvariant());
+//                System.out.println(invariantData.getInvariant());
                 // If a single invariant is violated, the mutant is killed
                 // Return AssertionReport where killed=true and killedBy=invariantData
                 MutantTestCaseReport mutantTestCaseReport = generateAssertionsForSingleInvariantData(testCase, invariantData);
-                // TODO: BEGIN DELETE
-                Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
-                System.out.println("VARIABLES MAP");
-                System.out.println(variableValuesMap);
-                System.out.println("#########################################");
-                // TODO: END DELETE
+
                 if(mutantTestCaseReport.isKilled()) {
                     return mutantTestCaseReport;
                 }
@@ -123,7 +119,7 @@ public class GenerateAssertions {
     }
 
     // For a single invariant (InvariantData)
-    private static MutantTestCaseReport generateAssertionsForSingleInvariantData(TestCase testCase, InvariantData invariantData) throws Exception {
+    private MutantTestCaseReport generateAssertionsForSingleInvariantData(TestCase testCase, InvariantData invariantData) throws Exception {
 
         String invariantType = invariantData.getInvariantType();
 
@@ -139,11 +135,9 @@ public class GenerateAssertions {
 
             // Invoke the corresponding assertion function
 //            Method method = findAssertionMethod(functionName);    // TODO: IMPLEMENT
-            Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class);
-            AssertionReport assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData);
+            Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class, List.class);
+            AssertionReport assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData, stringsToConsiderAsNull);
 
-            System.out.println(assertionReport.isSatisfied());
-            System.out.println("Description: " + assertionReport.getDescription());
 
             // If the Assertion is not satisfied
             if(!assertionReport.isSatisfied()) {
@@ -222,7 +216,7 @@ public class GenerateAssertions {
     // TODO: Move to a different class/package
     // ############################# UNARY #############################
     // ############################# UNARY STRING #############################
-    public static AssertionReport oneOfStringAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport oneOfStringAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         List<String> variables = invariantData.getVariables();
@@ -283,7 +277,7 @@ public class GenerateAssertions {
 
     }
 
-    public static AssertionReport fixedLengthStringAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport fixedLengthStringAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         int expectedLength = Integer.parseInt(invariant.split("==")[1].trim());
@@ -318,7 +312,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    public static AssertionReport isUrlAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport isUrlAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
         // Check that there is only one variable
@@ -352,7 +346,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    public static AssertionReport isDateYYYYMMDD(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport isDateYYYYMMDD(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
         // Check that there is only one variable
@@ -385,7 +379,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    public static AssertionReport isTimestampYYYYMMHHThhmmssmm(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport isTimestampYYYYMMHHThhmmssmm(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
         // Check that there is only one variable
@@ -419,7 +413,7 @@ public class GenerateAssertions {
     }
 
 
-    public static AssertionReport isNumericAssertion(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport isNumericAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
         // Check that there is only one variable
@@ -456,7 +450,7 @@ public class GenerateAssertions {
     }
 
     // ############################# UNARY STRING SEQUENCE #############################
-    public static AssertionReport stringSequenceEltOneOfString(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport stringSequenceEltOneOfString(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         List<String> variables = invariantData.getVariables();
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -504,7 +498,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    public static AssertionReport sequenceFixedLengthString(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport sequenceFixedLengthString(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         int expectedLength = Integer.parseInt(invariant.split("have LENGTH=")[1].trim());
@@ -525,11 +519,13 @@ public class GenerateAssertions {
                     ArrayNode arrayNode = (ArrayNode) variableValue;
                     // Iterate over arrayNode
                     for(JsonNode item: arrayNode) {
-                        int itemLength = item.textValue().length();
-                        if(itemLength != expectedLength) {
-                            String description = "The length of all the elements of " + variableName + " should be " + expectedLength
-                                    + ", but the length of the element " + item.textValue() + " is " + itemLength;
-                            return new AssertionReport(description);
+                        if(item != null && !stringsToConsiderAsNull.contains(item.textValue())) {
+                            int itemLength = item.textValue().length();
+                            if(itemLength != expectedLength) {
+                                String description = "The length of all the elements of " + variableName + " should be " + expectedLength
+                                        + ", but the length of the element " + item.textValue() + " is " + itemLength;
+                                return new AssertionReport(description);
+                            }
                         }
                     }
 
@@ -541,7 +537,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    public static AssertionReport sequenceStringElementsAreUrl(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport sequenceStringElementsAreUrl(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
         // Check that there is only one variable
@@ -583,7 +579,7 @@ public class GenerateAssertions {
     }
 
     // ############################# UNARY SCALAR #############################
-    public static AssertionReport unaryScalarLowerBound(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport unaryScalarLowerBound(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         int lowerBound = Integer.parseInt(invariant.split(">=")[1].trim());
@@ -617,7 +613,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    public static AssertionReport oneOfScalar(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport oneOfScalar(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         List<String> variables = invariantData.getVariables();
@@ -683,7 +679,7 @@ public class GenerateAssertions {
     }
 
     // ############################# UNARY FLOAT #############################
-    public static AssertionReport oneOfFloat(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport oneOfFloat(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         List<String> variables = invariantData.getVariables();
@@ -736,7 +732,7 @@ public class GenerateAssertions {
         return new AssertionReport();
     }
 
-    public static AssertionReport unaryScalarLowerBoundFloat(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport unaryScalarLowerBoundFloat(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         float lowerBound = Float.parseFloat(invariant.split(">=")[1].trim());
@@ -770,7 +766,7 @@ public class GenerateAssertions {
 
 
     // ############################# UNARY SEQUENCE #############################
-    public static AssertionReport sequenceOneOfSequence(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport sequenceOneOfSequence(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         String arrayValue = invariant.split("==")[1].trim();
@@ -806,7 +802,7 @@ public class GenerateAssertions {
     }
 
 
-    public static AssertionReport sequenceOneOfStringSequence(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport sequenceOneOfStringSequence(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         String invariant = invariantData.getInvariant();
         String arrayValue = invariant.split("==")[1].trim();
@@ -844,7 +840,7 @@ public class GenerateAssertions {
 
     // ############################# BINARY #############################
     // ############################# BINARY STRING #############################
-    public static AssertionReport twoStringEqual(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport twoStringEqual(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         List<String> variables = invariantData.getVariables();
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -929,7 +925,7 @@ public class GenerateAssertions {
     }
 
 
-    public static AssertionReport twoStringSubString(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport twoStringSubString(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
         List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
 
@@ -1018,7 +1014,7 @@ public class GenerateAssertions {
     }
 
     // ############################# BINARY SCALAR #############################
-    public static AssertionReport twoScalarIntGreaterEqual(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport twoScalarIntGreaterEqual(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -1098,7 +1094,7 @@ public class GenerateAssertions {
     }
 
 
-    public static AssertionReport twoScalarIntGreaterThan(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport twoScalarIntGreaterThan(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -1197,7 +1193,7 @@ public class GenerateAssertions {
         return null;
     }
 
-    public static AssertionReport twoScalarIntLessThan(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport twoScalarIntLessThan(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -1278,7 +1274,7 @@ public class GenerateAssertions {
     }
 
 
-    public static AssertionReport twoScalarIntEqual(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport twoScalarIntEqual(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         List<String> variables = invariantData.getVariables();
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -1362,7 +1358,7 @@ public class GenerateAssertions {
     }
 
     // ############################# BINARY SEQUENCE STRING #############################
-    public static AssertionReport sequenceStringMemberString(TestCase testCase, InvariantData invariantData) throws Exception {
+    public static AssertionReport sequenceStringMemberString(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
 
         List<String> sortedVariables = getSorted(invariantData.getVariables(), invariantData.getInvariant());
         Map<String, List<JsonNode>> variableValuesMap = getVariableValues(testCase, invariantData);
@@ -1483,13 +1479,6 @@ public class GenerateAssertions {
 
         return null;
     }
-
-
-
-
-
-
-
 
 
 

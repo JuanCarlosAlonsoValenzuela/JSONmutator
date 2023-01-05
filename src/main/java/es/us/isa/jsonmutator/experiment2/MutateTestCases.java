@@ -51,6 +51,7 @@ public class MutateTestCases {
         csvBuffer.write(headersString);
 
         int responseBodyIndex = headers.indexOf("responseBody");
+        int bodyParameterIndex = headers.indexOf("bodyParameter");
 
         for(int i=1; i<testCases.size(); i++) {
             List<String> testCase = testCases.get(i);
@@ -85,7 +86,7 @@ public class MutateTestCases {
 
             String row = testCase.get(0);
             for(int j=1; j<testCase.size(); j++){
-                if(j==responseBodyIndex) {
+                if(j==responseBodyIndex || j==bodyParameterIndex) {
                     row = row + "," + escapeCsv(testCase.get(j));
                 } else {
                     row = row + "," + testCase.get(j);

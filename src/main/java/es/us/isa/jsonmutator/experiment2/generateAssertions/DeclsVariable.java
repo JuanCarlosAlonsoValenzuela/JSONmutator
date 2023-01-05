@@ -5,7 +5,6 @@ import org.json.simple.JSONObject;
 
 import java.util.*;
 
-import static es.us.isa.jsonmutator.experiment2.GenerateAssertions.stringsToConsiderAsNull;
 import static es.us.isa.jsonmutator.experiment2.readTestCases.JSONManager.stringToJsonObject;
 
 
@@ -42,9 +41,9 @@ public class DeclsVariable {
         }
 
         // Set value to null if its value should be considered as null
-        if(Arrays.asList(stringsToConsiderAsNull).contains(value)) {
-            value = null;
-        }
+//        if(Arrays.asList(stringsToConsiderAsNull).contains(value)) {
+//            value = null;
+//        }
 
 
         return value;
