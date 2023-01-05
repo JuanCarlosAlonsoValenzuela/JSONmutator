@@ -22,5 +22,11 @@
     "testCasesPath": "src/test/resources/test_suites/Spotify/getAlbumTracks/Spotify_GetAlbumTracks_50.csv",
     "invariantsPath": "src/test/resources/test_suites/Spotify/getAlbumTracks/invariants_100_modified.csv",
     "stringsToConsiderAsNull": []
+  },
+  {
+    "operationName": "Spotify-getArtistAlbums",
+    "testCasesPath": "src/test/resources/test_suites/Spotify/getArtistAlbums/Spotify_GetArtistAlbums_50.csv",
+    "invariantsPath": "src/test/resources/test_suites/Spotify/getArtistAlbums/invariants_100_modified.csv",
+    "stringsToConsiderAsNull": []
   }
 ]

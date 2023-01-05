@@ -17,12 +17,12 @@ import static es.us.isa.jsonmutator.experiment2.MutateTestCases.mutateTestCases;
 
 public class MainExperiment2 {
 
-    private static int nExecutions = 10;
+    private static int nExecutions = 1;
     private static String mutatedTestCasesFolder = "mutated_test_cases";
     private static String mutationReportFolder = "mutation_reports";
 
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws Exception {
 
         // Read invariants and test cases paths from JSON file
         ObjectMapper objectMapper = new ObjectMapper();
@@ -34,9 +34,6 @@ public class MainExperiment2 {
         }
 
         System.out.println(operationPathList);
-
-
-        // TODO: Assert that no mutants are killed in the original file (without mutate)
 
         // For every API operation
         for(JsonNode operationPath: operationPathList) {
@@ -52,6 +49,13 @@ public class MainExperiment2 {
               for(JsonNode node: jsonNullStrings) {
                   stringsToConsiderAsNull.add(node.textValue());
               }
+            }
+
+            // Assert that no mutants are killed in the original file (without mutate)
+            GenerateAssertions originalAssertions = new GenerateAssertions(testCasesPath, invariantsPath, stringsToConsiderAsNull);
+            Double percentageKilledOriginal = originalAssertions.generateAssertions(operationName + "_original_mutation_report.csv");
+            if(percentageKilledOriginal != 0.0) {
+                throw new Exception("The mutation score in the original test suite should be 0%");
             }
 
             // Remove directories if exist

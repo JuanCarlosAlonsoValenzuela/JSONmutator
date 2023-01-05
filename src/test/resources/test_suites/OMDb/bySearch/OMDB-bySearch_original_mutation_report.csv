@@ -1,6 +1,6 @@
 testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType
 test_t4hsevm6fkty_bySearch;false;;;;
-test_vbnglf5u8lkk_bySearch;true;return.Poster is Url;The value N/v for the variable return.Poster is not a valid URL;main..bySearch&200&Search(main.bySearch&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vbnglf5u8lkk_bySearch;false;;;;
 test_uve5gg30rcyu_bySearch;false;;;;
 test_rhivu1wiqfxv_bySearch;false;;;;
 test_1hv8bhhy2xr90_bySearch;false;;;;
@@ -16,7 +16,7 @@ test_s1022wtp4rc4_bySearch;false;;;;
 test_sl3xy75f6r04_bySearch;false;;;;
 test_rhofubfaquy9_bySearch;false;;;;
 test_toig4jehhco3_bySearch;false;;;;
-test_u7zmb5f43393_bySearch;true;return.Response == "True";Expected one of [True], got TrFue;main..bySearch&200(main.bySearch&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7zmb5f43393_bySearch;false;;;;
 test_qe1k8wdjb4mr_bySearch;false;;;;
 test_qxffxzrqa0c6_bySearch;false;;;;
 test_1iynbqklzjwa9_bySearch;false;;;;
@@ -33,19 +33,19 @@ test_qeew3dv73cc5_bySearch;false;;;;
 test_rhgkhxt1ouhv_bySearch;false;;;;
 test_vf0wodfhshgh_bySearch;false;;;;
 test_1iycoxdrbflm9_bySearch;false;;;;
-test_1ib6hkq8egd9y_bySearch;true;return.totalResults is Numeric;The value ejemplo minus for the variable return.totalResults is not a valid number;main..bySearch&200(main.bySearch&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ib6hkq8egd9y_bySearch;false;;;;
 test_1iyfgpj3r1gz8_bySearch;false;;;;
 test_t4hutd5jwa40_bySearch;false;;;;
 test_1ji782boaiqn6_bySearch;false;;;;
 test_skjz9ip0drnd_bySearch;false;;;;
 test_t4a0knp8ko69_bySearch;false;;;;
-test_1jed619qbazj8_bySearch;true;return.Poster is Url;The value ejemplo minus for the variable return.Poster is not a valid URL;main..bySearch&200&Search(main.bySearch&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jed619qbazj8_bySearch;false;;;;
 test_1k1r7kq27qsl1_bySearch;false;;;;
-test_u8b7ewpr9et1_bySearch;true;return.Response == "True";Expected one of [True], got ;main..bySearch&200(main.bySearch&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u8b7ewpr9et1_bySearch;false;;;;
 test_rhg2w6pwq8tw_bySearch;false;;;;
-test_qe3ujxffzlnq_bySearch;true;return.Poster is Url;The value G9gsFErSUE for the variable return.Poster is not a valid URL;main..bySearch&200&Search(main.bySearch&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qe3ujxffzlnq_bySearch;false;;;;
 test_us3i6p96hpb6_bySearch;false;;;;
-test_qdss5ncb2y42_bySearch;true;return.Poster is Url;The value VJ5d4ICz for the variable return.Poster is not a valid URL;main..bySearch&200&Search(main.bySearch&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qdss5ncb2y42_bySearch;false;;;;
 test_1iv3tn5k1ypth_bySearch;false;;;;
 test_1iyqk9oj6j7zo_bySearch;false;;;;
-test_us06j6xz8bas_bySearch;true;return.Poster is Url;The value k4}H3REr for the variable return.Poster is not a valid URL;main..bySearch&200&Search(main.bySearch&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_us06j6xz8bas_bySearch;false;;;;
