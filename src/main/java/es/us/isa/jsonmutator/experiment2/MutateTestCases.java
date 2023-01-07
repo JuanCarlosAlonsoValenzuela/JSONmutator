@@ -54,8 +54,13 @@ public class MutateTestCases {
         int bodyParameterIndex = headers.indexOf("bodyParameter");
 
         for(int i=1; i<testCases.size(); i++) {
+
+            boolean mutatedIsEqual = true;
             List<String> testCase = testCases.get(i);
+
+            // Original response body string
             String responseBody = testCase.get(responseBodyIndex);
+            String mutatedJsonString = null;
 
             // Read JSON file
             JsonNode jsonNode = null;
@@ -67,18 +72,23 @@ public class MutateTestCases {
                 fail();
             }
 
-            // Create mutator
-            JsonMutator jsonMutator = new JsonMutator();
+            while(mutatedIsEqual) {
+                // Create mutator
+                JsonMutator jsonMutator = new JsonMutator();
 
-            // TODO: Enable and disable mutation operators
-            JsonNode mutatedJsonNode = jsonMutator.mutateJson(jsonNode, true);
+                // TODO: Enable and disable mutation operators
+                JsonNode mutatedJsonNode = jsonMutator.mutateJson(jsonNode, true);
 
-            String mutatedJsonString = null;
-            try {
-                mutatedJsonString = objectMapper.writeValueAsString(mutatedJsonNode);
-            } catch (JsonProcessingException e) {
-                e.printStackTrace();
-                fail();
+                try {
+                    // Mutated response body string
+                    mutatedJsonString = objectMapper.writeValueAsString(mutatedJsonNode);
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                    fail();
+                }
+
+                mutatedIsEqual = responseBody.equals(mutatedJsonString);
+
             }
 
             // Rewrite as a separate file
