@@ -33,15 +33,17 @@ public class MainExperiment2 {
             e.printStackTrace();
         }
 
-        System.out.println(operationPathList);
+//        System.out.println(operationPathList);
 
         // For every API operation
         for(JsonNode operationPath: operationPathList) {
-            System.out.println(operationPath);
 
             String operationName = operationPath.get("operationName").textValue();
             String testCasesPath = operationPath.get("testCasesPath").textValue();
             String invariantsPath = operationPath.get("invariantsPath").textValue();
+
+            //            System.out.println(operationPath);
+            System.out.println(operationName);
 
             List<String> stringsToConsiderAsNull = new ArrayList<>();
             JsonNode jsonNullStrings = operationPath.get("stringsToConsiderAsNull");
@@ -87,8 +89,9 @@ public class MainExperiment2 {
 
             }
             // Mutation scores for 10 executions
-            System.out.println(mutationScores);
+//            System.out.println(mutationScores);
             Double averageMutationScore = mutationScores.stream().mapToDouble(val ->val).average().orElse(0.0);
+            System.out.println(mutationScores);
             System.out.println(averageMutationScore);
 
 

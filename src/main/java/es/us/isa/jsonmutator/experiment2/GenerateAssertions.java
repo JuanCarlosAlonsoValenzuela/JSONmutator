@@ -7,6 +7,7 @@ import es.us.isa.jsonmutator.experiment2.generateAssertions.AssertionReport;
 import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport;
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
 import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
+import org.apache.logging.log4j.core.util.JsonUtils;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

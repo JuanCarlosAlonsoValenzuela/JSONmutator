@@ -69,7 +69,7 @@ main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::E
 main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;All the elements of input.price[] have LENGTH=1;daikon.inv.unary.stringsequence.SequenceFixedLengthString;(input.price[..]);0;0;1;0;0;0;0;0
 main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;LENGTH(return.id)==22;daikon.inv.unary.string.FixedLengthString;(return.id);1;0;0;0;0;0;0;0
 main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.is_closed == false;daikon.inv.unary.scalar.OneOfScalar;(return.is_closed);0;1;0;0;0;1;0;0
-main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.phone is Numeric;daikon.inv.unary.string.IsNumeric;(return.phone);1;0;0;0;0;0;0;0
+main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.phone is Numeric;daikon.inv.unary.string.IsNumeric;(return.phone);0;1;0;0;0;1;0;0
 main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.review_count >= 1;daikon.inv.unary.scalar.LowerBound;(return.review_count);0;1;0;0;0;1;0;0
 main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;return.url is Url;daikon.inv.unary.string.IsUrl;(return.url);1;0;0;0;0;0;0;0
 main.businessessearch.getBusinesses&200&businesses(main.getBusinesses&Input):::EXIT;"return.transactions[] elements one of { ""delivery"", ""pickup"", ""restaurant_reservation"" }";daikon.inv.unary.stringsequence.EltOneOfString;(return.transactions[..]);1;0;0;0;0;0;0;0
