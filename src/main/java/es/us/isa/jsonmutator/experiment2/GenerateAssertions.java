@@ -1381,24 +1381,28 @@ public class GenerateAssertions {
             if(firstVariableValue != null) {
                 // Get value as string
                 String firstVariableValueString = firstVariableValue.textValue();
-                // Check that the assertion is satisfied for every possible value of the RETURN variable
-                for(JsonNode secondVariableValue: variableValuesMap.get(secondVariableName)) {
 
-                    // Take null values into account
-                    if(secondVariableValue != null) {
-                        ArrayNode arrayNode = (ArrayNode) secondVariableValue;
+                if (firstVariableValueString != null && !stringsToConsiderAsNull.contains(firstVariableValueString)) {
+                    // Check that the assertion is satisfied for every possible value of the RETURN variable
+                    for (JsonNode secondVariableValue : variableValuesMap.get(secondVariableName)) {
 
-                        List<String> secondVariableList = new ArrayList<>();
-                        // Convert into a list of strings
-                        for(JsonNode item: arrayNode) {
-                            secondVariableList.add(item.textValue());
+                        // Take null values into account
+                        if (secondVariableValue != null) {
+                            ArrayNode arrayNode = (ArrayNode) secondVariableValue;
+
+                            List<String> secondVariableList = new ArrayList<>();
+                            // Convert into a list of strings
+                            for (JsonNode item : arrayNode) {
+                                secondVariableList.add(item.textValue());
+                            }
+
+                            String description = sequenceStringMemberStringAssertion(firstVariableValueString,
+                                    secondVariableList, firstVariableName, secondVariableName);
+                            if (description != null) {
+                                return new AssertionReport(description);
+                            }
                         }
 
-                        String description = sequenceStringMemberStringAssertion(firstVariableValueString,
-                                secondVariableList, firstVariableName, secondVariableName);
-                        if(description != null) {
-                            return new AssertionReport(description);
-                        }
                     }
 
                 }
@@ -1419,10 +1423,13 @@ public class GenerateAssertions {
                     if(firstVariableValue != null) {
                         String firstVariableValueString = firstVariableValue.textValue();
 
-                        String description = sequenceStringMemberStringAssertion(firstVariableValueString,
-                                secondVariableList, firstVariableName, secondVariableName);
-                        if(description != null) {
-                            return new AssertionReport(description);
+                        if(firstVariableValueString != null && !stringsToConsiderAsNull.contains(firstVariableValueString)) {
+
+                            String description = sequenceStringMemberStringAssertion(firstVariableValueString,
+                                    secondVariableList, firstVariableName, secondVariableName);
+                            if(description != null) {
+                                return new AssertionReport(description);
+                            }
                         }
                     }
                 }
@@ -1447,19 +1454,24 @@ public class GenerateAssertions {
                     // First variable as string
                     String firstVariableValueString = firstVariableValue.textValue();
 
-                    // Second variable as list of strings
-                    ArrayNode arrayNode = (ArrayNode) secondVariableValue;
-                    List<String> secondVariableList = new ArrayList<>();
-                    // Convert into a list of strings
-                    for(JsonNode item: arrayNode) {
-                        secondVariableList.add(item.textValue());
+                    if(firstVariableValueString != null && !stringsToConsiderAsNull.contains(firstVariableValueString)) {
+
+                        // Second variable as list of strings
+                        ArrayNode arrayNode = (ArrayNode) secondVariableValue;
+                        List<String> secondVariableList = new ArrayList<>();
+                        // Convert into a list of strings
+                        for(JsonNode item: arrayNode) {
+                            secondVariableList.add(item.textValue());
+                        }
+
+                        String description = sequenceStringMemberStringAssertion(firstVariableValueString,
+                                secondVariableList, firstVariableName, secondVariableName);
+                        if(description != null) {
+                            return new AssertionReport(description);
+                        }
+
                     }
 
-                    String description = sequenceStringMemberStringAssertion(firstVariableValueString,
-                            secondVariableList, firstVariableName, secondVariableName);
-                    if(description != null) {
-                        return new AssertionReport(description);
-                    }
                 }
 
             }

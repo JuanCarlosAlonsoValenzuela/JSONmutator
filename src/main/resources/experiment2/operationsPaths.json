@@ -57,7 +57,7 @@
     "operationName": "Yelp-getBusinesses",
     "testCasesPath": "src/test/resources/test_suites/Yelp/Yelp_testCases.csv",
     "invariantsPath": "src/test/resources/test_suites/Yelp/invariants_100_modified.csv",
-    "stringsToConsiderAsNull": []
+    "stringsToConsiderAsNull": [""]
   },
   {
     "operationName": "YouTube-listVideos",
