@@ -2,67 +2,67 @@
   {
     "operationName": "AmadeusHotel-getHotelOffers",
     "testCasesPath": "src/test/resources/test_suites/AmadeusHotel/AmadeusHotel_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/AmadeusHotel/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/AmadeusHotel/invariants_50_modified.csv",
     "stringsToConsiderAsNull": []
   },
   {
     "operationName": "GitHub-createOrgRepository",
     "testCasesPath": "src/test/resources/test_suites/GitHub/createOrganizationRepository/GitHub_createOrgRepo_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/GitHub/createOrganizationRepository/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/GitHub/createOrganizationRepository/invariants_50_modified.csv",
     "stringsToConsiderAsNull": []
   },
   {
     "operationName": "GitHub-getOrgRepositories",
     "testCasesPath": "src/test/resources/test_suites/GitHub/getOrganizationRepositories/GitHub_getOrgRepos_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/GitHub/getOrganizationRepositories/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/GitHub/getOrganizationRepositories/invariants_50_modified.csv",
     "stringsToConsiderAsNull": []
   },
   {
     "operationName": "Marvel-getComicById",
     "testCasesPath": "src/test/resources/test_suites/Marvel/Marvel_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/Marvel/invariants_100_modified_incomplete.csv",
+    "invariantsPath": "src/test/resources/test_suites/Marvel/invariants_50_modified.csv",
     "stringsToConsiderAsNull": [""]
   },
   {
     "operationName" : "OMDB-byIdOrTitle",
     "testCasesPath" : "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_testCases.csv",
-    "invariantsPath" : "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_100_modified.csv",
+    "invariantsPath" : "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_50_modified.csv",
     "stringsToConsiderAsNull": ["N/A"]
   },
   {
     "operationName" : "OMDB-bySearch",
     "testCasesPath" : "src/test/resources/test_suites/OMDb/bySearch/OMDb_bySearch_testCases.csv",
-    "invariantsPath" : "src/test/resources/test_suites/OMDb/bySearch/invariants_100_modified.csv",
+    "invariantsPath" : "src/test/resources/test_suites/OMDb/bySearch/invariants_50_modified.csv",
     "stringsToConsiderAsNull" : ["N/A"]
   },
   {
     "operationName": "Spotify-createPlaylist",
     "testCasesPath": "src/test/resources/test_suites/Spotify/createPlaylist/Spotify_createPlaylist_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/Spotify/createPlaylist/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/Spotify/createPlaylist/invariants_50_modified.csv",
     "stringsToConsiderAsNull": []
   },
   {
     "operationName": "Spotify-getAlbumTracks",
     "testCasesPath": "src/test/resources/test_suites/Spotify/getAlbumTracks/Spotify_getAlbumTracks_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/Spotify/getAlbumTracks/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/Spotify/getAlbumTracks/invariants_50_modified.csv",
     "stringsToConsiderAsNull": []
   },
   {
     "operationName": "Spotify-getArtistAlbums",
     "testCasesPath": "src/test/resources/test_suites/Spotify/getArtistAlbums/Spotify_getArtistAlbums_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/Spotify/getArtistAlbums/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/Spotify/getArtistAlbums/invariants_50_modified.csv",
     "stringsToConsiderAsNull": []
   },
   {
     "operationName": "Yelp-getBusinesses",
     "testCasesPath": "src/test/resources/test_suites/Yelp/Yelp_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/Yelp/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/Yelp/invariants_50_modified.csv",
     "stringsToConsiderAsNull": [""]
   },
   {
     "operationName": "YouTube-listVideos",
     "testCasesPath": "src/test/resources/test_suites/YouTube/Youtube_testCases.csv",
-    "invariantsPath": "src/test/resources/test_suites/YouTube/invariants_100_modified.csv",
+    "invariantsPath": "src/test/resources/test_suites/YouTube/invariants_50_modified.csv",
     "stringsToConsiderAsNull": []
   }
 ]

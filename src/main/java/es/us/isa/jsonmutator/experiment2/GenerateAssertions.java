@@ -8,6 +8,7 @@ import es.us.isa.jsonmutator.experiment2.generateAssertions.MutantTestCaseReport
 import es.us.isa.jsonmutator.experiment2.readInvariants.InvariantData;
 import es.us.isa.jsonmutator.experiment2.readTestCases.TestCase;
 import org.apache.logging.log4j.core.util.JsonUtils;
+import org.checkerframework.checker.units.qual.A;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -22,8 +23,7 @@ import java.util.regex.Pattern;
 
 import static es.us.isa.jsonmutator.experiment2.ReadInvariants.getInvariantsDataFromPath;
 import static es.us.isa.jsonmutator.experiment2.ReadTestCases.readTestCasesFromPath;
-import static es.us.isa.jsonmutator.experiment2.ReadVariablesValues.getVariableValues;
-import static es.us.isa.jsonmutator.experiment2.ReadVariablesValues.jsonNodeToList;
+import static es.us.isa.jsonmutator.experiment2.ReadVariablesValues.*;
 
 public class GenerateAssertions {
 
@@ -34,13 +34,28 @@ public class GenerateAssertions {
     private String invariantsPath;
     private List<String> stringsToConsiderAsNull;
 
+    private JsonNode assertionFunctions;
+    private JsonNode invariantsWithShift;
 
-    public GenerateAssertions(String mutatedTestCasesPath, String invariantsPath, List<String> stringsToConsiderAsNull) {
+    private static String assertionFunctionsPath = "src/main/resources/experiment2/assertionFunctions.json";
+
+    private static String invariantsWithShiftPath = "src/main/resources/experiment2/invariantsWithShift.json";
+
+
+    public GenerateAssertions(String mutatedTestCasesPath, String invariantsPath, List<String> stringsToConsiderAsNull) throws IOException {
         this.mutatedTestCasesPath = mutatedTestCasesPath;
         this.invariantsPath = invariantsPath;
 
         stringsToConsiderAsNull.add(null);
         this.stringsToConsiderAsNull = stringsToConsiderAsNull;
+
+        // File with assertion functions
+        ObjectMapper objectMapperAssertions = new ObjectMapper();
+        this.assertionFunctions = objectMapperAssertions.readTree(new String(Files.readAllBytes(Paths.get(assertionFunctionsPath))));
+
+        // File with assertion functions associated to invariants with shift
+        ObjectMapper objectMapperShift = new ObjectMapper();
+        this.invariantsWithShift = objectMapperShift.readTree(new String(Files.readAllBytes(Paths.get(invariantsWithShiftPath))));
     }
 
     public Double generateAssertions(String destinationPath) throws Exception {
@@ -129,16 +144,20 @@ public class GenerateAssertions {
 
             // Read configuration file
             ObjectMapper objectMapper = new ObjectMapper();
-            JsonNode jsonProperties = objectMapper.readTree(new String(Files.readAllBytes(Paths.get("src/main/resources/experiment2/assertionFunctions.json"))));
-
-            // Obtain the function assigned to the string value
-            String functionName = jsonProperties.get(invariantType).textValue();
 
             // Invoke the corresponding assertion function
-//            Method method = findAssertionMethod(functionName);    // TODO: IMPLEMENT
-            Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class, List.class);
-            AssertionReport assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData, stringsToConsiderAsNull);
-
+            AssertionReport assertionReport = null;
+            if(invariantsWithShift.has(invariantData.getInvariant())) {      // Invariants that contain shift
+                String functionName = invariantsWithShift.get(invariantData.getInvariant()).textValue();
+                Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class, List.class);
+                assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData, stringsToConsiderAsNull);        // TODO: REMOVE THIS LINE
+            } else {
+                // Obtain the function assigned to the string value
+                // Read function name from assertionFunctions file
+                String functionName = assertionFunctions.get(invariantType).textValue();
+                Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class, List.class);
+                assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData, stringsToConsiderAsNull);
+            }
 
             // If the Assertion is not satisfied
             if(!assertionReport.isSatisfied()) {
@@ -1491,6 +1510,144 @@ public class GenerateAssertions {
         }
 
         return null;
+    }
+
+    // API: Marvel
+    // Assertion: return.data.results[return.data.offset] == return.data.results[return.data.total-1]
+    public static AssertionReport marvelOffsetAndTotalAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
+        // Check ppt-name
+        if(!invariantData.getPptname().equals("main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT")) {
+            throw new Exception("Incorrect ppt-name, expected: main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT");
+        }
+        List<JsonNode> offsetValues = getSingleVariableValues(testCase, invariantData, "return.data.offset");
+        List<JsonNode> totalValues = getSingleVariableValues(testCase, invariantData, "return.data.total");
+
+        List<JsonNode> resultsValues = getSingleVariableValues(testCase, invariantData, "return.data.results");
+
+        if(offsetValues.size() != totalValues.size() || offsetValues.size() != resultsValues.size()) {
+            throw new Exception("Different sizes for lists that should have the same size");
+        }
+
+        for(int i = 0; i<offsetValues.size(); i++) {
+            int offsetValue = offsetValues.get(i).intValue();
+            int totalValue = totalValues.get(i).intValue() - 1;
+
+
+            ArrayNode resultsValue = (ArrayNode) resultsValues.get(i);
+
+            // If one of the values is less than 0
+            if(offsetValue<0){
+                return new AssertionReport("return.data.offset cannot be less than zero, got: " + offsetValue);
+            }
+            if(totalValue<0) {
+                return new AssertionReport("return.data.total-1 cannot be less than zero, got: " + totalValue);
+            }
+
+            // If one of the values is greater than the size of the array
+            if(totalValue > (resultsValue.size() - 1)) {
+                return new AssertionReport("The value of return.data.total-1 (" + totalValue + ") cannot be used to access an array of size " + resultsValue.size());
+            }
+            if(offsetValue > (resultsValue.size() - 1)) {
+                return new AssertionReport("The value of return.data.offset (" + offsetValue + ") cannot be used to access an array of size " + resultsValue.size());
+            }
+
+            if((totalValue != offsetValue) && (!resultsValue.get(totalValue).equals(resultsValue.get(offsetValue)))) {
+                return new AssertionReport("The array elements are not equal: return.data.results[return.data.offset] == return.data.results[return.data.total-1]");
+            }
+
+        }
+
+        return new AssertionReport();
+    }
+
+
+    // API: Marvel
+    // return.data.results[return.data.offset] == return.data.results[return.data.count-1]
+    public static AssertionReport marvelOffsetAndCountAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
+        // Check ppt-name
+        if(!invariantData.getPptname().equals("main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT")) {
+            throw new Exception("Incorrect ppt-name, expected: main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT");
+        }
+        List<JsonNode> offsetValues = getSingleVariableValues(testCase, invariantData, "return.data.offset");
+        List<JsonNode> countValues = getSingleVariableValues(testCase, invariantData, "return.data.count");
+
+        List<JsonNode> resultsValues = getSingleVariableValues(testCase, invariantData, "return.data.results");
+
+        if(offsetValues.size() != countValues.size() || offsetValues.size() != resultsValues.size()) {
+            throw new Exception("Different sizes for lists that should have the same size");
+        }
+
+        for(int i = 0; i<offsetValues.size(); i++) {
+            int offsetValue = offsetValues.get(i).intValue();
+            int countValue = countValues.get(i).intValue() - 1;
+
+            ArrayNode resultsValue = (ArrayNode) resultsValues.get(i);
+
+            // If one of the values is less than 0
+            if(offsetValue<0){
+                return new AssertionReport("return.data.offset cannot be less than zero, got: " + offsetValue);
+            }
+            if(countValue<0) {
+                return new AssertionReport("return.data.count-1 cannot be less than zero, got: " + countValue);
+            }
+
+            // If one of the values is greater than the size of the array
+            if(countValue > (resultsValue.size() - 1)) {
+                return new AssertionReport("The value of return.data.count-1 (" + countValue + ") cannot be used to access an array of size " + resultsValue.size());
+            }
+            if(offsetValue > (resultsValue.size() - 1)) {
+                return new AssertionReport("The value of return.data.offset (" + offsetValue + ") cannot be used to access an array of size " + resultsValue.size());
+            }
+
+            if((countValue != offsetValue) && (!resultsValue.get(countValue).equals(resultsValue.get(offsetValue)))) {
+                return new AssertionReport("The array elements are not equal: return.data.results[return.data.offset] == return.data.results[return.data.count-1]");
+            }
+
+        }
+
+        return new AssertionReport();
+    }
+
+    // API: Marvel
+    // return.data.results[] elements == return.data.results[return.data.offset]
+    public static AssertionReport marvelResultsElementsOffsetAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
+        // Check ppt-name
+        if(!invariantData.getPptname().equals("main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT")) {
+            throw new Exception("Incorrect ppt-name, expected: main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT");
+        }
+
+        List<JsonNode> offsetValues = getSingleVariableValues(testCase, invariantData, "return.data.offset");
+        List<JsonNode> resultsValues = getSingleVariableValues(testCase, invariantData, "return.data.results");
+
+        if(offsetValues.size() != resultsValues.size()) {
+            throw new Exception("Different sizes for lists that should have the same size");
+        }
+
+        for(int i = 0; i<offsetValues.size(); i++) {
+            int offsetValue = offsetValues.get(i).intValue();
+
+            ArrayNode resultsValue = (ArrayNode) resultsValues.get(i);
+
+            // If one of the values is less than 0
+            if(offsetValue<0){
+                return new AssertionReport("return.data.offset cannot be less than zero, got: " + offsetValue);
+            }
+
+            // If one of the values is greater than the size of the array
+            if(offsetValue > (resultsValue.size() - 1)) {
+                return new AssertionReport("The value of return.data.offset (" + offsetValue + ") cannot be used to access an array of size " + resultsValue.size());
+            }
+
+            for(JsonNode arrayElement: resultsValue) {
+                if(!arrayElement.equals(resultsValue.get(offsetValue))) {
+                    return new AssertionReport("The array elements are not equal: return.data.results[] elements == return.data.results[return.data.offset]");
+                }
+            }
+
+        }
+
+
+        return new AssertionReport();
     }
 
 

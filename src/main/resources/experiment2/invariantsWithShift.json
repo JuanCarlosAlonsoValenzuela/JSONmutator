@@ -1,0 +1,5 @@
+{
+  "return.data.results[return.data.offset] == return.data.results[return.data.total-1]": "marvelOffsetAndTotalAssertion",
+  "return.data.results[return.data.offset] == return.data.results[return.data.count-1]": "marvelOffsetAndCountAssertion",
+  "return.data.results[] elements == return.data.results[return.data.offset]": "marvelResultsElementsOffsetAssertion"
+}

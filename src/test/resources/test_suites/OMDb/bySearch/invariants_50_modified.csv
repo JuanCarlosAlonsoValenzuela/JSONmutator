@@ -1,0 +1,23 @@
+pptname;invariant;invariantType;variables;tp;fp;enter;bug;nullValue;fixedValues;arithmeticComparison;stringComparison
+main..bySearch&200&Search(main.bySearch&Input):::ENTER;"input.type one of { ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::ENTER;input.y one of { 2007, 2009 };daikon.inv.unary.scalar.OneOfScalar;(input.y);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::ENTER;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::ENTER;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;input.type == return.Type;daikon.inv.binary.twoString.StringEqual;(input.type, return.Type);1;0;0;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;"input.type one of { ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;input.y one of { 2007, 2009 };daikon.inv.unary.scalar.OneOfScalar;(input.y);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;"return.Type one of { ""game"", ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(return.Type);0;0;0;1;0;0;0;0
+main..bySearch&200&Search(main.bySearch&Input):::EXIT;return.Poster is Url;daikon.inv.unary.string.IsUrl;(return.Poster);1;0;0;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::ENTER;"input.type one of { ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::ENTER;input.y one of { 2007, 2009 };daikon.inv.unary.scalar.OneOfScalar;(input.y);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::ENTER;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::ENTER;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::EXIT;"input.type one of { ""movie"", ""series"" }";daikon.inv.unary.string.OneOfString;(input.type);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::EXIT;input.y one of { 2007, 2009 };daikon.inv.unary.scalar.OneOfScalar;(input.y);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::EXIT;"input.r == ""json""";daikon.inv.unary.string.OneOfString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::EXIT;LENGTH(input.r)==4;daikon.inv.unary.string.FixedLengthString;(input.r);0;0;1;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::EXIT;"return.Response == ""True""";daikon.inv.unary.string.OneOfString;(return.Response);1;0;0;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::EXIT;LENGTH(return.Response)==4;daikon.inv.unary.string.FixedLengthString;(return.Response);1;0;0;0;0;0;0;0
+main..bySearch&200(main.bySearch&Input):::EXIT;return.totalResults is Numeric;daikon.inv.unary.string.IsNumeric;(return.totalResults);1;0;0;0;0;0;0;0

@@ -67,7 +67,7 @@ public class ReadVariablesValues {
 
 
 
-    private static List<JsonNode> getSingleVariableValues(TestCase testCase, InvariantData invariantData, String variableName) throws Exception {
+    public static List<JsonNode> getSingleVariableValues(TestCase testCase, InvariantData invariantData, String variableName) throws Exception {
         // TODO: size(x) is also a possible variable value
         // TODO: Example of variable splitted by dots: return.owner.url
 

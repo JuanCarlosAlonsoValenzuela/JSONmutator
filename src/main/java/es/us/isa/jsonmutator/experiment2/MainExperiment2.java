@@ -17,7 +17,7 @@ import static es.us.isa.jsonmutator.experiment2.MutateTestCases.mutateTestCases;
 
 public class MainExperiment2 {
 
-    private static int nExecutions = 1;
+    private static int nExecutions = 10;
     private static String mutatedTestCasesFolder = "mutated_test_cases";
     private static String mutationReportFolder = "mutation_reports";
 
