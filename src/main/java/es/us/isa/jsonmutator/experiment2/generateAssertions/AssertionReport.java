@@ -1,7 +1,5 @@
 package es.us.isa.jsonmutator.experiment2.generateAssertions;
 
-import com.fasterxml.jackson.annotation.JsonTypeInfo;
-
 public class AssertionReport {
 
     private boolean satisfied;

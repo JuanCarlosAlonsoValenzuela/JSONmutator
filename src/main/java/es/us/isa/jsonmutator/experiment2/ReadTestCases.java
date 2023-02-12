@@ -40,20 +40,6 @@ public class ReadTestCases {
 
                 res.add(testCase);
 
-//
-//                String responseBody = testCase.getResponseBody();
-//                System.out.println(responseBody);
-//
-//                JsonNode responseJsonNode = getJsonNode(responseBody);
-//
-//                // Create mutator
-//                JsonMutator jsonMutator = new JsonMutator();
-//                JsonNode mutatedJsonNode = jsonMutator.mutateJson(responseJsonNode, false);
-//                System.out.println(mutatedJsonNode);
-//
-//                System.out.println("#####################################");
-
-
             }
 
 
@@ -88,15 +74,10 @@ public class ReadTestCases {
             while((testCasesLine = testCasesBR.readLine()) != null) {
                 TestCase testCase = testCaseFileManager.getTestCase(getCSVRecord(testCasesLine));
 
-//                System.out.println(testCase.getResponseBody());
-
-
                 String responseBody = testCase.getResponseBody();
                 System.out.println(responseBody);
 
                 JsonNode responseJsonNode = getJsonNode(responseBody);
-
-
 
                 // Create mutator
                 JsonMutator jsonMutator = new JsonMutator();
@@ -105,25 +86,11 @@ public class ReadTestCases {
 
                 System.out.println("#####################################");
 
-
-
-
-
-
             }
-
-
-
-
 
         } catch (IOException e){
             e.printStackTrace();
         }
-
-
-
-
-
 
     }
 }

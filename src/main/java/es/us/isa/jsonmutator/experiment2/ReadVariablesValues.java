@@ -17,43 +17,6 @@ import static es.us.isa.jsonmutator.experiment2.MutateTestCases.getJsonNode;
 
 public class ReadVariablesValues {
 
-    private static String invariantsPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_100_modified.csv";
-//    private static String testCasesPath = "src/test/resources/test-case-omdb.csv";
-    private static String testCasesPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv";
-
-
-
-    public static void main(String[] args) throws Exception {
-
-
-        // TODO: These test cases are supposed to be mutated
-        List<TestCase> testCases = readTestCasesFromPath(testCasesPath);
-        List<InvariantData> invariantDataList = getInvariantsDataFromPath(invariantsPath);
-
-        // TODO: convert into a for loop
-        TestCase testCase = testCases.get(0);
-
-        for(InvariantData invariantData: invariantDataList) {
-            System.out.println("#########################################");
-            System.out.println(invariantData.getInvariant());
-
-            // Function
-            Map<String, List<JsonNode>> variableValues = getVariableValues(testCase, invariantData);
-
-            for(String variableName: variableValues.keySet()) {
-                System.out.println("Variable: " + variableName);
-
-                for(JsonNode node: variableValues.get(variableName)){
-                    System.out.println(" -" + node);
-                }
-            }
-
-
-        }
-
-    }
-
-
     public static Map<String, List<JsonNode>> getVariableValues(TestCase testCase, InvariantData invariantData) throws Exception {
         Map<String, List<JsonNode>> res = new HashMap<>();
 
@@ -68,8 +31,6 @@ public class ReadVariablesValues {
 
 
     public static List<JsonNode> getSingleVariableValues(TestCase testCase, InvariantData invariantData, String variableName) throws Exception {
-        // TODO: size(x) is also a possible variable value
-        // TODO: Example of variable splitted by dots: return.owner.url
 
         List<JsonNode> res = new ArrayList<>();
 
@@ -175,8 +136,6 @@ public class ReadVariablesValues {
             }
         }
 
-        // TODO: Consider .array
-        // TODO: An array variable name contains either "[]" or "[..]"
         // Get route to variable
         String reducedPptname = pptname.substring(pptname.indexOf(testCase.getStatusCode())+3, pptname.indexOf('('));
         List<String> jsonHierarchy = new ArrayList<>();
@@ -199,8 +158,6 @@ public class ReadVariablesValues {
         return getVariableValuesFromHierarchy(variableHierarchy, nestingLevels);
     }
 
-
-    // TODO: Change function name
     // Only for the response
     private static List<JsonNode> getNestingLevels(JsonNode responseJsonNode, List<String> jsonHierarchy) {
 
@@ -239,7 +196,6 @@ public class ReadVariablesValues {
         } else {
 
             if(subElement.isArray()) {
-                // TODO: Each subElement could be another array (i.e., nested arrays)
                 ArrayNode subElementArray = (ArrayNode) subElement;
 
                 for(JsonNode node: subElementArray) {

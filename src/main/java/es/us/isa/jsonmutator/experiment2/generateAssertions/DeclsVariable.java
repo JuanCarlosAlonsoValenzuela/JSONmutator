@@ -40,11 +40,6 @@ public class DeclsVariable {
             }
         }
 
-        // Set value to null if its value should be considered as null
-//        if(Arrays.asList(stringsToConsiderAsNull).contains(value)) {
-//            value = null;
-//        }
-
 
         return value;
 
@@ -69,7 +64,6 @@ public class DeclsVariable {
                 JSONObject jsonSonObject = (JSONObject) jsonSon;
                 return getPrimitiveValueFromHierarchy(jsonSonObject, hierarchy.subList(1, hierarchy.size()));
             } else {    // If JSONArray
-                // TODO: Complete
                 return null;
             }
         }

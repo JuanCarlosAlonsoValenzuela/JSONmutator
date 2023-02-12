@@ -17,13 +17,7 @@ import static org.junit.Assert.fail;
 
 public class MutateTestCases {
 
-//    public static void main(String[] args) throws IOException {
-//        // Create "test" directory first
-//        mutateTestCases("test/mutated_test.csv", "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv");
-//    }
 
-
-    // TODO: Further configure mutation options (e.g., mutate x times)
     // Mutates a set of test cases and returns its path
     public static String mutateTestCases(String mutatedFileName, String testCasesPath) throws IOException {
 
@@ -76,7 +70,6 @@ public class MutateTestCases {
                 // Create mutator
                 JsonMutator jsonMutator = new JsonMutator();
 
-                // TODO: Enable and disable mutation operators
                 JsonNode mutatedJsonNode = jsonMutator.mutateJson(jsonNode, true);
 
                 try {
@@ -137,17 +130,5 @@ public class MutateTestCases {
         return jsonNode;
 
     }
-
-
-
-    // TODO: Read JSON from a csv file
-    // TODO: Maximum number of mutations?
-    // TODO: Read test cases file
-    // TODO: Enable and disable specific mutation operators (e.g., add object element)
-    // TODO: Check that the JSON is read correctly (e.g., multiple "" characters or multiline JSON)
-    // TODO: Mutate each test case (between 1 and 10 mutations per JSON)
-    // TODO: Compute metrics automatically. Percentage of mutants killed?
-    // TODO: Take special null values (e.g., N/A in OMDb) into account
-    // TODO: Take null values into account when creating the assertions
 
 }

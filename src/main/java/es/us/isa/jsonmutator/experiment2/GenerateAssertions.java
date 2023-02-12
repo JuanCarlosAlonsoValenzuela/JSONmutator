@@ -97,7 +97,6 @@ public class GenerateAssertions {
     }
 
 
-    // TODO: Move to a different class
     private String getReportCsvRow(TestCase testCase, MutantTestCaseReport mutantTestCaseReport) {
         if(mutantTestCaseReport.isKilled()) {
             return testCase.getTestCaseId() + ";" + mutantTestCaseReport.isKilled() + ";" + mutantTestCaseReport.getKilledBy().getInvariant() + ";" + mutantTestCaseReport.getDescription() + ";" +
@@ -150,7 +149,7 @@ public class GenerateAssertions {
             if(invariantsWithShift.has(invariantData.getInvariant())) {      // Invariants that contain shift
                 String functionName = invariantsWithShift.get(invariantData.getInvariant()).textValue();
                 Method method = GenerateAssertions.class.getMethod(functionName, TestCase.class, InvariantData.class, List.class);
-                assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData, stringsToConsiderAsNull);        // TODO: REMOVE THIS LINE
+                assertionReport = (AssertionReport) method.invoke(null, testCase, invariantData, stringsToConsiderAsNull);
             } else {
                 // Obtain the function assigned to the string value
                 // Read function name from assertionFunctions file
@@ -233,7 +232,6 @@ public class GenerateAssertions {
     }
 
 
-    // TODO: Move to a different class/package
     // ############################# UNARY #############################
     // ############################# UNARY STRING #############################
     public static AssertionReport oneOfStringAssertion(TestCase testCase, InvariantData invariantData, List<String> stringsToConsiderAsNull) throws Exception {
@@ -648,14 +646,14 @@ public class GenerateAssertions {
         List<Integer> acceptedValues = new ArrayList<>();
         int startIndex = invariant.indexOf("{");
         int endIndex = invariant.lastIndexOf("}");
-        if (startIndex != -1 && endIndex != -1) {       // TODO: Test this format
+        if (startIndex != -1 && endIndex != -1) {
             // Format: return.year one of { 2020, 2021, 2022 }
             String valuesString = invariant.substring(startIndex + 1, endIndex);
             String[] values = valuesString.split(", ");
             for (String value : values) {
                 acceptedValues.add(Integer.parseInt(value.trim()));
             }
-        } else if(invariant.startsWith(variables.get(0) + " ==")) { // TODO: Test this format
+        } else if(invariant.startsWith(variables.get(0) + " ==")) {
             String stringValue = invariant.split("==")[1].trim();
 
             if(stringValue.equals("null")){ // If the value is null
@@ -714,14 +712,14 @@ public class GenerateAssertions {
         List<Float> acceptedValues = new ArrayList<>();
         int startIndex = invariant.indexOf("{");
         int endIndex = invariant.lastIndexOf("}");
-        if (startIndex != -1 && endIndex != -1) {       // TODO: Test this format
+        if (startIndex != -1 && endIndex != -1) {
             // Format: return.year one of { 2020, 2021, 2022 }
             String valuesString = invariant.substring(startIndex + 1, endIndex);
             String[] values = valuesString.split(", ");
             for (String value : values) {
                 acceptedValues.add(Float.parseFloat(value.trim()));
             }
-        } else if(invariant.startsWith(variables.get(0) + " ==")) { // TODO: Test this format
+        } else if(invariant.startsWith(variables.get(0) + " ==")) {
             String stringValue = invariant.split("==")[1].trim();
             acceptedValues.add(Float.parseFloat(stringValue.trim()));
         }

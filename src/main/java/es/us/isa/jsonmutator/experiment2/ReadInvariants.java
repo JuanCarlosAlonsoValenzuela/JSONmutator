@@ -33,41 +33,5 @@ public class ReadInvariants {
 
     }
 
-    //    private static String invariantsPath = "src/test/resources/test_suites/OMDb/byIdOrTitle/invariants_100_modified.csv";
-
-//    public static void main(String[] args) throws IOException {
-//
-//        // Read the csv file as a list of rows
-//        List<List<String>> rows = readCSV(invariantsPath, true, ';');
-//
-////        for(List<String> row: rows) {
-////
-////            String rowToPrint = "";
-////            for(String cell: row){
-////                rowToPrint = rowToPrint + cell + ";";
-////            }
-////
-////            System.out.println(rowToPrint);
-////        }
-//
-//        List<String> header = rows.get(0);
-//
-//        rows = rows.subList(1, rows.size());
-//
-//        InvariantDataFileManager invariantDataFileManager = new InvariantDataFileManager(header);
-//
-//        List<InvariantData> invariantsData = invariantDataFileManager.getInvariantsData(rows);
-//
-//        for(InvariantData invariantData: invariantsData) {
-//            System.out.println(invariantData);
-//        }
-//
-//        System.out.println(invariantsData.size());
-//
-//    }
-
-
-
-
 
 }
