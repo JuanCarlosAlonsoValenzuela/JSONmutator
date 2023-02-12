@@ -21,6 +21,7 @@ public class MainExperiment2 {
     private static String mutatedTestCasesFolder = "mutated_test_cases";
     private static String mutationReportFolder = "mutation_reports";
 
+    private static boolean generateNewMutants = false;
 
     public static void main(String[] args) throws Exception {
 
@@ -33,8 +34,6 @@ public class MainExperiment2 {
             e.printStackTrace();
         }
 
-//        System.out.println(operationPathList);
-
         // For every API operation
         for(JsonNode operationPath: operationPathList) {
 
@@ -42,7 +41,6 @@ public class MainExperiment2 {
             String testCasesPath = operationPath.get("testCasesPath").textValue();
             String invariantsPath = operationPath.get("invariantsPath").textValue();
 
-            //            System.out.println(operationPath);
             System.out.println(operationName);
 
             List<String> stringsToConsiderAsNull = new ArrayList<>();
@@ -60,22 +58,24 @@ public class MainExperiment2 {
                 throw new Exception("The mutation score in the original test suite should be 0%");
             }
 
-            // Remove directories if exist
-            File mutatedTestCasesFile = new File(getOutputPath(mutatedTestCasesFolder, testCasesPath));
+            // Remove directories if exist and create empty directory
+            if(generateNewMutants) {    // Delete previous mutants
+                File mutatedTestCasesFile = new File(getOutputPath(mutatedTestCasesFolder, testCasesPath));
+                FileUtils.deleteDirectory(mutatedTestCasesFile);
+                mutatedTestCasesFile.mkdir();
+            }
             File mutationReportFile = new File(getOutputPath(mutationReportFolder, testCasesPath));
-
-            FileUtils.deleteDirectory(mutatedTestCasesFile);
             FileUtils.deleteDirectory(mutationReportFile);
-
-            // Create empty directories
-            mutatedTestCasesFile.mkdir();
             mutationReportFile.mkdir();
 
             List<Double> mutationScores = new ArrayList<>();
             // Generate and kill mutants, total of nExecutions
             for(int i = 0; i<nExecutions; i++) {
-                // Generate mutated_testCases.csv, returns the path of the mutants file
-                String mutatedTestCasesPath = mutateTestCases(mutatedTestCasesFolder + "/" + operationName + "_mutants_" + i + ".csv", testCasesPath);
+                String mutatedTestCasesPath = getOutputPath(mutatedTestCasesFolder + "/" + operationName + "_mutants_" + i + ".csv", testCasesPath);
+                if(generateNewMutants) {
+                    // Generate mutated_testCases.csv, returns the path of the mutants file
+                    mutatedTestCasesPath = mutateTestCases(mutatedTestCasesFolder + "/" + operationName + "_mutants_" + i + ".csv", testCasesPath);
+                }
 
                 // Generate mutation reports
                 GenerateAssertions generateAssertions = new GenerateAssertions(mutatedTestCasesPath, invariantsPath, stringsToConsiderAsNull);
