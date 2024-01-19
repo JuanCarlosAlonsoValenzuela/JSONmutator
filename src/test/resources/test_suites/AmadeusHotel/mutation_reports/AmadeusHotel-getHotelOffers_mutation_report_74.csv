@@ -1,0 +1,1001 @@
+testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType
+test_1k1uhobigv2gl_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urpmx15ywzzt_getMultiHotelOffers;false;;;;
+test_rkwr912cmu5v_getMultiHotelOffers;false;;;;
+test_1ieuyvqkhom03_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jefy7ck7bxh2_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-29, but got 6miZlnr4nB instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1iemobpw2vd4o_getMultiHotelOffers;false;;;;
+test_urjknubwkhgl_getMultiHotelOffers;true;return.type is a substring of return.self;Expected value of return.type (hotel-offers) to be a substring of return.self (https://test.api.amadeus.com/v3/shopping/hotel-o/,ffers?hotelIds=WILGBLON&adults=6&boardType=BREAKFAST&checkOutDate=2022-09-24);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_toddeq5hlcva_getMultiHotelOffers;true;input.checkInDate == return.checkInDate;Expected value of return.checkInDate to be 2022-09-21, but got Rh instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_ts1wl9p0oo6d_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4p4tijf4shj_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.type)==1;Expected length of 1 for variable return.rateFamilyEstimated.type, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb93spd92b02_getMultiHotelOffers;false;;;;
+test_sof2p4j104f5_getMultiHotelOffers;true;return.hotel.hotelId in input.hotelIds[];Expected input.hotelIds[..] ([WVBCNCOL]) to contain return.hotel.hotelId (WbBCNCOL);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.sequenceString.MemberString
+test_1hv88d2thg9bp_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s1jfq3nlcawm_getMultiHotelOffers;false;;;;
+test_1hrdp6uds6uk1_getMultiHotelOffers;true;return.self is Url;The value EJEMPLO MAYUS for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t843djjbynvq_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ejemplo minus;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sof4n66701f5_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 27 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7u2rm1kqqn6_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h81zu42m0g8m_getMultiHotelOffers;false;;;;
+test_1iv6jgvthe1d0_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (yAR) to be a substring of return.hotel.hotelId (HSPARCEN);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1jicty3q89lk4_getMultiHotelOffers;false;;;;
+test_u87y3gq39qau_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (2 and -727396);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_r1l3uean8mcx_getMultiHotelOffers;false;;;;
+test_s4uksroiwbhy_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element D*,C is 4;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_s1h5votn8aba_getMultiHotelOffers;false;;;;
+test_u87w5f3re71s_getMultiHotelOffers;true;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };Expected one of [PER_OCCUPANT, PER_PRODUCT], got PER_PRODUClT;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ieph9ukr7exx_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value l:"u(< for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1h7wzrrxpz8z5_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrud0it9uofm_getMultiHotelOffers;false;;;;
+test_sl1505nipb38_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_us0r6tpbgsog_getMultiHotelOffers;false;;;;
+test_1iv6l3mm2qbtx_getMultiHotelOffers;false;;;;
+test_u7rcjucmpdmd_getMultiHotelOffers;false;;;;
+test_t4vp8cortwf9_getMultiHotelOffers;true;LENGTH(return.room.description.lang)==2;Expected length of 2 for variable return.room.description.lang, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sksbocjlcrhw_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubgc5vb60jee_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sopneuwgivz7_getMultiHotelOffers;false;;;;
+test_1hrjqa7thmgrp_getMultiHotelOffers;false;;;;
+test_vbbtjwvhdvzl_getMultiHotelOffers;false;;;;
+test_rhm5zumtohte_getMultiHotelOffers;false;;;;
+test_1jy2pw044xw6w_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhswi90o49io_getMultiHotelOffers;false;;;;
+test_urp3fnnsdkc4_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_soem97m87tya_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_socbms79ti5s_getMultiHotelOffers;true;return.self is Url;The value qPg{ -G1( for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_ubj2uirwabeg_getMultiHotelOffers;false;;;;
+test_1iyhs3wryjm7r_getMultiHotelOffers;false;;;;
+test_t4q3q7mm3jug_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jeyub1m7w6ee_getMultiHotelOffers;false;;;;
+test_1jecq2e4sta9c_getMultiHotelOffers;false;;;;
+test_qhklifrfiaew_getMultiHotelOffers;false;;;;
+test_1iyl092sfwxus_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value }J for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iv6j2qsuegj7_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf3mkmhgf9t0_getMultiHotelOffers;false;;;;
+test_us0qsujbn2oy_getMultiHotelOffers;false;;;;
+test_rhglzf5bwv8w_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibkdalz49b93_getMultiHotelOffers;false;;;;
+test_1iyf00s5zedyv_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value 154´.55 for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hv60gze75e1u_getMultiHotelOffers;false;;;;
+test_1iyi99l2uj7so_getMultiHotelOffers;false;;;;
+test_toalkngz7pyr_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element JeC is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1hv38reufcspy_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got V);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qe1lsuu7b3ae_getMultiHotelOffers;false;;;;
+test_tnzixm1p8qwo_getMultiHotelOffers;true;return.pricingFrequency one of { "PER_NIGHT", "PER_STAY" };Expected one of [PER_NIGHT, PER_STAY], got f`M5?!J;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrmjao3l8siq_getMultiHotelOffers;false;;;;
+test_1je9wbzaoxdno_getMultiHotelOffers;false;;;;
+test_1ji7qg896e985_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tnz0xegk8siq_getMultiHotelOffers;true;return.base is Numeric;The value 400.U44 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rl55mqtdd2si_getMultiHotelOffers;true;return.self is Url;The value erP for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_skpljhp8ej3k_getMultiHotelOffers;false;;;;
+test_toiywrad44z7_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trqua2ijflmb_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1huxp52gpqr79_getMultiHotelOffers;false;;;;
+test_1iycoxt72yasy_getMultiHotelOffers;true;size(return.offers[]) >= 1;The value of size(return.offers[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_qe6lxs50v5te_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iesq9nx5ilgw_getMultiHotelOffers;true;return.policies.cancellation.amount is Numeric;The value 1*676.29 for the variable return.policies.cancellation.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhlmtpxusvug_getMultiHotelOffers;false;;;;
+test_1iauw5wrvwisx_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022-09-9 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1hrgy4erxegqb_getMultiHotelOffers;false;;;;
+test_vbennv0ub037_getMultiHotelOffers;false;;;;
+test_s18e4byy7jhf_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4p41m8d4unn_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hoKtel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uv8mmdub6ofo_getMultiHotelOffers;false;;;;
+test_1hb7pe5htilwj_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k200fxc1y2cj_getMultiHotelOffers;false;;;;
+test_tofp4zpmtzky_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 11 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbq7io0rzequ_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element c0Mg~ is 5;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1iv3t9a11361t_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.type)==1;Expected length of 1 for variable return.rateFamilyEstimated.type, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl02g7g0akvk_getMultiHotelOffers;false;;;;
+test_qdpy1qs5h7aw_getMultiHotelOffers;true;All the elements of return.policies.deposit.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.deposit.acceptedPayments.creditCards[..] should be 2, but the length of the element P is 1;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_t4ca3qfzse29_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value mR5Ti(oX5 for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ien7vvnipxeu_getMultiHotelOffers;true;return.self is Url;The value htt´ps://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=SILIM284&adults=8&checkInDate=2022-09-20&currency=COP&lang=ru-RU for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hv88tmpbgd43_getMultiHotelOffers;false;;;;
+test_t86wbd52a33k_getMultiHotelOffers;false;;;;
+test_t4f31n9zc9r7_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 11 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib60fizrmcs6_getMultiHotelOffers;false;;;;
+test_1iuqh34lzvx2r_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jensufdv8dic_getMultiHotelOffers;false;;;;
+test_u8b7c1qk8bp4_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-22, but got 2022-09-242 instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1k1ugw3d9pch0_getMultiHotelOffers;false;;;;
+test_1jiaijmrl59v4_getMultiHotelOffers;false;;;;
+test_r17a54j0rg36_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2022-09-/21 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_s4pkc2jjntwz_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe6ljulumtdd_getMultiHotelOffers;false;;;;
+test_1hrmi25l6ej4z_getMultiHotelOffers;true;return.price.base is Numeric;The value 1877N.00 for the variable return.price.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxfz1k2q8i7t_getMultiHotelOffers;true;return.self is Url;The value 6|I(n for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_uve667fho3lj_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibkc4oyw5lpw_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got g;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ibjskkgcskl3_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 20622-09-20 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_t844jez8304l_getMultiHotelOffers;false;;;;
+test_1iuspg3cbopbk_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got .VqG>`7p;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf0wd2yklpvc_getMultiHotelOffers;false;;;;
+test_1hv89lp8uri9e_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_somxyrwc8e9j_getMultiHotelOffers;false;;;;
+test_skycrme80cwz_getMultiHotelOffers;false;;;;
+test_1hraynsj0ngwx_getMultiHotelOffers;false;;;;
+test_trqvfxz9ipgi_getMultiHotelOffers;false;;;;
+test_skxx6c2psack_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl3y9n4o9wl3_getMultiHotelOffers;true;return.self is Url;The value ejemplo minus for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qhnuhx9bec83_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jenqw1m97u41_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 26 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyntnu302l2s_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7rszlne7upf_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdspfvd5uzi0_getMultiHotelOffers;false;;;;
+test_1k1x9u0vohx0i_getMultiHotelOffers;true;return.self is Url;The value ejemplo minus for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jyg21nr45gs5_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 6 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrubgg1a36lu_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ji50k542zhid_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hoter;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7rsj064bm7t_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2022-09-/,25 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_rl8drkznvcj8_getMultiHotelOffers;false;;;;
+test_skplj9t3vrjq_getMultiHotelOffers;false;;;;
+test_1iv0z7keg1mif_getMultiHotelOffers;false;;;;
+test_rl7vg2xvg31g_getMultiHotelOffers;false;;;;
+test_1jewkuvf7p73q_getMultiHotelOffers;false;;;;
+test_s1efli8stwkx_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (2 and 3);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_ts1vthe8peev_getMultiHotelOffers;false;;;;
+test_t4syp4xyzecl_getMultiHotelOffers;false;;;;
+test_1jelgza9crof5_getMultiHotelOffers;true;return.price.base is Numeric;The value ^zno#.gqL for the variable return.price.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl3fy9dfvf3s_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe12palf7ntw_getMultiHotelOffers;false;;;;
+test_1iepfsaxs15r6_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got xAr;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_skvl2h8a0aph_getMultiHotelOffers;false;;;;
+test_r1l5ej4y999x_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uv8o6i94iofo_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hot´/el-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhnchzhw6nhh_getMultiHotelOffers;true;return.policies.cancellation.amount is Numeric;The value m2INiXX4E8 for the variable return.policies.cancellation.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_skjznbkl6o2r_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hror4e9io8qf_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2´,022-09-21 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_s4v5ikzi3sj7_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-ofefers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ji1qj22dxjy1_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skjysqx1wb50_getMultiHotelOffers;true;return.policies.cancellation.amount is Numeric;The value ,r*"?k! for the variable return.policies.cancellation.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ibjsn54l7sro_getMultiHotelOffers;true;return.price.total is Numeric;The value i; for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_to53ypv0tws3_getMultiHotelOffers;true;return.amount is Numeric;The value ´/44.20 for the variable return.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_to7cnesv1vtu_getMultiHotelOffers;false;;;;
+test_1ji1q2m5e0gtt_getMultiHotelOffers;false;;;;
+test_1k25krqtv6nub_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jxzwy4wqyl2q_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got 5zfmTowwLD;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4mteva3kcis_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_veynoptl9nax_getMultiHotelOffers;false;;;;
+test_1ji282o7lf0iu_getMultiHotelOffers;false;;;;
+test_1h7j5o7i6hj6r_getMultiHotelOffers;false;;;;
+test_1h7im9k92cgmp_getMultiHotelOffers;false;;;;
+test_urv7mwia5g6x_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ji4gogl2kdvd_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1ddhwcxknqq_getMultiHotelOffers;false;;;;
+test_uv6d5m8afxh5_getMultiHotelOffers;true;return.self is Url;The value K,V[asy for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1k1wsr8v3wlkp_getMultiHotelOffers;false;;;;
+test_tnzk10ovmu60_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value 9´5000 for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl66y4ktemw5_getMultiHotelOffers;true;return.price.total is Numeric;The value EJEMPLO MAYUS for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vey5os39p451_getMultiHotelOffers;true;return.type is a substring of return.self;Expected value of return.type (hotel-offers) to be a substring of return.self (https://test.api.amadeus.com/v3/shopping/hotel-,offers?hotelIds=PUBKKMON&adults=8&checkInDate=2022-09-22&countryOfResidence=CH);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_s50o7o2rx9vb_getMultiHotelOffers;false;;;;
+test_1jy889am5y3qd_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-offer´,s;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qeffiihpmofo_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe3swy0nap89_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (FL4) to be a substring of return.hotel.hotelId (HSFLRAQR);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1huxpj55a9lk6_getMultiHotelOffers;false;;;;
+test_1iyexongpl1dj_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iesqnp2yecte_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho´*tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k253mg0fwp5v_getMultiHotelOffers;false;;;;
+test_toalk61wicf5_getMultiHotelOffers;false;;;;
+test_1h7inqwguawqc_getMultiHotelOffers;false;;;;
+test_1jy5h9ky09qux_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element MCU is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_s15ly6ri1081_getMultiHotelOffers;false;;;;
+test_1jyjbqwz2sdo1_getMultiHotelOffers;false;;;;
+test_vf45zj78ustd_getMultiHotelOffers;true;size(return.offers[]) >= 1;The value of size(return.offers[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_vbsgz5obma1t_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ji4zdm01nsqc_getMultiHotelOffers;false;;;;
+test_1iepzzg4gunvm_getMultiHotelOffers;true;return.base is Numeric;The value U for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qhkkso0f7o6w_getMultiHotelOffers;false;;;;
+test_qxtdjom5rpt0_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (4 and -657239);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hrubulf6i9nq_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got ho´,tel-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1dwkeq8m81h_getMultiHotelOffers;false;;;;
+test_1iyhp2e6ud2li_getMultiHotelOffers;false;;;;
+test_trwwztmn377b_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value RhL for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1jiflso6c7gpw_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got htel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbprjel9gdb6_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element :'Y3;^p%s is 9;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1k1wqqea9m545_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-27, but got 3dSOcTIvN7 instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_s1jzlvpb5po6_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got A]p1 V;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hr86vupm6wc5_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2´/022-09-22 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1hbj8ur37f12t_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 4 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_vbbvkj6vrnsm_getMultiHotelOffers;false;;;;
+test_uvbcin7lf41j_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel/-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_trtm1qggh5bp_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7fwd9a44unm_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element V is 1;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_qxr436jws1fa_getMultiHotelOffers;true;return.amount is Numeric;The value cy|+Bz5 for the variable return.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hrs22j3b2drt_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxr24vgajaea_getMultiHotelOffers;false;;;;
+test_u7p2rwm683e9_getMultiHotelOffers;false;;;;
+test_s5056zzd9zcj_getMultiHotelOffers;false;;;;
+test_1h7op8exoqt0k_getMultiHotelOffers;false;;;;
+test_urmb9azt16xx_getMultiHotelOffers;false;;;;
+test_s4p4qvsi0zeh_getMultiHotelOffers;true;return.self is Url;The value Nlwh: for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_us0pmn9uumux_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got h/otel-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ursdwv58b9yv_getMultiHotelOffers;true;return.pricingFrequency one of { "PER_NIGHT", "PER_STAY" };Expected one of [PER_NIGHT, PER_STAY], got PER_STPY;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s10kq73ede7p_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value ´*2022-09-25 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_to7u91m1sldj_getMultiHotelOffers;false;;;;
+test_to1tvpe935me_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4nfjhythnc6_getMultiHotelOffers;true;return.checkOutDate is a Date. Format: YYYY/MM/DD;The value bk2^z} for the variable return.checkOutDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_t8f7mupjtkkj_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (1 and -905962);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_t4flaf1tp5iv_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element D/C is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1iaxoe84jxann_getMultiHotelOffers;false;;;;
+test_1hv8bhhkpu99h_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qy4gbn6665o5_getMultiHotelOffers;false;;;;
+test_1hrgg9aobuxiv_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hoptel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s507uj28pug5_getMultiHotelOffers;false;;;;
+test_1jekyq8n8ra5t_getMultiHotelOffers;false;;;;
+test_1iyntlevrk01l_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element y}o=! is 5;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_qdy9dmiobfp5_getMultiHotelOffers;true;return.pricingFrequency one of { "PER_NIGHT", "PER_STAY" };Expected one of [PER_NIGHT, PER_STAY], got PERSTAY;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hbdqshjnhtuu_getMultiHotelOffers;true;LENGTH(return.room.description.lang)==2;Expected length of 2 for variable return.room.description.lang, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbm2i3rf1dfc_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got 9ua:;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vey310q4rtbq_getMultiHotelOffers;true;size(return.price.variations.changes[]) >= 1;The value of size(return.price.variations.changes[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_vf0y8g8vhxyv_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotYl-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sobuvkg0b5ur_getMultiHotelOffers;false;;;;
+test_u7um97hllwm9_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t8f5p0lgzqsm_getMultiHotelOffers;false;;;;
+test_t4cblg2iiqsz_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxze8t05pn4y_getMultiHotelOffers;true;return.base is Numeric;The value 47q32.33 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t8cfuyhmtaas_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got EJEMPLO MAYUS;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iusre6vimpm8_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got EJEMPLO MAYUS;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iepznxfri8mu_getMultiHotelOffers;false;;;;
+test_sobsxcxow9x0_getMultiHotelOffers;false;;;;
+test_veveoo8urplt_getMultiHotelOffers;false;;;;
+test_1iuy7dfmyt4di_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel*-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ji9zfs9idirb_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hb7nu0r112zo_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (3 and -252872);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1h7ftn7eo1c1l_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got h´,otel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhhsy7v8lmci_getMultiHotelOffers;true;return.price.total is Numeric;The value [fs&ls for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_tnzijd2g8uaq_getMultiHotelOffers;false;;;;
+test_1hrutg5whau5s_getMultiHotelOffers;false;;;;
+test_vbbuscp28oc2_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1cswmfz66go_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.type)==1;Expected length of 1 for variable return.rateFamilyEstimated.type, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qy1o31xkqi40_getMultiHotelOffers;true;return.roomQuantity is Numeric;The value %z)mzx for the variable return.roomQuantity is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_r179ocsg0mzp_getMultiHotelOffers;false;;;;
+test_1h7lwcsm06e79_getMultiHotelOffers;false;;;;
+test_1jy278tecfj90_getMultiHotelOffers;false;;;;
+test_t4sz0qtvby3l_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhdtvzd39vzq_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2022-09-1 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1ib6gsnobj690_getMultiHotelOffers;true;return.hotel.chainCode is a substring of return.hotel.hotelId;Expected value of return.hotel.chainCode (Lr) to be a substring of return.hotel.hotelId (LMPARCRE);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_s1jgtfzswjmu_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubmehyrv2ulf_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got ho´*tel-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb3k8zbhda3o_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibh0vbnzxq3m_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7wzrvtu8rw3_getMultiHotelOffers;true;size(return.offers[]) >= 1;The value of size(return.offers[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_s0xsy1g74gmu_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbem40tnzbxy_getMultiHotelOffers;true;size(return.price.variations.changes[]) >= 1;The value of size(return.price.variations.changes[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_1iupyg9q5m9tj_getMultiHotelOffers;false;;;;
+test_1hbjaqlr56xx3_getMultiHotelOffers;true;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };Expected one of [PER_OCCUPANT, PER_PRODUCT], got }@#igmh*;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7xe3k2d9hsy_getMultiHotelOffers;false;;;;
+test_u7zlx0esyicm_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl65uegs4fn7_getMultiHotelOffers;false;;;;
+test_skxw2z1szi3p_getMultiHotelOffers;false;;;;
+test_1jefesab53cj9_getMultiHotelOffers;false;;;;
+test_1h7o67fdp3pyv_getMultiHotelOffers;false;;;;
+test_ts57uh1dqott_getMultiHotelOffers;false;;;;
+test_1ib0gvhhuud7l_getMultiHotelOffers;true;return.hotel.hotelId in input.hotelIds[];Expected input.hotelIds[..] ([OMLAXCTR, BWBKK356]) to contain return.hotel.hotelId (OMLAXCTz);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.sequenceString.MemberString
+test_sl3wrzvkfh2r_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element xI*c9m is 6;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1jet9z1h9ywq8_getMultiHotelOffers;false;;;;
+test_vbpqdj35nghi_getMultiHotelOffers;false;;;;
+test_tnz262hx1bn5_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (2 and 3);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hroridrdsoxg_getMultiHotelOffers;false;;;;
+test_1jyd9i1xj96i9_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sondy5nk4bja_getMultiHotelOffers;false;;;;
+test_s1bmn5b6iyqu_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element *DC is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_s100iucuimgj_getMultiHotelOffers;false;;;;
+test_1hrpa7slreesi_getMultiHotelOffers;false;;;;
+test_1jy260f7kzfao_getMultiHotelOffers;false;;;;
+test_1h7u82j6he9md_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urgrpz3mjxb9_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhiv4ajrogmw_getMultiHotelOffers;true;return.self is Url;The value G for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jew2x0mg5c8g_getMultiHotelOffers;true;return.total is Numeric;The value ´*22950 for the variable return.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_tocwnkf8q1yd_getMultiHotelOffers;true;input.checkInDate == return.checkInDate;Expected value of return.checkInDate to be 2022-09-22, but got 9kRLPr5Ltv instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_rl2u7tconpdl_getMultiHotelOffers;false;;;;
+test_1k22t2fpxtqux_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got /*hotel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7wu5mc35mxu_getMultiHotelOffers;false;;;;
+test_1h7rfwjx229f6_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hote,l-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb6t3n7fpffo_getMultiHotelOffers;false;;;;
+test_1ib5xdj2ej7ef_getMultiHotelOffers;false;;;;
+test_1iextrpc4nfw3_getMultiHotelOffers;false;;;;
+test_tnyzr93sod2p_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u87wgxugbbck_getMultiHotelOffers;false;;;;
+test_sl67qaqfcw2t_getMultiHotelOffers;false;;;;
+test_1ibjuio0lwbp3_getMultiHotelOffers;false;;;;
+test_1hbahy37fkhfb_getMultiHotelOffers;true;return.base is Numeric;The value 310.*00 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qhq4qkqhjsj9_getMultiHotelOffers;true;return.self is Url;The value https://tes/,t.api.amadeus.com/v3/shopping/hotel-offers/23XV6NWFIV?lang=es-ES for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rh5091qebujm_getMultiHotelOffers;false;;;;
+test_1hbgh31735wz8_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (bV`) to be a substring of return.hotel.hotelId (WVBERTIT);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1h7o67fcwugqc_getMultiHotelOffers;false;;;;
+test_qhvnwd974rxd_getMultiHotelOffers;false;;;;
+test_1ji1oyvo9ciep_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyb01hvev8z6_getMultiHotelOffers;false;;;;
+test_s4pl6vg2pnat_getMultiHotelOffers;false;;;;
+test_ubompkjva4vs_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element X is 1;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1hv5h1sul13dv_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho´,tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u857fdcre99d_getMultiHotelOffers;false;;;;
+test_qxr436jeh9vc_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb6v49i006d0_getMultiHotelOffers;false;;;;
+test_1iukwfvyvsokj_getMultiHotelOffers;false;;;;
+test_vb6ccdhf1rua_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got {L;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1dw6hyjfcja_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element n^SzC is 5;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_qy1o3hdm1zs4_getMultiHotelOffers;true;return.price.base is Numeric;The value " for the variable return.price.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t8a5b46rzmlw_getMultiHotelOffers;false;;;;
+test_r1dcebfurpdg_getMultiHotelOffers;false;;;;
+test_1jydr19hhrtip_getMultiHotelOffers;true;return.total is Numeric;The value `% for the variable return.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1k1wsaonccj1e_getMultiHotelOffers;false;;;;
+test_qxywe2boex4i_getMultiHotelOffers;false;;;;
+test_trrdg1mwgr52_getMultiHotelOffers;false;;;;
+test_1jeffvwgbzjhg_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhw5qzlqowfq_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got qCgi6vg;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iykh8fgs7v3s_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value EJEMPLO MAYUS for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1h8212mkqpsgx_getMultiHotelOffers;true;return.price.total is Numeric;The value 70H7.84 for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_r1g4vr14gkzd_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl65dqbeahd2_getMultiHotelOffers;false;;;;
+test_1iv9tkbcdb0vt_getMultiHotelOffers;false;;;;
+test_1h7u806bvbmsx_getMultiHotelOffers;false;;;;
+test_soeljlub70wz_getMultiHotelOffers;true;return.pricingFrequency one of { "PER_NIGHT", "PER_STAY" };Expected one of [PER_NIGHT, PER_STAY], got  tN)~'4;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hroqsy9bogfo_getMultiHotelOffers;false;;;;
+test_t4sxunwilpo6_getMultiHotelOffers;true;LENGTH(return.room.description.lang)==2;Expected length of 2 for variable return.room.description.lang, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhlodm3852rd_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022U-09-25 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_sknb876n22jn_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element !njp&xWy is 8;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_soknccs7twl0_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ji9z1xec66aq_getMultiHotelOffers;false;;;;
+test_toie6s2udrug_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value bPwmbcAEA4 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1hrpb02ppirmt_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toiy4ter7mn6_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxkzyh76zwvp_getMultiHotelOffers;false;;;;
+test_ubu69g3r73oj_getMultiHotelOffers;false;;;;
+test_qdyb05dh9o39_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t89o5pr9r9ys_getMultiHotelOffers;false;;;;
+test_1hb878vhc1fee_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel/,-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hv39jh296ick_getMultiHotelOffers;false;;;;
+test_ubu6buxpw5lw_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf3o2470gt9s_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 11 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb6c0n94lr8z_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vevcchlzqhiw_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urxed6f046r7_getMultiHotelOffers;false;;;;
+test_1ib0x8o39ifjo_getMultiHotelOffers;false;;;;
+test_t86wbatla63m_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 6 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4yi6he016wo_getMultiHotelOffers;false;;;;
+test_1ib36dngbesdx_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_to53n75hr3vq_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1ctlzk96a7m_getMultiHotelOffers;true;return.price.base is Numeric;The value 335.1Y for the variable return.price.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jifkk61sopr8_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 11 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qy4fjizbi8fk_getMultiHotelOffers;false;;;;
+test_toa5nl8x4u9c_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uv8lgau03asj_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hote;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4c8xj6f7yw2_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value y5uSUTWzJd for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_sl3dzvxr51dj_getMultiHotelOffers;false;;;;
+test_1hv88r7umla9j_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element ejemplo minus is 13;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1iev226e2tmb9_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyirvrujhppg_getMultiHotelOffers;true;return.base is Numeric;The value  h2 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rh7sqaq5po39_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jylk41m7rm8x_getMultiHotelOffers;false;;;;
+test_qe1362p33rqr_getMultiHotelOffers;false;;;;
+test_sohboyfmne40_getMultiHotelOffers;true;return.amount is Numeric;The value :?Jr16~0 for the variable return.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_ts1wnsg41bhe_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hoGtel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb6a00xgfp6c_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 222-09-26 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1h7j6gdnu2hye_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdspwd8ynyp0_getMultiHotelOffers;false;;;;
+test_1hruao68pjwag_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_to1rlzl60qi9_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u804bb37yb8k_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 20*22-09-23 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_us0qvbqpeucz_getMultiHotelOffers;false;;;;
+test_1jyljbxf2zupd_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 24 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sknawqtyrtr8_getMultiHotelOffers;false;;;;
+test_1iyey03ug6xbt_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got .XOF;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rl7xekns37tt_getMultiHotelOffers;false;;;;
+test_vbccpzkx0jfm_getMultiHotelOffers;false;;;;
+test_vbsgz9lvi6go_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hot,el-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t8cgbqa8x3qr_getMultiHotelOffers;true;return.self is Url;The value ZodZifrn3J for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vbk5q1dh2jaw_getMultiHotelOffers;false;;;;
+test_r1ajrh644i7o_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 202Q-09-21 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_sl15btx5g7l1_getMultiHotelOffers;true;return.base is Numeric;The value 219.0O0 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_skpjiflcujw9_getMultiHotelOffers;false;;;;
+test_1jy28ez1vd73l_getMultiHotelOffers;false;;;;
+test_qhq20czpkcpw_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element [RW;)q,"R is 9;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1hrot5cg5i055_getMultiHotelOffers;false;;;;
+test_s10j5otfbuph_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iusrbgm2r390_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbd7bdx6p5r5_getMultiHotelOffers;false;;;;
+test_1ji4z2biuq545_getMultiHotelOffers;false;;;;
+test_qhntbzi551lw_getMultiHotelOffers;true;return.hotel.chainCode is a substring of return.hotel.hotelId;Expected value of return.hotel.chainCode (BP) to be a substring of return.hotel.hotelId (BWOSA523);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1ib38bvbw6d0h_getMultiHotelOffers;false;;;;
+test_1iv3rrmqt4pwy_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4ctl1l9ukx1_getMultiHotelOffers;false;;;;
+test_1iv6k8rqmb96g_getMultiHotelOffers;false;;;;
+test_1k22c8lawu911_getMultiHotelOffers;false;;;;
+test_vb3im67tm6np_getMultiHotelOffers;true;LENGTH(return.room.description.lang)==2;Expected length of 2 for variable return.room.description.lang, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxfgskqh84du_getMultiHotelOffers;true;return.roomQuantity is Numeric;The value ,5 for the variable return.roomQuantity is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jeqju8lo16ci_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv89x3bchcv5_getMultiHotelOffers;false;;;;
+test_tocwl7lz1gz6_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022-09´/-25 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_ubj3jtyt5ctt_getMultiHotelOffers;true;return.self is Url;The value C,:xGu for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hbj967hq2u75_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho*,tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sl0o63cl2jow_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvk83qeqhjz8_getMultiHotelOffers;false;;;;
+test_1ib986o9bstwj_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-26, but got h1 instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1jezcp42rahbr_getMultiHotelOffers;false;;;;
+test_tnzih2jn1p9u_getMultiHotelOffers;false;;;;
+test_1hv8bh3s3p6pi_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 6 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iemqaatyvbza_getMultiHotelOffers;false;;;;
+test_1k252ubtks661_getMultiHotelOffers;true;size(return.offers[]) >= 1;The value of size(return.offers[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_urxz0p9dugrp_getMultiHotelOffers;true;return.total is Numeric;The value 4,0.00 for the variable return.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_ubu6n9o1040y_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (ADa) to be a substring of return.hotel.hotelId (WVADL860);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_u87w2miwkl7q_getMultiHotelOffers;false;;;;
+test_1iycq3io7owms_getMultiHotelOffers;false;;;;
+test_to4l9c9nnv4z_getMultiHotelOffers;false;;;;
+test_1iauvgaymutyu_getMultiHotelOffers;false;;;;
+test_rl54j3xrphyq_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotl-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhq3hym9tlyd_getMultiHotelOffers;false;;;;
+test_1ieuzc4iyiblc_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value 68´,.00 for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbcdhu9do20k_getMultiHotelOffers;true;return.checkInDate is a Date. Format: YYYY/MM/DD;The value #%;[W- for the variable return.checkInDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_s0xtc4vaun3a_getMultiHotelOffers;true;return.price.total is Numeric;The value *@ for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qy4xv6zwsv1v_getMultiHotelOffers;true;return.base is Numeric;The value 39/,9.00 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jeli5fl8hvlf_getMultiHotelOffers;false;;;;
+test_sl0o6hi0fupk_getMultiHotelOffers;false;;;;
+test_ts1y5eihup0z_getMultiHotelOffers;false;;;;
+test_1h7j4idpe4k86_getMultiHotelOffers;true;return.checkInDate is a Date. Format: YYYY/MM/DD;The value 20/*22-09-22 for the variable return.checkInDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1iunozyceqqg4_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2022-K09-26 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_sksc56awuybd_getMultiHotelOffers;true;return.self is Url;The value https://test.api.amade*,us.com/v3/shopping/hotel-offers?hotelIds=WVADLFRA&adults=3&boardType=BREAKFAST&checkInDate=2022-09-22&lang=de&roomQuantity=9 for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qhvn1mpah99z_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 11 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s1ef7lffh8vn_getMultiHotelOffers;false;;;;
+test_1h84t5sipw7s1_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf3pmgia9nj9_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 202209-26 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1iaxm1xwu252w_getMultiHotelOffers;true;return.self is Url;The value  for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hv37x1clmgqb_getMultiHotelOffers;false;;;;
+test_1ji1owp3segxi_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toiekv62fygl_getMultiHotelOffers;false;;;;
+test_1h7oo4ki9kqjo_getMultiHotelOffers;false;;;;
+test_1hrawn48lcpiu_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qec5vkibjkfo_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotl-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ji27oiskt5pu_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib37v57jj8z9_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyhskml5y1yd_getMultiHotelOffers;true;return.hotel.hotelId in input.hotelIds[];Expected input.hotelIds[..] ([HILPL830]) to contain return.hotel.hotelId (|yGZV.&%);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.sequenceString.MemberString
+test_1jicty41xfsqg_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element A is 1;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1iuqgrrsruyia_getMultiHotelOffers;false;;;;
+test_1iavexmie4th4_getMultiHotelOffers;false;;;;
+test_1iuvj62oyf6g5_getMultiHotelOffers;true;return.self is Url;The value k&nnAYPy for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rhgkvwj7xsmp_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-offe´,rs;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jelhr87qig55_getMultiHotelOffers;false;;;;
+test_vbf57507m3hs_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got otel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxns1vde8j8h_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uv6e0j3zjrch_getMultiHotelOffers;false;;;;
+test_1ib988xk2k1f6_getMultiHotelOffers;true;return.price.base is Numeric;The value ejemplo minus for the variable return.price.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t8cd54xbxgs9_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbm0yf54l5yc_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got h*otel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qdtajsi9ypf6_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value GU0Q4bCcc2 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_s1dwyfvre78w_getMultiHotelOffers;false;;;;
+test_1iv6k8ps35mbd_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-´*offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uvendt2sczzo_getMultiHotelOffers;false;;;;
+test_1h7z8iug8nigp_getMultiHotelOffers;false;;;;
+test_vbce7ddiqxpw_getMultiHotelOffers;false;;;;
+test_soejlo61l25s_getMultiHotelOffers;false;;;;
+test_qdw2937g34tv_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 26 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhhsmtgj6lb6_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe3uvjd8l750_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s0v1620izqd3_getMultiHotelOffers;false;;;;
+test_s0ugit2qafxt_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t84mv10gn701_getMultiHotelOffers;false;;;;
+test_1hvbjp92lwg1f_getMultiHotelOffers;true;return.self is Url;The value vR_^~ for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_tru3zdbznjg0_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-23, but got sH_@|Dw instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1iaxlz6x3352b_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhhqorv9jo10_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element ´,CA is 4;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_too02m1x2pte_getMultiHotelOffers;false;;;;
+test_tnz1bdlo75f5_getMultiHotelOffers;false;;;;
+test_qe9dpi015vtx_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv8ab4dtrkh0_getMultiHotelOffers;false;;;;
+test_vb6bmoi4d3xt_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got 6;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uvgwrvzqt4yp_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iaxmg2lrx7j7_getMultiHotelOffers;false;;;;
+test_1jxzy47um10s4_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7wjssav6dyw_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value `w#Gb2 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_skmrd0tvuzao_getMultiHotelOffers;false;;;;
+test_u7xculsv8d9v_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got z)I;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyi9q4xwllbl_getMultiHotelOffers;true;return.base is Numeric;The value 21´/9.00 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qe6kou6uds8m_getMultiHotelOffers;true;return.self is Url;The value H62.}3!? for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jifj28wnr19t_getMultiHotelOffers;true;return.self is Url;The value daWCRb for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hrgf0mll7a76_getMultiHotelOffers;false;;;;
+test_1iauuzd9h1wz5_getMultiHotelOffers;false;;;;
+test_vevucn7rpoon_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho/,tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7wjsaxql6pf_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyg0voqhdhdh_getMultiHotelOffers;true;return.total is Numeric;The value qR9TUo0f47 for the variable return.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h84ueubkv6g1_getMultiHotelOffers;false;;;;
+test_rkwrkv9syych_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbszr9ymimnm_getMultiHotelOffers;false;;;;
+test_1hrdovfzb1ohf_getMultiHotelOffers;true;return.price.base is Numeric;The value a for the variable return.price.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jy2o0ex5wn6p_getMultiHotelOffers;false;;;;
+test_t49hv4hjdelt_getMultiHotelOffers;true;return.self is Url;The value EJEMPLO MAYUS for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jyd8ptdmo3zp_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 20´,22-09-21 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_rl2dgpl3d2sl_getMultiHotelOffers;false;;;;
+test_qe3sj8rf348k_getMultiHotelOffers;false;;;;
+test_1jict8q6wx6b4_getMultiHotelOffers;false;;;;
+test_tol5kgh8epup_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 202-09-23 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_sksugmd479ep_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe1k8mghp5k1_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2022-,09-20 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1jyiry0pn4j8h_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value EJEMPLO MAYUS for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1k1ui22ri8do4_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hortel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jxzd2473zi9l_getMultiHotelOffers;true;return.base is Numeric;The value 1´47.90 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hbj9ynhfh1dl_getMultiHotelOffers;false;;;;
+test_1ji77qtbr6tro_getMultiHotelOffers;true;return.total is Numeric;The value XklYqaeybz for the variable return.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxwlp0kw1f7c_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 8R for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_vevcctsc4bxg_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 6 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tofp4o7pls9y_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hoLtel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urxy8l2977zr_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jenqfi3qo84x_getMultiHotelOffers;false;;;;
+test_urxf4yg0m82p_getMultiHotelOffers;true;return.type is a substring of return.self;Expected value of return.type (hotel-offers) to be a substring of return.self (https://test.api.amadeus.com/v3/shopping/hotel-of/,fers?hotelIds=WVBCN014&adults=4&countryOfResidence=GB&currency=CAD&lang=ZH&roomQuantity=7);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_ubrf9oh41gmb_getMultiHotelOffers;false;;;;
+test_t4nct68v2rtx_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1u0wzuj1g6u_getMultiHotelOffers;true;LENGTH(return.room.description.lang)==2;Expected length of 2 for variable return.room.description.lang, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrm1aw857m0l_getMultiHotelOffers;true;return.self is Url;The value ejemplo minus for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_socceiwkc76p_getMultiHotelOffers;true;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };Expected one of [PER_OCCUPANT, PER_PRODUCT], got EJEMPLO MAYUS;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7ukp50r2l9w_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got NAZZ*dvJr;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4mtqfz5v7fm_getMultiHotelOffers;false;;;;
+test_1hrlyko37ofvl_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hotl;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t87cotb4uxbm_getMultiHotelOffers;false;;;;
+test_1if0krmur5g10_getMultiHotelOffers;false;;;;
+test_ublvbw2zeixv_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value D:3_dg for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hvbiu9x211dh_getMultiHotelOffers;false;;;;
+test_1iay5v1o0o5ko_getMultiHotelOffers;true;LENGTH(return.room.description.lang)==2;Expected length of 2 for variable return.room.description.lang, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1fnsx1kteuc_getMultiHotelOffers;false;;;;
+test_qhi9pt10izja_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyhr0lp5nhgx_getMultiHotelOffers;false;;;;
+test_r1fl2lbsz0hf_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe9f71pa5zqp_getMultiHotelOffers;false;;;;
+test_qxw5pphe9et4_getMultiHotelOffers;false;;;;
+test_1iesqz7exzj91_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value EJEMPLO MAYUS for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jer2jhy7fr6r_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hogel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4mtswrvpvtt_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7j62q0ls6sj_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got E;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iykk9xbq4vua_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hot´,el-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s18v9albtg6o_getMultiHotelOffers;false;;;;
+test_trrbt8wduv5j_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got gC#;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jy7rw3zz0spt_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-26, but got 2022-09-/*26 instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_ubop1zf2facw_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h84u0pc5ffi0_getMultiHotelOffers;false;;;;
+test_1h7lgoz6kyk3c_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got 4DvPD8gXj0;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qecnq59zjdra_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hoteNl;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1b6nxudjof7_getMultiHotelOffers;true;input.checkInDate == return.checkInDate;Expected value of return.checkInDate to be 2022-09-22, but got &UWb1|H./ instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_r1flunjwntk2_getMultiHotelOffers;false;;;;
+test_uv95bl65prhe_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got dX37up7Vqe;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iuy7d47hqan6_getMultiHotelOffers;false;;;;
+test_qdqhxl6juxx0_getMultiHotelOffers;false;;;;
+test_ubuoypshyf5d_getMultiHotelOffers;false;;;;
+test_us2yp48p9wmd_getMultiHotelOffers;false;;;;
+test_1h7z98hj26n1t_getMultiHotelOffers;false;;;;
+test_qdsqo7n3wj7d_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iaxobbjb2dt2_getMultiHotelOffers;false;;;;
+test_u855jozio604_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib0fp89l3rco_getMultiHotelOffers;false;;;;
+test_1jeyurlhi1aw2_getMultiHotelOffers;false;;;;
+test_qhsuk722r97p_getMultiHotelOffers;true;return.pricingFrequency one of { "PER_NIGHT", "PER_STAY" };Expected one of [PER_NIGHT, PER_STAY], got PEzR_NIGHT;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hbdpp4ih225i_getMultiHotelOffers;false;;;;
+test_t4symbyynnlk_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (0ON) to be a substring of return.hotel.hotelId (HILON98B);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qe4bp3wc2fz5_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubu69c68r4v7_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 6 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jei66ckwpbhi_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element 7CB is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1jiflq9drazaw_getMultiHotelOffers;true;return.amount is Numeric;The value 1´/3.00 for the variable return.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jy4zc1zzjinm_getMultiHotelOffers;true;return.policies.cancellation.amount is Numeric;The value y8chHbuvdf for the variable return.policies.cancellation.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_us3hsm6uegxi_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrdqr729s6k7_getMultiHotelOffers;false;;;;
+test_1jeo9is5zgi0n_getMultiHotelOffers;true;return.self is Url;The value http´/s://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=SMSVQ148&adults=3&boardType=BREAKFAST&countryOfResidence=AU&currency=AUD for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_uveohlxz7pyr_getMultiHotelOffers;false;;;;
+test_1iync1n6q7ghi_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got U]Q|SGGPG;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u82cit9dfn1f_getMultiHotelOffers;false;;;;
+test_t86x660phq2e_getMultiHotelOffers;false;;;;
+test_1iv71s7lyte1x_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho,tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeliiyjhovg6_getMultiHotelOffers;true;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };Expected one of [PER_OCCUPANT, PER_PRODUCT], got &iA;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbbwqi82fr6t_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (4 and 3);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_qdviduj86v5e_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sobsiy1q98wx_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jy4y6e4kjhv6_getMultiHotelOffers;false;;;;
+test_1jyodfy9s07jk_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl2u7rctdtmg_getMultiHotelOffers;false;;;;
+test_vbq7iqd4lnw7_getMultiHotelOffers;false;;;;
+test_1hrgzcvbj8u3m_getMultiHotelOffers;false;;;;
+test_1ibe9etx0hxde_getMultiHotelOffers;false;;;;
+test_s0xamr6vnf4z_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1iwncm592d5_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hote/,l;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sl0lfzwapzcg_getMultiHotelOffers;true;return.self is Url;The value https/://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=MCOSAMCM&adults=7&currency=CNY&lang=ar&paymentPolicy=NONE for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iun5tyugonjk_getMultiHotelOffers;true;return.price.total is Numeric;The value [*JQ for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s4p4qtvyq6gl_getMultiHotelOffers;false;;;;
+test_qxir7kxd2nnd_getMultiHotelOffers;false;;;;
+test_1jeqkjsfo09py_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxywbdnpxyzq_getMultiHotelOffers;false;;;;
+test_t89np1ynjfw4_getMultiHotelOffers;false;;;;
+test_tofnyqg10jmq_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (BCQ) to be a substring of return.hotel.hotelId (HSBCNAGY);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qxlkjiu7gpd1_getMultiHotelOffers;true;return.self is Url;The value EJEMPLO MAYUS for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iunoja434qb5_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hot/,el;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ibkcg8vzi1cy_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got 9*j8q pV2;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k25m05d26alt_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jett2xmgq7vm_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value p for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1iusqm4nnafqr_getMultiHotelOffers;false;;;;
+test_1hbj8s8cw4b52_getMultiHotelOffers;false;;;;
+test_u8dfp4rhm2xt_getMultiHotelOffers;false;;;;
+test_1iemp43y1gb3p_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhoxrkw15q3n_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrs1ocdo5x69_getMultiHotelOffers;true;return.self is Url;The value https:/y/test.api.amadeus.com/v3/shopping/hotel-offers/6WV4KUWKLL for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_ubgbs251pmi8_getMultiHotelOffers;false;;;;
+test_t8cf32ktoajn_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (2 and 1);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_t4klr07srgvq_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7r9f9m1myqu_getMultiHotelOffers;true;LENGTH(return.rateFamilyEstimated.code)==3;Expected length of 3 for variable return.rateFamilyEstimated.code, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hre7wdw8xiy9_getMultiHotelOffers;true;return.roomQuantity is Numeric;The value ´/9 for the variable return.roomQuantity is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t8cf3cg98dv4_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdssmjfqyhr9_getMultiHotelOffers;false;;;;
+test_tol60yff9v78_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-29, but got 2022n-09-29 instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_ursfxjgto9k5_getMultiHotelOffers;false;;;;
+test_vevd4pr4qp88_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element C6A is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_u85pcckgxdfb_getMultiHotelOffers;true;return.percentage is Numeric;The value EJEMPLO MAYUS for the variable return.percentage is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxffy79rakbq_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element BaCU is 4;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1ibeskp1x67vm_getMultiHotelOffers;false;;;;
+test_1ieya7kmm37fp_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skkiahwagncp_getMultiHotelOffers;false;;;;
+test_skyeq5ckjupi_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4a06cpc6f5d_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qy279ehlnujm_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value 266.9U for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ib6geoh9hs9y_getMultiHotelOffers;true;return.checkOutDate is a Date. Format: YYYY/MM/DD;The value  ; for the variable return.checkOutDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_qe9e3iqwsvnc_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vey657nk0ajq_getMultiHotelOffers;false;;;;
+test_t4fjqe757bxt_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got H7iN);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_to4jbcm4ie5x_getMultiHotelOffers;false;;;;
+test_1ibjvau4bodvd_getMultiHotelOffers;true;return.commission.percentage is Numeric;The value Gew4Y8sq92 for the variable return.commission.percentage is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ji1pqzum0x10_getMultiHotelOffers;false;;;;
+test_t8f5rlciwhnm_getMultiHotelOffers;false;;;;
+test_1if132v45pdtd_getMultiHotelOffers;true;input.checkOutDate is a substring of return.self;Expected value of input.checkOutDate (2022-09-26) to be a substring of return.self (https://test.api.amadeus.com/v3/shopping/hotel-offers?hotelIds=WVFLRCAR&adults=5&boardType=ROOM_ONLY&checkInDate=2022-09-20&checkOutDate=2w22-09-26&lang=ru&roomQuantity=5);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1hbgh0ig7ykoj_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-*,offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubgv9rtebcde_getMultiHotelOffers;false;;;;
+test_qhib9llnc9ix_getMultiHotelOffers;false;;;;
+test_us0p8eavud6h_getMultiHotelOffers;false;;;;
+test_urumlejkdd15_getMultiHotelOffers;false;;;;
+test_sl9fvj4n7cc8_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe6mbox1sbw1_getMultiHotelOffers;false;;;;
+test_to53n9h0b8me_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2´,022-09-20 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1je9wevhg9jqr_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7wwhn1b8db5_getMultiHotelOffers;false;;;;
+test_s1jhls1zzwx1_getMultiHotelOffers;false;;;;
+test_tog72f1su82t_getMultiHotelOffers;false;;;;
+test_1iaxm21iozebb_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib0elvku4o6a_getMultiHotelOffers;false;;;;
+test_1ib389kglpnp0_getMultiHotelOffers;false;;;;
+test_1jefhinn4nwhh_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022-*09-21 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1jeafff98ujc3_getMultiHotelOffers;false;;;;
+test_u7u4sade69gi_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1if0ihp3togfn_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022*,-09-24 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_qy1mj5ebilpd_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value 13*4.00 for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iauxpjfzbgbm_getMultiHotelOffers;false;;;;
+test_s18cy0d65bn5_getMultiHotelOffers;false;;;;
+test_1iv1j0glbp2d2_getMultiHotelOffers;false;;;;
+test_s4xw1uoyd2lf_getMultiHotelOffers;false;;;;
+test_1hravxgtulrvl_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got P[P0 pI*;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb3lciad3iuv_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value cm_.n;o for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_vbbv42vsgb51_getMultiHotelOffers;false;;;;
+test_1hrpbdyamdhrr_getMultiHotelOffers;false;;;;
+test_vbccnkri50ky_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uve6jt3p32nr_getMultiHotelOffers;false;;;;
+test_1ib391icrqwys_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value |92 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_r1a2arkhkdh3_getMultiHotelOffers;true;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };Expected one of [PER_OCCUPANT, PER_PRODUCT], got PER_PRO´DUCT;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urk47ui8ia7n_getMultiHotelOffers;false;;;;
+test_vf9p5nvgubso_getMultiHotelOffers;false;;;;
+test_qdssmj2pdd9e_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value j2022-09-30 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1k1rpklh6vh2r_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value  for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1jy4zqexjdnw8_getMultiHotelOffers;false;;;;
+test_urrx5jhwf3vo_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (MOA) to be a substring of return.hotel.hotelId (RZMIARZR);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_trqtvrieykhc_getMultiHotelOffers;false;;;;
+test_tonzcz0tp8af_getMultiHotelOffers;false;;;;
+test_1hux7oba5tgtf_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value GKK. for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_t4cafcqtt8vm_getMultiHotelOffers;false;;;;
+test_qdss8icc8gv9_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubj5yle63qld_getMultiHotelOffers;false;;;;
+test_rhlm1lqq0wv8_getMultiHotelOffers;false;;;;
+test_1iaxopqgzqt6c_getMultiHotelOffers;false;;;;
+test_tocv136bthrk_getMultiHotelOffers;false;;;;
+test_1hbjaq9wecew4_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (2 and 103562);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hbd7b5okqxio_getMultiHotelOffers;false;;;;
+test_t4w75rcgsth2_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jxzdgb7k6iqp_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho/tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iykgu6gz9xlw_getMultiHotelOffers;false;;;;
+test_ts4n9r8u3g3c_getMultiHotelOffers;false;;;;
+test_uvgwgfma6uk7_getMultiHotelOffers;false;;;;
+test_s0ugibakldti_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvbf8wk4yy5h_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got uuCCHqvhNE;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1je9ycz3z2x4k_getMultiHotelOffers;true;return.self is Url;The value mqu9Prnq2N for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vbmx1muao8xc_getMultiHotelOffers;false;;;;
+test_1hrlyydq9giep_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value drdtKLVAFg for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7u7lrfalu0h_getMultiHotelOffers;false;;;;
+test_1iexso4qpdp2t_getMultiHotelOffers;false;;;;
+test_s18e6qsb3514_getMultiHotelOffers;false;;;;
+test_1iextrpc6pv8j_getMultiHotelOffers;false;;;;
+test_to7u6iwam5wh_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2022-0Y-21 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_qe9v6eqngpq0_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4z03uf7evco_getMultiHotelOffers;false;;;;
+test_1iemphr9u9aw1_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got Vg;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4f29ozm1ohj_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element DkS is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1ieyalhtmn5mf_getMultiHotelOffers;false;;;;
+test_rh7sewbzymnn_getMultiHotelOffers;false;;;;
+test_t4hvx5lnkxnm_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho9el;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iunoj0atktvb_getMultiHotelOffers;false;;;;
+test_1iynba33twto7_getMultiHotelOffers;false;;;;
+test_1ibe9snhbzb5h_getMultiHotelOffers;false;;;;
+test_1ji50jz65sr3q_getMultiHotelOffers;false;;;;
+test_1iv9bmyp35et0_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubrg1qodxeu9_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ublwhx3t9po9_getMultiHotelOffers;false;;;;
+test_1iepgkjeckcis_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022-0R-26 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_urhble2jdtut_getMultiHotelOffers;false;;;;
+test_1jidae3bb3k9v_getMultiHotelOffers;true;return.self is Url;The value ejemplo minus for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_sohvkfdaezhx_getMultiHotelOffers;false;;;;
+test_urmdllk85ba9_getMultiHotelOffers;false;;;;
+test_1jyoddb6zafqv_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-offe/rs;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h84ss76gf9kh_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ,hr8lYy;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hr86vx2siyb8_getMultiHotelOffers;false;;;;
+test_t4iccteg7j93_getMultiHotelOffers;false;;;;
+test_vb42khr3a1k2_getMultiHotelOffers;false;;;;
+test_t8cgbmbb06k8_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element /,AT is 4;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1iyhshxwfi7om_getMultiHotelOffers;false;;;;
+test_rh7quw6wjju8_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ejemplo minus;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_r1a0oemy5f8h_getMultiHotelOffers;false;;;;
+test_vbmyzqq76ywp_getMultiHotelOffers;true;All the elements of return.policies.deposit.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.deposit.acceptedPayments.creditCards[..] should be 2, but the length of the element ejemplo minus is 13;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_vevcqctbgchl_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4hvzkgeph69_getMultiHotelOffers;false;;;;
+test_qhnamccreh4o_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jy2p3pmvh9v7_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uv8ko8b171wj_getMultiHotelOffers;true;return.commission.percentage is Numeric;The value ejemplo minus for the variable return.commission.percentage is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s4rvckqwbi2g_getMultiHotelOffers;false;;;;
+test_skpluqkpxcfr_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhoxoy6s6r00_getMultiHotelOffers;true;input.checkInDate == return.checkInDate;Expected value of return.checkInDate to be 2022-09-21, but got $H>mJ instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1k1u0z8owg2lw_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got K~rZ*3$I;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_skmswnhz73g4_getMultiHotelOffers;true;return.base is Numeric;The value 175/,.00 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u87xmqy9rl2c_getMultiHotelOffers;false;;;;
+test_vbt05cpwtueo_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s102ehhqzoz5_getMultiHotelOffers;false;;;;
+test_uv8lwuqegx88_getMultiHotelOffers;false;;;;
+test_qe3vn7q6c300_getMultiHotelOffers;false;;;;
+test_qdq0rylh79yo_getMultiHotelOffers;false;;;;
+test_1iut8382b3w36_getMultiHotelOffers;true;return.self is Url;The value |u}c6-;F for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iuyr8qq17g4i_getMultiHotelOffers;false;;;;
+test_sksdmodkd2zl_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got ejemplo minus;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf3na1zinqcx_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hray74ogutlv_getMultiHotelOffers;false;;;;
+test_s4se4qaff395_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hoteel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urv6gqv18kmc_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 0 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb6bk9o7gwu1_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s100j0m3g50k_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 2022-09-921 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1iuvfnsrgprg3_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iukx59vu9d80_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iukx7w88hagp_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got EJEMPLO MAYUS;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_todfd20c4lrr_getMultiHotelOffers;true;return.roomQuantity is Numeric;The value /,4 for the variable return.roomQuantity is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxisfz5iawkk_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrdn8x2jw65v_getMultiHotelOffers;true;return.amount is Numeric;The value 1.´93 for the variable return.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sohwch7iq0j4_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (1 and 0);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1jyd96bbbe4hk_getMultiHotelOffers;false;;;;
+test_rhg4ftetzpsz_getMultiHotelOffers;false;;;;
+test_1hb7nu2prvzhe_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element  is 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_uvjpplmuq8o4_getMultiHotelOffers;true;LENGTH(return.room.description.lang)==2;Expected length of 2 for variable return.room.description.lang, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbaed2wdsb3r_getMultiHotelOffers;true;LENGTH(return.hotel.dupeId)==9;Expected length of 9 for variable return.hotel.dupeId, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sksc2rtfschg_getMultiHotelOffers;false;;;;
+test_r1a30eyy7i28_getMultiHotelOffers;false;;;;
+test_1hruuy1e74kl3_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 6 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s1gmsc0kkvnc_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb6ucb88hdgh_getMultiHotelOffers;false;;;;
+test_rl5nk3gdc306_getMultiHotelOffers;false;;;;
+test_t4vqe65uy2i9_getMultiHotelOffers;false;;;;
+test_sknbp38bowo3_getMultiHotelOffers;false;;;;
+test_ubjlhf9q2o8m_getMultiHotelOffers;true;return.base is Numeric;The value ´/416.00 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1huzz2405okl0_getMultiHotelOffers;false;;;;
+test_t4f2nqfsgape_getMultiHotelOffers;true;return.base is Numeric;The value 6n for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hv2rjmv2ffar_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got *H;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrp9tze750z5_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 202C-09-23 for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_vey2y457l3z5_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u856boupqp0z_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl03luxsabld_getMultiHotelOffers;false;;;;
+test_u7xdblgejrs6_getMultiHotelOffers;true;return.self is Url;The value https://test.api.amadeu,s.com/v3/shopping/hotel-offers?hotelIds=WVBERTIT&adults=5&boardType=BREAKFAST&roomQuantity=7 for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_urpm4rf2f7sg_getMultiHotelOffers;false;;;;
+test_1hrbg72i43882_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbja0ypptz6q_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value 5 Y[> for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_soko4mwpksbo_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iuya37zpcg1g_getMultiHotelOffers;true;return.price.total is Numeric;The value 3318,.00 for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h82khl9e0db7_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got ;3Gku;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyezjyey1mck_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022,-09-23 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_rkwsqir2tt2a_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value 2022-0/,9-28 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1jifjgjvzwhti_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ejemplo minus;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t89oxxkr9ycy_getMultiHotelOffers;false;;;;
+test_qhhre50ozsxk_getMultiHotelOffers;false;;;;
+test_1ib99cjq3dbnd_getMultiHotelOffers;true;return.price.total is Numeric;The value EJEMPLO MAYUS for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jyb0i43dejq9_getMultiHotelOffers;true;return.amount is Numeric;The value tFafa5DdrT for the variable return.amount is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ji77o4aiu2jp_getMultiHotelOffers;false;;;;
+test_s1jg1pk7v6ep_getMultiHotelOffers;false;;;;
+test_r1akxya8khfa_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (1 and 291056);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1k22buk79ztk4_getMultiHotelOffers;false;;;;
+test_1h7lxirzyfr6s_getMultiHotelOffers;false;;;;
+test_qe3u5vwtr2nk_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbd8va1q5e7m_getMultiHotelOffers;false;;;;
+test_qxir7aqvt16d_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s18vnhmxvwvo_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hote/*l;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhsu66bjaa1x_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ejemplo minus;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxi86l0m2fjn_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxyx64j87n7b_getMultiHotelOffers;false;;;;
+test_u7ok2b26s1mc_getMultiHotelOffers;false;;;;
+test_r17aj21wop5t_getMultiHotelOffers;false;;;;
+test_r1akjyrt1d0y_getMultiHotelOffers;true;return.hotel.chainCode is a substring of return.hotel.hotelId;Expected value of return.hotel.chainCode (LY) to be a substring of return.hotel.hotelId (LMSYD895);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1iv73caggn49y_getMultiHotelOffers;false;;;;
+test_uv9488vim25f_getMultiHotelOffers;false;;;;
+test_qxoatwzp2jq9_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trzooshedpgx_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_to7d180n4gtw_getMultiHotelOffers;false;;;;
+test_sobuvkgc671s_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-o/,ffers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyq0bgy0ugc0_getMultiHotelOffers;true;return.base is Numeric;The value 9JlOO` for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vf982hpgvpsz_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv2p7i6ofzoj_getMultiHotelOffers;false;;;;
+test_vbhfidkdbdbr_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got 1;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iun7un5frkfm_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (1 and 0);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hr5wyplzkmd2_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element BMjT>j{ is 7;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_t8a58pd51o3c_getMultiHotelOffers;false;;;;
+test_1hrs202a4pird_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jydaa45ct2d2_getMultiHotelOffers;false;;;;
+test_qxl0o4ldol0m_getMultiHotelOffers;true;return.hotel.chainCode is a substring of return.hotel.hotelId;Expected value of return.hotel.chainCode (hT) to be a substring of return.hotel.hotelId (RTTLSAIR);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_s4p4d2ljemnk_getMultiHotelOffers;true;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };Expected one of [PER_OCCUPANT, PER_PRODUCT], got ;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb6u9uh85u7n_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element nXJ is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1hvb1dqznrkgy_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element d is 1;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1hvbkeo90oiua_getMultiHotelOffers;false;;;;
+test_1h84t8hic1rg2_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hot´,el;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_trz6g13fhyr5_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got 6otel-offers;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7zkr1e84rc1_getMultiHotelOffers;false;;;;
+test_sl14xkxo3q5y_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jew2ly2hgnl0_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 12 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8anuygil2eb_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-25, but got 2022-0Z-25 instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_uvhf3c3nvcxh_getMultiHotelOffers;true;return.hotel.cityCode is a substring of return.hotel.hotelId;Expected value of return.hotel.cityCode (SEV) to be a substring of return.hotel.hotelId (HLSEL235);main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1iyc5wq0684tg_getMultiHotelOffers;true;All the elements of return.policies.deposit.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.deposit.acceptedPayments.creditCards[..] should be 2, but the length of the element s is 1;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_qxw63u601a3n_getMultiHotelOffers;false;;;;
+test_s50751y4zz20_getMultiHotelOffers;false;;;;
+test_qec5svtutisk_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4fjqg5y7fw7_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value (,oV:6 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_rhgmdg8es50k_getMultiHotelOffers;true;size(return.price.variations.changes[]) >= 1;The value of size(return.price.variations.changes[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_to4k5vlggf1v_getMultiHotelOffers;false;;;;
+test_1hv2rxmdtpaau_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho*tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iv0zxc3olkyq_getMultiHotelOffers;false;;;;
+test_vbeo4ms0rygg_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toalkltdfo6s_getMultiHotelOffers;false;;;;
+test_1h7whumrj4l6h_getMultiHotelOffers;true;input.checkOutDate == return.checkOutDate;Expected value of return.checkOutDate to be 2022-09-28, but got xiKbn instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1ib986omyujow_getMultiHotelOffers;false;;;;
+test_1hb86uofpw4s2_getMultiHotelOffers;false;;;;
+test_vbt1bc4711de_getMultiHotelOffers;false;;;;
+test_1h7iml4ysaasx_getMultiHotelOffers;true;return.checkOutDate is a Date. Format: YYYY/MM/DD;The value 2022-09u22 for the variable return.checkOutDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1iaxmu3qugv8z_getMultiHotelOffers;false;;;;
+test_ubon68djifjk_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf1dw702hjxw_getMultiHotelOffers;true;return.pricingMode one of { "PER_OCCUPANT", "PER_PRODUCT" };Expected one of [PER_OCCUPANT, PER_PRODUCT], got PER_PRODUC/*T;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hv0gwxy204l3_getMultiHotelOffers;true;return.percentage is Numeric;The value "P for the variable return.percentage is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7io7m8rfe48_getMultiHotelOffers;false;;;;
+test_rhocpyl1vxpd_getMultiHotelOffers;false;;;;
+test_1iuyquhcykq42_getMultiHotelOffers;false;;;;
+test_qy4dx3p74y8y_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (2 and 512806);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hv87yy4s288n_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got EJEMPLO MAYUS;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hbm26vbiheg6_getMultiHotelOffers;true;return.base is Numeric;The value BkaK2WVMiJ for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_tnzj8ux6snxt_getMultiHotelOffers;true;return.base is Numeric;The value ´/759.00 for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jiajpvnni90x_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv6juulvid0m_getMultiHotelOffers;false;;;;
+test_urjmomjw6mgl_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element ECA is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1jy26ek880o4z_getMultiHotelOffers;false;;;;
+test_rhb19s3cfcde_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl5llrzzw2ub_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got kuSo0;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxyx38c6j7li_getMultiHotelOffers;false;;;;
+test_s504syvqf8tf_getMultiHotelOffers;false;;;;
+test_qe3sjd28rejq_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value J022-09-21 for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1iexszbmm3yuu_getMultiHotelOffers;false;;;;
+test_u8555pgrh3cm_getMultiHotelOffers;false;;;;
+test_1iynt9on3qpti_getMultiHotelOffers;true;size(return.offers[]) >= 1;The value of size(return.offers[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_s0uiuzdpsr4y_getMultiHotelOffers;false;;;;
+test_u7znhim23qed_getMultiHotelOffers;false;;;;
+test_sksc2jjpw1ut_getMultiHotelOffers;false;;;;
+test_sl3we4bfp8iu_getMultiHotelOffers;false;;;;
+test_qxlizgryyt0m_getMultiHotelOffers;true;return.base is Numeric;The value f)y^&J<u for the variable return.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_trtlnhtqrcdf_getMultiHotelOffers;false;;;;
+test_qhkj60uqwh9e_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u88fyiultz5e_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element ´JC is 3;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1jed7lofjfa5w_getMultiHotelOffers;false;;;;
+test_1jyajo3ehek4l_getMultiHotelOffers;false;;;;
+test_1jy28ez1lc6r5_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element  is 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_s4xg2jawsbp0_getMultiHotelOffers;false;;;;
+test_toieklaytnau_getMultiHotelOffers;false;;;;
+test_qecnqesxsa5f_getMultiHotelOffers;false;;;;
+test_sl0n07xksf38_getMultiHotelOffers;false;;;;
+test_1ib6icoie4pww_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got h´,otel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_somxyw7hstid_getMultiHotelOffers;true;LENGTH(return.rateCode)==3;Expected length of 3 for variable return.rateCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_to7bvcn0w9yb_getMultiHotelOffers;false;;;;
+test_uv5v8bk9ecs1_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl53cr3n2zp4_getMultiHotelOffers;true;return.self is Url;The value %x for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iv0z7kd08i1x_getMultiHotelOffers;true;return.price.total is Numeric;The value v2844.00 for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vevcqipkp9o9_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urk3tvegtq28_getMultiHotelOffers;false;;;;
+test_qxzf0z6bh7ar_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7okrsjjyjc2_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 3 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxg0ls48j48h_getMultiHotelOffers;true;LENGTH(return.id)==10;Expected length of 10 for variable return.id, got 11 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe6kp5ovntbp_getMultiHotelOffers;false;;;;
+test_qdvkbuj0helv_getMultiHotelOffers;false;;;;
+test_1if1176pr4l0h_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got EJEMPLO MAYUS;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_us0p8o758it4_getMultiHotelOffers;true;LENGTH(return.policies.cancellation.deadline)==25;Expected length of 25 for variable return.policies.cancellation.deadline, got 2 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf3no3fl33om_getMultiHotelOffers;true;input.checkInDate == return.checkInDate;Expected value of return.checkInDate to be 2022-09-21, but got $Q instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_qe9wca6jdr36_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s18bgh2e8htc_getMultiHotelOffers;true;return.price.base is Numeric;The value 15*,750.00 for the variable return.price.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_soq6464xajw9_getMultiHotelOffers;false;;;;
+test_tonyia2ms12a_getMultiHotelOffers;true;return.type == "hotel-offers";Expected one of [hotel-offers], got hotel-offer*,s;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrawbk9s87jl_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got hot´,el;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhtyxdn4fk1h_getMultiHotelOffers;false;;;;
+test_1hrgg6m0xc1f6_getMultiHotelOffers;true;return.roomQuantity is Numeric;The value ,2 for the variable return.roomQuantity is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhowwzk911er_getMultiHotelOffers;false;;;;
+test_1h7fvkx613qy9_getMultiHotelOffers;false;;;;
+test_to4jpfnyjjuf_getMultiHotelOffers;false;;;;
+test_s163hux6bqr4_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got  7X;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_skmu30a5z03b_getMultiHotelOffers;false;;;;
+test_s1jf9ftn45rm_getMultiHotelOffers;true;LENGTH(return.price.currency)==3;Expected length of 3 for variable return.price.currency, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbgj1b20v4v5_getMultiHotelOffers;true;return.self is Url;The value dhT\|if for the variable return.self is not a valid URL;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hb7pe74bclkg_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got 4;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s15mc9vk1yd3_getMultiHotelOffers;false;;;;
+test_1jenpnpqgps9u_getMultiHotelOffers;false;;;;
+test_t4vna0tx50f5_getMultiHotelOffers;true;input.checkInDate == return.checkInDate;Expected value of return.checkInDate to be 2022-09-21, but got 2022-0921 instead;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1hbj9kcin0msj_getMultiHotelOffers;false;;;;
+test_1huzzdg2u6r8i_getMultiHotelOffers;false;;;;
+test_urhcrpbu6ywk_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 5 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubp6nrqxfyp2_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jy5gvxbdpilh_getMultiHotelOffers;true;return.endDate is a Date. Format: YYYY/MM/DD;The value  for the variable return.endDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_1jent8akyzmub_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value /,82200 for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urxgdqg9pun9_getMultiHotelOffers;false;;;;
+test_rh7rkj9pm2wg_getMultiHotelOffers;false;;;;
+test_qy1ohekapa2b_getMultiHotelOffers;false;;;;
+test_qhw5r1lk1xep_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhufarrdyqn9_getMultiHotelOffers;true;return.roomQuantity is Numeric;The value *3 for the variable return.roomQuantity is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxyvxek7xs9t_getMultiHotelOffers;false;;;;
+test_vbenqjpmup9d_getMultiHotelOffers;false;;;;
+test_ubp69wl643lg_getMultiHotelOffers;false;;;;
+test_1iv1ip83pqelg_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hr86fj41wf8x_getMultiHotelOffers;true;size(return.price.variations.changes[]) >= 1;The value of size(return.price.variations.changes[..]) should be greater or equal than 1 but got 0;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_vbq8amat6uk1_getMultiHotelOffers;true;LENGTH(return.room.type)==3;Expected length of 3 for variable return.room.type, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tonzcymmbp69_getMultiHotelOffers;false;;;;
+test_t84mut4m5647_getMultiHotelOffers;false;;;;
+test_rhjczf1ow0v8_getMultiHotelOffers;false;;;;
+test_1iv9agh6jd5ra_getMultiHotelOffers;false;;;;
+test_1jezcb0z9brs4_getMultiHotelOffers;false;;;;
+test_1jylk1ivcnbz6_getMultiHotelOffers;false;;;;
+test_tocw6qo738s2_getMultiHotelOffers;false;;;;
+test_s0xsy5pv5fzs_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 8 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jefzdpt14h9f_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (2 and 3);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_urrut8v7d647_getMultiHotelOffers;false;;;;
+test_1iavddq0743eg_getMultiHotelOffers;false;;;;
+test_s4unijawcw1i_getMultiHotelOffers;false;;;;
+test_1ibh16m4z5ano_getMultiHotelOffers;true;return.percentage is Numeric;The value EJEMPLO MAYUS for the variable return.percentage is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urjk9jao8tpe_getMultiHotelOffers;false;;;;
+test_trwvfgyznewl_getMultiHotelOffers;false;;;;
+test_trwvcw69qiqs_getMultiHotelOffers;false;;;;
+test_1hrgykyoln5f8_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ´/hotel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iuy8jjcmqkok_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl3fycxmfejl_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got EU5;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s0xsy3ewbu5e_getMultiHotelOffers;true;LENGTH(return.hotel.cityCode)==3;Expected length of 3 for variable return.hotel.cityCode, got 1 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iuvgg2tqxwdx_getMultiHotelOffers;true;input.adults == return.guests.adults;input.adults should be equal to return.guests.adults, but got different values (1 and 366842);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1jyaja2aurdr9_getMultiHotelOffers;false;;;;
+test_qhvoztve796f_getMultiHotelOffers;false;;;;
+test_urxgp38fbj1u_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jy4xe21lja5v_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qy4xskoj2asy_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 4 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hruts0f522b6_getMultiHotelOffers;false;;;;
+test_urpmx9259s8m_getMultiHotelOffers;false;;;;
+test_uv6d5sjavxh4_getMultiHotelOffers;true;return.price.total is Numeric;The value w38wXVW2fT for the variable return.price.total is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hux7ls4b827k_getMultiHotelOffers;false;;;;
+test_1k22cmod0nq77_getMultiHotelOffers;false;;;;
+test_urxy8om5uecx_getMultiHotelOffers;false;;;;
+test_vbt1bhzmfo12_getMultiHotelOffers;true;LENGTH(return.currency)==3;Expected length of 3 for variable return.currency, got 13 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&taxes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1if0ivuk88bw4_getMultiHotelOffers;false;;;;
+test_qe6nvtqirmet_getMultiHotelOffers;true;All the elements of return.policies.guarantee.acceptedPayments.creditCards[] have LENGTH=2;The length of all the elements of return.policies.guarantee.acceptedPayments.creditCards[..] should be 2, but the length of the element {<s+; is 5;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_s1b3jt9egz8l_getMultiHotelOffers;true;return.startDate is a Date. Format: YYYY/MM/DD;The value xeO43UAQMR for the variable return.startDate is not a valid Date (format: YYYYMMDD);main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers&price&variations&changes(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.dates.IsDateYYYYMMDD
+test_ubgcxvkagppx_getMultiHotelOffers;true;return.price.variations.average.base is Numeric;The value aj for the variable return.price.variations.average.base is not a valid number;main.shoppinghotel-offers.getMultiHotelOffers&200&data&offers(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7qydbwy4qjm_getMultiHotelOffers;false;;;;
+test_1hbm0k4588b3l_getMultiHotelOffers;false;;;;
+test_sl68i9d9zbxv_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 10 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jy27kho7d5r9_getMultiHotelOffers;false;;;;
+test_1h7zsq0y5hxrt_getMultiHotelOffers;true;LENGTH(return.hotel.chainCode)==2;Expected length of 2 for variable return.hotel.chainCode, got 7 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jeyvgyovsmye_getMultiHotelOffers;false;;;;
+test_urv7pfa9fmls_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 9 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toogifq4ri3m_getMultiHotelOffers;false;;;;
+test_qy26swlku0dd_getMultiHotelOffers;false;;;;
+test_t4ndl6izqptl_getMultiHotelOffers;false;;;;
+test_somw0yjgb03d_getMultiHotelOffers;false;;;;
+test_vbsjdt64l17q_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got h5otel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7rg7wcgc7jr_getMultiHotelOffers;true;LENGTH(return.hotel.hotelId)==8;Expected length of 8 for variable return.hotel.hotelId, got 6 instead.;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sksaz6w2vdcy_getMultiHotelOffers;true;return.hotel.type == "hotel";Expected one of [hotel], got ho6tel;main.shoppinghotel-offers.getMultiHotelOffers&200&data(main.getMultiHotelOffers&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7rb2am3s8rp_getMultiHotelOffers;false;;;;

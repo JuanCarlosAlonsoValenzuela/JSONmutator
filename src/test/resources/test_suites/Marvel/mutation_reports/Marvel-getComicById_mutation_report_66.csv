@@ -1,0 +1,1001 @@
+testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType
+test_sohehr9o7ujn_getComicIndividual;false;;;;
+test_1jyjciytkrb5j_getComicIndividual;false;;;;
+test_1jiflbwt15zjm_getComicIndividual;false;;;;
+test_1iaxpk9hrhxsz_getComicIndividual;false;;;;
+test_t4svif9ge8gy_getComicIndividual;false;;;;
+test_urv7n2etoapc_getComicIndividual;false;;;;
+test_s4rvr1amhbac_getComicIndividual;true;return.price >= 0.0;The value of return.price should be greater or equal than 0.0 but got -824726.0;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBoundFloat
+test_urmvwznyfar7_getComicIndividual;false;;;;
+test_1hux8gf4t3h46_getComicIndividual;false;;;;
+test_sok5ezra8chd_getComicIndividual;false;;;;
+test_ubrfnnn3wu9h_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxteef5s45dg_getComicIndividual;true;return.resourceURI is Url;The value BAFz for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_trwbvoz1z97m_getComicIndividual;false;;;;
+test_1iun72bfjx7i1_getComicIndividual;true;return.creators.collectionURI is Url;The value Y for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_uboms5lp10dv_getComicIndividual;false;;;;
+test_r1ddkd3zoj78_getComicIndividual;true;return.type one of { "digitalPurchasePrice", "printPrice" };Expected one of [digitalPurchasePrice, printPrice], got CBtS(u8=/;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7p1571xa0c8_getComicIndividual;false;;;;
+test_1iyqlftu9tfeg_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qec5f4ynfn03_getComicIndividual;false;;;;
+test_s4xfaf2zyelf_getComicIndividual;true;return.resourceURI is Url;The value fM5VDUcTlc for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s1gocck3cawh_getComicIndividual;true;LENGTH(return.diamondCode)==9;Expected length of 9 for variable return.diamondCode, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl668n55oh82_getComicIndividual;false;;;;
+test_1jia12nb16gdd_getComicIndividual;false;;;;
+test_t4l4wvcrj3g1_getComicIndividual;false;;;;
+test_1h7zrm6hiy5gx_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 0);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1jeipzcdf06yb_getComicIndividual;false;;;;
+test_1h82k3vzxx279_getComicIndividual;false;;;;
+test_uruolul45r20_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (135757 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hrbftb8gtmqu_getComicIndividual;false;;;;
+test_1iupz5r6yzfw7_getComicIndividual;false;;;;
+test_vevvg0b01n3p_getComicIndividual;true;input.comicId == return.id;input.comicId should be equal to return.id, but got different values (71576 and 71577);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1k1r94q7beb8m_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got ejemplo minus;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf6g7x5kqdyu_getComicIndividual;false;;;;
+test_1jicuepine989_getComicIndividual;false;;;;
+test_1k22s7uqz5ir7_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (7 and 8);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1ji7sbl3vvy29_getComicIndividual;false;;;;
+test_soejwuq23dio_getComicIndividual;false;;;;
+test_1jy26shsi2w51_getComicIndividual;false;;;;
+test_1hbdr6ka3y6nr_getComicIndividual;true;LENGTH(return.ean)==20;Expected length of 20 for variable return.ean, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbit75wwgfna_getComicIndividual;true;return.events.collectionURI is Url;The value 4\~]D;Uj for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1h7lwoijiublg_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv9tkdoplhrn_getComicIndividual;true;return.copyright == "© 2022 MARVEL";Expected one of [© 2022 MARVEL], got EJEMPLO MAYUS;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubgv9rhqjpyo_getComicIndividual;true;LENGTH(return.diamondCode)==9;Expected length of 9 for variable return.diamondCode, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdt8x1d567vo_getComicIndividual;false;;;;
+test_uv5vmm6afzuf_getComicIndividual;false;;;;
+test_qy4y6hfyezi0_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jei63lw109k6_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (2 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_ubu8zpv9vfj6_getComicIndividual;false;;;;
+test_trz5lk30ysdx_getComicIndividual;false;;;;
+test_1h82kyf03np7p_getComicIndividual;false;;;;
+test_ts2ewtr6fwwz_getComicIndividual;true;return.resourceURI is a substring of return.creators.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/pxblic/comics/7140) to be a substring of return.creators.collectionURI (http://gateway.marvel.com/v1/public/comics/7140/creators);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1h7gd73q1dzz5_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jetafzj5a0j6_getComicIndividual;false;;;;
+test_qdytpmltid6h_getComicIndividual;false;;;;
+test_qhhreaymhs1f_getComicIndividual;false;;;;
+test_t81afkfrgbp5_getComicIndividual;false;;;;
+test_qxqm8g8gxq9k_getComicIndividual;false;;;;
+test_1iuy8xi3v66ap_getComicIndividual;false;;;;
+test_to536zh3yqub_getComicIndividual;false;;;;
+test_ts1xdjumtc8k_getComicIndividual;false;;;;
+test_ubj53sv8guw4_getComicIndividual;false;;;;
+test_qxl0nss8yqt1_getComicIndividual;false;;;;
+test_rhdd4r9c3cde_getComicIndividual;false;;;;
+test_1hb7pbmd15tgk_getComicIndividual;false;;;;
+test_t4ndwt6x2jhz_getComicIndividual;false;;;;
+test_1hrgft11qnqk9_getComicIndividual;false;;;;
+test_tofn9cydwx9g_getComicIndividual;false;;;;
+test_qhkjk0co1z5g_getComicIndividual;false;;;;
+test_us08xsg74zfn_getComicIndividual;false;;;;
+test_1iv3sxjrazcxf_getComicIndividual;false;;;;
+test_u7razrw0iwqf_getComicIndividual;true;return.resourceURI is Url;The value >/ for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_sl66mq7jruwg_getComicIndividual;false;;;;
+test_s18uvdf90i0j_getComicIndividual;false;;;;
+test_1iuke4i757ntv_getComicIndividual;false;;;;
+test_1hrj7n5qpxely_getComicIndividual;false;;;;
+test_vf3og5o0nh2p_getComicIndividual;false;;;;
+test_1jy7qcdcpgt9v_getComicIndividual;true;return.price >= 0.0;The value of return.price should be greater or equal than 0.0 but got -1.0;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBoundFloat
+test_u85o97s4qr7b_getComicIndividual;false;;;;
+test_u8e0a19nlx0i_getComicIndividual;false;;;;
+test_ubu8zptvxpwm_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (-30377 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_tnzijfeakapf_getComicIndividual;true;return.code == 200;Expected one of [200], got -511540;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1hrjadj1vq63o_getComicIndividual;false;;;;
+test_ubu87txay99g_getComicIndividual;false;;;;
+test_qxfzi3kiu14n_getComicIndividual;false;;;;
+test_1jyit1tjqdj5g_getComicIndividual;true;return.code == 200;Expected one of [200], got 586437;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1jew0yx0tc28y_getComicIndividual;false;;;;
+test_1ieybatdwohmd_getComicIndividual;false;;;;
+test_toa4hjk02r8k_getComicIndividual;false;;;;
+test_s4mb3jhk6zxi_getComicIndividual;false;;;;
+test_1jyittlih20j6_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ies94hfno01j_getComicIndividual;false;;;;
+test_1ibbhmmkzlrn7_getComicIndividual;false;;;;
+test_qdtajw26u1wz_getComicIndividual;false;;;;
+test_t4c9poy5yq0n_getComicIndividual;true;return.code == 200;Expected one of [200], got -298168;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1jy4xrzjdied0_getComicIndividual;false;;;;
+test_t4vnobtt9f06_getComicIndividual;false;;;;
+test_1iycqhpqlm2b5_getComicIndividual;false;;;;
+test_qy1ppynmzqyh_getComicIndividual;false;;;;
+test_1ibbkfoljhmwj_getComicIndividual;false;;;;
+test_qdpzlnckbkmp_getComicIndividual;false;;;;
+test_t4fjqckljtya_getComicIndividual;true;return.resourceURI is Url;The value H for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1k1ty8yz1gvvq_getComicIndividual;false;;;;
+test_1iuso7n73dkkh_getComicIndividual;true;return.attributionHTML == "<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>";Expected one of [<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>], got EJEMPLO MAYUS;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t8f5arlrgisy_getComicIndividual;false;;;;
+test_1ibbh92vb8qxt_getComicIndividual;true;return.resourceURI is Url;The value N69dO2+ for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hbljelfhsh9h_getComicIndividual;false;;;;
+test_u7u3m6obxsfp_getComicIndividual;true;return.resourceURI is Url;The value http://gateway.marvel.comv1/public/creators/11463 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qxfzw6n6ob3l_getComicIndividual;true;return.resourceURI is Url;The value htp://gateway.marvel.com/v1/public/creators/2133 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_urmdoe5n9dm9_getComicIndividual;false;;;;
+test_trrbt6ilktpf_getComicIndividual;false;;;;
+test_qe149b1ce6gl_getComicIndividual;false;;;;
+test_1je9ycx3icrat_getComicIndividual;false;;;;
+test_1hv005y48v7zp_getComicIndividual;false;;;;
+test_1ibkbcmpqg2sw_getComicIndividual;false;;;;
+test_qy4fv1biz4tu_getComicIndividual;false;;;;
+test_1huzxhx8ffwhj_getComicIndividual;false;;;;
+test_1jyobf2303n1h_getComicIndividual;false;;;;
+test_u8diqwwm4px1_getComicIndividual;false;;;;
+test_1ib0g601bh2yg_getComicIndividual;true;return.digitalId >= 0;The value of return.digitalId should be greater or equal than 0 but got -84792;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_1iv9c3g7gqtdk_getComicIndividual;true;return.resourceURI is Url;The value http://g*,ateway.marvel.com/v1/public/stories/38310 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iupww1q9gmra_getComicIndividual;false;;;;
+test_sl9gn5jnztyc_getComicIndividual;false;;;;
+test_r17sdvxv8yn8_getComicIndividual;false;;;;
+test_1jenqfno2ekvp_getComicIndividual;true;return.events.collectionURI is Url;The value 2 for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1h85bk16o0apg_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];The value of return.data.offset (55382) cannot be used to access an array of size 1;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_to53yxedst9x_getComicIndividual;false;;;;
+test_t4tfe3dpj6t0_getComicIndividual;false;;;;
+test_s4mb3j54hvlg_getComicIndividual;true;LENGTH(return.diamondCode)==9;Expected length of 9 for variable return.diamondCode, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1uiu3ci965h_getComicIndividual;true;return.creators.collectionURI is Url;The value ejemplo minus for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jy2phmrcavco_getComicIndividual;false;;;;
+test_urunr7mjw94j_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 2 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tol6f7dum8mr_getComicIndividual;true;LENGTH(return.diamondCode)==9;Expected length of 9 for variable return.diamondCode, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iepzlilal646_getComicIndividual;false;;;;
+test_1jewkgkfd08q9_getComicIndividual;false;;;;
+test_1jy7rw9wgied4_getComicIndividual;false;;;;
+test_1ib5yjs8qbkmo_getComicIndividual;false;;;;
+test_sl0o6b7bdhrn_getComicIndividual;false;;;;
+test_urp341cyh7ox_getComicIndividual;true;return.resourceURI is Url;The value Jf9 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_ubgc5tdul0dy_getComicIndividual;false;;;;
+test_ts1wzaslm0xl_getComicIndividual;false;;;;
+test_rhdsq5iwt4qc_getComicIndividual;false;;;;
+test_t8f811ecd73k_getComicIndividual;false;;;;
+test_sl3es1qddbnc_getComicIndividual;false;;;;
+test_s1jy1lrblox2_getComicIndividual;false;;;;
+test_1jygk1ng30jzp_getComicIndividual;false;;;;
+test_sof3shl39kqe_getComicIndividual;false;;;;
+test_1jyobfbm87wx2_getComicIndividual;true;return.creators.collectionURI is Url;The value pgzFqHPuEF for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1ib35j0ildnw3_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 4470);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vb6u9inlqijm_getComicIndividual;false;;;;
+test_1iv9ct5kqhicx_getComicIndividual;false;;;;
+test_uvjqkc65bvc1_getComicIndividual;false;;;;
+test_s4rt32rpr4mu_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/77345) to be a substring of return.events.collectionURI (http://gateway.marvel.com/v1/public/comics/7734/5/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1jyiti35zmvz8_getComicIndividual;false;;;;
+test_uvbvjkf8rgpv_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 2 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jidb63686iph_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 56 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jetth2mzus11_getComicIndividual;false;;;;
+test_1ieyaj10mox13_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 41 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxw4xl9niur6_getComicIndividual;false;;;;
+test_1jet9l2cw9vlj_getComicIndividual;false;;;;
+test_1ibc0t1hljdip_getComicIndividual;false;;;;
+test_1jefhfzavj0om_getComicIndividual;false;;;;
+test_1jy262yb9gnjr_getComicIndividual;true;return.resourceURI is Url;The value HF3KvmN3| for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s4xewccrnu45_getComicIndividual;true;return.resourceURI is Url;The value http://,gateway.marvel.com/v1/public/stories/67783 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hbd6itxr2rec_getComicIndividual;false;;;;
+test_1jy7ogo9u1i5z_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iephchc6kncm_getComicIndividual;false;;;;
+test_u856n1mjr7fn_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibe8mxkvzuxv_getComicIndividual;true;return.stories.collectionURI is Url;The value GMj5#{pxl for the variable return.stories.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qe1l10ig7sq9_getComicIndividual;false;;;;
+test_1k201ofh731h0_getComicIndividual;false;;;;
+test_qe6m984luhbk_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got Data provided by MarvelV. © 2022 MARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhsuvps7u9np_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jy7qpyoneb09_getComicIndividual;true;return.resourceURI is Url;The value http:/*//gateway.marvel.com/v1/public/creators/1247 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t4qmtzt6lo35_getComicIndividual;true;return.thumbnail.path is Url;The value B for the variable return.thumbnail.path is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hrs1aj5xowtz_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 2);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_skn9qrfgn7zo_getComicIndividual;false;;;;
+test_to4lq2ek731z_getComicIndividual;true;return.resourceURI is Url;The value ejemplo minus for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1ibbjks55k2t4_getComicIndividual;true;return.resourceURI is Url;The value Z for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_soknqdvucvvo_getComicIndividual;false;;;;
+test_tnz07vcd6sf7_getComicIndividual;false;;;;
+test_vbkpzon5y2qs_getComicIndividual;false;;;;
+test_rhb247j1i81c_getComicIndividual;false;;;;
+test_vbsixh4ov7ld_getComicIndividual;false;;;;
+test_1ibjtf7dsv0hh_getComicIndividual;false;;;;
+test_t81cdmekxs9y_getComicIndividual;false;;;;
+test_u8048qprga5d_getComicIndividual;false;;;;
+test_tog5w7svzl15_getComicIndividual;false;;;;
+test_qxisu5u0xyed_getComicIndividual;false;;;;
+test_1ib98n28q6sl3_getComicIndividual;true;return.url is Url;The value ejemplo minus for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qe6n3xfscw1k_getComicIndividual;false;;;;
+test_ubuonix3twme_getComicIndividual;true;return.creators.collectionURI is Url;The value m for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_ubrgwfzm4h2e_getComicIndividual;false;;;;
+test_s4mbevkqrjvo_getComicIndividual;true;return.code == 200;Expected one of [200], got 201;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1jeafwb0dk4md_getComicIndividual;false;;;;
+test_1jeyvhagkhu0k_getComicIndividual;false;;;;
+test_s1jh7n0v0z8i_getComicIndividual;false;;;;
+test_skpjwuwl0unp_getComicIndividual;false;;;;
+test_1jeaec2yvjneh_getComicIndividual;false;;;;
+test_toogtzonz0wz_getComicIndividual;false;;;;
+test_1jy262seo5h6b_getComicIndividual;false;;;;
+test_1jia2k14ir1o8_getComicIndividual;false;;;;
+test_1jyaihy2ly6go_getComicIndividual;true;return.resourceURI is Url;The value W#,/<= for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jydrf6ne95ye_getComicIndividual;true;return.resourceURI is Url;The value t+: for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hrj8cypseomw_getComicIndividual;false;;;;
+test_1iuw0mrwtepgm_getComicIndividual;true;return.resourceURI is Url;The value K for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_to2bsyiibtk2_getComicIndividual;false;;;;
+test_s13chzbbjn01_getComicIndividual;false;;;;
+test_1jy4xeaa92sz6_getComicIndividual;false;;;;
+test_1iuyrpcjaowfm_getComicIndividual;false;;;;
+test_vf97ahf2cb50_getComicIndividual;false;;;;
+test_rhm55fja4ztt_getComicIndividual;false;;;;
+test_1iyfic2o527n5_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 947207);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_qec6nh6dkg1h_getComicIndividual;false;;;;
+test_1ies73ey74s34_getComicIndividual;false;;;;
+test_ubj364q6wcvo_getComicIndividual;false;;;;
+test_1jel0ogijp5d0_getComicIndividual;false;;;;
+test_ts58bcrgg75g_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got Data provided by Marvel. © 2022 MaARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qe73emuxwth2_getComicIndividual;false;;;;
+test_qdyckdtepjl0_getComicIndividual;false;;;;
+test_toogfsnxwm5v_getComicIndividual;false;;;;
+test_rl038bmjezat_getComicIndividual;false;;;;
+test_qxnu04glkd2v_getComicIndividual;true;LENGTH(return.ean)==20;Expected length of 20 for variable return.ean, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4q654k347xy_getComicIndividual;false;;;;
+test_qdpy4hgt6iid_getComicIndividual;false;;;;
+test_sl3xhr71h2r8_getComicIndividual;false;;;;
+test_qxfg0i7i4ugk_getComicIndividual;false;;;;
+test_to7ap9a4j701_getComicIndividual;false;;;;
+test_1hvb1b7wn1h7m_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got Data ´provided by Marvel. © 2022 MARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hbm1ez0sb338_getComicIndividual;false;;;;
+test_1jeco4awzfk8o_getComicIndividual;false;;;;
+test_1h7zspwz7fmsx_getComicIndividual;false;;;;
+test_1ibh2ctf1sktg_getComicIndividual;false;;;;
+test_1jidas0gtvwwz_getComicIndividual;false;;;;
+test_1iynbnmgp2yci_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got 19;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_rhajetw0elvc_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 5 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4vquvxgdoon_getComicIndividual;true;return.copyright == "© 2022 MARVEL";Expected one of [© 2022 MARVEL], got 7aWb6A2954;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u8552wuz0nxu_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 58 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h84v4a8cjj91_getComicIndividual;false;;;;
+test_qxi9qregfeqr_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (0 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1h7gera31povn_getComicIndividual;false;;;;
+test_qe9eswn9ccpx_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (899653 and 5);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_uvjr9xyeeqm1_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (0 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_ubjmq3beuf6t_getComicIndividual;false;;;;
+test_1h7j654uijvqe_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got -872705;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_skvluj28g0fo_getComicIndividual;false;;;;
+test_1iaveva1ds4ti_getComicIndividual;false;;;;
+test_1iupwtuebscx0_getComicIndividual;false;;;;
+test_t4yy5t5wthys_getComicIndividual;false;;;;
+test_ubrgtqxqjghh_getComicIndividual;true;return.stories.collectionURI is Url;The value -8a|JnkD for the variable return.stories.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qhl2nsk43ltf_getComicIndividual;false;;;;
+test_1hraxszofij3n_getComicIndividual;false;;;;
+test_qhna5uts420l_getComicIndividual;false;;;;
+test_rhdaefxjb1va_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and -938789);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vbsh1mh1gxmd_getComicIndividual;true;return.resourceURI is Url;The value ejemplo minus for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t8a4j9uiprvl_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (918341 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1jidb3ksygoxh_getComicIndividual;false;;;;
+test_1h7o5f97910za_getComicIndividual;true;return.resourceURI is a substring of return.creators.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/7459) to be a substring of return.creators.collectionURI (http://gateway.marvel.com/v1/puClic/comics/7459/creators);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_t89o5tdmo3fo_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 42 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe6lh3wnazas_getComicIndividual;true;return.events.collectionURI is Url;The value h6tp://gateway.marvel.com/v1/public/comics/37683/events for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_tofpj161e6uv_getComicIndividual;false;;;;
+test_qhvmq8aczpyo_getComicIndividual;false;;;;
+test_qy4erkr7q90w_getComicIndividual;true;return.creators.collectionURI is Url;The value htgtp://gateway.marvel.com/v1/public/comics/37421/creators for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_trrddbbkglrt_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/43536) to be a substring of return.events.collectionURI (http://gateway.marvel.com/v1/public/comics//43536/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_t4kknbb1oa41_getComicIndividual;false;;;;
+test_1iyhq8fy0vko5_getComicIndividual;false;;;;
+test_qdsrud997xgy_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got 21;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_r1alsgxgiiwj_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 2);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_s1jzlrs4mgys_getComicIndividual;false;;;;
+test_ts56aij5mtyx_getComicIndividual;true;return.resourceURI is Url;The value http//gateway.marvel.com/v1/public/stories/14340 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jy7r6q1mum2d_getComicIndividual;false;;;;
+test_t4q5d892lp9t_getComicIndividual;true;return.resourceURI is Url;The value YA2bu6 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t8fq1706c9k1_getComicIndividual;false;;;;
+test_t81d851t5nat_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (5 and 0);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_ubrevro16yif_getComicIndividual;false;;;;
+test_vbheq7f9nupk_getComicIndividual;false;;;;
+test_qhl2bxzinn8i_getComicIndividual;false;;;;
+test_rhug2m4h73u8_getComicIndividual;false;;;;
+test_sof3enz5nfox_getComicIndividual;false;;;;
+test_1jewkjd123v3r_getComicIndividual;false;;;;
+test_vbkod5q1hlr5_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxl11nkx06ye_getComicIndividual;false;;;;
+test_qe9evutbpf7b_getComicIndividual;true;size(return.prices[]) one of { 1, 2 };Expected one of [1, 2], got 0;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_qe3szuy9qwc8_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 2 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbafj5wot455_getComicIndividual;false;;;;
+test_1jyittnj63vq9_getComicIndividual;true;return.type one of { "digitalPurchasePrice", "printPrice" };Expected one of [digitalPurchasePrice, printPrice], got ejemplo minus;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_skmtdf9fyur9_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 9 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyq3tqyablnn_getComicIndividual;false;;;;
+test_urhbo0t6qh5w_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (1 and 2);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_s1efleonseuq_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got Dat´,a provided by Marvel. © 2022 MARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeo9wtnhwisx_getComicIndividual;false;;;;
+test_qxr2zpx3mjja_getComicIndividual;false;;;;
+test_1jeyv33t7ep88_getComicIndividual;false;;;;
+test_1hrbeykbwmw54_getComicIndividual;false;;;;
+test_1hrudh4bzdsmu_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 3 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf46rpq8341k_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got Data provided by Marvel. © X2022 MARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urxhxuw6xpph_getComicIndividual;false;;;;
+test_1jxzwmcckj8dt_getComicIndividual;false;;;;
+test_qxia1yb70jfq_getComicIndividual;false;;;;
+test_urhb9tdp377b_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 5 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rh7q2tn5cx2c_getComicIndividual;false;;;;
+test_t4w8bwnihen7_getComicIndividual;false;;;;
+test_u805heg0rvc2_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4p41ibev4va_getComicIndividual;true;LENGTH(return.ean)==20;Expected length of 20 for variable return.ean, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl3gcg14l5bk_getComicIndividual;false;;;;
+test_vbbupztmpra9_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/100119) to be a substring of return.events.collectionURI (http://gateway.marvel.com/v1/public/c1omics/100119/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_toixa4hpz52a_getComicIndividual;false;;;;
+test_ts4qp6mrerzk_getComicIndividual;false;;;;
+test_vf6xu42cc3zn_getComicIndividual;false;;;;
+test_qhtetp5befxx_getComicIndividual;false;;;;
+test_s12tsdszncyu_getComicIndividual;true;return.copyright == "© 2022 MARVEL";Expected one of [© 2022 MARVEL], got © 2022 MAR,VEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ibec4vqgvy3p_getComicIndividual;false;;;;
+test_qdvh9y5jvupf_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 0);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1k1r60rjnnygj_getComicIndividual;true;return.events.collectionURI is Url;The value hGtp://gateway.marvel.com/v1/public/comics/815/events for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s4v5g27r5cmp_getComicIndividual;false;;;;
+test_t4l4uijhnho3_getComicIndividual;false;;;;
+test_skxvm78estgy_getComicIndividual;false;;;;
+test_urek79j70pio_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got Data provided by Marvel. © 202,2 MARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jyd7xhanbja9_getComicIndividual;false;;;;
+test_1hbghsqjqzgab_getComicIndividual;false;;;;
+test_1hv8rgd8hvoz6_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 3 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb3iopc22mnq_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got ejemplo minus;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhhtcitf8siu_getComicIndividual;false;;;;
+test_qe9vylaos6zq_getComicIndividual;true;return.resourceURI is a substring of return.characters.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/10917) to be a substring of return.characters.collectionURI (http://gateway.marvel.com/v1/publc/comics/10917/characters);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1k1txsb79d6ch_getComicIndividual;false;;;;
+test_s1dw3swnf41h_getComicIndividual;false;;;;
+test_urk4jcug52k5_getComicIndividual;false;;;;
+test_skk14zk28me9_getComicIndividual;false;;;;
+test_s13c3m1c8isx_getComicIndividual;false;;;;
+test_t4sz0bfg5fec_getComicIndividual;false;;;;
+test_urv6utyj30hk_getComicIndividual;false;;;;
+test_1iyex7rrqzb6q_getComicIndividual;false;;;;
+test_rlapmqh83a5z_getComicIndividual;false;;;;
+test_rhm5jd3k4fad_getComicIndividual;false;;;;
+test_vb94wdhj7syp_getComicIndividual;false;;;;
+test_soelgz49w0fm_getComicIndividual;false;;;;
+test_skycs07pz50y_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 41 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uv5vmcal1ws6_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h821gv6ci3p0_getComicIndividual;true;return.type one of { "digitalPurchasePrice", "printPrice" };Expected one of [digitalPurchasePrice, printPrice], got princPrice;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhqlhueubuif_getComicIndividual;true;return.attributionHTML == "<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>";Expected one of [<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>], got .vA@jp(;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jetcs479gktg_getComicIndividual;false;;;;
+test_s1dw3nc1j8te_getComicIndividual;false;;;;
+test_1h7z98hu5f60o_getComicIndividual;false;;;;
+test_rl2dgtvcxohk_getComicIndividual;false;;;;
+test_vbeog1ku0o6c_getComicIndividual;true;return.price >= 0.0;The value of return.price should be greater or equal than 0.0 but got -525267.9;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBoundFloat
+test_ts1x21tikyev_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 5 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uve4akognxi9_getComicIndividual;true;return.url is Url;The value rbH9agoB2t for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_u8573pghzalg_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got pnoWSJUwfN;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hbdqeg3v0dwh_getComicIndividual;false;;;;
+test_qxwnn07b49it_getComicIndividual;false;;;;
+test_vbhdk80rdmwp_getComicIndividual;false;;;;
+test_rhr5lfdkha9i_getComicIndividual;false;;;;
+test_t4qoe2a4ge3o_getComicIndividual;false;;;;
+test_urgs6jbgd8ae_getComicIndividual;true;return.resourceURI is Url;The value HQ\7p</S% for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hrmjov3rek39_getComicIndividual;true;return.copyright == "© 2022 MARVEL";Expected one of [© 2022 MARVEL], got © 202x2 MARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hv38p5xbul2s_getComicIndividual;false;;;;
+test_rlanm1ut5vtx_getComicIndividual;true;return.code == 200;Expected one of [200], got 61992;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1h7ilhi3iawxf_getComicIndividual;false;;;;
+test_rl2dj2ff61px_getComicIndividual;true;return.resourceURI is Url;The value http//gateway.marvel.com/v1/public/creators/2120 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qy4f5o5t9u0i_getComicIndividual;false;;;;
+test_1hbaz3ibmvk1j_getComicIndividual;false;;;;
+test_qhiaydiolh0j_getComicIndividual;false;;;;
+test_vf6fu9u9rbqo_getComicIndividual;true;return.attributionHTML == "<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>";Expected one of [<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>], got <a href="http://marvel.com">Data provided by MarvVel. © 2022 MARVEL</a>;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jekz4e1zasm9_getComicIndividual;false;;;;
+test_t4yhgo3a0pwx_getComicIndividual;false;;;;
+test_1iuqgpd0h21x0_getComicIndividual;true;return.resourceURI is a substring of return.stories.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/22359) to be a substring of return.stories.collectionURI (http://gateway.mWrvel.com/v1/public/comics/22359/stories);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1ib9a74pkm6oz_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 309247);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hbaypbamwd2s_getComicIndividual;true;return.url is Url;The value .5-(-#7Nl for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iunolsw26hq1_getComicIndividual;false;;;;
+test_sohcgyn16nac_getComicIndividual;false;;;;
+test_qhvlvoxbs6yb_getComicIndividual;false;;;;
+test_t4q4wcxdfw34_getComicIndividual;false;;;;
+test_qxnstzjfd4qg_getComicIndividual;false;;;;
+test_s15mqbc84mrd_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubu69nyrf42p_getComicIndividual;false;;;;
+test_r1lotnqypyyb_getComicIndividual;false;;;;
+test_rkwrkndqfju8_getComicIndividual;false;;;;
+test_s0uhoq4k9bhd_getComicIndividual;false;;;;
+test_1ib37jsr145yx_getComicIndividual;false;;;;
+test_s507j6m8mfcl_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 6 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s1jg1llxlo35_getComicIndividual;false;;;;
+test_1iv9dkrzr61x1_getComicIndividual;false;;;;
+test_rl2u7pf4gjzo_getComicIndividual;true;return.creators.collectionURI is Url;The value ejemplo minus for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t8f7plcji9nq_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vevvg1x7sy0k_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got A:`;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_r1ctm5uxx5d0_getComicIndividual;false;;;;
+test_1jecmjw9etkxf_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbhw9l9z6trq_getComicIndividual;false;;;;
+test_uv8n0aznt2k1_getComicIndividual;false;;;;
+test_qxfzi5iq23hw_getComicIndividual;false;;;;
+test_r1fle7afdi01_getComicIndividual;false;;;;
+test_us07di2efcj7_getComicIndividual;false;;;;
+test_vf6hgz0dia92_getComicIndividual;true;return.resourceURI is Url;The value Vtwz for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_sl9gnbt8ir7a_getComicIndividual;true;return.resourceURI is Url;The value u_O 2 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qe1kpc8x1vzm_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv5zrcehjzhg_getComicIndividual;false;;;;
+test_qy4gpukrvk8g_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 58 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tnz07xbo8s3c_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 0);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_qxqk7w959gf7_getComicIndividual;false;;;;
+test_1ib8pusevdb1v_getComicIndividual;false;;;;
+test_s100uapfazaw_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];The value of return.data.offset (359495) cannot be used to access an array of size 1;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_veym1qgws1nl_getComicIndividual;false;;;;
+test_qdysuzo3g2n7_getComicIndividual;true;return.code == 200;Expected one of [200], got -242045;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_rhodfghez1vc_getComicIndividual;false;;;;
+test_1iv71s3oerv3t_getComicIndividual;false;;;;
+test_vf99mqelxu0m_getComicIndividual;false;;;;
+test_s4xcknheim9h_getComicIndividual;true;return.data.total == size(return.data.results[]);return.data.total should be equal to size(return.data.results[..]), but got different values (1 and 0);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_skpkdgqg204z_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 58 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbhftzud8z1i_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 56 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxwmh2r1ry9k_getComicIndividual;false;;;;
+test_1hrosoeppub07_getComicIndividual;false;;;;
+test_vf1fe2vm41f9_getComicIndividual;false;;;;
+test_vevcqeqq9lx1_getComicIndividual;false;;;;
+test_1ievhnmkqtni1_getComicIndividual;true;return.creators.collectionURI is Url;The value ejemplo minus for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qdybpquayuk7_getComicIndividual;false;;;;
+test_1iyhsko6vy7oi_getComicIndividual;true;return.creators.available >= return.creators.returned;The value of return.creators.returned should be lesser or equal than return.creators.available (6), but got 7;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_vb42vxqyacf5_getComicIndividual;true;return.resourceURI is Url;The value http://*,gateway.marvel.com/v1/public/stories/80672 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s1b4q2h2ewkm_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jylk43yab59h_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 6 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tolq896g110m_getComicIndividual;true;LENGTH(return.diamondCode)==9;Expected length of 9 for variable return.diamondCode, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbk7ocgr0ajo_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 53 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ievida17egxh_getComicIndividual;true;return.series.resourceURI is Url;The value http://gateway.marvel.c*,om/v1/public/series/23103 for the variable return.series.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1k22b4z55p2k8_getComicIndividual;true;return.price >= 0.0;The value of return.price should be greater or equal than 0.0 but got -679358.7;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBoundFloat
+test_1h823et87slkh_getComicIndividual;true;return.thumbnail.path is Url;The value !1|)"7 for the variable return.thumbnail.path is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s12te55g0fub_getComicIndividual;false;;;;
+test_skvmy01syd0h_getComicIndividual;false;;;;
+test_vbk8g6tadzxs_getComicIndividual;false;;;;
+test_s1jg1vhn9dtg_getComicIndividual;false;;;;
+test_skv4az9x8fg1_getComicIndividual;false;;;;
+test_uv5v8f50edrq_getComicIndividual;false;;;;
+test_urrye1ai75tj_getComicIndividual;true;return.resourceURI is Url;The value ejemplo minus for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jefxtfshy8fm_getComicIndividual;true;return.resourceURI is Url;The value _u for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qxwn911vf31y_getComicIndividual;false;;;;
+test_qxwnbk63wyt4_getComicIndividual;false;;;;
+test_t4sxupvjerzt_getComicIndividual;true;return.resourceURI is Url;The value vk(o_G< for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1ib99cjodoit2_getComicIndividual;false;;;;
+test_trwdw8z5jvht_getComicIndividual;true;return.type one of { "digitalPurchasePrice", "printPrice" };Expected one of [digitalPurchasePrice, printPrice], got printPrie;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4xfadgom435_getComicIndividual;true;return.resourceURI is Url;The value http://gat´/eway.marvel.com/v1/public/stories/14335 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_to7bh3mznnll_getComicIndividual;false;;;;
+test_vbcdtk3ugq5f_getComicIndividual;false;;;;
+test_1h7fwfwclg851_getComicIndividual;true;return.characters.collectionURI is Url;The value XN~` for the variable return.characters.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hrorz373nzug_getComicIndividual;false;;;;
+test_1h7o7rdv6pjz8_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 6 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jer2gx6x4yew_getComicIndividual;true;return.code == 200;Expected one of [200], got 465648;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_vf1e7tn20xf9_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got -303742;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_s4rtemqz40fn_getComicIndividual;false;;;;
+test_u8apekrcj3g3_getComicIndividual;false;;;;
+test_uv93riqdbynk_getComicIndividual;false;;;;
+test_to2bvhlkzm7p_getComicIndividual;false;;;;
+test_vb3j2wcgfnsk_getComicIndividual;false;;;;
+test_skvl2cvshkde_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/41264) to be a substring of return.events.collectionURI (http://gatewa9y.marvel.com/v1/public/comics/41264/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_skk1x7avhquw_getComicIndividual;false;;;;
+test_1h821e6wjf9rs_getComicIndividual;true;return.series.resourceURI is Url;The value ht/,tp://gateway.marvel.com/v1/public/series/935 for the variable return.series.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qhtd9s7z3tyc_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 0);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_r1flul71ydlx_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 7 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h85bhejeh99z_getComicIndividual;false;;;;
+test_t4nv4kdxibzo_getComicIndividual;false;;;;
+test_qeeycxscos3c_getComicIndividual;false;;;;
+test_ubgbuj9d3mt1_getComicIndividual;true;return.price >= 0.0;The value of return.price should be greater or equal than 0.0 but got -1.0;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBoundFloat
+test_ubrh7m3ztpph_getComicIndividual;false;;;;
+test_1jyg1nip54fom_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 56 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t86v7y6qphsx_getComicIndividual;false;;;;
+test_1hv5ijcvrduna_getComicIndividual;false;;;;
+test_to7u6j7cai45_getComicIndividual;false;;;;
+test_1jeoaauqupqar_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got -834531;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1hre7l1hcn4gy_getComicIndividual;true;return.resourceURI is Url;The value http:A//gateway.marvel.com/v1/public/creators/11901 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qe11jj457t5x_getComicIndividual;false;;;;
+test_1hrghfkaiu5pf_getComicIndividual;false;;;;
+test_1jyahendydobn_getComicIndividual;false;;;;
+test_vf1du01ocvg6_getComicIndividual;true;return.resourceURI is Url;The value http:/gateway.marvel.com/v1/public/comics/35106 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1h820arvhycmc_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got O/*k;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sl652e7dmpuu_getComicIndividual;false;;;;
+test_1iun67qh37crq_getComicIndividual;false;;;;
+test_r1a0ocb5k292_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 5 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1iv3g4k38fa_getComicIndividual;false;;;;
+test_u7zo9osi1ovm_getComicIndividual;false;;;;
+test_vf6hs9gqpliw_getComicIndividual;false;;;;
+test_u8e0o5x77iup_getComicIndividual;false;;;;
+test_qy4xephhdois_getComicIndividual;false;;;;
+test_ubmdnbuoymar_getComicIndividual;false;;;;
+test_urrwdp5v7za9_getComicIndividual;false;;;;
+test_1iv3s5hwajsrq_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 41 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4z03mjwuvdx_getComicIndividual;false;;;;
+test_1hrax3qfxycdx_getComicIndividual;true;return.copyright == "© 2022 MARVEL";Expected one of [© 2022 MARVEL], got © 2022 M´*ARVEL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h84tmshct36t_getComicIndividual;false;;;;
+test_1iukxjihq4ler_getComicIndividual;false;;;;
+test_s1jhzpkk95pu_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 42 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubre63wj0d43_getComicIndividual;true;return.url is Url;The value E for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s1b4pqo1mwqe_getComicIndividual;true;return.resourceURI is Url;The value V for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qxw667d35yr7_getComicIndividual;false;;;;
+test_uvgwdl0g6p0x_getComicIndividual;false;;;;
+test_1jeo8tkwherzp_getComicIndividual;false;;;;
+test_1jel102gny7ae_getComicIndividual;false;;;;
+test_1hrjruk31ciev_getComicIndividual;false;;;;
+test_1jy7qqaiiaelh_getComicIndividual;false;;;;
+test_1hb85r9rzukir_getComicIndividual;true;return.resourceURI is a substring of return.stories.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/61457) to be a substring of return.stories.collectionURI (http://gateway.marvel.com/v1/pJblic/comics/61457/stories);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1k252203x8hnl_getComicIndividual;false;;;;
+test_s12t09nivqzq_getComicIndividual;false;;;;
+test_1hrrk4wivjxia_getComicIndividual;true;LENGTH(return.ean)==20;Expected length of 20 for variable return.ean, got 8 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv6lf2zje915_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe6m9g1274fn_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 3 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1fm6deyzw38_getComicIndividual;false;;;;
+test_urpm577be7n5_getComicIndividual;false;;;;
+test_rkxbiwwtfeqq_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhhu71usm4wy_getComicIndividual;false;;;;
+test_1k1uhnzo018pv_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got O´,k;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k1tzqqlf7jol_getComicIndividual;true;return.url is Url;The value t for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rl042l2z2z3m_getComicIndividual;false;;;;
+test_s4v5271rotb5_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got {INQ;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbbuppygxbug_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];The value of return.data.offset (1) cannot be used to access an array of size 1;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_qxqmk0xkyee9_getComicIndividual;true;return.code == 200;Expected one of [200], got -560798;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_vbsiluugw1me_getComicIndividual;false;;;;
+test_skyeprlmmgde_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 6 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrdpns1g7aeb_getComicIndividual;false;;;;
+test_vbcelehfxd2c_getComicIndividual;false;;;;
+test_s4xdqijr52yb_getComicIndividual;false;;;;
+test_1ien6n9yiaxiw_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (5 and 4);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_s1bntmrsc5yu_getComicIndividual;false;;;;
+test_1hrbgl5k61qnl_getComicIndividual;true;return.stories.collectionURI is Url;The value 2*Er| for the variable return.stories.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_to4k399uo9px_getComicIndividual;true;LENGTH(return.diamondCode)==9;Expected length of 9 for variable return.diamondCode, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbsh1mip8v90_getComicIndividual;false;;;;
+test_s13axyuabxo0_getComicIndividual;false;;;;
+test_s0v0ur6m633n_getComicIndividual;true;LENGTH(return.ean)==20;Expected length of 20 for variable return.ean, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7trmli9jxv9_getComicIndividual;false;;;;
+test_1iv9d753pvuie_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 41 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jelij8s8p9h3_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/30127) to be a substring of return.events.collectionURI (http://gateway.marvel.com/v1/public/comics/30´127/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_r1dcbwkk360k_getComicIndividual;false;;;;
+test_ts4pzt3gb0vl_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (12 and 11);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hb7pppg993cg_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/80256) to be a substring of return.events.collectionURI (http://gateway.marvel.com/v*1/public/comics/80256/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1ies7vli6pbnd_getComicIndividual;false;;;;
+test_qy1nbb8bxb1x_getComicIndividual;false;;;;
+test_1k201ob6box9f_getComicIndividual;false;;;;
+test_sobsj5xaqa91_getComicIndividual;true;LENGTH(return.diamondCode)==9;Expected length of 9 for variable return.diamondCode, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_to2b12kl8fg0_getComicIndividual;false;;;;
+test_sknau2386ijm_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 59 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4rvtk0lok6p_getComicIndividual;false;;;;
+test_1hrrk5046ewj6_getComicIndividual;false;;;;
+test_u82doy720h9e_getComicIndividual;false;;;;
+test_1iepgvvfx4fg0_getComicIndividual;false;;;;
+test_urmd7qc0qwqd_getComicIndividual;false;;;;
+test_1ibbj9p8p820m_getComicIndividual;false;;;;
+test_t81ba7ql0kf7_getComicIndividual;false;;;;
+test_qhqml72t9ttf_getComicIndividual;false;;;;
+test_u85o6pe0wto8_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hux82dyo4hmc_getComicIndividual;true;return.stories.collectionURI is Url;The value xp9M: for the variable return.stories.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jxzwxn54z390_getComicIndividual;false;;;;
+test_1hux61dtk5m41_getComicIndividual;false;;;;
+test_1jyg068v1mblc_getComicIndividual;false;;;;
+test_1jew1fn7e6n93_getComicIndividual;false;;;;
+test_rhgkhxem8jea_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got 19;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iut7as1tml2x_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (-98304 and 2);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hrgzobby8j1e_getComicIndividual;false;;;;
+test_to7tv0v4jsc2_getComicIndividual;false;;;;
+test_s0uk0ss0vn8i_getComicIndividual;false;;;;
+test_qhndo4eu4d9v_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 8 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyd80abnft4j_getComicIndividual;false;;;;
+test_1jet9nywzcdwh_getComicIndividual;false;;;;
+test_to7b2szurmg3_getComicIndividual;false;;;;
+test_qdyb07ck954m_getComicIndividual;false;;;;
+test_1jig39ds92fs2_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 2 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s1eevwusszed_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyl13rryz882_getComicIndividual;false;;;;
+test_vbpqroj86ov7_getComicIndividual;false;;;;
+test_1iaxopusnht83_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 3 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyc5ioinwm79_getComicIndividual;false;;;;
+test_toohol0mmkoj_getComicIndividual;true;return.resourceURI is Url;The value M for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iyq1hs4pz9lv_getComicIndividual;false;;;;
+test_1ji4gqrin010x_getComicIndividual;false;;;;
+test_qxliz8i0n2nq_getComicIndividual;false;;;;
+test_1iyhqk27ywl6c_getComicIndividual;false;;;;
+test_1hbd8xx64yg52_getComicIndividual;true;return.attributionHTML == "<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>";Expected one of [<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>], got ejemplo minus;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iupyu98wnqd0_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got /,Ok;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxttwwue7jn6_getComicIndividual;false;;;;
+test_sopoyxakt9ph_getComicIndividual;false;;;;
+test_1hbaxgurj1rnd_getComicIndividual;false;;;;
+test_1iv1jsmfu7jae_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tolqop2xrsyp_getComicIndividual;true;return.events.collectionURI is Url;The value Ioc for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_ubjm95nx1lx4_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 0);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vf0x4vp4fc53_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1rr2bhcxdmd_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (19 and 18);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_s4mc9ogo4dwj_getComicIndividual;false;;;;
+test_t4vq2xokkmya_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got -633008;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_u854b6u3dzy1_getComicIndividual;false;;;;
+test_1iun7dpgm8ugm_getComicIndividual;false;;;;
+test_1iv9d9dlvqywl_getComicIndividual;true;return.stories.collectionURI is Url;The value 5_R8 for the variable return.stories.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qec50po78855_getComicIndividual;false;;;;
+test_vb6byas49bg2_getComicIndividual;false;;;;
+test_qhkidynr38s7_getComicIndividual;false;;;;
+test_vf964md9xi75_getComicIndividual;false;;;;
+test_s50nfxcd96cl_getComicIndividual;false;;;;
+test_skv4p8n08114_getComicIndividual;false;;;;
+test_1hblibcpb6oft_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (3 and 2);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1ibh0ehjetanl_getComicIndividual;false;;;;
+test_1h820zzi7rfaq_getComicIndividual;false;;;;
+test_rhrp34d82kvo_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 3 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe1jupo6qpgj_getComicIndividual;true;input.comicId == return.id;input.comicId should be equal to return.id, but got different values (71375 and -942406);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_qe3uhemwqiic_getComicIndividual;true;return.digitalId >= 0;The value of return.digitalId should be greater or equal than 0 but got -767782;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_u7zl7qrm7z94_getComicIndividual;false;;;;
+test_rhajcd32cy0i_getComicIndividual;false;;;;
+test_t89mj28rsf1u_getComicIndividual;false;;;;
+test_1hrbgldfsdx69_getComicIndividual;false;;;;
+test_uv95q0fg1pwm_getComicIndividual;true;return.resourceURI is Url;The value j7G)[e>0 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hv2pzaiglf07_getComicIndividual;false;;;;
+test_vbpqtx26e350_getComicIndividual;false;;;;
+test_to7dhvudaybc_getComicIndividual;false;;;;
+test_s1dwvr52txep_getComicIndividual;false;;;;
+test_1iunnr9x6ihwz_getComicIndividual;false;;;;
+test_1iyc8kky0fxwi_getComicIndividual;true;return.series.resourceURI is Url;The value [F for the variable return.series.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_r1a0nytl9ftv_getComicIndividual;false;;;;
+test_1h7o5cg7wuc0z_getComicIndividual;false;;;;
+test_1iunnre6wksag_getComicIndividual;true;return.creators.available >= 0;The value of return.creators.available should be greater or equal than 0 but got -802042;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_to1rjavtjak7_getComicIndividual;true;return.thumbnail.path is Url;The value -: for the variable return.thumbnail.path is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_skk01gkmhjs3_getComicIndividual;false;;;;
+test_rhty803t1gdt_getComicIndividual;true;LENGTH(return.ean)==20;Expected length of 20 for variable return.ean, got 22 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hr8msvbeoh86_getComicIndividual;false;;;;
+test_toiy1yepy5va_getComicIndividual;false;;;;
+test_1ibh37c1w76n6_getComicIndividual;false;;;;
+test_qdqip61umkvp_getComicIndividual;false;;;;
+test_qhhre14anlmg_getComicIndividual;false;;;;
+test_ubre687wnasl_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (135735 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_tnz1dy9mle7t_getComicIndividual;false;;;;
+test_qhq3khf18b51_getComicIndividual;false;;;;
+test_1h7wjgyiko3ms_getComicIndividual;false;;;;
+test_to4kxvvwz5nq_getComicIndividual;true;return.attributionText == "Data provided by Marvel. © 2022 MARVEL";Expected one of [Data provided by Marvel. © 2022 MARVEL], got EJEMPLO MAYUS;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeky9krwkbj5_getComicIndividual;false;;;;
+test_to4lq0ezf2uo_getComicIndividual;false;;;;
+test_s18w4bdnnias_getComicIndividual;false;;;;
+test_1k229idkmtv8l_getComicIndividual;false;;;;
+test_qxw3tycpln3m_getComicIndividual;true;return.resourceURI is Url;The value *L_F< for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_urxhy2qddxyv_getComicIndividual;false;;;;
+test_1h7zagy11p0za_getComicIndividual;false;;;;
+test_us085qkmtap1_getComicIndividual;false;;;;
+test_rhlodu06siub_getComicIndividual;true;return.resourceURI is Url;The value http:/´*/gateway.marvel.com/v1/public/creators/10409 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1h85bh8klg374_getComicIndividual;false;;;;
+test_ubgb01v5075g_getComicIndividual;false;;;;
+test_s10kq1771b21_getComicIndividual;true;return.creators.available >= 0;The value of return.creators.available should be greater or equal than 0 but got -701101;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_sknbp2va7zg0_getComicIndividual;true;return.resourceURI is Url;The value ejemplo minus for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qhvm9g7r2cz8_getComicIndividual;false;;;;
+test_urumzfovgcwx_getComicIndividual;false;;;;
+test_1jyiu7sl7495x_getComicIndividual;false;;;;
+test_vbeowh48dfle_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 53 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbkpx5vqvhpg_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 3 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8anuy37edrr_getComicIndividual;false;;;;
+test_1h7iowviawyls_getComicIndividual;false;;;;
+test_u7wtu0dp2blk_getComicIndividual;false;;;;
+test_skkhys0zxmpj_getComicIndividual;false;;;;
+test_qy4f35fjvz1v_getComicIndividual;false;;;;
+test_1k254gt3u3wvk_getComicIndividual;false;;;;
+test_1jiflsiamuxit_getComicIndividual;false;;;;
+test_ursf340sj3uc_getComicIndividual;false;;;;
+test_s10k0e4bxi78_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1ifi5t1vepf_getComicIndividual;false;;;;
+test_sl3y9p4jjrqs_getComicIndividual;false;;;;
+test_1h7u82msc3zg8_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got 19;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_s12ukjz5hqw2_getComicIndividual;false;;;;
+test_1hrorky5yn5mh_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s0uk3jtzupf6_getComicIndividual;true;return.url is Url;The value  PEHU.eI( for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vbkocrlg48qc_getComicIndividual;false;;;;
+test_qy4y6pc2lbnb_getComicIndividual;false;;;;
+test_vey3f288mq8z_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];The value of return.data.offset (1) cannot be used to access an array of size 1;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_us0qethoqkaa_getComicIndividual;false;;;;
+test_ubgdqfwpjak2_getComicIndividual;true;return.resourceURI is Url;The value http:/´//gateway.marvel.com/v1/public/creators/9565 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_uvbdm9r7zr5f_getComicIndividual;true;return.resourceURI is Url;The value http://gate*,way.marvel.com/v1/public/creators/13012 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s4rvqntw3lm8_getComicIndividual;false;;;;
+test_toogihcopc9u_getComicIndividual;false;;;;
+test_vb42hv1ltpwl_getComicIndividual;false;;;;
+test_rkxcaz58sqwk_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 6 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubj542dmmm9e_getComicIndividual;false;;;;
+test_sl66y4xwpkqf_getComicIndividual;true;return.code == 200;Expected one of [200], got 201;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_to7d1a12hpvc_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (-36828 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hrdnmxu7mr8j_getComicIndividual;false;;;;
+test_s4ukspoxu81j_getComicIndividual;false;;;;
+test_toihdjpahheq_getComicIndividual;false;;;;
+test_qhql3nfibmt0_getComicIndividual;true;return.resourceURI is Url;The value O for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hr84jm3xzpko_getComicIndividual;false;;;;
+test_ublveis6yy5e_getComicIndividual;false;;;;
+test_1iesrrfw2merb_getComicIndividual;false;;;;
+test_vf97m61czkmv_getComicIndividual;false;;;;
+test_1h7zb6n0q43zk_getComicIndividual;false;;;;
+test_qe9wt9v9xk4w_getComicIndividual;true;return.resourceURI is a substring of return.creators.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public*/comics/6708) to be a substring of return.creators.collectionURI (http://gateway.marvel.com/v1/public/comics/6708/creators);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_u7wtd88n5ooo_getComicIndividual;true;return.events.collectionURI is Url;The value http://gatew/ay.marvel.com/v1/public/comics/72687/events for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jeqkxhbsjzg2_getComicIndividual;false;;;;
+test_qdvjm8qb7vxh_getComicIndividual;false;;;;
+test_u7zny4in20xk_getComicIndividual;false;;;;
+test_urxxgcjqnsqf_getComicIndividual;false;;;;
+test_sknb838j43zs_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 53 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf6h09mnidkm_getComicIndividual;false;;;;
+test_u87w5h32m2qr_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (-13406 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vbmyzqqfmdrp_getComicIndividual;false;;;;
+test_1jecpa9vo5w6r_getComicIndividual;true;return.resourceURI is Url;The value http://g*ateway.marvel.com/v1/public/comics/48741 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&variants(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qhq2bpdq0jsh_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];return.data.offset cannot be less than zero, got: -1;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hb86jjw6b969_getComicIndividual;true;return.resourceURI is Url;The value EJEMPLO MAYUS for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qdy9rjcvgz7c_getComicIndividual;false;;;;
+test_u7rbdf5bml2u_getComicIndividual;false;;;;
+test_rhoezqtle3ap_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (2 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vevvu6ycqxwz_getComicIndividual;false;;;;
+test_urhavsnxwmzl_getComicIndividual;true;return.creators.collectionURI is Url;The value EJEMPLO MAYUS for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1h7qzx8gh2dyp_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (-783945 and 6);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_uvjo5kqkc5sx_getComicIndividual;false;;;;
+test_1h85bhoqrkswz_getComicIndividual;false;;;;
+test_1jyaj9uq23ad3_getComicIndividual;false;;;;
+test_qdsqliy1oh0z_getComicIndividual;false;;;;
+test_uv8l27f4tyee_getComicIndividual;false;;;;
+test_vbmyzkhghgf9_getComicIndividual;false;;;;
+test_sobrr3o31e8y_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (-513946 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_qxi99trcg57q_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (19 and 20);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vbsjrwlbv9kh_getComicIndividual;false;;;;
+test_vey659zulhlu_getComicIndividual;false;;;;
+test_1jyai3x0b554o_getComicIndividual;false;;;;
+test_1jecpa5zbnxo5_getComicIndividual;false;;;;
+test_s1dvseii4w8n_getComicIndividual;true;return.resourceURI is Url;The value w for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iv9v72v3f52d_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got @\QL;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4ru6oxyugqc_getComicIndividual;false;;;;
+test_ts4nlbk2trg9_getComicIndividual;false;;;;
+test_qhvo7i5gmtyu_getComicIndividual;false;;;;
+test_r1l6w0ggi434_getComicIndividual;true;return.type one of { "digitalPurchasePrice", "printPrice" };Expected one of [digitalPurchasePrice, printPrice], got printPrace;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t89lr89079kj_getComicIndividual;true;return.characters.collectionURI is Url;The value # for the variable return.characters.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s4m9jintekpt_getComicIndividual;false;;;;
+test_1iexrw2jpzcrl_getComicIndividual;false;;;;
+test_1hr8nyl650l69_getComicIndividual;false;;;;
+test_qy4ear1a750x_getComicIndividual;true;return.data.total == size(return.data.results[]);return.data.total should be equal to size(return.data.results[..]), but got different values (1 and 0);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_rhdasomf8y8y_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhg2ydn75ism_getComicIndividual;false;;;;
+test_uve5s6b2q9me_getComicIndividual;false;;;;
+test_1iuvzjba8aan6_getComicIndividual;false;;;;
+test_to7tsrm3n86x_getComicIndividual;true;return.thumbnail.path is Url;The value C~_F8W2LN for the variable return.thumbnail.path is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jenq3zephoab_getComicIndividual;false;;;;
+test_1h7tokvedz9sy_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 7 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s18cxwg7sj7b_getComicIndividual;true;return.type one of { "digitalPurchasePrice", "printPrice" };Expected one of [digitalPurchasePrice, printPrice], got printPri2e;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vevbkr7gs2n5_getComicIndividual;false;;;;
+test_ts1yxman58iq_getComicIndividual;false;;;;
+test_ubjmnk768d44_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ublw3m3b7d4m_getComicIndividual;false;;;;
+test_1hbdqvbsryvxw_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got k;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrlz10gup25t_getComicIndividual;true;return.events.collectionURI is Url;The value 1 for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t8fpkl6d9x7l_getComicIndividual;false;;;;
+test_1ibkcwkuneou1_getComicIndividual;false;;;;
+test_uv5vayav17c5_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (4 and 0);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_urp316rb0i7l_getComicIndividual;false;;;;
+test_uvbd88mh2ywm_getComicIndividual;false;;;;
+test_rl7x2ydtux4n_getComicIndividual;false;;;;
+test_ubgu3i7iomrb_getComicIndividual;true;size(return.prices[]) one of { 1, 2 };Expected one of [1, 2], got 0;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_uvk8thrt7sqc_getComicIndividual;false;;;;
+test_qhw6jbq21gz9_getComicIndividual;false;;;;
+test_1iesrr23d3dr9_getComicIndividual;false;;;;
+test_1k1r7khshu7ug_getComicIndividual;false;;;;
+test_1ibes4f36eusi_getComicIndividual;false;;;;
+test_tocwl0184v93_getComicIndividual;false;;;;
+test_1hv5gza3pwtgz_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (4 and 5);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1jeyubdgyfq5s_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 7 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rkxaqogsslkp_getComicIndividual;true;return.creators.collectionURI is Url;The value  Cl8 for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_urjmm1ujn48j_getComicIndividual;false;;;;
+test_1h7rhrz585ohf_getComicIndividual;false;;;;
+test_qdvh7r77kwh0_getComicIndividual;false;;;;
+test_u82clhlmqe5u_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl0n09wa5eet_getComicIndividual;false;;;;
+test_skkir24xxqus_getComicIndividual;false;;;;
+test_ubp67e726rso_getComicIndividual;true;return.creators.available >= return.creators.returned;The value of return.creators.returned should be lesser or equal than return.creators.available (5), but got 6;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_qy4ep3ybl55u_getComicIndividual;false;;;;
+test_1h7qzj5een03a_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 2);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hr8nykt3i987_getComicIndividual;false;;;;
+test_rl52hztzekbo_getComicIndividual;false;;;;
+test_t4teoc16qree_getComicIndividual;false;;;;
+test_uv95pmaaqiqs_getComicIndividual;false;;;;
+test_sl8wrqy2jn76_getComicIndividual;false;;;;
+test_s1gqac4met6f_getComicIndividual;false;;;;
+test_skjznjgfq4iu_getComicIndividual;false;;;;
+test_s12saq5qf1gz_getComicIndividual;false;;;;
+test_rhdtvzdmz8zd_getComicIndividual;true;return.series.resourceURI is Url;The value http://gat*eway.marvel.com/v1/public/series/17554 for the variable return.series.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jiajs6v61xlv_getComicIndividual;false;;;;
+test_sok4pibmtf1h_getComicIndividual;false;;;;
+test_1h7qzjdmorcc1_getComicIndividual;false;;;;
+test_qe74kq8maq0g_getComicIndividual;false;;;;
+test_1k1u07asyu7hi_getComicIndividual;false;;;;
+test_sohe0xjsejw6_getComicIndividual;false;;;;
+test_1ji4fhzi3vewk_getComicIndividual;false;;;;
+test_rl8e5s0y3z1w_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jydso3031kxk_getComicIndividual;false;;;;
+test_1hrgzqy1rp7hy_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (24086 and 3);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1iupwi46v8u9j_getComicIndividual;false;;;;
+test_u7okuhly14di_getComicIndividual;false;;;;
+test_qxl11nkna6p0_getComicIndividual;true;return.thumbnail.path is Url;The value ejemplo minus for the variable return.thumbnail.path is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1if0kfv0pds9w_getComicIndividual;false;;;;
+test_1ibkba7xrjujq_getComicIndividual;true;return.resourceURI is a substring of return.characters.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/63888) to be a substring of return.characters.collectionURI (http://gateway.marv´/el.com/v1/public/comics/63888/characters);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1ji784w13nfox_getComicIndividual;false;;;;
+test_ubmdndsw7tio_getComicIndividual;true;return.resourceURI is Url;The value THO|f`Z for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_tru36xole4pt_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 8 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iuvz31c9pc2s_getComicIndividual;false;;;;
+test_1h7gd4qvxp7w0_getComicIndividual;false;;;;
+test_vbhfwgmrh0z9_getComicIndividual;true;return.resourceURI is Url;The value http://gateway.marvel.com8v1/public/creators/13932 for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qxfgptr82jat_getComicIndividual;false;;;;
+test_1k202gn88kjfp_getComicIndividual;false;;;;
+test_1iun5frua5z6q_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 59 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rlapk1h21e8z_getComicIndividual;true;return.code == 200;Expected one of [200], got 207213;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_ts4n9t7n09x4_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/71966) to be a substring of return.events.collectionURI (http://gateway.marvelYcom/v1/public/comics/71966/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qy4dzog9cyua_getComicIndividual;true;return.attributionHTML == "<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>";Expected one of [<a href="http://marvel.com">Data provided by Marvel. © 2022 MARVEL</a>], got <a href="http://marvel.com">Data proGvided by Marvel. © 2022 MARVEL</a>;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qy4dwrvwhliw_getComicIndividual;false;;;;
+test_ubuoyrezms6u_getComicIndividual;true;LENGTH(return.ean)==20;Expected length of 20 for variable return.ean, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t8cfgzcr1veg_getComicIndividual;false;;;;
+test_1hbiq5i4tjyut_getComicIndividual;false;;;;
+test_rh4z2s48vfhz_getComicIndividual;false;;;;
+test_us3in77fd1er_getComicIndividual;false;;;;
+test_1iv3sv99bv7li_getComicIndividual;false;;;;
+test_toig4x7zf778_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (1 and 2);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hbd9bwb0wvu9_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 59 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7xch2szw569_getComicIndividual;true;return.resourceURI is a substring of return.creators.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/67057) to be a substring of return.creators.collectionURI (http://gateway.marvel.com/v1/pub´*lic/comics/67057/creators);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qxtavz7rnm1x_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ies7kcmf2p11_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got 36620;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_sobuhbf70mcw_getComicIndividual;false;;;;
+test_qhnbpx9kde1w_getComicIndividual;false;;;;
+test_qhkirq8pz390_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iemnxqdk20rp_getComicIndividual;false;;;;
+test_qxw507nrplyd_getComicIndividual;false;;;;
+test_1jekxvfplvc6e_getComicIndividual;false;;;;
+test_urk3fqbxqr1f_getComicIndividual;false;;;;
+test_u7ru5tau5fzp_getComicIndividual;false;;;;
+test_to1sbd2rd7as_getComicIndividual;false;;;;
+test_1iv73clyds9ir_getComicIndividual;false;;;;
+test_1jyoddn2k2cl3_getComicIndividual;false;;;;
+test_1iyq3tpbqxpvd_getComicIndividual;false;;;;
+test_rhgmg79u62jm_getComicIndividual;false;;;;
+test_1hr5x1bxdh1yq_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (2 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1jenppw9vmaet_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_us08h10zyywi_getComicIndividual;false;;;;
+test_to1rx8e3yt0l_getComicIndividual;false;;;;
+test_t4a27avz5tgk_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got O/k;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iykhxulsz4tu_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got EJEMPLO MAYUS;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urp4zsh1a4bq_getComicIndividual;false;;;;
+test_1ibkctukqw6ea_getComicIndividual;false;;;;
+test_s18v9ktiz3uc_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (6 and 0);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_rhtze7dlyzp1_getComicIndividual;true;return.thumbnail.path is Url;The value ejemplo minus for the variable return.thumbnail.path is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t4q4z753w8di_getComicIndividual;false;;;;
+test_s13cvmmwdu7m_getComicIndividual;false;;;;
+test_1hr8432kv9uex_getComicIndividual;false;;;;
+test_u7ww3mc5n3g9_getComicIndividual;false;;;;
+test_1iyqlcywyit6b_getComicIndividual;true;return.resourceURI is Url;The value ejemplo minus for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qhvlvbh7dbua_getComicIndividual;true;return.resourceURI is Url;The value 'sD for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qxl2oko98kz4_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 1 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hr5dhe28axps_getComicIndividual;false;;;;
+test_t4l4iy80u52u_getComicIndividual;false;;;;
+test_1k1xaorrqibsn_getComicIndividual;false;;;;
+test_1k1wpkgteqgdi_getComicIndividual;false;;;;
+test_1iv3suz28qyif_getComicIndividual;false;;;;
+test_rhm4rcge2kah_getComicIndividual;false;;;;
+test_1hv5hfpyhlx7p_getComicIndividual;false;;;;
+test_1hru9w1orff3l_getComicIndividual;true;return.copyright == "© 2022 MARVEL";Expected one of [© 2022 MARVEL], got q>eWwzPY;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhoezkj8jxv7_getComicIndividual;false;;;;
+test_rl02ig9q99h3_getComicIndividual;false;;;;
+test_t4yg83zh9ohh_getComicIndividual;false;;;;
+test_skq3ec1a01mg_getComicIndividual;false;;;;
+test_t4flr2vrwzmp_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];return.data.offset cannot be less than zero, got: -71065;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_t8a5mohyz0bm_getComicIndividual;true;return.resourceURI is Url;The value y] for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t4vq0ejs3u5f_getComicIndividual;true;return.characters.collectionURI is Url;The value 'l0Frpr for the variable return.characters.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_sohue9praaex_getComicIndividual;true;return.resourceURI is a substring of return.creators.collectionURI;Expected value of return.resourceURI (http://ugateway.marvel.com/v1/public/comics/16611) to be a substring of return.creators.collectionURI (http://gateway.marvel.com/v1/public/comics/16611/creators);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_rhtzp9lx79dl_getComicIndividual;false;;;;
+test_1h7r0bfvyeera_getComicIndividual;false;;;;
+test_tol5kkt45oab_getComicIndividual;false;;;;
+test_1h7leqxkj6u60_getComicIndividual;true;LENGTH(return.etag)==40;Expected length of 40 for variable return.etag, got 42 instead.;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbbx1wm9sehv_getComicIndividual;false;;;;
+test_1hv0hdq1dvw3a_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhowwxli4pir_getComicIndividual;false;;;;
+test_toigz8qhvr5g_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbm24eurxvmt_getComicIndividual;false;;;;
+test_skkjx72e6h4o_getComicIndividual;false;;;;
+test_1k1zjaeac5ppg_getComicIndividual;false;;;;
+test_qxwnmq9njh9y_getComicIndividual;false;;;;
+test_urxxujlwrzuc_getComicIndividual;false;;;;
+test_s4mbf3gd9ld0_getComicIndividual;false;;;;
+test_rhr7m7lrwbxe_getComicIndividual;false;;;;
+test_t86ud995ep87_getComicIndividual;false;;;;
+test_r17bp3f5xq2g_getComicIndividual;false;;;;
+test_1iyqld0uvyat0_getComicIndividual;false;;;;
+test_1jyg19pggv1h5_getComicIndividual;false;;;;
+test_1iyfgbg092rzl_getComicIndividual;false;;;;
+test_1ievhnoxfbqyc_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 6 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1u1axcv68o2_getComicIndividual;false;;;;
+test_qxqjw1oxa3w4_getComicIndividual;false;;;;
+test_1jeyvh4k14unr_getComicIndividual;false;;;;
+test_qxw668yj3q5y_getComicIndividual;false;;;;
+test_skstoi7vgzzt_getComicIndividual;true;return.creators.collectionURI is Url;The value tvWYX2078L for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rhufoncmwmsi_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 59 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib60t6aeoe2c_getComicIndividual;false;;;;
+test_1ib35x3ljdeep_getComicIndividual;true;return.url is Url;The value Xt3M3PG7ts for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jeqi7ju1hg83_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1cu2rcve25h_getComicIndividual;false;;;;
+test_t4f47qxnd83b_getComicIndividual;false;;;;
+test_skv3upmif1pd_getComicIndividual;false;;;;
+test_1hrpb08nwrw3d_getComicIndividual;false;;;;
+test_1h7wga6jd4g8p_getComicIndividual;true;return.url is Url;The value EJEMPLO MAYUS for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iuvzxid6cj8j_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 7 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jer0ipq7qtsy_getComicIndividual;false;;;;
+test_vbshr7xkzjg8_getComicIndividual;false;;;;
+test_1hrdpkvg9g7qp_getComicIndividual;false;;;;
+test_1jei8tvzrj4ts_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got O;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubu87tjhjd4g_getComicIndividual;false;;;;
+test_1huzy7gou4i0h_getComicIndividual;true;return.status == "Ok";Expected one of [Ok], got RV~P;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k1wsaio996bd_getComicIndividual;false;;;;
+test_somw0wjx1s2q_getComicIndividual;false;;;;
+test_1iyhqmkzg46k9_getComicIndividual;false;;;;
+test_qhq3ygl0yc6v_getComicIndividual;true;return.price >= 0.0;The value of return.price should be greater or equal than 0.0 but got -567428.9;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBoundFloat
+test_1h7lgditmq4a8_getComicIndividual;false;;;;
+test_1h84s04ycndk1_getComicIndividual;false;;;;
+test_qdpxq8hvqesl_getComicIndividual;false;;;;
+test_rhovr442zntx_getComicIndividual;true;return.url is Url;The value xjZVAs1GU for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iv6l0xyod0kz_getComicIndividual;false;;;;
+test_skmtaw471aas_getComicIndividual;false;;;;
+test_rhll9p2o71pe_getComicIndividual;false;;;;
+test_sobsx9c4eb7d_getComicIndividual;false;;;;
+test_rkwst5upgorl_getComicIndividual;false;;;;
+test_vf6fg2tvguw1_getComicIndividual;false;;;;
+test_1k1ziz08q47cn_getComicIndividual;false;;;;
+test_qe6lxrqxcf8x_getComicIndividual;false;;;;
+test_urhcrmyxqan7_getComicIndividual;false;;;;
+test_1jewm39kmo8qc_getComicIndividual;true;return.data.limit == 20;Expected one of [20], got 21;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iv9dz8yd5n3l_getComicIndividual;false;;;;
+test_1jeqhvtl5eddh_getComicIndividual;false;;;;
+test_1iuvib9vaxbvl_getComicIndividual;false;;;;
+test_rlap8ww45vzl_getComicIndividual;false;;;;
+test_1k1r6ew7zcwv9_getComicIndividual;false;;;;
+test_qxr43cu3ap2e_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (-208959 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_t84mh1xklk55_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 5 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tofnz2bjzu42_getComicIndividual;false;;;;
+test_1h85by2bovhvd_getComicIndividual;false;;;;
+test_1h7j6gha8ro6q_getComicIndividual;false;;;;
+test_1iv3s3an2s4th_getComicIndividual;false;;;;
+test_1ibetaahcorp2_getComicIndividual;false;;;;
+test_u8arcua2p36r_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (19 and 0);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hruaofr1k5rt_getComicIndividual;true;size(return.prices[]) one of { 1, 2 };Expected one of [1, 2], got 0;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_s1jey7cv2y41_getComicIndividual;false;;;;
+test_s0xtc8tos5kn_getComicIndividual;false;;;;
+test_1h84srxo1zodv_getComicIndividual;false;;;;
+test_vb9lc1abgvhf_getComicIndividual;false;;;;
+test_1h7j5cwnzn4fp_getComicIndividual;false;;;;
+test_uvenbi8d8qjn_getComicIndividual;false;;;;
+test_vbhy7z3hhrhe_getComicIndividual;true;return.resourceURI is Url;The value e9u^@05%\ for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&stories&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_skmsixu3n7fo_getComicIndividual;false;;;;
+test_1jeqia09y26ht_getComicIndividual;false;;;;
+test_1iyeye3cdgdb7_getComicIndividual;false;;;;
+test_1huxor6vr3691_getComicIndividual;false;;;;
+test_sl64zx33yixy_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 58 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ji282jx3ixd0_getComicIndividual;false;;;;
+test_1iuqgpfc1kmsj_getComicIndividual;false;;;;
+test_qy1p98ulxq9h_getComicIndividual;false;;;;
+test_1ib8ph7fp65b8_getComicIndividual;false;;;;
+test_t4vno1ydsbw8_getComicIndividual;false;;;;
+test_r1cue06n4rxi_getComicIndividual;true;return.resourceURI is Url;The value EJEMPLO MAYUS for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_u7ralmrtpbvm_getComicIndividual;false;;;;
+test_vf3pmmgpsm5w_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 55 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iykzxoesqj3p_getComicIndividual;false;;;;
+test_socaumcrq8mu_getComicIndividual;false;;;;
+test_qhsw1x14p5x0_getComicIndividual;false;;;;
+test_1ibkbciel2xbs_getComicIndividual;true;return.resourceURI is a substring of return.creators.collectionURI;Expected value of return.resourceURI (http://gateway.mavel.com/v1/public/comics/121) to be a substring of return.creators.collectionURI (http://gateway.marvel.com/v1/public/comics/121/creators);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1jetad2ys67n7_getComicIndividual;true;return.url is Url;The value /9paY.0$` for the variable return.url is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&urls(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iaxn80upg2na_getComicIndividual;false;;;;
+test_1ib0fbf1kd2k3_getComicIndividual;false;;;;
+test_1jidabo5ezask_getComicIndividual;false;;;;
+test_to2b0qqojoma_getComicIndividual;false;;;;
+test_1iemp6ig2qstd_getComicIndividual;false;;;;
+test_sl3x60yz9q29_getComicIndividual;false;;;;
+test_us3hgzxohy5z_getComicIndividual;true;return.creators.available >= 0;The value of return.creators.available should be greater or equal than 0 but got -137295;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_rhg1q3c86qub_getComicIndividual;false;;;;
+test_s4mapi0bp6jl_getComicIndividual;false;;;;
+test_tnyzrizk1uep_getComicIndividual;false;;;;
+test_s162s37lwqxv_getComicIndividual;false;;;;
+test_r17c3463dk50_getComicIndividual;true;return.type one of { "digitalPurchasePrice", "printPrice" };Expected one of [digitalPurchasePrice, printPrice], got EJEMPLO MAYUS;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&prices(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_somxnduq4ca8_getComicIndividual;false;;;;
+test_vf3q0c1tanvn_getComicIndividual;false;;;;
+test_u7raa0un729i_getComicIndividual;false;;;;
+test_vb439wxs66hw_getComicIndividual;false;;;;
+test_1iv3u1g77367r_getComicIndividual;false;;;;
+test_ubgb01wj3rjo_getComicIndividual;false;;;;
+test_1hv5ixc0d49r5_getComicIndividual;true;return.creators.collectionURI is Url;The value P a for the variable return.creators.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_us099d3z7bl0_getComicIndividual;false;;;;
+test_1iv9ueqse3ak7_getComicIndividual;false;;;;
+test_1hbm1c4eam1iw_getComicIndividual;true;return.resourceURI is Url;The value 22<i!. for the variable return.resourceURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&creators&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rh4zs61fmdrm_getComicIndividual;false;;;;
+test_1jxzy6h3v5x6a_getComicIndividual;false;;;;
+test_1h84uq56dhd2e_getComicIndividual;true;LENGTH(return.thumbnail.extension)==3;Expected length of 3 for variable return.thumbnail.extension, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhkl6p4xxhrl_getComicIndividual;false;;;;
+test_1k1r7yqtl4md1_getComicIndividual;true;return.creators.returned == size(return.creators.items[]);return.creators.returned should be equal to size(return.creators.items[..]), but got different values (3 and 4);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hb7ps6al7cc3_getComicIndividual;false;;;;
+test_uvk795fzl3cj_getComicIndividual;false;;;;
+test_qy276ttbj394_getComicIndividual;false;;;;
+test_sl163o9ynl2d_getComicIndividual;false;;;;
+test_urguu7xtdv79_getComicIndividual;false;;;;
+test_r1a2ounfcva9_getComicIndividual;false;;;;
+test_qdw15l0n4hf7_getComicIndividual;true;LENGTH(return.extension)==3;Expected length of 3 for variable return.extension, got 10 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jet9l0c7jhpg_getComicIndividual;true;return.data.total == return.data.count;return.data.total should be equal to return.data.count, but got different values (442737 and 1);main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vbk7ltqhthet_getComicIndividual;false;;;;
+test_u85nekueg2es_getComicIndividual;true;return.events.collectionURI is Url;The value EJEMPLO MAYUS for the variable return.events.collectionURI is not a valid URL;main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_trwby1f8e25e_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 13 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhb21ih9g38l_getComicIndividual;true;return.resourceURI is a substring of return.events.collectionURI;Expected value of return.resourceURI (http://gateway.marvel.com/v1/public/comics/36502) to be a substring of return.events.collectionURI (http://gateway.marvel.com/v/public/comics/36502/events);main.v1publiccomics{comicId}.getComicIndividual&200&data&results(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qxtv5kwkrtd2_getComicIndividual;false;;;;
+test_1ies7htv9szsj_getComicIndividual;true;LENGTH(return.path)==57;Expected length of 57 for variable return.path, got 59 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&images(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubrg1t12bk2q_getComicIndividual;false;;;;
+test_t81tlnhwx0tg_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];return.data.offset cannot be less than zero, got: -955542;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1h7ly8h1qv3ub_getComicIndividual;true;LENGTH(return.language)==5;Expected length of 5 for variable return.language, got 4 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&textObjects(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4cc1vza4myg_getComicIndividual;true;return.data.results[return.data.offset] == return.data.results[return.data.total-1];The value of return.data.offset (1) cannot be used to access an array of size 1;main.v1publiccomics{comicId}.getComicIndividual&200(main.getComicIndividual&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1ibjt169c4u2a_getComicIndividual;true;LENGTH(return.resourceURI)==54;Expected length of 54 for variable return.resourceURI, got 7 instead.;main.v1publiccomics{comicId}.getComicIndividual&200&data&results&characters&items(main.getComicIndividual&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv5hri8mvfj6_getComicIndividual;false;;;;
+test_sl0lis5059b5_getComicIndividual;false;;;;

@@ -17,11 +17,11 @@ import static es.us.isa.jsonmutator.experiment2.MutateTestCases.mutateTestCases;
 
 public class MainExperiment2 {
 
-    private static int nExecutions = 10;
+    private static int nExecutions = 100;
     private static String mutatedTestCasesFolder = "mutated_test_cases";
     private static String mutationReportFolder = "mutation_reports";
 
-    private static boolean generateNewMutants = false;
+    private static boolean generateNewMutants = true;
 
     public static void main(String[] args) throws Exception {
 

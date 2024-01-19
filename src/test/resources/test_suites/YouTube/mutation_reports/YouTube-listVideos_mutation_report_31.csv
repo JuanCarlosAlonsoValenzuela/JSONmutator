@@ -1,0 +1,1001 @@
+testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType
+test_toameyjqh6wn_getVideos;false;;;;
+test_qdyu12za056g_getVideos;true;return.player.embedWidth is Numeric;The value ejemplo minus for the variable return.player.embedWidth is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_r1dbjczni9nl_getVideos;false;;;;
+test_qxw2z7hrfo86_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8aqyr5z2rzq_getVideos;true;return.statistics.likeCount is Numeric;The value H for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhr6rs88ygro_getVideos;true;return.statistics.likeCount is Numeric;The value 8q!nd for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_trtk61pkfiux_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iev0tibm5kj6_getVideos;false;;;;
+test_u7oifu5soyly_getVideos;true;return.recordingDetails.location.altitude == 0.0;Expected one of [0.0], got 1.0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfFloat
+test_1jew1dbzxpely_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item  of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_1iv3sv6xj1n52_getVideos;false;;;;
+test_vf98uo6i8hfb_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hvb0wtau2yxw_getVideos;false;;;;
+test_r1a1g4njpnar_getVideos;false;;;;
+test_uvhf3847jwom_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t81crp2jjg3d_getVideos;false;;;;
+test_t8fpmxzv8axt_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got LF;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qeffigum15pt_getVideos;false;;;;
+test_somyflmjtwf7_getVideos;false;;;;
+test_t4sy8r00j8dz_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (8VK4-IlvibI) to be a substring of return.player.embedHtml (<iframe width="480" height="360" src="//www.youtube.com/embed/8VKD-IlvibI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qy26v7vaxjjq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u87wgvvp9eg4_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhvlvhf4shfd_getVideos;false;;;;
+test_1ji1poh355q2f_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got hI;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iexrfmmptvlh_getVideos;false;;;;
+test_vbbwo1fyigyu_getVideos;false;;;;
+test_vf97m7oqddnq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7u222a2tcva_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_toamf4fzoysy_getVideos;false;;;;
+test_1iemn5s4y5yk7_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got z;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrdo16skv9lt_getVideos;false;;;;
+test_vf0xu8w9ttup_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u85oyfdk8i1v_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxqk7pzkfb6u_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf1f2iliw0va_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (DIfrHMiTQC4) to be a substring of return.player.embedHtml (n^1Owcq]7);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_u82xnbdr0wtz_getVideos;true;LENGTH(return.snippet.channelId)==24;Expected length of 24 for variable return.snippet.channelId, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u855h3u30y0k_getVideos;false;;;;
+test_t4ctwtub9260_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#v´,ideo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iv3tpoc14nky_getVideos;true;return.player.embedHeight is Numeric;The value < for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7lwo6nwclet_getVideos;true;return.statistics.favoriteCount is Numeric;The value xmOb for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qhib9vu47ewk_getVideos;false;;;;
+test_s0ugl7j9vuci_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (-49826), but got 5;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_1hv2pnw5p6d6a_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtuce#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbhxto4gunuh_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u82wejclylv8_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rh7r8p0tanuc_getVideos;false;;;;
+test_qxw45iqq9kc4_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (-357678), but got 5;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_tonxq7vn2q7l_getVideos;false;;;;
+test_vf9780mcjayf_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urunft98ian7_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item (Gk=bfoH of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_sl3dlug8qdyr_getVideos;true;return.id is a substring of return.snippet.thumbnails.default.url;Expected value of return.id (AiMv46tt_JM) to be a substring of return.snippet.thumbnails.default.url (https://i.ytimg.com/vi/Ai*Mv46tt_JM/default.jpg);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1jei81rg52nhg_getVideos;false;;;;
+test_1hux8doswy9td_getVideos;false;;;;
+test_u8e0oe7j4cbm_getVideos;false;;;;
+test_to7dte877s4z_getVideos;false;;;;
+test_1ibjuiehdnsys_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toa4t1vnx3xy_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdqhzyfcwjmq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe1l12i17ynt_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#/video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k1zk4xa1qtyq_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoL/*istResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7opmdo6w7dw_getVideos;false;;;;
+test_vey6gpzrmsm9_getVideos;false;;;;
+test_s50nw9b0ykag_getVideos;false;;;;
+test_1jidae4y2r9km_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jewlmi7k0qi8_getVideos;false;;;;
+test_qxw63q8tiw4z_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7j6gr4kkgu0_getVideos;false;;;;
+test_tog53znf1jjq_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_soelh7dztrn5_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 7 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hraxszm7ouw3_getVideos;false;;;;
+test_1ibkc4knajtip_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxwlowm9u4x2_getVideos;false;;;;
+test_us2yriq4r6lv_getVideos;true;return.statistics.favoriteCount is Numeric;The value ^q_.{ZL for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl8wroxpbe5h_getVideos;false;;;;
+test_1ji5064d7ja06_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skn9qvcevjuf_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got ;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_to4khfxjdye9_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb6thoa0bkft_getVideos;false;;;;
+test_qhht0w7jjm8y_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got <N h;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jyajque6zho3_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got youtub;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urrwu0sn7fi0_getVideos;false;;;;
+test_1iuvie0us5gdt_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf9pjoobrmly_getVideos;false;;;;
+test_1h7whul6dllk6_getVideos;false;;;;
+test_t84mv1dry3c2_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7rhs0rhwmyd_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhdbi04r8n5c_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbhenn12mvz9_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skjzkmwolf1e_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4kkn9c8qx4j_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got edrLxbXswF;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf3potq7hb95_getVideos;false;;;;
+test_s18vnnwipjxt_getVideos;true;LENGTH(return.liveStreamingDetails.scheduledStartTime)==20;Expected length of 20 for variable return.liveStreamingDetails.scheduledStartTime, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4p4tgk2chtj_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got y´outube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s0uhd3uly6gg_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got YfnR";;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_r1g3pbig2m9e_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got fal*,se;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ublvby1se52q_getVideos;false;;;;
+test_t8cx35wiyf5i_getVideos;false;;;;
+test_s4xcyib8kchi_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxocbh09rp0k_getVideos;false;;;;
+test_vf0x2guxauk8_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tol95f6apdte_getVideos;true;LENGTH(return.snippet.publishedAt)==20;Expected length of 20 for variable return.snippet.publishedAt, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jeo8r3q9p73n_getVideos;false;;;;
+test_qy1p96wykmr4_getVideos;true;return.player.embedWidth is Numeric;The value C~|i`O for the variable return.player.embedWidth is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urpnb0pa0hgi_getVideos;false;;;;
+test_s4sc6n2fsvhh_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibbkfsx7abzr_getVideos;false;;;;
+test_1iupyrw23fvhs_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got yout´/ube;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jiflefkoqqt0_getVideos;false;;;;
+test_vf6ea3i3be5h_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (-159387), but got 1;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_qhkiukgg1l4m_getVideos;false;;;;
+test_1jicsdvnwbplv_getVideos;true;LENGTH(return.liveStreamingDetails.actualStartTime)==20;Expected length of 20 for variable return.liveStreamingDetails.actualStartTime, got 21 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdw13a4gk7s6_getVideos;true;return.snippet.thumbnails.medium.url is Url;The value .P for the variable return.snippet.thumbnails.medium.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iyc6av2njyas_getVideos;false;;;;
+test_tolqm2e0c3e9_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrdp78ivmdlw_getVideos;false;;;;
+test_rhr7xpli9b95_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got yotube#videoListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_trwvtkenep88_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv3sh5tc96ch_getVideos;true;return.snippet.categoryId is Numeric;The value EJEMPLO MAYUS for the variable return.snippet.categoryId is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_ubu5hhsvpws6_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyns10n4xap1_getVideos;false;;;;
+test_ubopfoosfnli_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got gNppahiMtH;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxffy7oqm3qe_getVideos;false;;;;
+test_1hrrjd07x3srq_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvjrcknluxd0_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbbvynv15aus_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s12vf2yv5ook_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4plw4oifu5d_getVideos;true;return.player.embedHeight is Numeric;The value /,4254 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jxze8je3a2ck_getVideos;false;;;;
+test_1jifm6nbq9mph_getVideos;true;return.statistics.favoriteCount is Numeric;The value ,J( for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbkpzuwp64py_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got X;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_tolp1q3kunhi_getVideos;false;;;;
+test_1iv4byt6qdvfn_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u87w2ydb7h2q_getVideos;true;LENGTH(return.snippet.publishedAt)==20;Expected length of 20 for variable return.snippet.publishedAt, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_us3hen12sv37_getVideos;false;;;;
+test_1hrbftb88v2ux_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vid/,eo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4q5oer3mpf5_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got x;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ure1vzc6xf00_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s15joss1jho1_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t89nb2t7x2k1_getVideos;false;;;;
+test_1h7ind8txmo2r_getVideos;true;return.statistics.viewCount is Numeric;The value 4c84612 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jew1rd44j29g_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t8cf5jdpxbom_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe6kdrmbmusi_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubp5ezsaeh5x_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got N.f,y;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4sd9zc72m3l_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got youtub´,e;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u85nsq9oypmd_getVideos;false;;;;
+test_qhl2no8onrjp_getVideos;false;;;;
+test_qe1kmxtzk08p_getVideos;false;;;;
+test_soq7qxaw7775_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (480 and 479);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1h7r0b9l7pld0_getVideos;false;;;;
+test_to4jdpful7w0_getVideos;false;;;;
+test_t8cgn6m9ljz5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toifct0wa7he_getVideos;false;;;;
+test_1hrs1oc04rzn4_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got ejemplo minus;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sok4bd8jrgog_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#videyo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_tnzjbdayxj6p_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvbe06l6rsqg_getVideos;true;LENGTH(return.liveStreamingDetails.actualEndTime)==20;Expected length of 20 for variable return.liveStreamingDetails.actualEndTime, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubj3633x5e1u_getVideos;true;return.snippet.thumbnails.default.url is Url;The value l for the variable return.snippet.thumbnails.default.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iaxn80u5i14o_getVideos;false;;;;
+test_uv5vatydcj02_getVideos;true;return.player.embedHeight is Numeric;The value B571 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iaxnm4c4h7xg_getVideos;false;;;;
+test_soelve0kiii9_getVideos;false;;;;
+test_1ji282gcat3jq_getVideos;true;size(return.topicDetails.topicCategories[]) >= 1;The value of size(return.topicDetails.topicCategories[..]) should be greater or equal than 1 but got 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_rlamtw0uxu1x_getVideos;false;;;;
+test_1h7zauutwtnw7_getVideos;false;;;;
+test_tofocnmdvvc2_getVideos;false;;;;
+test_urunrhjxos4l_getVideos;false;;;;
+test_rl8feg3d3odx_getVideos;false;;;;
+test_1hrs2rsm3rz38_getVideos;true;return.statistics.commentCount is Numeric;The value {=98o8T6 for the variable return.statistics.commentCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl3d87j57ntt_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trz5zf86q59s_getVideos;false;;;;
+test_s1020jz4zh2x_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got #`$W;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jy4xs7f7w7jl_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item ttps://en.wikipedia.org/wiki/Sport of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_s1dvplutij50_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item  of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_1hbgin3or8abd_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_us2zxifi6wdg_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib3ph7pvnwvl_getVideos;false;;;;
+test_u8aomoh4ccaa_getVideos;true;LENGTH(return.snippet.channelId)==24;Expected length of 24 for variable return.snippet.channelId, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhvntf1ghjjr_getVideos;true;LENGTH(return.snippet.channelId)==24;Expected length of 24 for variable return.snippet.channelId, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1rqoby3ian8_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtulbe#videoListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb3j03pvokl4_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbt0j9wdeddl_getVideos;true;return.snippet.thumbnails.medium.height == 180;Expected one of [180], got 181;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_qhw658yho3lc_getVideos;false;;;;
+test_u88geytbfkfo_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got flse;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf6eo2l0zzvp_getVideos;false;;;;
+test_sl3x6ahn81np_getVideos;true;All the elements of return.contentDetails.regionRestriction.blocked[] have LENGTH=2;The length of all the elements of return.contentDetails.regionRestriction.blocked[..] should be 2, but the length of the element EJEMPLO MAYUS is 13;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_qdt9bbywgnkx_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got salse;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubmefkc3ly76_getVideos;false;;;;
+test_soknevjmxe0p_getVideos;false;;;;
+test_1h821sdwpo46x_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yutube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iepgkf3sxbub_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got rRwKn4h803;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1bnf7vrmq8y_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7whwznj0px4_getVideos;false;;;;
+test_s4xg5bxtgoyq_getVideos;true;return.snippet.thumbnails.medium.height == 180;Expected one of [180], got -624626;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_ubgvner3ho3a_getVideos;false;;;;
+test_1k254e8clr4u0_getVideos;true;return.snippet.thumbnails.maxres.width == 1280;Expected one of [1280], got 163116;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_qeex6mjxr90k_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ?1k~>U;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iusozfuuu3w2_getVideos;false;;;;
+test_uv8math6czef_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vi,deo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1h7tu0pu985_getVideos;true;return.snippet.thumbnails.high.height == 360;Expected one of [360], got 359;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iexs7l8qug53_getVideos;false;;;;
+test_us31hmgy8md4_getVideos;true;return.recordingDetails.location.altitude == 0.0;Expected one of [0.0], got 1.0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfFloat
+test_1hrbekj75r8z7_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skpit4eefcyr_getVideos;false;;;;
+test_urrwfw1zpa2f_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got Q~ a/@{;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jezcaz1m5xdd_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4xdszp6r04l_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trtnaaj7dbud_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrjqogrt0x80_getVideos;false;;;;
+test_u7u1nzi856xx_getVideos;true;return.id is a substring of return.snippet.thumbnails.default.url;Expected value of return.id (YuuTrYG2zhg) to be a substring of return.snippet.thumbnails.default.url (https://i.ytimg.com/vi/YuuTrYG2Yhg/default.jpg);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_soejx6vkjuxw_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item $O of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_1ies7vhj24660_getVideos;true;size(return.topicDetails.topicCategories[]) >= 1;The value of size(return.topicDetails.topicCategories[..]) should be greater or equal than 1 but got 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_s0xab8unmuk0_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 2 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxyxy4salnj7_getVideos;true;return.statistics.viewCount is Numeric;The value f20 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4yg8c8b682r_getVideos;true;LENGTH(return.liveStreamingDetails.actualEndTime)==20;Expected length of 20 for variable return.liveStreamingDetails.actualEndTime, got 21 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvbdzx1n38f5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r17cekjs55q0_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vid/,eo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ibc0c3gk1ovp_getVideos;true;return.snippet.categoryId is Numeric;The value j})<nzW_ for the variable return.snippet.categoryId is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_ubp71pb5fqr4_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jezdettm9cmw_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ejemplo minus;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf98gt12kd45_getVideos;false;;;;
+test_vbmwnjrmqvdy_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoListRespose;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iepgvzr8xvfp_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got >;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_toixciwfjw4h_getVideos;false;;;;
+test_qe9w15o3he7r_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got 9.]MzC*S;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7oj7weglxkg_getVideos;false;;;;
+test_r1csfylz41mb_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vi*deo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t84mxo438oxh_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got d2JJ7jm8Xq;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbemhjs3s08j_getVideos;true;return.snippet.thumbnails.high.width == 480;Expected one of [480], got 479;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_toan4lxd7uwl_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item httpE://en.wikipedia.org/wiki/Film of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_ubp6z2kkb5nl_getVideos;false;;;;
+test_us0q0oevo7cl_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4yyjifmv0hh_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s0xberhm22bd_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got h1;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t49k9rx4lx0l_getVideos;false;;;;
+test_1jxzfeongzpt2_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe3w41gdtd14_getVideos;false;;;;
+test_1jia104xho1mg_getVideos;false;;;;
+test_u7okdxr5szle_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trqtk79cbwa8_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iepig66rmqsy_getVideos;false;;;;
+test_1iupyu98kohmf_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got 56014;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_soq6hvffmezm_getVideos;false;;;;
+test_1hvb0lihzcke0_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hblimr56nxh4_getVideos;false;;;;
+test_rl2aqfuq4hmb_getVideos;true;return.statistics.commentCount is Numeric;The value ,2309 for the variable return.statistics.commentCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhr75hfhgj8k_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv9bpd48rhgy_getVideos;false;;;;
+test_1hbiprj0rh99u_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urpnp3rdzsde_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item 1 of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_vbppnvox3dr5_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qy1mj8yk7vw0_getVideos;true;return.snippet.thumbnails.medium.height == 180;Expected one of [180], got 179;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1h7wimb6p91di_getVideos;true;return.statistics.viewCount is Numeric;The value 2Y3602 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qdysh4gg1z6t_getVideos;false;;;;
+test_1ibeaknc991kj_getVideos;false;;;;
+test_qxnr9ovctl4h_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got youtue;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t8f6h0vngc35_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h84rlxwkdsfm_getVideos;false;;;;
+test_sopn0dywyecx_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdvho75v5z5g_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got outube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sksbr9gnv6eq_getVideos;true;return.snippet.thumbnails.default.width == 120;Expected one of [120], got 119;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_sl9h1ak8wyt5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iey9qwu1p3qq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toiekd214w9w_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got 321;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iycqk6uxf8dt_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jecoyjndsyet_getVideos;false;;;;
+test_t4vp8app16qu_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube/#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf0wqu902x4p_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (4), but got 5;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_t4ico5f4xmpk_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4mcl8qswu9i_getVideos;false;;;;
+test_vbeog3juthrm_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trqv4lvuh2k9_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got 8B!nR;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7zbkeavbupe_getVideos;true;LENGTH(return.snippet.publishedAt)==20;Expected length of 20 for variable return.snippet.publishedAt, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxtcg0303goh_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtub#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbmzg4oo4x87_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhb2tsl7lk6e_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vide/*o;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhlnlq7hfnsm_getVideos;false;;;;
+test_1ibhkcn6xa34z_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got aONXG6w8KA;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4msy5i81ftx_getVideos;false;;;;
+test_t8fo0grvubsm_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got 9D}()xGT;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jy26eaeycier_getVideos;false;;;;
+test_urunrdyclra9_getVideos;false;;;;
+test_1hv5ix82t6yid_getVideos;false;;;;
+test_1hbfxwyhdcxmc_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item https://en.wikipedia,.org/wiki/Military of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_u7zmbdccq3w5_getVideos;false;;;;
+test_1h7toywk0dveb_getVideos;false;;;;
+test_1iuvzv1jeiucy_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 5 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_somw0oar4ode_getVideos;true;input.maxHeight > return.pageInfo.resultsPerPage;The value of return.pageInfo.resultsPerPage should be lesser than input.maxHeight (input.maxHeight), but got return.pageInfo.resultsPerPage;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterThan
+test_1hrjr261tapmb_getVideos;true;LENGTH(return.nextPageToken)==6;Expected length of 6 for variable return.nextPageToken, got 5 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8e0qt0a3whf_getVideos;true;return.statistics.viewCount is Numeric;The value 4547*8 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_trwcq41flut5_getVideos;false;;;;
+test_vey3etxmz8z4_getVideos;true;return.snippet.thumbnails.standard.url is Url;The value BY for the variable return.snippet.thumbnails.standard.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1if0j76ysgo6e_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qy25mtnnyov8_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got SW;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jiai86eemtdk_getVideos;false;;;;
+test_vb3juu8y8vvp_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4xewntosi1x_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vi7deo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uvk6v1z6fr5k_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item ejemplo minus of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_qhiahronkisx_getVideos;false;;;;
+test_1hv2ot3adpt29_getVideos;false;;;;
+test_vbbtxvlxs31h_getVideos;false;;;;
+test_1jiajbsjvuywo_getVideos;false;;;;
+test_1iay55junnzom_getVideos;true;size(return.topicDetails.topicCategories[]) >= 1;The value of size(return.topicDetails.topicCategories[..]) should be greater or equal than 1 but got 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_1ies73n8f9cfm_getVideos;false;;;;
+test_t842nwisbxv4_getVideos;false;;;;
+test_trqv4lviurfo_getVideos;true;return.snippet.categoryId is Numeric;The value aan|zM for the variable return.snippet.categoryId is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vevv4nufs8qh_getVideos;false;;;;
+test_t8f8f4fcmjq9_getVideos;false;;;;
+test_1ibh1yxu184z5_getVideos;true;return.snippet.thumbnails.high.height == 360;Expected one of [360], got 361;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iuvj66o6k6r9_getVideos;false;;;;
+test_1ib8rvmz5hkkk_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf6got8n5lk2_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vevdl5nchc8n_getVideos;false;;;;
+test_vb93c1j2ryaq_getVideos;false;;;;
+test_1iuya3fwppyzm_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u88f6b329l4k_getVideos;true;return.statistics.commentCount is Numeric;The value M for the variable return.statistics.commentCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl3y9wzjzwwx_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#vide*,oListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sok35hsbuy5d_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrj9wvmmtz6s_getVideos;false;;;;
+test_1h7o64igui7u9_getVideos;false;;;;
+test_1h7le1eh487qq_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uveovipcgsvo_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vido;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qe1l14hcftr8_getVideos;true;return.player.embedHeight is Numeric;The value 6r for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s504srbjg5yq_getVideos;true;LENGTH(return.nextPageToken)==6;Expected length of 6 for variable return.nextPageToken, got 4 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4q5alwuz6ev_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jent8giw4z01_getVideos;false;;;;
+test_t4fk702m4y1u_getVideos;false;;;;
+test_urk2l5dulp9t_getVideos;true;return.snippet.thumbnails.maxres.width == 1280;Expected one of [1280], got 348403;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_qe1leo7ul4yp_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#ivideo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4nccejuvbxx_getVideos;false;;;;
+test_t84m2pbwmesj_getVideos;false;;;;
+test_1k1x9u4gr4sag_getVideos;true;return.statistics.favoriteCount is Numeric;The value ejemplo minus for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urhbnswqib1g_getVideos;false;;;;
+test_1iev1zvh4crw4_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got E;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hv88r2aap1lt_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t84486hlp5ra_getVideos;false;;;;
+test_1h7qx4afowdwl_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got y,outube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubj4ep6iv4tz_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubj4si11paap_getVideos;false;;;;
+test_tofplfn6vn75_getVideos;false;;;;
+test_u7wtu1zyjfaw_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv6kn6oj59b9_getVideos;false;;;;
+test_1hrub2511o12e_getVideos;false;;;;
+test_qhiavuety8fr_getVideos;false;;;;
+test_1jyahbwrajhgx_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yout/*ube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1huzzg749akop_getVideos;false;;;;
+test_trtkhtx9ir07_getVideos;false;;;;
+test_qdy9rhpzzm91_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item https://en.wikipedia./*org/wiki/Film of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_vf3noaz8396c_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (-225198), but got 1;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_1jym2teubmo1h_getVideos;false;;;;
+test_1hbir94a25nj7_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (85E6spD1OjQ) to be a substring of return.player.embedHtml (ejemplo minus);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_urguu8byxo3d_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (480 and 115972);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1iupzjwlzjnlg_getVideos;true;LENGTH(return.nextPageToken)==6;Expected length of 6 for variable return.nextPageToken, got 2 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jxzw62o1lv08_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got ejemplo minus;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iey9fcgvckm9_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got :LQ=}+?;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1dvedeb47xv_getVideos;false;;;;
+test_1hbfz2xv1vdk3_getVideos;false;;;;
+test_1hrj9j01w5ffl_getVideos;true;return.player.embedHeight is Numeric;The value 5L0 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hrpa7r09pfed_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb9lbwydvm1w_getVideos;true;return.pageInfo.totalResults >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.totalResults (-284538), but got 1;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_s507gc0yk0h1_getVideos;true;return.player.embedHeight is Numeric;The value DP#wt for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s1gn3gxfuzc2_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf6y5kf7astd_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got bQRIAsg8J3;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubolxu52gl69_getVideos;false;;;;
+test_ubjmneacykvl_getVideos;true;return.snippet.thumbnails.high.height == 360;Expected one of [360], got 113329;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_vb439z9avvp4_getVideos;false;;;;
+test_rl8dddzpwktg_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iuso7j7d6gxl_getVideos;false;;;;
+test_rhoeo63niv5d_getVideos;false;;;;
+test_qxnt7ycdj5tk_getVideos;true;return.statistics.commentCount is Numeric;The value 3a for the variable return.statistics.commentCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4c9mynxl6wh_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ejemplo minus;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u87wxfe7szlh_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube/#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uv6djtnfrlma_getVideos;false;;;;
+test_to53yxfjk189_getVideos;false;;;;
+test_1h7zsbmdqlnav_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#/,video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbhg7l7f3dpv_getVideos;false;;;;
+test_uvhg93xf5vzq_getVideos;false;;;;
+test_soq6hzem1mb8_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ~^N>&;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s0xsjurehrvn_getVideos;false;;;;
+test_s4xx8a7wz335_getVideos;false;;;;
+test_1jicty236f9sx_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4p36tcpwzzp_getVideos;false;;;;
+test_sl3erzs4cmlh_getVideos;false;;;;
+test_1iuvj3eevif5e_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iykhxmo8v5gk_getVideos;false;;;;
+test_1ibkcwmty8i0p_getVideos;false;;;;
+test_1jygjnwkx89k1_getVideos;true;return.statistics.likeCount is Numeric;The value 132´/4 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_trwcnquc2vkx_getVideos;true;return.liveStreamingDetails.actualEndTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional);The value 2022-10-02Z10:05:39Z for the variable return.liveStreamingDetails.actualEndTime is not a valid timestamp (format: YYYYMMHHThhmmssmm);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm
+test_1iyn8jh5uy69j_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoListRespo´nse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrj8qy6tpzs3_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ieyair4d21q0_getVideos;true;return.snippet.thumbnails.high.height == 360;Expected one of [360], got 72210;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_s4ru6qy3u3hu_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got 319;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1jeir5e2lub07_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1je9wevurvokz_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got youtRube;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iv6jjk6aczzo_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4htyo86wrc2_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yutube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4scyoxrtv74_getVideos;false;;;;
+test_1h7zrjlr4izp1_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item EJEMPLO MAYUS of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_vbk8dme7fqk0_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s0v00c62k4za_getVideos;false;;;;
+test_u7oitsyst7w6_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrjrg391ndiu_getVideos;true;return.snippet.thumbnails.default.height == 90;Expected one of [90], got 89;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1jekzwearz1ic_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl5llo1doras_getVideos;true;return.snippet.thumbnails.default.width == 120;Expected one of [120], got 119;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_tog6aauyaixy_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyexlr9e9fe9_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got wNXtFdPDte;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4ukv44p8cbn_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1ifi08g259s_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got you´tube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iuspu8eal06o_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7zrm6ukbz92_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item ejemplo minus of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_qxw5e6sp5et5_getVideos;false;;;;
+test_s0uhrav0e0xd_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got faRlse;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_veymwdfieywi_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7zagu3jj5mb_getVideos;false;;;;
+test_ubmdn89mbr6r_getVideos;false;;;;
+test_1h7z987yzxo37_getVideos;false;;;;
+test_qy4ear103ckk_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7wgohipp3s1_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhlm1v94aw69_getVideos;false;;;;
+test_vevdin9gpvli_getVideos;false;;;;
+test_qhl1k3on7jg4_getVideos;false;;;;
+test_1if12rb4ajsj7_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got yout*ube;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t8f6h55yy1r6_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyai439nxelu_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skvls69c7rjm_getVideos;false;;;;
+test_u7u35mu5wmd5_getVideos;true;size(return.topicDetails.topicCategories[]) >= 1;The value of size(return.topicDetails.topicCategories[..]) should be greater or equal than 1 but got 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_1ib6gegmh4da1_getVideos;false;;;;
+test_t4vqehz7l2k5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxob57eedxyr_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got ´*true;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hux5c4mgp8wz_getVideos;false;;;;
+test_1ievhyx2i349y_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urmc1r08o7jo_getVideos;true;LENGTH(return.liveStreamingDetails.scheduledStartTime)==20;Expected length of 20 for variable return.liveStreamingDetails.scheduledStartTime, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rh4ym8m8gz1d_getVideos;false;;;;
+test_1hrgzo5sqjdbo_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4p1mmzpcvvp_getVideos;true;return.player.embedHeight is Numeric;The value P for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sknagd7zfjvm_getVideos;true;return.snippet.thumbnails.default.height == 90;Expected one of [90], got 91;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_sl3d7zmqpahy_getVideos;true;size(return.topicDetails.topicCategories[]) >= 1;The value of size(return.topicDetails.topicCategories[..]) should be greater or equal than 1 but got 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_sl6844bj5js3_getVideos;false;;;;
+test_1k1rqodyqsgfk_getVideos;false;;;;
+test_u7ojltkb4shi_getVideos;false;;;;
+test_s1jf9hsydffo_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib0dtpe65dno_getVideos;false;;;;
+test_ublwkc8rocvm_getVideos;false;;;;
+test_s4mc9mhd3rxt_getVideos;true;return.pageInfo.totalResults >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.totalResults (-938717), but got 5;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_qxqkzkmwzcqg_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got y9utube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb92y21nn511_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoListRespohnse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k201znklsd2o_getVideos;false;;;;
+test_u7rao9i4x65f_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tnzjpon2q6gm_getVideos;true;return.snippet.thumbnails.maxres.url is Url;The value  for the variable return.snippet.thumbnails.maxres.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rkxbu33glsu0_getVideos;false;;;;
+test_1h7ged1ho8axy_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyc7s0mh20c4_getVideos;false;;;;
+test_qhhr07u28u2e_getVideos;true;return.statistics.likeCount is Numeric;The value 109p3 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ji4j0lnxubzp_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrm1dglty249_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got O9YPKKBn0C;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t84lorrwfuqr_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;RV"ET:K<;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7fx53yb03ee_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl7vgcszf0af_getVideos;false;;;;
+test_1hbaz0ta2rqlf_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubrgwe0tcr3l_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got W]7e;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hr83rlv5a04z_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got ejemplo minus;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4yi67ic7b5j_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got c/@9n;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf9806ryfo6q_getVideos;false;;;;
+test_tol7io0bydde_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtubevideo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhdtffhr3p0k_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got 321;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1hvb2326maq7s_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtub*,e#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7o6lajq704h_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hr8othl4w7s5_getVideos;false;;;;
+test_1iv6lt8fdnebc_getVideos;false;;;;
+test_qy279ew177ee_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urv6uy8kpctu_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got youtub8e;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyf0q428y6au_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtub#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rh89k93wnay8_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb3kki18k8rl_getVideos;true;return.statistics.viewCount is Numeric;The value 57I4881 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_uvbd88ncu2pc_getVideos;false;;;;
+test_t4a1ci0ls6k2_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_us08jppqhkxc_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vevcqgqbfmep_getVideos;false;;;;
+test_uvjr9zkwe2cj_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got y´/outube#videoListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ts1x1vjxv0ag_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got pt58z;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hre74barxwe1_getVideos;false;;;;
+test_vbbu0afwp1yx_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got KG6B7?w;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iv3qwtgicd9y_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ~KX;)<OL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urserhr0z9ro_getVideos;false;;;;
+test_s1jgw4m3l17p_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jezdh2awehbs_getVideos;false;;;;
+test_1k1r97baj8ztx_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbpqdh6md6pl_getVideos;false;;;;
+test_qxfiadyuhgf7_getVideos;false;;;;
+test_trwwlk90nsc5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb94kt7wdzqv_getVideos;false;;;;
+test_u80510u9k1nl_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yoItube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhm57mhclyle_getVideos;true;return.player.embedHeight is Numeric;The value 62,0 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jecpa21hoh11_getVideos;false;;;;
+test_qxw2le8wyvcn_getVideos;false;;;;
+test_1jy7q0t1qvprp_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got pk63Z5wIeK;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sksuscm8ljdu_getVideos;false;;;;
+test_qxqj1h37vpyw_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4yi6buk1zjt_getVideos;true;input.maxResults == return.pageInfo.resultsPerPage;input.maxResults should be equal to return.pageInfo.resultsPerPage, but got different values (45 and 46);main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_rhd9joo3kwv5_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got youtu´/be;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_trqu9n3lx4kk_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jelgyy2ekdb7_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got Bd;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeco6ro98do0_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got I4eL6VXtG7;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jifkxpe3n7mq_getVideos;false;;;;
+test_uvbwpjth23aw_getVideos;true;return.pageInfo.totalResults >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.totalResults (-93288), but got 2;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_rkxanxtb03zt_getVideos;false;;;;
+test_skkiajw3momv_getVideos;false;;;;
+test_1iv3sh1vk0meb_getVideos;false;;;;
+test_t89ojuhv7ar4_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4f1hj6jmgj4_getVideos;false;;;;
+test_1h7o6ipfeghgm_getVideos;true;return.statistics.likeCount is Numeric;The value 130´/547 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urmdad4063j8_getVideos;true;input.maxHeight > return.pageInfo.resultsPerPage;The value of return.pageInfo.resultsPerPage should be lesser than input.maxHeight (input.maxHeight), but got return.pageInfo.resultsPerPage;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterThan
+test_ubu8o5vynepf_getVideos;false;;;;
+test_1je9wpyfcf8z8_getVideos;false;;;;
+test_1ib36b0rc2iph_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7opookjl8oj_getVideos;false;;;;
+test_vb92y0f5xnhu_getVideos;true;return.snippet.thumbnails.default.url is Url;The value p?m"B$OO for the variable return.snippet.thumbnails.default.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iepyt0kg5zjq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyq0e7kgg0u0_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhvn1gednlfa_getVideos;false;;;;
+test_1h7zr87diza78_getVideos;false;;;;
+test_1jy7r45pvn0he_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got 321;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_qxntzyl62zao_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got D;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t8cf32828cok_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uve7cd2h20j8_getVideos;true;return.snippet.thumbnails.maxres.height == 720;Expected one of [720], got 721;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_vbk8dztu0g8p_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jer2360200h2_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vido;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_tru57nxq3j1z_getVideos;false;;;;
+test_toohoh2m1gmb_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibeto800npt0_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl0mmf0u19b7_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxr3p1itbnsp_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got x;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sobsj7udykag_getVideos;false;;;;
+test_sopn0hybapuq_getVideos;false;;;;
+test_to4lps4rc6sh_getVideos;true;return.statistics.commentCount is Numeric;The value 14h3 for the variable return.statistics.commentCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s1jevq6lkqwk_getVideos;true;return.statistics.viewCount is Numeric;The value YO|$P&#d" for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iv1jskssang0_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item G of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_1ib3q6t6pajhv_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got *]q*;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb3lqoyjuf5k_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hr86vwpt1ooj_getVideos;false;;;;
+test_ubjm9f631tnq_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got y/,outube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeytj5c1glrn_getVideos;true;return.statistics.viewCount is Numeric;The value EJEMPLO MAYUS for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rkwurez0l9vc_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got C/6W|^k;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7xdpgzfcrp1_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl3d83kj5zky_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_us0pmnaoulo2_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7qxihg6w0o1_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ublwygy18up1_getVideos;false;;;;
+test_skpjwwjorzn7_getVideos;false;;;;
+test_to1rzsqeo8rq_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t89ndv2h1pwm_getVideos;true;return.snippet.thumbnails.high.height == 360;Expected one of [360], got 359;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iv72yiuxq59z_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t49k9zu4tjci_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t8f6v5w8gl0m_getVideos;true;LENGTH(return.liveStreamingDetails.scheduledStartTime)==20;Expected length of 20 for variable return.liveStreamingDetails.scheduledStartTime, got 22 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rkwschmvzvht_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl53o7gtn4mp_getVideos;false;;;;
+test_u7zkraw28rw1_getVideos;false;;;;
+test_vbcdvzar18wy_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhdsnl75ount_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got 604017;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iv9ct5koky1v_getVideos;true;LENGTH(return.nextPageToken)==6;Expected length of 6 for variable return.nextPageToken, got 7 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trzode54wu9l_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item ejemplo minus of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_rhr7xk1qj8mb_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (nFiJrEuHbxE) to be a substring of return.player.embedHtml (J);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_t4vp8i9lmmnq_getVideos;false;;;;
+test_t4flamy7zkfn_getVideos;true;return.statistics.viewCount is Numeric;The value ) for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jyjayseecwo5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4xe4lmn4yg4_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (653380 and 480);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_vf3owrhjq88o_getVideos;false;;;;
+test_1ibh198i9215t_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u85pcgij57ow_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item EE]e of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_qeffigv82kaf_getVideos;false;;;;
+test_s15ks9ekpnw7_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ublwkftakhti_getVideos;true;return.player.embedHeight is a substring of return.player.embedHtml;Expected value of return.player.embedHeight (67485) to be a substring of return.player.embedHtml (<iframe width="3817" height="6785" src="https://www.youtube.com/embed/-qxIl2zDAlI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1iyl0pyjcfltc_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jew2zr9pyckz_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoLi/*stResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k1rqohw91mwn_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv9vicyp0w1g_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got h/d;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u85nh1mstra9_getVideos;false;;;;
+test_1ib5yv4p6u2ia_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got /*youtube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyc8y68u8wv7_getVideos;true;return.snippet.thumbnails.default.height == 90;Expected one of [90], got 89;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_s1036lbsggo3_getVideos;false;;;;
+test_1iupygdn3t6id_getVideos;false;;;;
+test_1h7geojgw3yhu_getVideos;true;return.player.embedHeight is Numeric;The value t for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iupxlv0hfx2q_getVideos;false;;;;
+test_toig7g1e8fg2_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib986cff4chd_getVideos;true;return.snippet.thumbnails.medium.height == 180;Expected one of [180], got 179;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iepy3rd0rb6p_getVideos;false;;;;
+test_t4sxunw8koyt_getVideos;true;return.statistics.likeCount is Numeric;The value Q for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hb86gr9x7037_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got ejemplo minus;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbhffp9eocx0_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qeevmvzryhwy_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got /,2d;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jydr19jfumgg_getVideos;false;;;;
+test_rhtxr8ceiw52_getVideos;true;return.snippet.thumbnails.default.height == 90;Expected one of [90], got 870441;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_s12v16624v93_getVideos;false;;;;
+test_soccemvgu2pg_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtu*,be#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hraw934oegdf_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got Boutube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jym3j0bni6ut_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trweob7166hu_getVideos;true;return.player.embedWidth is Numeric;The value #(F::o for the variable return.player.embedWidth is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ibesz025bak0_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item >'#* of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_1k22s7qtipfsk_getVideos;true;return.snippet.thumbnails.maxres.height == 720;Expected one of [720], got 53082;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_qy4ep89njzad_getVideos;false;;;;
+test_1hvb1p6zit942_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ZSD;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4kmio9d8tb8_getVideos;false;;;;
+test_1jy5fpg5lddtj_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k229i22xkew5_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbhglskcup88_getVideos;false;;;;
+test_1jxzgko2t4qbc_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tol7zc7lpjs4_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yo/utube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urjk9p8vcke1_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yutube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhd9k0ka75me_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vid´*eo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urgshzblasz9_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl8drfge7p6d_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item ejemplo minus of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_urupdz64bsxj_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got Q}[oLTt;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhgmdenjamut_getVideos;false;;;;
+test_s103kghtsh12_getVideos;false;;;;
+test_trz75oiqc290_getVideos;false;;;;
+test_uv5uue13iotz_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got ´/youtube;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4qmtpy11cv9_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got CHar8|GjH;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4ndwqvmmat3_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got 2´*d;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hr5wz1escd9x_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yo/*utube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iaxp3txuszfq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sobuvigp7jg8_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ..Nv;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_tolpfv5jr883_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl3x3dvkebty_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoListRasponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4q6ughmuur5_getVideos;false;;;;
+test_skmtox8bwoxd_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib3p0vrtqbmp_getVideos;false;;;;
+test_urjk9johnpes_getVideos;false;;;;
+test_r1ie0ofddx7p_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 7 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jxzg97oimh5t_getVideos;false;;;;
+test_s18cjxntd8og_getVideos;false;;;;
+test_qhqlvpz1b9rr_getVideos;false;;;;
+test_skxu2ilicmcw_getVideos;true;return.statistics.likeCount is Numeric;The value *,900451 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jensdfeetttf_getVideos;false;;;;
+test_trtk3cz5wina_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uv6d60fpfzac_getVideos;false;;;;
+test_1iusozhgwcxf5_getVideos;false;;;;
+test_rhdd2eh7yhbs_getVideos;true;return.statistics.likeCount is Numeric;The value rDezu473aJ for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbf6fv09masy_getVideos;false;;;;
+test_tofp55nk8vg3_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbcdt89m2vjq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8b8yuurw1tg_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (0), but got 1;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_rkws13mlvtiw_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got fals;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhkl6t3ihsft_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item https://en.wikipeZdia.org/wiki/Rock_music of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_qe6nhqmgy82u_getVideos;false;;;;
+test_1jygkfsw7ds8p_getVideos;false;;;;
+test_rlap6g4a2kvm_getVideos;false;;;;
+test_rhak41ia0gfn_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhte1uh4xhyp_getVideos;false;;;;
+test_1h7z98dxj0fna_getVideos;false;;;;
+test_1jyg0vylwrq5u_getVideos;false;;;;
+test_s18vnphy7whf_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1wriifikldd_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item u&rG of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_vevvu9azdxep_getVideos;false;;;;
+test_1hrubgibmqz51_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubjn1hpu8f91_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got 7q';main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vey3cd6eox89_getVideos;false;;;;
+test_rh5jcnnpsi8y_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4f3qv8wsu28_getVideos;false;;;;
+test_1k1wq0v62sl6h_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got 1;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrs2gcathyyd_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got L{7{,;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubj3k28szl81_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s12saw1pu81h_getVideos;false;;;;
+test_1hrbft1q2w95w_getVideos;true;return.statistics.likeCount is Numeric;The value 999´71 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urrxxheaazj5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyd9yfi84j1i_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item ejemplo minus of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_t4f13e52o1nn_getVideos;true;return.snippet.thumbnails.standard.width == 640;Expected one of [640], got 641;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iaxmrb2bonqs_getVideos;true;return.statistics.viewCount is Numeric;The value 213/*142 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ien8a51r9ik4_getVideos;false;;;;
+test_rl03aiizms0x_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 7 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe9ch3h4ad7l_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got ´*2d;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sohvkgyq35tj_getVideos;false;;;;
+test_qdyu1aws4i7q_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ^NNVZ};main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ib99qorgtjkz_getVideos;false;;;;
+test_urjknscbl73r_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyd9vn7t1u7q_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (480 and 505541);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1ib8rtbphalvc_getVideos;true;return.contentDetails.caption one of { "false", "true" };Expected one of [false, true], got ejemplo minus;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhgmdm640bar_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u804pc7oru5i_getVideos;false;;;;
+test_qe115jzjhffo_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhit3uhy93xu_getVideos;true;return.statistics.viewCount is Numeric;The value 2057K14 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_r17sufv3fgvs_getVideos;true;return.player.embedWidth is Numeric;The value <:c;8{r+ for the variable return.player.embedWidth is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jydt1tup5xdd_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#*,video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uv5w0hqpjcxl_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item >C-)I9\+r of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_vbelef2j6m9j_getVideos;false;;;;
+test_s1b5vvl61so5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxw2l4f5dyyd_getVideos;false;;;;
+test_1hrrjandtko4y_getVideos;false;;;;
+test_1ibe8mlsdfv3o_getVideos;false;;;;
+test_urrxjmjgcfuc_getVideos;false;;;;
+test_rhb2tj31it6a_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbaerdw861iw_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got |'Pb[')j;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u805hgdpjk1f_getVideos;true;All the elements of return.contentDetails.regionRestriction.allowed[] have LENGTH=2;The length of all the elements of return.contentDetails.regionRestriction.allowed[..] should be 2, but the length of the element  is 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_rhow595hztcx_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jy7pk391j5m9_getVideos;true;return.player.embedHeight is Numeric;The value 37p2 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1k1zhcb2chu7o_getVideos;false;;;;
+test_u8dz3xk1mdyu_getVideos;true;return.player.embedWidth is Numeric;The value 131*,6 for the variable return.player.embedWidth is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hbdq37mj2s6x_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ejemplo minus;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxywpasgkdpf_getVideos;false;;;;
+test_1iyc7dzu5znsp_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item < of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_ubge4b4lawkh_getVideos;true;return.player.embedHeight is Numeric;The value 218/,1 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urrwtx6ikodd_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jett2zl5v1v9_getVideos;true;return.player.embedHeight is Numeric;The value 1KU5dClsvx for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qe9ch1ht9hkn_getVideos;true;return.snippet.thumbnails.default.height == 90;Expected one of [90], got 91;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_rl54ghkhgbp2_getVideos;false;;;;
+test_u7zlzp3dcmk3_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv8ab6donfap_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item EJEMPLO MAYUS of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_1ib0fbbghp0me_getVideos;true;return.player.embedHeight is Numeric;The value Rsh7inoWtJ for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_tony44o66que_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhnbsjlekrc1_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qdt8ja585ant_getVideos;false;;;;
+test_urk4548kcnjp_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxobx1r7qxx4_getVideos;true;return.player.embedHeight is Numeric;The value p($PUhFS for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u7wu5iq6kh87_getVideos;true;return.player.embedHeight is Numeric;The value 6gz for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_skmu5f4x0yn8_getVideos;false;;;;
+test_to2bevfc6r06_getVideos;false;;;;
+test_s18ew7x74rw4_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhqm9spfoxm8_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item K of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_qhnt9f4i4oc7_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxywb656pp9z_getVideos;false;;;;
+test_skvm8o4r8nz9_getVideos;true;return.player.embedWidth is a substring of return.player.embedHtml;Expected value of return.player.embedWidth (771) to be a substring of return.player.embedHtml (<iframe width="7371" height="4146" src="https://www.youtube.com/embed/BPjbiZQmBI4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_s4p1bawk9gs2_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxqkzw383rs2_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ji4go6q8phlt_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyagxpq09gme_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yo,utube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyc6mf02lt0x_getVideos;false;;;;
+test_ursfgto47zg1_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got G`rP<7NR~;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ib38pw2hmpfd_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv2p9z04hge0_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iyq1y62yrm7n_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (4ExkCymFfRQ) to be a substring of return.player.embedHtml (EJEMPLO MAYUS);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1iave5ic3bm0i_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvbcfwjttjs3_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7rsivvklsmo_getVideos;false;;;;
+test_trwelwdy5zdt_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#v/*ideo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4p3l6c9342p_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe6nvrq3sew1_getVideos;false;;;;
+test_1iuyr8qbc2ss5_getVideos;true;LENGTH(return.liveStreamingDetails.scheduledStartTime)==20;Expected length of 20 for variable return.liveStreamingDetails.scheduledStartTime, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxfgq3yb2jqb_getVideos;false;;;;
+test_s0xt0kjrwawh_getVideos;false;;;;
+test_sksu2r6ulr94_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hr5ec4ywgy8x_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (xCsqwjRqDIE) to be a substring of return.player.embedHtml (G]);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qdpz83zdki0k_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoListRespo/nse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4xdt77o06lh_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtubl#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyn9posh2jow_getVideos;true;return.liveStreamingDetails.actualEndTime is Timestamp. Format: YYYY-MM-DDTHH:MM:SS.mmZ (Miliseconds are optional);The value 2022-1m-03T15:07:46Z for the variable return.liveStreamingDetails.actualEndTime is not a valid timestamp (format: YYYYMMHHThhmmssmm);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.dates.IsTimestampYYYYMMHHThhmmssmm
+test_s18eyyjkyuzo_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item https://en.wi´,kipedia.org/wiki/Video_game_culture of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_uv8m88ri4l7p_getVideos;true;size(return.topicDetails.topicCategories[]) >= 1;The value of size(return.topicDetails.topicCategories[..]) should be greater or equal than 1 but got 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_r1idy7m7135d_getVideos;false;;;;
+test_1hv392sufdc1h_getVideos;true;input.maxResults == return.pageInfo.resultsPerPage;input.maxResults should be equal to return.pageInfo.resultsPerPage, but got different values (17 and 100270);main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_uve7qe7jg12b_getVideos;false;;;;
+test_1hv0hb0zu5v1f_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iephchoxti79_getVideos;false;;;;
+test_u8dges5o54ro_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (479 and 480);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_rh7ry8hhxfe9_getVideos;false;;;;
+test_t4sxx4bcxuud_getVideos;false;;;;
+test_qxfiaa0tw2lz_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got -535627;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_rlamu7iu18om_getVideos;false;;;;
+test_uv8m8b44syue_getVideos;false;;;;
+test_t4nvwqykms12_getVideos;false;;;;
+test_1hbfzh6i3ihpv_getVideos;false;;;;
+test_r1fnepmxdboh_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4v4chzz6vz7_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got 2Gd;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sksu2r7cpa2f_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got om4TaFXv26;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qdy9dcn6xaut_getVideos;false;;;;
+test_s18uvbthm0j6_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got 8d4xpvRo?;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iunojc5a4iuc_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sopn0c0puiqr_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got yout´/ube#videoListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7fw1my4ep0w_getVideos;true;LENGTH(return.nextPageToken)==6;Expected length of 6 for variable return.nextPageToken, got 7 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toa59tmkg3le_getVideos;false;;;;
+test_1ib0yvl61vuxy_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (479 and 480);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_s4plidgcxtm8_getVideos;false;;;;
+test_t4f0mm0amsf8_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhtctad05nau_getVideos;false;;;;
+test_somxl2ng1p2q_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv4b6ozbnygh_getVideos;false;;;;
+test_1jifm4av1h8a9_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sobuk03xrewk_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl8f0b1o1ctz_getVideos;true;return.snippet.thumbnails.default.url is Url;The value ejemplo minus for the variable return.snippet.thumbnails.default.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hb7p02g7ww8h_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got you/*tube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1gp1se3ej3r_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7okul6ggeau_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (6FKbnPwhw58) to be a substring of return.player.embedHtml (87'6);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_t8f62w6zw3sh_getVideos;true;return.pageInfo.totalResults >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.totalResults (-633767), but got 1;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_1iv3s30rx0jsl_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item https://en.wikipedia.or6g/wiki/Lifestyle_(sociology) of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_qxwm2y1sd4qg_getVideos;false;;;;
+test_1jetce0qpr5f5_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhvmbywykjtu_getVideos;true;return.id is a substring of return.snippet.thumbnails.default.url;Expected value of return.id (Ju2KHPWP_M4) to be a substring of return.snippet.thumbnails.default.url (https://i.ytimg.com/vi/Ju2KHPWP_M/default.jpg);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qdspfteew483_getVideos;true;return.snippet.categoryId is Numeric;The value /24 for the variable return.snippet.categoryId is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s18dpymp8px1_getVideos;true;return.contentDetails.definition one of { "hd", "sd" };Expected one of [hd, sd], got /hd;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iukvl51ppoa8_getVideos;true;return.snippet.thumbnails.default.width == 120;Expected one of [120], got 119;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_s50nw9mwhpba_getVideos;true;return.statistics.favoriteCount is Numeric;The value rIiqXb0GFn for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s4xfaf421lra_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item X4@c of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_qhkli1k0m81i_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (Dh3LYuJbBiU) to be a substring of return.player.embedHtml (<iframe width="2374" height="1335" src="https://www.youtube.com/embed/Dh3YuJbBiU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1k1rpvzv2eib9_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvbw08a2sew4_getVideos;false;;;;
+test_rl5lzpk1rl13_getVideos;true;return.statistics.likeCount is Numeric;The value 83/340 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t8ceoxisl2k1_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8b7c9moixcy_getVideos;true;return.statistics.viewCount is Numeric;The value KE for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hror76w1ntk6_getVideos;false;;;;
+test_1iv3qzk4u6zaq_getVideos;false;;;;
+test_1hrub4pqy3wop_getVideos;false;;;;
+test_to7aro41jcjd_getVideos;false;;;;
+test_qy26v7ijja05_getVideos;false;;;;
+test_rhg2hzowpnqb_getVideos;true;return.pageInfo.totalResults >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.totalResults (-501733), but got 1;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_1iycps89ic4e1_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 8 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skvm5xi1ni9d_getVideos;true;return.status.license one of { "creativeCommon", "youtube" };Expected one of [creativeCommon, youtube], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbsglehjwmsk_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvgwdoxmrcqc_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7fu14y41yzp_getVideos;true;return.statistics.favoriteCount is Numeric;The value /*0 for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qdssk28vj6g1_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got bWtw5eTW28;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1dvbykoaeyb_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxw5dyuurq61_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hruu5lf3fwoo_getVideos;false;;;;
+test_rhufoyt66n95_getVideos;false;;;;
+test_us083dq91ved_getVideos;true;return.player.embedHeight is Numeric;The value ´,3172 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7iowzrsio2u_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yout´*ube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1bni2gtpe7s_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_tnyzda0mre44_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrpbgqwn525s_getVideos;false;;;;
+test_sl67stvrq1x0_getVideos;false;;;;
+test_1k1tzclhhztpy_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (4), but got 5;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_skv2qv7dflmd_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yout8ube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4qnlts40y7r_getVideos;false;;;;
+test_1jig3bu8fa4wx_getVideos;true;LENGTH(return.nextPageToken)==6;Expected length of 6 for variable return.nextPageToken, got 7 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_soneq1k555k2_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got |DRO:;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iupw45f952d4_getVideos;true;return.snippet.thumbnails.standard.width == 640;Expected one of [640], got -934979;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_trqtyi5wlffl_getVideos;true;LENGTH(return.snippet.channelId)==24;Expected length of 24 for variable return.snippet.channelId, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhhtsyravktu_getVideos;true;return.snippet.thumbnails.default.height == 90;Expected one of [90], got 89;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1hravuw3ecmzm_getVideos;false;;;;
+test_1hv2pljbdeu61_getVideos;false;;;;
+test_s18w1uk7f8tf_getVideos;false;;;;
+test_ts1xr9follbt_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iukwred3fynk_getVideos;false;;;;
+test_1jensg61eeulg_getVideos;true;return.statistics.commentCount is Numeric;The value ´87045 for the variable return.statistics.commentCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qdyt991rxf1e_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got Kx7qGXc2pw;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1huxpxa7hljcj_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtue#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qecnc3rp7142_getVideos;false;;;;
+test_rhtyzxzfdnp5_getVideos;false;;;;
+test_t81bo2lp2xbn_getVideos;false;;;;
+test_t8cfxl6w0y7s_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uvhg9lo3g02r_getVideos;false;;;;
+test_u88gt67bh4qd_getVideos;false;;;;
+test_1h7oo4mhaq7ua_getVideos;false;;;;
+test_t4yze3exqn8y_getVideos;true;return.id is a substring of return.snippet.thumbnails.default.url;Expected value of return.id (awa471Prpnk) to be a substring of return.snippet.thumbnails.default.url (https://i.ytimg.com/vi/awa4z1Prpnk/default.jpg);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_1hb87n4hlk38j_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbt18tnv8x80_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got 2;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7rgaj0i341g_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4xe49rcnl2e_getVideos;true;return.snippet.thumbnails.maxres.url is Url;The value https://i.ytimg.co´*m/vi/VmUc5JycrDg/maxresdefault_live.jpg for the variable return.snippet.thumbnails.maxres.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1jewm0us205yv_getVideos;true;return.snippet.thumbnails.default.url is Url;The value EJEMPLO MAYUS for the variable return.snippet.thumbnails.default.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rhlodsfb3sc2_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtub#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_to2c6o50008j_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got you6ube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4ctwg1dc20i_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got s5IBqt`,;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_trqtvzejg6r5_getVideos;false;;;;
+test_r1icul2t03eh_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u7wvrxoxd9a1_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbaymmlkaiwh_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got you*tube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jydt21rfb4fm_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got EJEMPLO MAYUS;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ts56orwihu0i_getVideos;false;;;;
+test_rkwrkldterzn_getVideos;false;;;;
+test_toihal5e1xkp_getVideos;false;;;;
+test_1hbghgwdutir7_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 7 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8apvig498x2_getVideos;false;;;;
+test_tocx1pgntbae_getVideos;false;;;;
+test_u7p0rdwcswtv_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urjjk7qmg3lc_getVideos;true;input.maxResults == return.pageInfo.resultsPerPage;input.maxResults should be equal to return.pageInfo.resultsPerPage, but got different values (40 and 106029);main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_t81crrg20dpe_getVideos;true;return.statistics.favoriteCount is Numeric;The value z for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s4plwck2wvg1_getVideos;false;;;;
+test_qdw0arrocdpi_getVideos;true;return.snippet.thumbnails.standard.width == 640;Expected one of [640], got 641;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1iay5v599dw6w_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rh7qs9hqvgoh_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4swocb263qe_getVideos;false;;;;
+test_ure0eh8xs0fq_getVideos;false;;;;
+test_vbbtjwjk5g6w_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube#videoLi´stResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_r1iebyv6p3qu_getVideos;false;;;;
+test_skq2alirgy0j_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 2 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1cue076vjhg_getVideos;false;;;;
+test_1ib6hkictwiu9_getVideos;true;LENGTH(return.snippet.publishedAt)==20;Expected length of 20 for variable return.snippet.publishedAt, got 19 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1a1uhkt6fjk_getVideos;false;;;;
+test_1jer1aryde4ok_getVideos;false;;;;
+test_t4q3qd5jqb8i_getVideos;false;;;;
+test_s4p39e4bt6ib_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u8b6y2z9zsqh_getVideos;false;;;;
+test_1hbist6qmmvdx_getVideos;true;return.player.embedHeight is Numeric;The value 9*>/%91 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ibebd3qacehw_getVideos;false;;;;
+test_1jetsoknhg678_getVideos;true;return.pageInfo.totalResults >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.totalResults (-130196), but got 5;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_trzoapsbsieq_getVideos;false;;;;
+test_s103n76rk6yg_getVideos;true;return.statistics.likeCount is Numeric;The value 142/*32 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jidabmjh3dbo_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got LKx|9TY;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbbvkit0akaf_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv89lwrnllbt_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhvmnbd6kvg9_getVideos;true;return.statistics.likeCount is Numeric;The value 1139A for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qec4pl3lajw7_getVideos;false;;;;
+test_ubonvtrjho4h_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ursfxlf0mrtw_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (1), but got 2;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_sksdpenql36s_getVideos;true;return.statistics.favoriteCount is Numeric;The value ejemplo minus for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jy5h9kkgqgxc_getVideos;true;return.player.embedHeight is Numeric;The value LVM5WsANKU for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_ubgbuhac5fmp_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s507ghya4bw2_getVideos;false;;;;
+test_skk0tkrj4v39_getVideos;false;;;;
+test_ublvpwuewgv5_getVideos;true;return.snippet.thumbnails.medium.url is Url;The value Rxi for the variable return.snippet.thumbnails.medium.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s12t30njyss9_getVideos;true;return.snippet.thumbnails.medium.url is Url;The value G for the variable return.snippet.thumbnails.medium.url is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s506obrvyzao_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (506930 and 480);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_uvbcfqaivak6_getVideos;false;;;;
+test_uvjpbm57g485_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 7 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ji4yli5g98is_getVideos;false;;;;
+test_ublxo6ax7z1v_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtubY#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_tode46155xys_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s0v0up8x1sfl_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got w1D;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jyjcj6p5gzms_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got L/n/D;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qe4bpbtm9vsh_getVideos;true;return.snippet.thumbnails.medium.width == 320;Expected one of [320], got 319;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_1jeo9j0fnq2pd_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t84lovpeyl9z_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (480 and 481);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1hblkkz0rgwo4_getVideos;false;;;;
+test_1jifky39bcf1u_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sksa74nr2cds_getVideos;true;LENGTH(return.snippet.channelId)==24;Expected length of 24 for variable return.snippet.channelId, got 3 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1ui1yr823hw_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got 2´,d;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhakkr8zof8w_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 5 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibe8p4vrw4f6_getVideos;false;;;;
+test_qy26em0w5x6f_getVideos;false;;;;
+test_s1goqfyqqg52_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jicsurdypph5_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 4 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf0vkutnshtd_getVideos;false;;;;
+test_1jyjc4zpaxant_getVideos;false;;;;
+test_1iycom0z5qw4y_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 8 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iaxmr7ht19gz_getVideos;true;return.statistics.favoriteCount is Numeric;The value EJEMPLO MAYUS for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jicsuhjp2fl1_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got T;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyq1hccgybtt_getVideos;false;;;;
+test_u7u4e79w8yg1_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rh4yowwlf0a9_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibhlgfnovigm_getVideos;true;LENGTH(return.liveStreamingDetails.actualStartTime)==20;Expected length of 20 for variable return.liveStreamingDetails.actualStartTime, got 5 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7io7iadhx7o_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv1i8eelzcjc_getVideos;true;return.statistics.viewCount is Numeric;The value 436K149 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sobv9jknyek2_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtube´/#videoListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4cbzf75w6ea_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t8f8f8dejei8_getVideos;true;return.snippet.thumbnails.high.width == return.snippet.thumbnails.standard.height;return.snippet.thumbnails.high.width should be equal to return.snippet.thumbnails.standard.height, but got different values (480 and 481);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntEqual
+test_1jenrzu1v21bs_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (Msg9hvHphtU) to be a substring of return.player.embedHtml (gsdSaGpPLT);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_veveoka0hw6v_getVideos;false;;;;
+test_s13axoll5kqd_getVideos;false;;;;
+test_s50549c1ztra_getVideos;false;;;;
+test_sohcjpc8ps1e_getVideos;true;size(return.topicDetails.topicCategories[]) >= 1;The value of size(return.topicDetails.topicCategories[..]) should be greater or equal than 1 but got 0;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.LowerBound
+test_1hroqccduftww_getVideos;false;;;;
+test_ublx9pgpem2g_getVideos;true;input.maxHeight > return.pageInfo.resultsPerPage;The value of return.pageInfo.resultsPerPage should be lesser than input.maxHeight (input.maxHeight), but got return.pageInfo.resultsPerPage;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterThan
+test_1h7o4yj2wa04w_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv1i8gd510zb_getVideos;false;;;;
+test_uvhh15rdabfl_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yo*utube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sl68iewq70aa_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got 2;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_trzmquvuvak4_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (YXrNok2wKS4) to be a substring of return.player.embedHtml (j);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_s1h7fsvn98ac_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got p.Nn>ZNb~;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qe6lux6nd4j9_getVideos;false;;;;
+test_rh5ja2vvk8rm_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yo/utube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4yyjifmtbuh_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib389ckr8zzk_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got #;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4p20vxadtuu_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbiquxb898oo_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 29 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_too0gnidbbjt_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item $ of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_uve6jx29ly77_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got ejemplo minus;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrrl8h411l5t_getVideos;false;;;;
+test_1h7imnfhjouox_getVideos;true;return.kind == "youtube#videoListResponse";Expected one of [youtube#videoListResponse], got youtubte#videoListResponse;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrm22oktfxh1_getVideos;false;;;;
+test_1jyagy3w7vrjn_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 10 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iepyf9pk4wo4_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ts1vvwjj4orn_getVideos;true;return.player.embedWidth is Numeric;The value ´*2102 for the variable return.player.embedWidth is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbbtjmoecqwl_getVideos;false;;;;
+test_1iyf0qbllu0de_getVideos;false;;;;
+test_qxi8ki68fznc_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got youtube#vi,deo;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrj9x34bvaeb_getVideos;true;return.snippet.thumbnails.default.width == 120;Expected one of [120], got 121;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.scalar.OneOfScalar
+test_uvbfmptvbcj4_getVideos;true;return.player.embedHeight is Numeric;The value /5220 for the variable return.player.embedHeight is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxfzw0rzfbdv_getVideos;true;All the elements of return.contentDetails.regionRestriction.blocked[] have LENGTH=2;The length of all the elements of return.contentDetails.regionRestriction.blocked[..] should be 2, but the length of the element R/*U is 4;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1hr845myu5rnd_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ib8rt3uf4d9v_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 12 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iv73f2qrt36p_getVideos;false;;;;
+test_ure3gdme3hv5_getVideos;true;LENGTH(return.snippet.publishedAt)==20;Expected length of 20 for variable return.snippet.publishedAt, got 6 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbd82xzt5kxg_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 26 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skq27x78f9rp_getVideos;true;return.statistics.likeCount is Numeric;The value 3Y80 for the variable return.statistics.likeCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_skjyt2s0qkab_getVideos;true;return.player.embedWidth is Numeric;The value ejemplo minus for the variable return.player.embedWidth is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4ht9antmzau_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got bIZ;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb69zxcnwmd0_getVideos;true;All the elements of return.contentDetails.regionRestriction.blocked[] have LENGTH=2;The length of all the elements of return.contentDetails.regionRestriction.blocked[..] should be 2, but the length of the element EJEMPLO MAYUS is 13;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceFixedLengthString
+test_1hux64ae70bhz_getVideos;true;return.statistics.favoriteCount is Numeric;The value _ for the variable return.statistics.favoriteCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jicqu0q2rt4o_getVideos;false;;;;
+test_1k254e2gm955v_getVideos;true;All the elements of return.topicDetails.topicCategories[] are URLs;The item inRjQPhZfc of the return.topicDetails.topicCategories[..] array is not a valid URL;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.stringsequence.SequenceStringElementsAreUrl
+test_1jelh1oqi3h9v_getVideos;false;;;;
+test_1k1ugyqg2q3ax_getVideos;true;return.id is a substring of return.player.embedHtml;Expected value of return.id (LUqwnZbBPRw) to be a substring of return.player.embedHtml (ejemplo minus);main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.binary.twoString.StdString$SubString
+test_qxw4x92fm050_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toixcovqt25v_getVideos;false;;;;
+test_qhtdzfm3xbg3_getVideos;true;return.contentDetails.dimension one of { "2d", "3d" };Expected one of [2d, 3d], got (c{3-pdH,;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qe117yrqm1iq_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 0 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urpmx941eb8i_getVideos;false;;;;
+test_1iv9dkvzfemox_getVideos;true;LENGTH(return.recordingDetails.recordingDate)==20;Expected length of 20 for variable return.recordingDetails.recordingDate, got 21 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sohw1364ofua_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 9 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r1l4mexjavck_getVideos;true;return.statistics.viewCount is Numeric;The value 280c40227 for the variable return.statistics.viewCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1k1r7yix6ta9g_getVideos;false;;;;
+test_qxl2zxg531vb_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 1 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbsij28yaywl_getVideos;true;LENGTH(return.etag)==27;Expected length of 27 for variable return.etag, got 28 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1h7rh02i0hvmt_getVideos;false;;;;
+test_urmwdxqvniox_getVideos;true;return.pageInfo.resultsPerPage >= size(return.items[]);The value of size(return.items[..]) should be lesser or equal than return.pageInfo.resultsPerPage (-402488), but got 2;main.youtubev3videos.getVideos&200(main.getVideos&Input):::EXIT;daikon.inv.binary.twoScalar.IntGreaterEqual
+test_qhted2xx1c1d_getVideos;false;;;;
+test_s10keiudfpt1_getVideos;false;;;;
+test_1jy7odrowz29l_getVideos;false;;;;
+test_rl7xgz5hbnsn_getVideos;false;;;;
+test_rhg1q3cs4sip_getVideos;true;LENGTH(return.id)==11;Expected length of 11 for variable return.id, got 13 instead.;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhll9j5utcfs_getVideos;false;;;;
+test_1k1ugykhld4qg_getVideos;true;return.kind == "youtube#video";Expected one of [youtube#video], got yo/*utube#video;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iyezy5eu2gc2_getVideos;true;return.statistics.commentCount is Numeric;The value 3*,576 for the variable return.statistics.commentCount is not a valid number;main.youtubev3videos.getVideos&200&items(main.getVideos&Input):::EXIT;daikon.inv.unary.string.IsNumeric

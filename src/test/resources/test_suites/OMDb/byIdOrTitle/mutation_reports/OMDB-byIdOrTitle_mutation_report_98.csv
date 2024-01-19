@@ -1,0 +1,1001 @@
+testCaseId;killed;killedBy_invariant;description;killedBy_pptname;killedBy_invariantType
+test_1ibh16g6q3ry0_search;false;;;;
+test_vbhf1nt09rua_search;false;;;;
+test_r1fkzubhs4s9_search;false;;;;
+test_urunr23w4mlf_search;true;return.Response == "True";Expected one of [True], got #--`~;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t81crdmsdz5c_search;true;return.imdbRating is Numeric;The value o.6 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iuysetn4cens_search;false;;;;
+test_rlb6pi78y69d_search;false;;;;
+test_1hrdqqwuwodh0_search;false;;;;
+test_1jeo8r1rqkyna_search;false;;;;
+test_toien3o6pgdz_search;false;;;;
+test_s1jhoau92nhe_search;false;;;;
+test_1iv9d9dn9s0h1_search;false;;;;
+test_s10kecy455br_search;false;;;;
+test_1hraz1vye4to1_search;false;;;;
+test_1jig1rzzcy52o_search;false;;;;
+test_1k200tu3r4gv7_search;false;;;;
+test_1jekzwbxjewqa_search;true;return.Poster is Url;The value h´/ttps://m.media-amazon.com/images/M/MV5BNDYxNjQyMjAtNTdiOS00NGYwLWFmNTAtNThmYjU5ZGI2YTI1XkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_SX300.jpg for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s1jejzxziomt_search;true;return.imdbRating is Numeric;The value `|`0B9TH for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urpnp9brslt0_search;false;;;;
+test_sl670jei9feg_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got 2':G([;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_r1fle5akafjk_search;false;;;;
+test_rlb6bmy7i436_search;false;;;;
+test_1hbit6ug0ysdx_search;false;;;;
+test_vf964e2pu81l_search;true;return.Response == "True";Expected one of [True], got >Q;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4ibkp67aeec_search;false;;;;
+test_sok6kx67crj5_search;false;;;;
+test_s4xxojv1uijq_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urmbnjz05eg5_search;false;;;;
+test_sof49baz2vdu_search;true;return.totalSeasons is Numeric;The value }<Y)@4HO for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hbis3ld4wqqt_search;false;;;;
+test_qxtvjpy1ye5w_search;true;return.Episode is Numeric;The value *4 for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iemn5w44dut5_search;false;;;;
+test_qeevmiirr1o8_search;false;;;;
+test_urpnba763lth_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt11198334, but got )BZ5* n instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_r1l460mb6lo6_search;true;return.Metascore is Numeric;The value ,6&g6 for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hv8rued6qkhc_search;true;return.imdbRating is Numeric;The value go84hC4yrI for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u85pcorf45yr_search;false;;;;
+test_1jyjannukfrl0_search;false;;;;
+test_1iyi83m1ns27p_search;false;;;;
+test_1jeaec4kvgm79_search;true;return.Response == "True";Expected one of [True], got ejemplo minus;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7wi8gcn4k0z_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ]A9y@Fx.;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7o6irglqbeh_search;true;return.imdbVotes is Numeric;The value O_|' for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qhq3hupbocwz_search;false;;;;
+test_1jeqhvziqzo6u_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Meacritic;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iupydsxfm88i_search;false;;;;
+test_1k1uifzwspizo_search;false;;;;
+test_qxoatuz03zub_search;false;;;;
+test_t8cep704s2ua_search;false;;;;
+test_1ib0dtxbch9o4_search;false;;;;
+test_1jefhftew7tk2_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ejemplo minus;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jy5gvrc2m8mw_search;false;;;;
+test_skyesmje5e7r_search;false;;;;
+test_s18ehyvq6ibd_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 3 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe3szooqr0vl_search;false;;;;
+test_1hv89j08ctfzs_search;true;return.imdbVotes is Numeric;The value `6 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s15l8tlsddm9_search;true;return.Metascore is Numeric;The value N//A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s5054f7977tv_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jydacmi4gk6r_search;false;;;;
+test_sl8xmi6wccag_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 1 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uv5wgxnp7yut_search;false;;;;
+test_rhrp5p2kdesx_search;false;;;;
+test_vf0wd1df2zhv_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_urrye3kv3dk6_search;true;return.Response == "True";Expected one of [True], got /,True;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb944b93pc8p_search;false;;;;
+test_1jyd8bopksuw4_search;false;;;;
+test_t4vnobup983a_search;false;;;;
+test_s0xtejo5jo0z_search;true;return.Episode is Numeric;The value 1/*0 for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxtd5rgkvj3a_search;true;return.imdbRating is Numeric;The value 7.´5 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_trz5lo139zjs_search;true;return.imdbVotes is Numeric;The value 8.7a(.V for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4q6j7mpbjnb_search;false;;;;
+test_uvjpbseiki1u_search;false;;;;
+test_qxob7q5vmmw2_search;false;;;;
+test_urguwktt62pe_search;false;;;;
+test_trquqei2s660_search;false;;;;
+test_uv5wh37j25b5_search;true;return.Response == "True";Expected one of [True], got g;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k22aqprr2w6b_search;false;;;;
+test_rh7tiospq1bs_search;false;;;;
+test_vbhdvevlro83_search;false;;;;
+test_uvbfms4u2esm_search;false;;;;
+test_vevdwkfvnntu_search;true;return.Metascore is Numeric;The value /,N/A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxqlrkie9mpk_search;false;;;;
+test_1iv9cer0ldruc_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie Dawabase;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t81d5kah6gj4_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt0898266, but got /tt0898266 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_qxzemvpscti9_search;true;return.Episode is Numeric;The value B8 for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t81urqtx7pdh_search;true;return.totalSeasons is Numeric;The value l!2 5-D for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhr5lf0j4aqq_search;true;return.totalSeasons is Numeric;The value 7YpdGfvzH5 for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qhl2nagarckk_search;false;;;;
+test_ubu8zu59jacy_search;false;;;;
+test_tofo1jfb917l_search;true;return.Metascore is Numeric;The value N´/A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iv1jsod92eyg_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 5 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl2dj6c58rax_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt1027449, but got  instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_u8ap0twol201_search;false;;;;
+test_1hr8mshhyqiif_search;false;;;;
+test_t4a097ac97j9_search;true;return.Poster is Url;The value EJEMPLO MAYUS for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_urjknod5j77d_search;false;;;;
+test_1hrubg262l10i_search;false;;;;
+test_1iaxm23uhkj7b_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 9 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vbkpx0b4y9fd_search;false;;;;
+test_qe6luzho2f6q_search;false;;;;
+test_1jyg380yibdcx_search;false;;;;
+test_trz4to4k1u7o_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got @W;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jydrvysq72w4_search;false;;;;
+test_1jxzd2g0etcgx_search;false;;;;
+test_qe9vn6ixnlmb_search;false;;;;
+test_1ieq020ud1v04_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got epsode;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4csc9yw9pwk_search;false;;;;
+test_vb6csxe4osad_search;true;return.Episode is Numeric;The value ´18 for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qdyaxasfkzlf_search;true;return.Poster is Url;The value BT9!b{ for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1ji1o4im0qov5_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got move;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrucmbg27q75_search;false;;;;
+test_ts572uo2v6sz_search;false;;;;
+test_sonec2fld16d_search;false;;;;
+test_1jxzdizxeyrmq_search;true;return.imdbRating is Numeric;The value 7.*,5 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_ubomblexq4ad_search;false;;;;
+test_1iv9bph3oxkc7_search;false;;;;
+test_1jxzf32rea5ba_search;false;;;;
+test_qhvmnp6ome76_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sksa76n27589_search;false;;;;
+test_1hrm232ev1hlw_search;false;;;;
+test_1ibjvaw4z1lbq_search;false;;;;
+test_1hrm1on5kwaic_search;false;;;;
+test_sl0n0c6oq14k_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iynahso6ic86_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got episoZe;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sl9hvzj7xa2e_search;false;;;;
+test_qy4fh66p7ak7_search;false;;;;
+test_qdvhznupftr9_search;false;;;;
+test_toixnxoefrjm_search;false;;;;
+test_1iyna6aawrqd2_search;false;;;;
+test_1h7ioj87dtx7p_search;false;;;;
+test_tocv1359i3q9_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got 9fs3FmBY2i;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u8dhyum8p4rn_search;true;return.Response == "True";Expected one of [True], got TrTue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s13bpqtyu06e_search;false;;;;
+test_vevw842vfygm_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt4120524, but got ## instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_socbmgdf5t2c_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 12 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vb41ee49cchj_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got EHTn9AOGV7;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubu69c4ksfn6_search;false;;;;
+test_qxtcg7yshduu_search;false;;;;
+test_1jidabohe21iv_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 1 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4yhdzr914rq_search;false;;;;
+test_1iuw08qtygl7l_search;false;;;;
+test_1h7ldypslqp82_search;false;;;;
+test_r1alefu1quld_search;false;;;;
+test_1ji1pd513xvsh_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got movze;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qe9dpnk4zcxd_search;false;;;;
+test_sl0n02c33sjb_search;false;;;;
+test_rl7vworopzjp_search;true;return.Poster is Url;The value 6Ot for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qdy9d8bl4rqb_search;false;;;;
+test_qxw47vks8jfq_search;false;;;;
+test_1h82jpuwjapus_search;false;;;;
+test_qxyvlqlseeli_search;false;;;;
+test_skq2ouj0tzcm_search;true;return.Episode is Numeric;The value PAc,D7 for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_toigiikh8jzm_search;false;;;;
+test_1iv1jeviib49y_search;false;;;;
+test_qxyxhfdsjs6e_search;false;;;;
+test_sobsx8zcx0dv_search;false;;;;
+test_1iyc8k557hj6u_search;false;;;;
+test_t4yikgidoldg_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 12 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubu5y41e1e7q_search;false;;;;
+test_uvjomeunh1df_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got movnie;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t81uat3pftcx_search;true;return.Metascore is Numeric;The value }z[ for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_uvgyed9pra75_search;false;;;;
+test_ursfxjghw2eu_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 0 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4cc1vmgnoe1_search;false;;;;
+test_1jyisns2rybeb_search;true;return.Response == "True";Expected one of [True], got :(vg1F;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uvk6xqoip17o_search;false;;;;
+test_1k1r60dcin0iq_search;false;;;;
+test_1jefga7t9xq9j_search;false;;;;
+test_urxhk1m8e34x_search;false;;;;
+test_1hrmjov37gsag_search;true;return.Season is Numeric;The value A@px for the variable return.Season is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_tnz23btjczzr_search;false;;;;
+test_1jew0yvfxk7l1_search;false;;;;
+test_1jeiqtrf0gn6r_search;true;return.imdbVotes is Numeric;The value txW for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iv7293ddn38y_search;true;return.Poster is Url;The value ^|" for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qxr43gs3w19g_search;false;;;;
+test_t4teoe25qt7l_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 12 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hbghh2bhwfg1_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt11312618, but got tt1,1312618 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_t8a4grfl5gs3_search;false;;;;
+test_r1akjqx0nfht_search;false;;;;
+test_s1b4eg72jlti_search;true;return.Response == "True";Expected one of [True], got ~?61;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qy1pbrzmerli_search;false;;;;
+test_toa5zd3unofa_search;false;;;;
+test_sl9fv9m0s2lt_search;false;;;;
+test_u7ohnhpu3rs6_search;false;;;;
+test_1k1x8qe04er1i_search;false;;;;
+test_1iukdnxzvn585_search;false;;;;
+test_rhgl7f9l2fch_search;false;;;;
+test_1iv3sjkz6o57n_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 6 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rhtxr9zs408i_search;false;;;;
+test_1h7x1c0a3fcqh_search;false;;;;
+test_sl66k9fdyxcx_search;false;;;;
+test_to7b5l9y6at5_search;false;;;;
+test_uvbwbqmkbh2t_search;true;return.imdbRating is Numeric;The value iv- for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhgl7dabn6lv_search;false;;;;
+test_us07p4pdxaux_search;false;;;;
+test_1iunpdx3z1cfs_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s12ru0ch39rp_search;false;;;;
+test_1k1r9lhz1wcpv_search;false;;;;
+test_tonzojb6sdh5_search;true;return.imdbVotes is Numeric;The value FGccqW4Tbo for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urjk9jojkab5_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qhibcc9p30is_search;false;;;;
+test_1iyez5vavv2w4_search;false;;;;
+test_uv6crr36jskj_search;false;;;;
+test_s1bnfn9baaue_search;true;return.Poster is Url;The value Uv[9:^/ for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rl2cr83psjli_search;false;;;;
+test_urxxufmyshfb_search;false;;;;
+test_t4cbl7tof7ty_search;false;;;;
+test_vbf5nyptjsc1_search;false;;;;
+test_rkzm5dn9c9pw_search;true;return.Metascore is Numeric;The value E for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4f2z8gwdg83_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 9 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibhkcr59rmg1_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl2ttoc1sb4x_search;false;;;;
+test_1iuyaxwl30u9l_search;false;;;;
+test_u7rtpdd8m739_search;false;;;;
+test_u8aqks1554yp_search;false;;;;
+test_rhgkff0sb41f_search;true;return.Poster is Url;The value  for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vbbx2aexllix_search;false;;;;
+test_1jyg0hxh635md_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got  XRo;}Me;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ien6n5zo6reb_search;true;return.imdbRating is Numeric;The value N/*,A for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iv4a0frlhwl2_search;false;;;;
+test_vbq9jebmc75h_search;false;;;;
+test_1h7z8u2jhcin5_search;false;;;;
+test_1h7toyyifnlut_search;false;;;;
+test_t4vpavgz95bo_search;false;;;;
+test_1jer25os103zk_search;false;;;;
+test_1jett5cg1rewk_search;false;;;;
+test_1hv8r553n8rw8_search;false;;;;
+test_tolpfrjz6p86_search;true;return.imdbRating is Numeric;The value 8.´/9 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jxzwy4khme02_search;true;return.Response == "True";Expected one of [True], got ejemplo minus;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jy280zj5xanl_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ´Internet Movie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iuyqj4w69zz8_search;false;;;;
+test_skyepzfrcvvl_search;false;;;;
+test_1h82jbbowsgh0_search;true;return.Response == "True";Expected one of [True], got Tru2;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jxzf0a47x5pw_search;false;;;;
+test_trzmql1b15x5_search;false;;;;
+test_s1bnffeapwz5_search;false;;;;
+test_1k1r7ki5j8l0h_search;false;;;;
+test_qhvmq9xokyua_search;false;;;;
+test_1ji9zigx6w09t_search;false;;;;
+test_vbmy7oixj6et_search;false;;;;
+test_qdst0cmz7ho8_search;true;return.imdbRating is Numeric;The value NG/A for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_somxl10ebm0p_search;true;return.imdbVotes is Numeric;The value *,619,057 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hrj7n9byycz4_search;false;;;;
+test_rl2v2ol6piyf_search;false;;;;
+test_u8b7srx4w46q_search;false;;;;
+test_1iev17jfau0c1_search;false;;;;
+test_trz6rjfn4h13_search;false;;;;
+test_vf9qs37iwkza_search;false;;;;
+test_to4m16iutqnr_search;false;;;;
+test_qxoar0e02c6w_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 9 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1r97l5cvpkm_search;false;;;;
+test_s50ntsgx5wti_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1wsopr7b52a_search;true;return.imdbVotes is Numeric;The value *150 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s4rth9ggid6a_search;false;;;;
+test_1jy2nxu83jqk7_search;false;;;;
+test_1iupxa6eoycm9_search;false;;;;
+test_qxir7km9n4o2_search;false;;;;
+test_1iyfgbfzr0enm_search;true;return.imdbRating is Numeric;The value _yUg for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxns1r3et3l1_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got u;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uve4akmixs8n_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf6hgpjn7asj_search;false;;;;
+test_1jed5nazsxfzn_search;false;;;;
+test_somx6nphn9rn_search;false;;;;
+test_1iepiimmdzh2t_search;false;;;;
+test_r1a1ipqhclrp_search;false;;;;
+test_1iephchasl9a0_search;true;return.Poster is Url;The value EJEMPLO MAYUS for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hrj7kwuyhyr8_search;true;return.Metascore is Numeric;The value P6soKx7caa for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hrgfhiatjxgy_search;false;;;;
+test_s15lka0cmrsl_search;true;return.imdbVotes is Numeric;The value 79Y,936 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhr7jouondpy_search;false;;;;
+test_1k2542u026fxv_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt10872600, but got ejemplo minus instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1jeqizk329w11_search;false;;;;
+test_qxlil7r3ertt_search;true;return.Metascore is Numeric;The value 7´3 for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qdychp3u9j5c_search;false;;;;
+test_sksv5zx7frdy_search;false;;;;
+test_rhb1njcnv338_search;false;;;;
+test_1jia0ouguhf75_search;true;return.Response == "True";Expected one of [True], got Tr*ue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_veynoljvfr6r_search;false;;;;
+test_1hv618lvhk4f6_search;false;;;;
+test_t4f13c4zcuhy_search;false;;;;
+test_rl2d2seym69d_search;false;;;;
+test_tocwkq6mfbjt_search;false;;;;
+test_1hbaxxao0kztv_search;true;return.imdbRating is Numeric;The value D{ for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_tnyzg2ljkvg8_search;false;;;;
+test_uvbfkbbvtgl4_search;true;return.imdbVotes is Numeric;The value 4´/57,260 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jyllzghqecz5_search;false;;;;
+test_rl038blpesmc_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got 1;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf6g85138y0i_search;false;;;;
+test_1hbjaq7yr955u_search;true;return.imdbVotes is Numeric;The value b56G for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhdt3z4um8fs_search;true;return.Poster is Url;The value htteps://m.media-amazon.com/images/M/MV5BMjE1MzYzNjk3OF5BMl5BanBnXkFtZTgwMzk0MzYwNzE@._V1_SX300.jpg for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vf1fgde55zl1_search;false;;;;
+test_u7u4px6kszzn_search;true;return.Response == "True";Expected one of [True], got ;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sobs4x9exd9e_search;true;return.imdbVotes is Numeric;The value #D for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s4rwirmtj7ea_search;true;return.Response == "True";Expected one of [True], got T/rue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubrg1t12cz09_search;false;;;;
+test_r1g4y3ioyyi8_search;false;;;;
+test_s1jhzr5pyvxz_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 11 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubmefe1mwfn9_search;false;;;;
+test_1je9xkv902cza_search;false;;;;
+test_ubu5xy4mq5h0_search;false;;;;
+test_vf3na88rs7qp_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got move;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sksa4fyying7_search;true;return.Poster is Url;The value C$%vZxM} for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s12ru89pmc12_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got moie;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ib60vuy36w50_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie /,Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qhl1jxrvq43c_search;false;;;;
+test_sohboug84j1g_search;false;;;;
+test_tolqlyfmacl3_search;false;;;;
+test_1iauw5she4wo2_search;false;;;;
+test_rhdaepth18bn_search;false;;;;
+test_qxtb783uy7oh_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_vf0uq0deukog_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie7 Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4vncpjtedly_search;true;return.imdbRating is Numeric;The value m.5 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u8e0a0va3kfl_search;false;;;;
+test_ure32e4skles_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got H2XTI;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hr5veyzc52r9_search;true;return.Response == "True";Expected one of [True], got T9rue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rl2vrrwuooqc_search;false;;;;
+test_rl2d2mizfepc_search;false;;;;
+test_s12sm6k2oig3_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got QSR2jyZBIB;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1huzyoagrbz8y_search;false;;;;
+test_qdqgtv3anlti_search;true;return.imdbRating is Numeric;The value 8.K for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rl2ccxhqpen8_search;false;;;;
+test_vbhftqcj57hu_search;true;return.imdbVotes is Numeric;The value N//*A for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl66mgbierzq_search;false;;;;
+test_1iyc7s6iolmjl_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 1 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_toanijhbaud1_search;false;;;;
+test_1iauua7mc7wir_search;true;return.Poster is Url;The value 1es for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_rhgkt3yuwgmq_search;false;;;;
+test_urp4o1u9muyg_search;false;;;;
+test_u7um8vn4ze5i_search;false;;;;
+test_1je9vk8k0b42t_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt1141458, but got tt1141/,458 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_qhvnfhvly720_search;true;return.Poster is Url;The value N1A for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iauvrtcihquu_search;false;;;;
+test_u85pceiy3eqs_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got OdxUe35BCD;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iuvj6ancozzm_search;false;;;;
+test_1hbd83a6swtwl_search;false;;;;
+test_s15lmsqxua1y_search;false;;;;
+test_1hblhgtpnjinr_search;true;return.Response == "True";Expected one of [True], got Trbe;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h81zwkv1rl84_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got episJde;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u82wsub6ddf7_search;false;;;;
+test_t4qouns8ha3o_search;true;return.imdbRating is Numeric;The value rGZ9P_ for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4l5au4jsit2_search;true;return.Poster is Url;The value ]>^ for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vevu9wl27mm1_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ejemplo minus;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hbg1hwrs0bw2_search;false;;;;
+test_uvendx1od4jd_search;false;;;;
+test_u8di1freier4_search;true;return.Season is Numeric;The value PbB{ for the variable return.Season is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_uvep9i7to0tv_search;false;;;;
+test_vb6agmr9fj90_search;false;;;;
+test_1jig2346papf8_search;false;;;;
+test_1k252fxa3o0u0_search;false;;;;
+test_1jygkfsvxmlh1_search;true;return.totalSeasons is Numeric;The value !U6 for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhgllhyxlkc4_search;false;;;;
+test_t8a5p79y1xkp_search;false;;;;
+test_soq7o524y3c2_search;true;return.totalSeasons is Numeric;The value QaI,S for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iuy9b7ephbvp_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt1141458, but got EJEMPLO MAYUS instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1k1r60t718tv6_search;false;;;;
+test_uvk6xmq6pr8y_search;false;;;;
+test_tode709znejm_search;false;;;;
+test_trtlccxr7r6r_search;false;;;;
+test_to1thegkmtyv_search;false;;;;
+test_u88fyn6tqxx3_search;false;;;;
+test_tofpiuxaanvl_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Mo/*vie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeo8r5oyx3l0_search;true;return.imdbVotes is Numeric;The value ejemplo minus for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhgkf4slgyn6_search;false;;;;
+test_qe12bnao9f78_search;true;return.imdbRating is Numeric;The value 8*.8 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hrjrwuya4kmd_search;true;return.Poster is Url;The value ht´/tps://m.media-amazon.com/images/M/MV5BMzYzYWNlYjktZjNmOS00MDNjLWIzMjUtOWFkZmUzMjNmZTdkXkEyXkFqcGdeQXVyMTA3NTc2MjYw._V1_SX300.jpg for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iepfbh66ay43_search;false;;;;
+test_1jekyc1lcxwkw_search;false;;;;
+test_sl3we69cwb3o_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Metacriwtic;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hvbkekawv2hu_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt2669746, but got WEeC5cqWnw instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_us07p2db9ird_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt7286456, but got tt7N86456 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1jeqj1yvvaiwl_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie DSatabase;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u8b7ewdltzqo_search;false;;;;
+test_ubp6lb0fia0j_search;false;;;;
+test_1ies73otamlwh_search;true;return.Metascore is Numeric;The value 6k for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hvaztgbbi89t_search;true;return.Response == "True";Expected one of [True], got ejemplo minus;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k1r6360rio2q_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt4179452, but got ejemplo minus instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1h84ustu1vo0y_search;false;;;;
+test_uv6cdkfhvgx1_search;false;;;;
+test_1h7ilhe3s27ab_search;false;;;;
+test_1h7qzgmmnpohf_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got V;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jygkdfnqcjsk_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet MoFvie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrgywfebc10z_search;false;;;;
+test_ubjn3y6sw5lv_search;false;;;;
+test_sopnse7xo08i_search;false;;;;
+test_1ibec55ly9kqg_search;false;;;;
+test_urmvx3nwkxut_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got j;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbhd3k8iujj5_search;false;;;;
+test_1ibbzy6movcqe_search;false;;;;
+test_urjk9v5n0huq_search;true;return.Metascore is Numeric;The value N´,/A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hbay8nfumvxx_search;false;;;;
+test_u7u3js8ag4ds_search;false;;;;
+test_uv6cdi2tkdh5_search;false;;;;
+test_uv8ne2kkld0x_search;false;;;;
+test_t8f83mgi56bd_search;false;;;;
+test_qe9flcoch9o3_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got L0mElhmWYj;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iexq9jn6zqd4_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got 5-*\;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_tnz2k5l36nu9_search;false;;;;
+test_trz5zp47xvty_search;false;;;;
+test_uvgzkiivh6cm_search;false;;;;
+test_1jy7odq2nhooo_search;false;;;;
+test_somx9aeexcmu_search;false;;;;
+test_1hr83rrr4nsj5_search;true;return.Response == "True";Expected one of [True], got ´*True;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4xews5aigqe_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 4 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ieuyy7c9p65h_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got C;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u82fbpo48ep1_search;false;;;;
+test_1jetcpp1yr6lx_search;false;;;;
+test_qxoatszp5ppg_search;true;return.Response == "True";Expected one of [True], got BJ_ouV9C;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urmufrv44s3b_search;true;return.imdbRating is Numeric;The value apRa1jT23P for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vb6cqiwf86ye_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 3 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1zjo9frmss3_search;false;;;;
+test_1iv9bmse2jjnb_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 3 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1k1wrkzkxwyt1_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt0434409, but got tt043409 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_uboo9l14n511_search;false;;;;
+test_vevc157fatrk_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 3 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_r17c3a3er3vp_search;false;;;;
+test_s12uka55pl5v_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt1190634, but got tt119063 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_t81tx1vi9fty_search;false;;;;
+test_vey5r2l0xso3_search;false;;;;
+test_r17b8p2tr4ty_search;true;return.Response == "True";Expected one of [True], got Tr´,ue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbenqbsoi92c_search;false;;;;
+test_s18dcbbycrau_search;false;;;;
+test_ts57xdokisme_search;false;;;;
+test_1ib35x9hipk4x_search;false;;;;
+test_uruozznyws34_search;true;return.imdbRating is Numeric;The value EJEMPLO MAYUS for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_ts56r2sx5d11_search;false;;;;
+test_sohwezzhityv_search;false;;;;
+test_1ievhnkl7ljkz_search;true;return.Response == "True";Expected one of [True], got ;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vevbyqccpbg4_search;false;;;;
+test_1iuqgp35lirsh_search;false;;;;
+test_vbcdf56e3hgy_search;false;;;;
+test_1jxzwmimh5lr5_search;true;return.imdbRating is Numeric;The value FabUgVUOie for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jei6vk4wqa1u_search;true;return.imdbVotes is Numeric;The value 38,3´/79 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t8f62nxlmdrl_search;false;;;;
+test_vb92xw3qmat1_search;false;;;;
+test_ublwvw8n1h6c_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Mov/*ie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sohcurvxbsqg_search;false;;;;
+test_trrbf1uto1me_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iuvj633fqx4l_search;false;;;;
+test_1h7ioxd7345dg_search;true;return.imdbVotes is Numeric;The value X342,946 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u7ul2u9naova_search;false;;;;
+test_tofnnedy9x0m_search;false;;;;
+test_1jym3wvhosi8x_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iupxaabbio2t_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 11 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hb7om4x1kn5i_search;false;;;;
+test_u8555flk712v_search;false;;;;
+test_t4w7mdjvg184_search;false;;;;
+test_ubrg45vo1bvo_search;false;;;;
+test_1hb7q3iobgwmr_search;true;return.Metascore is Numeric;The value y>DQ2u{ for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7infnyxzsys_search;false;;;;
+test_1h7j5alub3fw8_search;false;;;;
+test_s1dyftlde2wg_search;false;;;;
+test_uboms9kjb2hu_search;false;;;;
+test_rhdtti8hib1i_search;true;return.Response == "True";Expected one of [True], got T´/rue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4f3r4q74egp_search;false;;;;
+test_qhkjmmnzvp6a_search;false;;;;
+test_vbhxd3udfzhf_search;false;;;;
+test_qxr3dt0nc6d5_search;false;;;;
+test_qe3ujv3nk3lf_search;false;;;;
+test_1iuyrbb22678z_search;false;;;;
+test_ursep0x0nv3t_search;false;;;;
+test_u7p1luwfcu3n_search;false;;;;
+test_1huxod850oh88_search;false;;;;
+test_1ib3pv79qtcty_search;false;;;;
+test_t4klf9ywxp45_search;false;;;;
+test_t86u1qvtseur_search;true;return.Response == "True";Expected one of [True], got EJEMPLO MAYUS;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb94yubl837d_search;true;return.imdbVotes is Numeric;The value m/A for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hvb2jq00ia91_search;false;;;;
+test_s4ukspban5np_search;false;;;;
+test_s50o7lopbard_search;true;return.Response == "True";Expected one of [True], got W]-;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_trwcbynktjcl_search;false;;;;
+test_urgu4kk8l836_search;false;;;;
+test_u7rc5naimfxv_search;true;return.Metascore is Numeric;The value :1& w.os for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iyezk0ckxmpj_search;false;;;;
+test_qxwmuudmkv36_search;false;;;;
+test_t842l3jq3exw_search;false;;;;
+test_1iuyay0jqveif_search;false;;;;
+test_qe6l5rjgo6k6_search;true;return.imdbRating is Numeric;The value Mx9l"s,g for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_toanijh1bhwk_search;false;;;;
+test_1hrj6v74p3uxx_search;false;;;;
+test_qdw12tz689ra_search;false;;;;
+test_vf96fyg6n6g2_search;true;return.imdbRating is Numeric;The value 4c for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1huzyzj9f1i77_search;true;return.imdbRating is Numeric;The value 3AuwDUvO5J for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_soheht85b229_search;true;return.Poster is Url;The value (!6U<_: for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_urgv7xlp4s4i_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 12 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s18wftot1g6s_search;false;;;;
+test_1iv726gm05boi_search;false;;;;
+test_1iext23wf7u48_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got 7U:wx;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t49i91o86k37_search;false;;;;
+test_qdsr2gmvbewl_search;false;;;;
+test_1h7rhrwsltxrr_search;false;;;;
+test_qy4fgyb2ulo9_search;false;;;;
+test_ublu5oucgny0_search;false;;;;
+test_r1g43ez9er74_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got pMmzHvXvoR;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urp47g1ils1f_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ´*movie;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4f0pgmihmpk_search;false;;;;
+test_skvm8g8ompma_search;false;;;;
+test_qy4edpjc7yw4_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_skstlvhvvrqw_search;false;;;;
+test_1h7ged8z51isj_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 3 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxl2ls0afkty_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt3984176, but got FZxSs instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_r1fkagsihqnl_search;false;;;;
+test_qe3v9axz09r6_search;false;;;;
+test_qhl1vi32ocok_search;false;;;;
+test_trtkvf77nd4p_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got i_2~I}Y;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeaffp5goqi9_search;false;;;;
+test_1iv4byde93g38_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt3749900, but got ejemplo minus instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_rhugxb0mlnw7_search;true;return.Metascore is Numeric;The value /,N/A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jecmk62cpb1x_search;true;return.imdbRating is Numeric;The value %efSJ9t\ for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_soq6yv2sfa61_search;false;;;;
+test_1iupzmbfkqpf7_search;false;;;;
+test_to520jy71ffl_search;true;return.imdbVotes is Numeric;The value 212,*,947 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxnugciuo7jt_search;false;;;;
+test_qdq02d4fnrcj_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got 2;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrgy6png6cs1_search;false;;;;
+test_s100uklorz94_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Mov/,ie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrrk29hqmlib_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got 9~V;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uvhfvcceh4rq_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got 4MVQDnqHm6;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hbirbfiwkv39_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jyisnikm17ow_search;false;;;;
+test_ts2el5un07jq_search;false;;;;
+test_1jeysthw536g5_search;true;return.Metascore is Numeric;The value /,N/A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl3edwp8dxki_search;false;;;;
+test_to1uq6h3yred_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 6 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_soq7abtuc27r_search;false;;;;
+test_urxxj7izrdpv_search;true;return.imdbVotes is Numeric;The value 6*,7,818 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbq92ue495x3_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt13800512, but got  instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1ib6hncye2z3p_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iycq3mlzx5iq_search;true;return.Metascore is Numeric;The value 1/,00 for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jyouj1tfub05_search;false;;;;
+test_s4pl4coxk4th_search;false;;;;
+test_ublu85lkxi60_search;true;return.Poster is Url;The value h0]X_}08 for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_qxnr9ey7fbdu_search;false;;;;
+test_r1cv90mhe9mc_search;false;;;;
+test_qdsqacsrwm77_search;false;;;;
+test_1ib3phdp6wtvc_search;false;;;;
+test_1hrpalvqn6vqq_search;true;return.imdbRating is Numeric;The value fNX7q3XKoG for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7oq0cvih8ah_search;true;return.Response == "True";Expected one of [True], got >e;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4nwzxb8n6t4_search;false;;;;
+test_t4cryau0gnch_search;false;;;;
+test_s4plwcjj3aya_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 4 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iuvhj80gs7jt_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Rotten*, Tomatoes;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t89mj655xld1_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt5668386, but got 2pTBCu9Jxb instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1iv12nhjllcgz_search;true;return.Metascore is Numeric;The value NA for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hrucax24s5df_search;false;;;;
+test_u7ojzqqrijoy_search;false;;;;
+test_urxgrvhqlpwi_search;false;;;;
+test_1hraxvqo6m14n_search;false;;;;
+test_t8f6h37q2pgh_search;false;;;;
+test_1hbaxgus30q5e_search;false;;;;
+test_1hv2rxqas0pd1_search;false;;;;
+test_t8f5axxk1jl1_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got [Ic2#;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxtd85vubh43_search;true;return.Response == "True";Expected one of [True], got EJEMPLO MAYUS;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7u8s86nlm45_search;true;return.Metascore is Numeric;The value U1 for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jewk580is9x2_search;true;return.imdbRating is Numeric;The value E1>%)@ for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iupygc2q86d5_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got G&LS*3&@;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4qnzsvxqu01_search;false;;;;
+test_sl0ngzof8pq0_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ,LrRG}C&h;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7ioj869ued0_search;true;return.Metascore is Numeric;The value 4,9 for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jeiq1vh1rnmt_search;false;;;;
+test_1iuvzupqlr3n4_search;true;return.imdbRating is Numeric;The value N*,/A for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qecoz4stika8_search;true;return.imdbVotes is Numeric;The value 7´/97,936 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ibkcfv4fpzxs_search;false;;;;
+test_1jy26e8ffab8m_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt1140907, but got w8pUVAOXQX instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_qdya58yh78z8_search;false;;;;
+test_1ji505siz2lb8_search;true;return.Response == "True";Expected one of [True], got ´/True;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbngln14j0hk_search;false;;;;
+test_1hbm2idned54h_search;false;;;;
+test_t86uradc9rg4_search;false;;;;
+test_s4mbf7s97meu_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt8100958, but got C instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_ure0pzlfdw86_search;false;;;;
+test_t8cd4oslna5z_search;true;return.Metascore is Numeric;The value N/´,A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urxefqu2odgz_search;false;;;;
+test_1ji1pohg89mb7_search;false;;;;
+test_ts4n708sw601_search;false;;;;
+test_vb6csteehqox_search;true;return.Response == "True";Expected one of [True], got ;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbszaq3mdcv5_search;false;;;;
+test_1hux6i5yu1b35_search;false;;;;
+test_uv94jt6sze5d_search;false;;;;
+test_veynohxp0ns5_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got MetacritRc;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxia25ujmteq_search;true;return.Metascore is Numeric;The value K for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ibhl4r0sgz02_search;true;return.imdbRating is Numeric;The value vmPw~CJ4u for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u87yt4grhile_search;false;;;;
+test_sl3x3tq1ek3b_search;false;;;;
+test_qxirlk28y9f4_search;false;;;;
+test_1hrmiu46tk5yv_search;true;return.Poster is Url;The value OnrgChJLM3 for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hruaa55usta1_search;false;;;;
+test_skk15930bwhl_search;false;;;;
+test_ureklqeukc35_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie Databa,se;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s15kuo7dn8kw_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got /,T?cG=1;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jeqht4wbbm8z_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Metac´ritic;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ji7aee1g4dwk_search;false;;;;
+test_1iukwr8s7hq3q_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got I;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u82fbx7isx2b_search;true;return.totalSeasons is Numeric;The value EJEMPLO MAYUS for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ibbjl1oblvzs_search;true;return.Response == "True";Expected one of [True], got w;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_to1rjis7w9pv_search;true;return.Poster is Url;The value EJEMPLO MAYUS for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1hrotx74o5o3b_search;false;;;;
+test_ublv0fqd3odz_search;false;;;;
+test_urjl4cjuzz1x_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got EJEMPLO MAYUS;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbk827zs5yr5_search;false;;;;
+test_1hr86t8drzbs2_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 7 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_uve506ezyxbk_search;false;;;;
+test_qe9eswarkta0_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got G0;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jiajpfukya7l_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 4 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxob7w4168ft_search;true;return.Response == "True";Expected one of [True], got T5ue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf1fdyydnyhu_search;false;;;;
+test_r1l6i1bitwkw_search;false;;;;
+test_ubonk9fgi8mo_search;true;return.Metascore is Numeric;The value usenEfG7Ag for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hrrjcvvzd7p4_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jy26gzfoerec_search;false;;;;
+test_skvlgjyqp4qc_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 0 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iauuo8qre5wm_search;false;;;;
+test_1hruaaemuqhbq_search;false;;;;
+test_s4v4oc6lr8s5_search;false;;;;
+test_1jyodu2xvp8bn_search;false;;;;
+test_trz4hvw0yp2c_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 11 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jew435xtuued_search;true;return.imdbRating is Numeric;The value UZSL for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t86tnpryznzm_search;false;;;;
+test_1k1ziwfihz5nq_search;false;;;;
+test_socaxd1fbltg_search;false;;;;
+test_1hre6swwceiid_search;true;return.imdbVotes is Numeric;The value Y; for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hbd7rll8qgq9_search;true;return.imdbVotes is Numeric;The value ´,2750 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jics02483iht_search;false;;;;
+test_r1dcpw3ba99g_search;true;return.imdbVotes is Numeric;The value EJEMPLO MAYUS for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jeytj7aqu4hf_search;false;;;;
+test_s1jgfuo4t2zl_search;false;;;;
+test_urxgdwc0vjhf_search;false;;;;
+test_1h7z9awbv095y_search;false;;;;
+test_qy4f5i9txgkx_search;false;;;;
+test_t4km4j626w6d_search;true;return.imdbVotes is Numeric;The value 1N4,999 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iexs7d04y4vq_search;false;;;;
+test_rhd9k2iffm1t_search;false;;;;
+test_t842l5v6uxx5_search;true;return.imdbVotes is Numeric;The value LgxC7qhJm5 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_trwdtgc2xqw3_search;false;;;;
+test_sknbmk3cqxd1_search;false;;;;
+test_s15lka0eozed_search;false;;;;
+test_1hvb38zkfhye9_search;false;;;;
+test_qdybs7mywyt2_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got EJEMPLO MAYUS;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_toan4id6a1r9_search;false;;;;
+test_sl3e2m8v106p_search;true;return.Poster is Url;The value ;ZUyTS8S for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iuso7baevpdl_search;false;;;;
+test_1hvbkh1fs7z1u_search;false;;;;
+test_1k1ugw7bnzq77_search;true;return.Poster is Url;The value  for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_s18brv264w2q_search;false;;;;
+test_rkwsf8bbcn6u_search;false;;;;
+test_s15l8v79v3g6_search;true;return.Poster is Url;The value 6MBu^%B]] for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_1iev17nd12wrp_search;false;;;;
+test_qhnaxsrc25vb_search;false;;;;
+test_toigiur5eush_search;false;;;;
+test_vf47m8pa2oh1_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s504epvf5dtg_search;false;;;;
+test_uvgyc0fptkrq_search;false;;;;
+test_1k22aof99uo1c_search;false;;;;
+test_1jens2989d4kk_search;false;;;;
+test_urrwdj7y2omu_search;false;;;;
+test_1jy5g3njn7tk6_search;false;;;;
+test_t4f1spcb49bq_search;false;;;;
+test_urmbc3yv9h68_search;true;return.imdbVotes is Numeric;The value ´*457,260 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urjjk656pbol_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 1 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qxi8hpj1q3hw_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got T;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sohvya687k2u_search;true;return.Response == "True";Expected one of [True], got /,True;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb946m4yitde_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got _rm;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t8foem5gmtdk_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ejemplo minus;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iempygpu6r75_search;false;;;;
+test_1jew4jvojekvt_search;false;;;;
+test_urel23ylu9me_search;true;return.Response == "True";Expected one of [True], got T/,rue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rl5njnp8jvht_search;false;;;;
+test_1ji4gcuoxzeia_search;true;return.imdbRating is Numeric;The value 166*@- for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7ts0l0igina_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got dK'3i;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1iv1jskt2fmly_search;false;;;;
+test_1hrggyok4cggy_search;false;;;;
+test_1ib8qpjn54box_search;false;;;;
+test_1jeffhvqwbtx3_search;false;;;;
+test_1hv5jbarlpr1v_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 2 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_sl8xxw8a9g0x_search;false;;;;
+test_qdqidt9mvol0_search;true;return.Response == "True";Expected one of [True], got s;Xf&q9;*;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t8f6v2d7j3ug_search;false;;;;
+test_u7ok2935o8df_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jewlpcfk33nd_search;false;;;;
+test_1hvbjp5523bco_search;false;;;;
+test_t4a24zzmgim0_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ovie;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1jzlnual25t_search;false;;;;
+test_1iunolsy09a3p_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got moie;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1h7d667mycm_search;false;;;;
+test_u7wvdyj9e0xl_search;false;;;;
+test_uv8ngx5wmgkh_search;false;;;;
+test_vey3qcbujqcw_search;false;;;;
+test_1ib0g64c4zhpi_search;true;return.imdbRating is Numeric;The value U for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urp5g23keuzo_search;false;;;;
+test_1jy5070ewpt85_search;true;return.imdbRating is Numeric;The value R[~++xn for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vey659z0mpf8_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 12 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_s4p4r3qabods_search;false;;;;
+test_s4unww71tnj6_search;false;;;;
+test_t4qmwg9mxelt_search;true;return.Season is Numeric;The value ejemplo minus for the variable return.Season is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_uvbfy0mq1rhd_search;true;return.Poster is Url;The value https://m.m/edia-amazon.com/images/M/MV5BZjEyMmUyYmYtNTAwYi00OWUwLWJlNzEtMDM2N2QxNzIwMTdjXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_urhb7iioaszb_search;true;return.Response == "True";Expected one of [True], got Trve;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uve5uh5rvk2s_search;false;;;;
+test_1ji7auxxlss4l_search;false;;;;
+test_1hbahju800mlf_search;false;;;;
+test_1h7whgc5k6t7q_search;false;;;;
+test_rhg26dqkaqm0_search;false;;;;
+test_s4p4qttqs12a_search;false;;;;
+test_qhnaxx0rtd11_search;false;;;;
+test_qy4hf5suhbuh_search;true;return.imdbRating is Numeric;The value 8.T3 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ib3qkkgkd36r_search;false;;;;
+test_qy4fv78mbl89_search;false;;;;
+test_t4cs132zufci_search;false;;;;
+test_rhaik11737lj_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got Tseries;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jyag5lijk5rs_search;false;;;;
+test_urmwbcmtzmeu_search;false;;;;
+test_s13axj219vzt_search;true;return.Metascore is Numeric;The value ejemplo minus for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rh7q2ro65fzr_search;false;;;;
+test_1hrjpw6oou0rq_search;false;;;;
+test_1ies6s4hhx35c_search;false;;;;
+test_t8fpkd9f0jli_search;false;;;;
+test_vbemvyqm3ynl_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got /s;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t845e2c7bxo6_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 6 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4voir90a6p1_search;true;return.Response == "True";Expected one of [True], got 1r96mINV17;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ibbjysw0vkfs_search;false;;;;
+test_ubgc637kdj5l_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 7 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_to4kxrxmlq9d_search;false;;;;
+test_rhlmw8d2fmt4_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 12 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1ibhkqnxsol0h_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hrgi7g7bzfxh_search;true;return.Response == "True";Expected one of [True], got Tr/,ue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hruaqwkjp7hw_search;false;;;;
+test_1jxzdx109msl4_search;false;;;;
+test_s4v4qkrjldtj_search;false;;;;
+test_1h85c9d5vrak1_search;false;;;;
+test_urmbq4oaqezn_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt10648342, but got  instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1h7qxwqfw5dtg_search;false;;;;
+test_1iev1zhos66np_search;false;;;;
+test_1iepyt0kydylg_search;false;;;;
+test_somyd4v9o604_search;true;return.imdbRating is Numeric;The value ejemplo minus for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jefg9rnzes6x_search;true;return.Response == "True";Expected one of [True], got Tru7e;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ieya4vxle793_search;false;;;;
+test_1iv9tkfape88g_search;false;;;;
+test_u7ol5zkk0j8j_search;true;return.Metascore is Numeric;The value N/´/A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1h7x0mcw53i9k_search;false;;;;
+test_ubu87g39icmc_search;false;;;;
+test_qe6n3xf0fejl_search;false;;;;
+test_1h7u8drmpahr9_search;false;;;;
+test_1hrgi4vibjo6x_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got |ZPD;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vevcf89rlcft_search;false;;;;
+test_ubjn1nn7pu91_search;false;;;;
+test_1h7lfwvda0x88_search;true;return.Episode is Numeric;The value %) for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jeipnybr0fg7_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got seraes;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_ubmethi6f50x_search;true;return.imdbVotes is Numeric;The value 342,94 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1hbaybdqefp6d_search;true;return.totalSeasons is Numeric;The value #91&JO for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_toohaljb1ug5_search;false;;;;
+test_sl90ci25ndk2_search;false;;;;
+test_1jetcs3t5pxyu_search;false;;;;
+test_uvberyxuy69f_search;true;return.imdbRating is Numeric;The value EJEMPLO MAYUS for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_sl3fk9wofs55_search;true;return.Episode is Numeric;The value EJEMPLO MAYUS for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbcdvv07gztt_search;false;;;;
+test_1iyki0j97jq75_search;false;;;;
+test_vbbuc504k6k4_search;false;;;;
+test_1huxp541blauu_search;false;;;;
+test_rl03lz9ft4xl_search;false;;;;
+test_ursfxjfporav_search;false;;;;
+test_somxnbhhoew6_search;false;;;;
+test_rhai65tvdcfl_search;true;return.Metascore is Numeric;The value gp^c*}B$p for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rl7vwz0dtirc_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 8 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl5nmcd6wchg_search;true;return.imdbVotes is Numeric;The value 484,64/*2 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rl021qi52bfp_search;false;;;;
+test_vb41pws4kdva_search;false;;;;
+test_ts1xrb2u3y2h_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt2531336, but got tt25313/*36 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1jyll7oino2n9_search;false;;;;
+test_skq27wu8u1ir_search;false;;;;
+test_1hrut2738zl12_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got eisode;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7j4wcujoaih_search;false;;;;
+test_qy4eb6rvd1yu_search;false;;;;
+test_rlb6e5rsot9t_search;true;return.imdbVotes is Numeric;The value 3,42,946 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qy1nbdj8j4fr_search;false;;;;
+test_qdqh7u880m76_search;false;;;;
+test_s1jxl1ic9tgm_search;true;return.Season is Numeric;The value NA for the variable return.Season is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qhw5d0gl3rz8_search;false;;;;
+test_1hrgy4b7yjfw1_search;false;;;;
+test_rhr5o1q0g5kp_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 1 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_t4km4n3uea0k_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hr879xs007jr_search;false;;;;
+test_s100g9kop5x0_search;true;return.totalSeasons is Numeric;The value OMXO4p1IAm for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jyob14j8asfa_search;false;;;;
+test_qy4eauy0a59v_search;false;;;;
+test_us2yoogqegkk_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 8 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_u856ptvkw5de_search;true;return.Metascore is Numeric;The value &p for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ib3pev9516jn_search;false;;;;
+test_t89m7jumadlt_search;false;;;;
+test_1k201ol2ay5v8_search;false;;;;
+test_trqt3ldd2bld_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ´*episode;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1je9x414n5s1i_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt2411492, but got  instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_ubgvnuk4n2ox_search;false;;;;
+test_1hbj9n1l9614k_search;false;;;;
+test_trtmtyl3ojso_search;false;;;;
+test_t4hseo33fznd_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got 5;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qdw0avp4tt2b_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt5668386, but got tt566386 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_vbbvyi044ab4_search;false;;;;
+test_rhllq8zeb7fl_search;false;;;;
+test_r1ctan5yq9mb_search;false;;;;
+test_1iyeygrztqgq8_search;false;;;;
+test_s18ekpkdeyph_search;false;;;;
+test_vf6gmg0pl0s6_search;false;;;;
+test_t81d5ka8vasl_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie Datbase;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hv0hrt4c57ow_search;false;;;;
+test_1h7o677355jci_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got f L#3;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_t4l3oeuhogfk_search;false;;;;
+test_t86vj8zb6r1d_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Memacritic;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_tnz0jdbtable_search;true;return.Response == "True";Expected one of [True], got ctY;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_urxxjb2ktduq_search;false;;;;
+test_qdyc6ap4rfox_search;false;;;;
+test_1ji27oh6v2sth_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1hv392x6d6hiv_search;false;;;;
+test_t4yfikuq73u9_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Rotten Toma*toes;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jyfzpv9cc8dh_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got `);main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jicrzyj7dpid_search;false;;;;
+test_1ji505q5sg6k3_search;false;;;;
+test_1hux59nukt4kh_search;false;;;;
+test_1huzzrrf67tiq_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Interet Movie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbk5q8ws2yjl_search;true;return.totalSeasons is Numeric;The value |]k_T for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s0ugz4oadf06_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got epsode;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_qxocdzrowto9_search;false;;;;
+test_1h7o7rjex0qxv_search;false;;;;
+test_s4sdcs0y2vy0_search;false;;;;
+test_urpnawqfucl1_search;false;;;;
+test_rhtxu0zhc2ue_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_trwc9i7c9jxz_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet MoviPe Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrj81gpqgawn_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt16492678, but got @ instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1iyl1f44ve8fk_search;true;return.imdbVotes is Numeric;The value 38,37v9 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4f0mpymyfqt_search;false;;;;
+test_1h7fvz8iwvl0y_search;false;;;;
+test_1hv8b3evx8mr7_search;false;;;;
+test_urekzbpmmd6g_search;false;;;;
+test_us3i6bh4nbcl_search;false;;;;
+test_1ib8qn0iehaap_search;false;;;;
+test_rhiwlw8hwieq_search;false;;;;
+test_1if11zak67d5v_search;false;;;;
+test_sohevud7z5gm_search;false;;;;
+test_1hv5hrikk8c3c_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 10 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ts1vt1kvvplw_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got TRotten Tomatoes;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1h7u8ryovgcaf_search;true;return.imdbRating is Numeric;The value .^xG[o1 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iupw1koj5084_search;false;;;;
+test_1iv0z55xsnprt_search;true;return.Metascore is Numeric;The value N/´*A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rl53afv0p5ye_search;false;;;;
+test_skpj792s1e0p_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie Databa,se;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7xe14vgrrxz_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt1028236, but got tt102823´,6 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_u87xmx7iqpno_search;false;;;;
+test_u7ru5le3rsqb_search;false;;;;
+test_1ji9z28w35mck_search;false;;;;
+test_1hrbekn4m3crm_search;false;;;;
+test_1iv1j0qh1fsc2_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt12412888, but got  instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1iyhq8fjtl44y_search;true;return.imdbVotes is Numeric;The value k for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s0uk111srltd_search;true;return.Metascore is Numeric;The value 5r for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iyns1es01ld0_search;false;;;;
+test_1jiajplrg1smu_search;false;;;;
+test_sobuvihl5xyt_search;false;;;;
+test_u7rbu8wz55wy_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ejemplo minus;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vb93q86zu9f9_search;true;return.Episode is Numeric;The value ejemplo minus for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1ib3p0gc0omk4_search;false;;;;
+test_1h7ioiwcbfuqt_search;true;return.Episode is Numeric;The value /N/A for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbhy564p233o_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt4179452, but got G6Hrwd6H2L instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1iuvj670m4t9w_search;false;;;;
+test_s0x8aimx58oi_search;false;;;;
+test_rlb588clp16b_search;false;;;;
+test_1hb7mzjpu50ti_search;true;return.Response == "True";Expected one of [True], got ´*True;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_u7oiwbqi0rxd_search;false;;;;
+test_1hrj7ym4eigdg_search;false;;;;
+test_1jydsladsfzg7_search;false;;;;
+test_sl3wpcstms12_search;false;;;;
+test_t4csqd1w39df_search;false;;;;
+test_us08xoforrcn_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movie´, Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vbshrg66z588_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got ;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hux5ngorh9gy_search;false;;;;
+test_1hvb2jof6vpeu_search;false;;;;
+test_s4v52bcx5a3p_search;true;return.Poster is Url;The value  for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_vbcenxkke1is_search;false;;;;
+test_uv95bveuvvao_search;false;;;;
+test_1k1uiiqkwigrm_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rl02u4y0kvnb_search;false;;;;
+test_s18ektizrwab_search;false;;;;
+test_s1dw3myqcu9k_search;false;;;;
+test_s164cdiyn50z_search;false;;;;
+test_qdsq7xmzahbm_search;false;;;;
+test_sl9fxvxkwqpi_search;false;;;;
+test_qxtvxpgiz4o2_search;true;return.totalSeasons is Numeric;The value wij"TcZ< for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urme29dck1gj_search;false;;;;
+test_1iv3rb6ek0r3q_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got _oe-B/}nC;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ib0gy86skz75_search;false;;;;
+test_1iukwrk9l1zjs_search;false;;;;
+test_us2xx1njxzcl_search;false;;;;
+test_vbkplnvqkchj_search;false;;;;
+test_s0uzzuesmr06_search;false;;;;
+test_vbq7iy8evt5u_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Rotten Tomatoecs;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s4ul6ohu0w8h_search;false;;;;
+test_vbem69d62ulh_search;false;;;;
+test_t8427k85dz6q_search;true;return.Response == "True";Expected one of [True], got Truv;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1hrrkx49n4va9_search;true;return.Response == "True";Expected one of [True], got Tr3ue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_sof4nc2og6rb_search;false;;;;
+test_us2z32zzfa7a_search;true;return.Metascore is Numeric;The value 7*,5 for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s1002eg2yfci_search;false;;;;
+test_u8dj7l13vr5i_search;false;;;;
+test_sl67qd3lqm9l_search;false;;;;
+test_1k1rpicz2sh2e_search;false;;;;
+test_1jew0yv2w26no_search;false;;;;
+test_sobtp1cl4gmr_search;true;return.Poster is Url;The value  for the variable return.Poster is not a valid URL;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsUrl
+test_t4sxua2siiid_search;false;;;;
+test_1ibec7kfb408o_search;false;;;;
+test_1iv1jha05zcro_search;false;;;;
+test_1ibhlg1itk677_search;false;;;;
+test_1iay52t6c6bzo_search;true;return.Metascore is Numeric;The value ´*N/A for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t4ygonu7a1x4_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Internet Movize Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1k252g5541obn_search;false;;;;
+test_urk4lw00w8j8_search;false;;;;
+test_1jetce32ip5wy_search;false;;;;
+test_s1dxqegmnrjq_search;false;;;;
+test_ubmf78dm85lx_search;false;;;;
+test_vbcel8k2hn3t_search;true;return.imdbRating is Numeric;The value N/,A for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qxwn94znrtbp_search;true;return.imdbVotes is Numeric;The value Z150 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jew3rzfqy52w_search;false;;;;
+test_skvkzw366pf5_search;true;LENGTH(return.seriesID)==9;Expected length of 9 for variable return.seriesID, got 8 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_rkzmgxx46alt_search;false;;;;
+test_vbsjs42qtxkk_search;false;;;;
+test_s13cvu5zc0gy_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got InterVet Movie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_s1b3jswb7oky_search;false;;;;
+test_t4htl2w0tyk5_search;false;;;;
+test_r1g5c6ln1a3q_search;false;;;;
+test_t4nx07k7ygqd_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_ubu71o85tqgp_search;true;return.Season is Numeric;The value tYEkS66U44 for the variable return.Season is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_rhm4fm95zcqh_search;false;;;;
+test_r1csga3egn6r_search;false;;;;
+test_1k250yp2jyz50_search;true;return.imdbVotes is Numeric;The value ejemplo minus for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_vbf57avl13ky_search;true;return.Metascore is Numeric;The value N/w for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_to7dtclnd10i_search;false;;;;
+test_1jydsli9331va_search;false;;;;
+test_qxqldz7tz6ex_search;false;;;;
+test_tnz2yckz8v36_search;false;;;;
+test_t81t4xntirsi_search;true;return.Metascore is Numeric;The value t for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u7r9tkyplbuc_search;false;;;;
+test_urgvalylx54g_search;false;;;;
+test_somv8ya3um9c_search;false;;;;
+test_1hbm1sy3o8ilu_search;false;;;;
+test_sof30hbeydeq_search;false;;;;
+test_1hbah3acm8u9c_search;false;;;;
+test_1hrbgl9ik8tie_search;false;;;;
+test_1h821uud6gh0y_search;true;LENGTH(return.DVD)==11;Expected length of 11 for variable return.DVD, got 9 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1jeo94wzfy7u8_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got 2;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_vf6h2sd8jcyp_search;true;return.Response == "True";Expected one of [True], got Tue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jyllzqc1ygj7_search;false;;;;
+test_to7tsryl3jac_search;false;;;;
+test_soq64850m1r6_search;false;;;;
+test_s18vnfzii791_search;true;return.Response == "True";Expected one of [True], got HE.,W^h;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1jia1e3p1qrlj_search;true;return.imdbRating is Numeric;The value 8/*.8 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1iyfh3qg6p0zc_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt0096697, but got tt009697 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1jylmrkol3nzm_search;false;;;;
+test_1jei9ltw7ilwk_search;false;;;;
+test_1ib38n9q3hc1c_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt4463986, but got tt4463´,986 instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_1jefhu20zyhk4_search;false;;;;
+test_rhb1njcnpfms_search;false;;;;
+test_1jyahenek43eh_search;true;input.i == return.imdbID;Expected value of return.imdbID to be tt12412888, but got {n%2\Z~ instead;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.binary.twoString.StringEqual
+test_vb6ty86ekfug_search;false;;;;
+test_1hrrjoematovk_search;false;;;;
+test_trwvqzalkwtx_search;false;;;;
+test_qdvh9yh9h8x0_search;true;return.Response == "True";Expected one of [True], got rue;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ibe9srf2ar1f_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 0 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_1iuvzxipnu0c9_search;true;return.imdbVotes is Numeric;The value 333/2 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s4xcykbbpzqs_search;false;;;;
+test_u8dj4qglv3oi_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got Interet Movie Database;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rh4yordnm3ao_search;false;;;;
+test_uve6y3qk0e2h_search;true;return.totalSeasons is Numeric;The value ;+MRY: for the variable return.totalSeasons is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jefzdluqy351_search;false;;;;
+test_u85oko4ra1pu_search;false;;;;
+test_vbk61r85qo9t_search;false;;;;
+test_1k229wapvicmd_search;false;;;;
+test_1jygktppmjak9_search;false;;;;
+test_rl02ftk8qdyu_search;false;;;;
+test_1ibkcfxf68ggz_search;false;;;;
+test_u7u2g5bcobc3_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got ,movie;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_uruoxkv3w8qh_search;false;;;;
+test_1k253oz5i7pkg_search;false;;;;
+test_sl67ekinc4kx_search;false;;;;
+test_1ib0g37e6povs_search;false;;;;
+test_1hrdohoq9mnn7_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got serie/,s;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_rhjd1vgjds1j_search;false;;;;
+test_skq3e44lqi43_search;false;;;;
+test_ts1xty4h0sit_search;true;return.imdbVotes is Numeric;The value 174,5´*46 for the variable return.imdbVotes is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_urxhh34idvzq_search;false;;;;
+test_uvgwghllbxva_search;true;return.imdbRating is Numeric;The value ´/7.8 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1k1ugvrw6iyif_search;false;;;;
+test_vf46gdatrqsm_search;true;return.Episode is Numeric;The value NrA for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_t8cep9d9j3hd_search;true;return.Metascore is Numeric;The value EJEMPLO MAYUS for the variable return.Metascore is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_1jyagk2dna983_search;false;;;;
+test_vey5r8j882t5_search;true;return.Type one of { "episode", "movie", "series" };Expected one of [episode, movie, series], got I';main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_skmu2ss6tulv_search;false;;;;
+test_vbngzm5i827o_search;true;LENGTH(return.Released)==11;Expected length of 11 for variable return.Released, got 13 instead.;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.FixedLengthString
+test_qe9f7bkxy0j4_search;true;return.imdbRating is Numeric;The value 9/,.0 for the variable return.imdbRating is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_u7rtdqqqztk2_search;false;;;;
+test_1jenqi4sw0tpd_search;true;return.Episode is Numeric;The value d1 for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_s1bo7nj7x6jp_search;false;;;;
+test_s0xbsgr3uxip_search;false;;;;
+test_1jewkj93lnk9w_search;true;return.Episode is Numeric;The value N/ for the variable return.Episode is not a valid number;main..searchByIdOrTitle&200(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.IsNumeric
+test_qdy9g3b0clkm_search;false;;;;
+test_1iyexlt71fiau_search;false;;;;
+test_qy1npgajaov7_search;true;return.Source one of { "Internet Movie Database", "Metacritic", "Rotten Tomatoes" };Expected one of [Internet Movie Database, Metacritic, Rotten Tomatoes], got y2m;main..searchByIdOrTitle&200&Ratings(main.searchByIdOrTitle&Input):::EXIT;daikon.inv.unary.string.OneOfString
+test_1ji1owmqm0qwi_search;false;;;;
