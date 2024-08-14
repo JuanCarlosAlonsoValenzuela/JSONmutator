@@ -50,47 +50,4 @@ public class ReadTestCases {
         return res;
     }
 
-
-    private static String testCasesFilePath = "src/test/resources/test_suites/OMDb/byIdOrTitle/OMDb_byIdOrTitle_50.csv";
-
-    public static void main(String[] args) {
-
-
-        try {
-            // Read test cases
-            File testCasesFile = new File(testCasesFilePath);
-            FileReader testCasesFileReader = new FileReader(testCasesFile);
-            BufferedReader testCasesBR = new BufferedReader(testCasesFileReader);
-            String testCasesLine = "";
-
-            // The first line must be the header
-            String header = testCasesBR.readLine();
-            if (header == null) {
-                throw new NullPointerException("The csv file containing the test cases is empty");
-            }
-
-            TestCaseFileManager testCaseFileManager = new TestCaseFileManager(header);
-
-            while((testCasesLine = testCasesBR.readLine()) != null) {
-                TestCase testCase = testCaseFileManager.getTestCase(getCSVRecord(testCasesLine));
-
-                String responseBody = testCase.getResponseBody();
-                System.out.println(responseBody);
-
-                JsonNode responseJsonNode = getJsonNode(responseBody);
-
-                // Create mutator
-                JsonMutator jsonMutator = new JsonMutator();
-                JsonNode mutatedJsonNode = jsonMutator.mutateJson(responseJsonNode, false);
-                System.out.println(mutatedJsonNode);
-
-                System.out.println("#####################################");
-
-            }
-
-        } catch (IOException e){
-            e.printStackTrace();
-        }
-
-    }
 }

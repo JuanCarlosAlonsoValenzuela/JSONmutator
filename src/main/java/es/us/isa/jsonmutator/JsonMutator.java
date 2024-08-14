@@ -11,6 +11,9 @@ import java.io.IOException;
 import java.util.*;
 import java.util.stream.Collectors;
 
+import es.us.isa.jsonmutator.experiment2.mutationReports.ElementMutationResult;
+import es.us.isa.jsonmutator.experiment2.mutationReports.MutationOperatorResult;
+import es.us.isa.jsonmutator.experiment2.mutationReports.MutationResult;
 import es.us.isa.jsonmutator.mutator.AbstractMutator;
 import es.us.isa.jsonmutator.mutator.AbstractObjectOrArrayMutator;
 import es.us.isa.jsonmutator.mutator.AbstractOperator;
@@ -200,17 +203,18 @@ public class JsonMutator {
      * @param singleOrder True if you want to apply only one mutation.
      * @return The mutated JsonNode.
      */
-    public JsonNode mutateJson(JsonNode jsonNode, boolean singleOrder) {
+    public MutationResult mutateJson(JsonNode jsonNode, boolean singleOrder) {
         if (singleOrder) {
             if (!singleOrderActive) // If the last call to this function was with singleOrder=false, then...
                 setUpSingleOrderMutation(); // ... set up parameters for single order mutation...
             singleOrderActive = true; // ... and keep track of this update for next function call
-            return singleOrderMutation(jsonNode);
+            return singleOrderMutation(jsonNode, null);
         } else {
             if (singleOrderActive) // If the last call to this function was with singleOrder=true, then...
                 resetMutators(); // ... set up parameters for multiple order mutation
             singleOrderActive = false; // ... and keep track of this update for next function call
-            return multipleOrderMutation(jsonNode);
+            // TODO: IMPLEMENT IN THE FUTURE (IF REQUIRED)
+            return new MutationResult(null, multipleOrderMutation(jsonNode));
         }
     }
 
@@ -304,7 +308,8 @@ public class JsonMutator {
      * @param jsonNode The JSON to mutate.
      * @return The mutated JSON.
      */
-    private JsonNode singleOrderMutation(JsonNode jsonNode) {
+    private MutationResult singleOrderMutation(JsonNode jsonNode, ElementMutationResult elementMutationResult) {
+
         boolean firstIterationOccurred = false; // Used to reset the state of firstIteration attribute
         JsonNode jsonNodeCopy = jsonNode;
         int currentJsonProgress = 0; // Used to locate object property or array element to mutate (within current jsonNode)
@@ -332,17 +337,19 @@ public class JsonMutator {
                     elementIndexes.add(jsonProgress); // Keep track of all properties that are subject to change
             } else if (elementIndex == jsonProgress) { // If element to mutate is the current one
                 if (jsonNodeCopy.isObject())
-                    mutateElement(jsonNodeCopy, Lists.newArrayList(jsonNodeCopy.fieldNames()).get(currentJsonProgress), null);
+                    elementMutationResult = mutateElement(jsonNodeCopy, Lists.newArrayList(jsonNodeCopy.fieldNames()).get(currentJsonProgress), null);
                 else if (jsonNodeCopy.isArray())
-                    mutateElement(jsonNodeCopy, null, currentJsonProgress);
+                    elementMutationResult = mutateElement(jsonNodeCopy, null, currentJsonProgress);
                 mutationApplied = true;
             }
             currentJsonProgress++; // Update iteration indexes
             jsonProgress++;
             if (mutationApplied) // If mutation was already applied, stop iterating
                 break;
-            if (subJsonNode.isContainerNode()) // Iterate over properties that are arrays or objects
-                singleOrderMutation(subJsonNode);
+            if (subJsonNode.isContainerNode()) { // Iterate over properties that are arrays or objects
+                MutationResult mr = singleOrderMutation(subJsonNode, elementMutationResult);
+                elementMutationResult = mr.getElementMutationResult();
+            }
         }
 
         // At the end of the first iteration, all elements subject to change will have been saved, choose one to mutate:
@@ -350,13 +357,16 @@ public class JsonMutator {
             if (elementIndexes.size() > 0) { // If at least one element can be mutated, do so
                 elementIndex = elementIndexes.get(rand.nextInt(elementIndexes.size()));
                 jsonProgress = 0; // Once elementIndex is set, start iterating again, looking for the property
-                singleOrderMutation(jsonNodeCopy);
+
+                MutationResult mr = singleOrderMutation(jsonNodeCopy, elementMutationResult);
+                elementMutationResult = mr.getElementMutationResult();
             }
             // Reset variables for the next time this function will be called:
             resetJsonMutator();
         }
 
-        return jsonNodeCopy;
+        return new MutationResult(elementMutationResult, jsonNodeCopy);
+
     }
 
     /**
@@ -424,31 +434,68 @@ public class JsonMutator {
      * of an element, (possibly) mutates the value of the element and inserts the
      * mutated value in the same position.
      */
-    private void mutateElement(JsonNode jsonNode, String propertyName, Integer index) {
+    private ElementMutationResult mutateElement(JsonNode jsonNode, String propertyName, Integer index) {
         boolean isObj = index==null; // If index==null, jsonNode is an object, otherwise it is an array
-        JsonNode element = isObj ? jsonNode.get(propertyName) : jsonNode.get(index);
-        if (longMutator!=null && element.isIntegralNumber()) {
-            if (isObj) longMutator.mutate((ObjectNode) jsonNode, propertyName);
-            else longMutator.mutate((ArrayNode) jsonNode, index);
-        } else if (doubleMutator!=null && element.isFloatingPointNumber()) {
-            if (isObj) doubleMutator.mutate((ObjectNode)jsonNode, propertyName);
-            else doubleMutator.mutate((ArrayNode) jsonNode, index);
-        } else if (stringMutator!=null && element.isTextual()) {
-            if (isObj) stringMutator.mutate((ObjectNode)jsonNode, propertyName);
-            else stringMutator.mutate((ArrayNode) jsonNode, index);
-        } else if (booleanMutator!=null && element.isBoolean()) {
-            if (isObj) booleanMutator.mutate((ObjectNode)jsonNode, propertyName);
-            else booleanMutator.mutate((ArrayNode) jsonNode, index);
-        } else if (nullMutator!=null && element.isNull()) {
-            if (isObj) nullMutator.mutate((ObjectNode)jsonNode, propertyName);
-            else nullMutator.mutate((ArrayNode) jsonNode, index);
-        } else if (objectMutator!=null && element.isObject()) {
-            if (isObj) objectMutator.mutate((ObjectNode)jsonNode, propertyName);
-            else objectMutator.mutate((ArrayNode) jsonNode, index);
-        } else if (arrayMutator!=null && element.isArray()) {
-            if (isObj) arrayMutator.mutate((ObjectNode) jsonNode, propertyName);
-            else arrayMutator.mutate((ArrayNode) jsonNode, index);
+
+        JsonNode element = null;
+        if (isObj) {
+            element = jsonNode.get(propertyName);
+
+//            System.out.println("Element to mutate is object");
+//            System.out.println("Property name to mutate: " + propertyName);
+        } else {
+            element = jsonNode.get(index);
+
+//            System.out.println("Element to mutate is array");
+//            System.out.println("Index of element to mutate: " + index);
         }
+
+        // Store specific information about the results of executing a mutation operator
+        MutationOperatorResult mutationOperatorResult = null;
+        String mutatedPropertyDatatype = null;
+
+        if (longMutator!=null && element.isIntegralNumber()) {
+            mutatedPropertyDatatype = "long";
+            if (isObj) mutationOperatorResult = longMutator.mutate((ObjectNode) jsonNode, propertyName);
+            else mutationOperatorResult = longMutator.mutate((ArrayNode) jsonNode, index);
+        } else if (doubleMutator!=null && element.isFloatingPointNumber()) {
+            mutatedPropertyDatatype = "double";
+            if (isObj) mutationOperatorResult = doubleMutator.mutate((ObjectNode)jsonNode, propertyName);
+            else mutationOperatorResult = doubleMutator.mutate((ArrayNode) jsonNode, index);
+        } else if (stringMutator!=null && element.isTextual()) {
+            mutatedPropertyDatatype = "string";
+            if (isObj) mutationOperatorResult = stringMutator.mutate((ObjectNode)jsonNode, propertyName);
+            else mutationOperatorResult = stringMutator.mutate((ArrayNode) jsonNode, index);
+        } else if (booleanMutator!=null && element.isBoolean()) {
+            mutatedPropertyDatatype = "boolean";
+            if (isObj) mutationOperatorResult = booleanMutator.mutate((ObjectNode)jsonNode, propertyName);
+            else mutationOperatorResult = booleanMutator.mutate((ArrayNode) jsonNode, index);
+        } else if (nullMutator!=null && element.isNull()) {
+            mutatedPropertyDatatype = "null";
+            if (isObj) mutationOperatorResult = nullMutator.mutate((ObjectNode)jsonNode, propertyName);
+            else mutationOperatorResult = nullMutator.mutate((ArrayNode) jsonNode, index);
+        } else if (objectMutator!=null && element.isObject()) {
+            mutatedPropertyDatatype = "object";
+            if (isObj) mutationOperatorResult = objectMutator.mutate((ObjectNode)jsonNode, propertyName);
+            else mutationOperatorResult = objectMutator.mutate((ArrayNode) jsonNode, index);
+        } else if (arrayMutator!=null && element.isArray()) {
+            mutatedPropertyDatatype = "array";
+            if (isObj) mutationOperatorResult = arrayMutator.mutate((ObjectNode) jsonNode, propertyName);
+            else mutationOperatorResult = arrayMutator.mutate((ArrayNode) jsonNode, index);
+        }
+
+        // Throw exception if mutationOperatorResult is still null
+        if (mutationOperatorResult == null) {
+            throw new RuntimeException("mutationOperatorResult should not be null");
+        }
+
+
+        if (isObj) {    // If object
+            return new ElementMutationResult(mutationOperatorResult, mutatedPropertyDatatype, propertyName);
+        } else {        // If array
+            return new ElementMutationResult(mutationOperatorResult, mutatedPropertyDatatype, index);
+        }
+
     }
 
     private AbstractMutator getMutator(JsonNode jsonNode) {

@@ -15,13 +15,13 @@ import static es.us.isa.jsonmutator.experiment2.MutateTestCases.mutateTestCases;
 public class MainExperiment2 {
 
     // Number of mutated versions of the original test suite to generate
-    private static int nExecutions = 2;
+    private static int nExecutions = 1;
 
     // Location of the CSV file containing the original test cases
-    private static String originalTestCasesPath;
+    private static String originalTestCasesPath = "C:\\Users\\jcav\\Documents\\GitHub\\JSONmutator\\src\\test\\resources\\test_delete\\original_test_suite.csv";
 
     // Directory that will store the resulting mutated test suites (one per execution)
-    private static String mutatedTestCasesDirectory;
+    private static String mutatedTestCasesDirectory = "C:\\Users\\jcav\\Documents\\GitHub\\JSONmutator\\src\\test\\resources\\test_delete\\mutants";
 
 
     public static void main(String[] args) throws IOException {

@@ -4,6 +4,8 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import es.us.isa.jsonmutator.JsonMutator;
+import es.us.isa.jsonmutator.experiment2.mutationReports.ElementMutationResult;
+import es.us.isa.jsonmutator.experiment2.mutationReports.MutationResult;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;
@@ -13,6 +15,7 @@ import java.util.List;
 import static es.us.isa.jsonmutator.experiment2.GenerateAssertions.getOutputPath;
 import static es.us.isa.jsonmutator.experiment2.readTestCases.CSVManager.readCSV;
 import static org.apache.commons.lang3.StringEscapeUtils.escapeCsv;
+
 import static org.junit.Assert.fail;
 
 public class MutateTestCases {
@@ -42,6 +45,9 @@ public class MutateTestCases {
 
         // Write csv header
         String headersString = headers.toString().replace("[", "").replace("]","").replace(", ", ",");
+        // TODO: Property name can also be an array index
+        headersString = headersString + ",jsonNodeType,propertyName,mutationOperatorName,originalValue,mutatedValue";
+
         csvBuffer.write(headersString);
 
         int responseBodyIndex = headers.indexOf("responseBody");
@@ -66,11 +72,14 @@ public class MutateTestCases {
                 fail();
             }
 
+            ElementMutationResult elementMutationResult = null;
             while(mutatedIsEqual) {
                 // Create mutator
                 JsonMutator jsonMutator = new JsonMutator();
 
-                JsonNode mutatedJsonNode = jsonMutator.mutateJson(jsonNode, true);
+                MutationResult mutationResult = jsonMutator.mutateJson(jsonNode, true);
+                JsonNode mutatedJsonNode = mutationResult.getMutatedJsonNode();
+                elementMutationResult = mutationResult.getElementMutationResult();
 
                 try {
                     // Mutated response body string
@@ -95,6 +104,12 @@ public class MutateTestCases {
                     row = row + "," + testCase.get(j);
                 }
             }
+
+            row = row + "," + elementMutationResult.getMutatedPropertyDatatype() +
+                    "," + elementMutationResult.getPropertyName() +
+                    "," + elementMutationResult.getMutationOperatorResult().getMutationOperatorName() +
+                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getOriginalValue()) +
+                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getMutatedValue());
 
             // Write the test case as csv row
             csvBuffer.newLine();

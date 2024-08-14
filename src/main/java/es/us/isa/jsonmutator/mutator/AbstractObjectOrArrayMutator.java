@@ -3,6 +3,7 @@ package es.us.isa.jsonmutator.mutator;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import es.us.isa.jsonmutator.experiment2.mutationReports.MutationOperatorResult;
 
 import java.util.Iterator;
 
@@ -86,7 +87,7 @@ public abstract class AbstractObjectOrArrayMutator extends AbstractMutator {
      * @return True if at least one mutation was applied, false otherwise
      */
     @Override
-    public boolean mutate(ObjectNode objectNode, String propertyName) {
+    public MutationOperatorResult mutate(ObjectNode objectNode, String propertyName) {
         return mutate(objectNode, propertyName, null);
     }
 
@@ -100,7 +101,7 @@ public abstract class AbstractObjectOrArrayMutator extends AbstractMutator {
      * @return True if at least one mutation was applied, false otherwise
      */
     @Override
-    public boolean mutate(ArrayNode arrayNode, int index) {
+    public MutationOperatorResult mutate(ArrayNode arrayNode, int index) {
         return mutate(arrayNode, null, index);
     }
 
@@ -118,11 +119,18 @@ public abstract class AbstractObjectOrArrayMutator extends AbstractMutator {
      *
      * @return True if at least one mutation was applied, false otherwise
      */
-    protected boolean mutate(JsonNode jsonNode, String propertyName, Integer index) {
+    protected MutationOperatorResult mutate(JsonNode jsonNode, String propertyName, Integer index) {
         boolean isObj = index==null; // If index==null, jsonNode is an object, otherwise it is an array
         Boolean elementWasObj = null; // Whether the elementToMutate was an object in the previous iteration or not
         int nMutations = rand1.nextInt(minMutations, maxMutations);
+
+        if (nMutations != 1) {
+            throw new RuntimeException("When using this version of JSONMutator, there should be only one mutation applied");
+        }
+
         boolean wasMutated = false;
+        String operatorApplied = null;
+
         for (int i=0; i<nMutations; i++) {
             JsonNode elementToMutate = isObj ? jsonNode.get(propertyName) : jsonNode.get(index);
             // The mutation could make the object or array null or of other type. Also, it could convert an
@@ -149,15 +157,21 @@ public abstract class AbstractObjectOrArrayMutator extends AbstractMutator {
                         operators.remove(operator); // Remove that operator so that the mutation isn't applied twice
                         // Replace original element with mutated element:
                         insertElement(jsonNode, mutatedElement, propertyName, index);
-                        if (!wasMutated)
+                        if (!wasMutated) {
                             wasMutated = true;
+                            operatorApplied = operator;
+                        }
                     }
                 }
             }
         }
         resetOperators(); // After all mutations are applied, reset operators to have all of them in the map again
 
-        return wasMutated;
+        if (wasMutated) {
+            return new MutationOperatorResult(operatorApplied, null, null);
+        } else {
+            return new MutationOperatorResult();
+        }
     }
 
     /**

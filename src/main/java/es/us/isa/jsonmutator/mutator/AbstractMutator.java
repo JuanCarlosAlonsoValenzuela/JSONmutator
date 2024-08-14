@@ -3,6 +3,7 @@ package es.us.isa.jsonmutator.mutator;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import es.us.isa.jsonmutator.experiment2.mutationReports.MutationOperatorResult;
 
 import java.util.*;
 
@@ -88,7 +89,7 @@ public abstract class AbstractMutator extends RandomManager {
      * @param propertyName the property name of the object to be mutated
      * @return True if the mutation was applied, false otherwise
      */
-    public boolean mutate(ObjectNode objectNode, String propertyName) {
+    public MutationOperatorResult mutate(ObjectNode objectNode, String propertyName) {
         return mutate(objectNode, propertyName, null);
     }
 
@@ -100,11 +101,11 @@ public abstract class AbstractMutator extends RandomManager {
      * @param index the index of the element to be mutated
      * @return True if the mutation was applied, false otherwise
      */
-    public boolean mutate(ArrayNode arrayNode, int index) {
+    public MutationOperatorResult mutate(ArrayNode arrayNode, int index) {
         return mutate(arrayNode, null, index);
     }
 
-    private boolean mutate(JsonNode jsonNode, String propertyName, Integer index) {
+    private MutationOperatorResult mutate(JsonNode jsonNode, String propertyName, Integer index) {
         if (shouldApplyMutation()) {
             boolean isObj = index==null; // If index==null, jsonNode is an object, otherwise it is an array
             JsonNode element = isObj ? jsonNode.get(propertyName) : jsonNode.get(index);
@@ -129,24 +130,21 @@ public abstract class AbstractMutator extends RandomManager {
 
             // Mutate element by randomly choosing one mutation operator among 'operators' and applying the mutation:
             String operator = getOperator();
+
+            System.out.println("Mutation operator to apply: " + operator);
+
             if (operator != null) {
                 Object mutatedElement = operators.get(operator).mutate(elementToMutate);
+
+                System.out.println("Original value: " + elementToMutate);
+                System.out.println("Mutated value: " + mutatedElement);
+
                 insertElement(jsonNode, mutatedElement, propertyName, index); // Replace original element with mutated element
-                return true;
+
+                return new MutationOperatorResult(operator, elementToMutate, mutatedElement);
             }
         }
-        return false;
+        return new MutationOperatorResult();
     }
 
 }
-
-
-
-
-
-
-
-
-
-
-
