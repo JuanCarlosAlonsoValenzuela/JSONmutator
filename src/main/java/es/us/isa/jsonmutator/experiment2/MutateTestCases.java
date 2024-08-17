@@ -46,7 +46,7 @@ public class MutateTestCases {
         // Write csv header
         String headersString = headers.toString().replace("[", "").replace("]","").replace(", ", ",");
         // TODO: Property name can also be an array index
-        headersString = headersString + ",jsonNodeType,propertyName,mutationOperatorName,originalValue,mutatedValue";
+        headersString = headersString + ",jsonNodeType,variableHierarchy,mutationOperatorName,originalValue,mutatedValue";
 
         csvBuffer.write(headersString);
 
@@ -72,6 +72,7 @@ public class MutateTestCases {
                 fail();
             }
 
+            String variableHierarchy = "";
             ElementMutationResult elementMutationResult = null;
             while(mutatedIsEqual) {
                 // Create mutator
@@ -80,6 +81,7 @@ public class MutateTestCases {
                 MutationResult mutationResult = jsonMutator.mutateJson(jsonNode, true);
                 JsonNode mutatedJsonNode = mutationResult.getMutatedJsonNode();
                 elementMutationResult = mutationResult.getElementMutationResult();
+                variableHierarchy = mutationResult.getVariableHierarchy();
 
                 try {
                     // Mutated response body string
@@ -106,7 +108,7 @@ public class MutateTestCases {
             }
 
             row = row + "," + elementMutationResult.getMutatedPropertyDatatype() +
-                    "," + elementMutationResult.getPropertyName() +
+                    "," + variableHierarchy +
                     "," + elementMutationResult.getMutationOperatorResult().getMutationOperatorName() +
                     "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getOriginalValue()) +
                     "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getMutatedValue());
