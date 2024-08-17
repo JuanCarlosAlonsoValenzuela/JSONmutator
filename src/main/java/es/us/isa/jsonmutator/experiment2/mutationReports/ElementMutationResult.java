@@ -1,7 +1,5 @@
 package es.us.isa.jsonmutator.experiment2.mutationReports;
 
-import com.fasterxml.jackson.databind.node.JsonNodeType;
-
 /**
  * @author Juan C. Alonso
  */

@@ -14,6 +14,7 @@ import java.util.stream.Collectors;
 import es.us.isa.jsonmutator.experiment2.mutationReports.ElementMutationResult;
 import es.us.isa.jsonmutator.experiment2.mutationReports.MutationOperatorResult;
 import es.us.isa.jsonmutator.experiment2.mutationReports.MutationResult;
+import es.us.isa.jsonmutator.experiment2.mutationReports.TreeNode;
 import es.us.isa.jsonmutator.mutator.AbstractMutator;
 import es.us.isa.jsonmutator.mutator.AbstractObjectOrArrayMutator;
 import es.us.isa.jsonmutator.mutator.AbstractOperator;
@@ -34,6 +35,7 @@ import es.us.isa.jsonmutator.util.OperatorNames;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import static es.us.isa.jsonmutator.experiment2.mutationReports.TreePathFinder.findPath;
 import static es.us.isa.jsonmutator.util.JsonManager.getNodeElement;
 import static es.us.isa.jsonmutator.util.JsonManager.insertElement;
 import static es.us.isa.jsonmutator.util.PropertyManager.readProperty;
@@ -57,6 +59,7 @@ public class JsonMutator {
     private boolean mutationApplied; // For SOM: True if the mutation was applied. Used to stop iterating
     private boolean singleOrderActive; // True if single order mutation was used in the previous execution
     private JsonNode rootJson; // For getAllMutants(): root JSON where each property will be mutated in several ways
+    private TreeNode rootNode; // Root of the JSON tree
 
     private StringMutator stringMutator;
     private LongMutator longMutator;
@@ -208,13 +211,13 @@ public class JsonMutator {
             if (!singleOrderActive) // If the last call to this function was with singleOrder=false, then...
                 setUpSingleOrderMutation(); // ... set up parameters for single order mutation...
             singleOrderActive = true; // ... and keep track of this update for next function call
-            return singleOrderMutation(jsonNode, null);
+            return singleOrderMutation(jsonNode, null, new TreeNode("root"));
         } else {
             if (singleOrderActive) // If the last call to this function was with singleOrder=true, then...
                 resetMutators(); // ... set up parameters for multiple order mutation
             singleOrderActive = false; // ... and keep track of this update for next function call
             // TODO: IMPLEMENT IN THE FUTURE (IF REQUIRED)
-            return new MutationResult(null, multipleOrderMutation(jsonNode));
+            return new MutationResult(null, multipleOrderMutation(jsonNode), null);
         }
     }
 
@@ -281,6 +284,7 @@ public class JsonMutator {
         elementIndex = null;
         elementIndexes = new ArrayList<>();
         mutationApplied = false;
+        rootNode = null;
     }
 
     /**
@@ -308,12 +312,14 @@ public class JsonMutator {
      * @param jsonNode The JSON to mutate.
      * @return The mutated JSON.
      */
-    private MutationResult singleOrderMutation(JsonNode jsonNode, ElementMutationResult elementMutationResult) {
+    private MutationResult singleOrderMutation(JsonNode jsonNode, ElementMutationResult elementMutationResult, TreeNode treeNode) {
 
+        String variableHierarchy = null;        // Complete variable hierarchy of the mutated JSON property, starting from the root
         boolean firstIterationOccurred = false; // Used to reset the state of firstIteration attribute
         JsonNode jsonNodeCopy = jsonNode;
         int currentJsonProgress = 0; // Used to locate object property or array element to mutate (within current jsonNode)
         if (firstIteration) {
+            rootNode = treeNode;    // Set rootNode during the first iteration (since this code is only executed once)
             firstIteration = false;
             firstIterationOccurred = true;
             jsonNodeCopy = jsonNode.deepCopy(); // Make a deep copy so that the input object is not altered
@@ -332,23 +338,37 @@ public class JsonMutator {
         Iterator<JsonNode> jsonIterator = jsonNodeCopy.elements();
         while (jsonIterator.hasNext()) { // Keep iterating the JSON...
             JsonNode subJsonNode = jsonIterator.next();
+
+            TreeNode currentNode = new TreeNode(Lists.newArrayList(jsonNodeCopy.fieldNames()).get(currentJsonProgress));
+            if (elementIndex != null) { // Add elements to the JSON tree only during the second iteration on the JSON
+                treeNode.addChild(currentNode);
+            }
+
             if (elementIndex == null) { // If an element to mutate has not been selected yet
-                if (isElementSubjectToChange(subJsonNode))
+                if (isElementSubjectToChange(subJsonNode)) {
                     elementIndexes.add(jsonProgress); // Keep track of all properties that are subject to change
+                }
             } else if (elementIndex == jsonProgress) { // If element to mutate is the current one
-                if (jsonNodeCopy.isObject())
+                if (jsonNodeCopy.isObject()) {
                     elementMutationResult = mutateElement(jsonNodeCopy, Lists.newArrayList(jsonNodeCopy.fieldNames()).get(currentJsonProgress), null);
-                else if (jsonNodeCopy.isArray())
+                } else if (jsonNodeCopy.isArray()) {
                     elementMutationResult = mutateElement(jsonNodeCopy, null, currentJsonProgress);
+                }
+
+                // Generate value of the complete variable hierarchy
+                variableHierarchy = findPath(rootNode, currentNode.getId());
+
                 mutationApplied = true;
             }
+
             currentJsonProgress++; // Update iteration indexes
             jsonProgress++;
             if (mutationApplied) // If mutation was already applied, stop iterating
                 break;
             if (subJsonNode.isContainerNode()) { // Iterate over properties that are arrays or objects
-                MutationResult mr = singleOrderMutation(subJsonNode, elementMutationResult);
+                MutationResult mr = singleOrderMutation(subJsonNode, elementMutationResult, currentNode);
                 elementMutationResult = mr.getElementMutationResult();
+                variableHierarchy = mr.getVariableHierarchy();
             }
         }
 
@@ -358,14 +378,16 @@ public class JsonMutator {
                 elementIndex = elementIndexes.get(rand.nextInt(elementIndexes.size()));
                 jsonProgress = 0; // Once elementIndex is set, start iterating again, looking for the property
 
-                MutationResult mr = singleOrderMutation(jsonNodeCopy, elementMutationResult);
+                MutationResult mr = singleOrderMutation(jsonNodeCopy, elementMutationResult, treeNode);
                 elementMutationResult = mr.getElementMutationResult();
+                variableHierarchy = mr.getVariableHierarchy();
+
             }
             // Reset variables for the next time this function will be called:
             resetJsonMutator();
         }
 
-        return new MutationResult(elementMutationResult, jsonNodeCopy);
+        return new MutationResult(elementMutationResult, jsonNodeCopy, variableHierarchy);
 
     }
 

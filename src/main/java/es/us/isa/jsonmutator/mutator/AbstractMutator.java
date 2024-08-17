@@ -131,13 +131,13 @@ public abstract class AbstractMutator extends RandomManager {
             // Mutate element by randomly choosing one mutation operator among 'operators' and applying the mutation:
             String operator = getOperator();
 
-            System.out.println("Mutation operator to apply: " + operator);
+//            System.out.println("Mutation operator to apply: " + operator);
 
             if (operator != null) {
                 Object mutatedElement = operators.get(operator).mutate(elementToMutate);
 
-                System.out.println("Original value: " + elementToMutate);
-                System.out.println("Mutated value: " + mutatedElement);
+//                System.out.println("Original value: " + elementToMutate);
+//                System.out.println("Mutated value: " + mutatedElement);
 
                 insertElement(jsonNode, mutatedElement, propertyName, index); // Replace original element with mutated element
 
