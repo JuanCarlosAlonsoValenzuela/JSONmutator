@@ -339,9 +339,14 @@ public class JsonMutator {
         while (jsonIterator.hasNext()) { // Keep iterating the JSON...
             JsonNode subJsonNode = jsonIterator.next();
 
-            TreeNode currentNode = new TreeNode(Lists.newArrayList(jsonNodeCopy.fieldNames()).get(currentJsonProgress));
-            if (elementIndex != null) { // Add elements to the JSON tree only during the second iteration on the JSON
-                treeNode.addChild(currentNode);
+            TreeNode currentNode;
+            if (jsonNodeCopy.isObject()) {
+                currentNode = new TreeNode(Lists.newArrayList(jsonNodeCopy.fieldNames()).get(currentJsonProgress));
+                if (elementIndex != null) { // Add elements to the JSON tree only during the second iteration on the JSON
+                    treeNode.addChild(currentNode);
+                }
+            } else {
+                currentNode = treeNode;
             }
 
             if (elementIndex == null) { // If an element to mutate has not been selected yet
