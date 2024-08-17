@@ -3,7 +3,9 @@ package es.us.isa.jsonmutator.mutator;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import es.us.isa.jsonmutator.experiment2.mutationReports.ElementMutationResult;
 import es.us.isa.jsonmutator.experiment2.mutationReports.MutationOperatorResult;
+import es.us.isa.jsonmutator.experiment2.mutationReports.MutationResult;
 
 import java.util.Iterator;
 
@@ -183,13 +185,19 @@ public abstract class AbstractObjectOrArrayMutator extends AbstractMutator {
      * @param jsonNode The JSON object or array to mutate
      * @return The mutated JSON object or array
      */
-    public JsonNode getMutatedNode(JsonNode jsonNode) {
+    // TODO: This modified version can only be used with Single Order Mutation
+    public MutationResult getMutatedNode(JsonNode jsonNode, String mutatedPropertyDatatype) {
+
+        MutationOperatorResult mutationOperatorResult = null;
+
         resetFirstLevelOperators(); // Use only first level operators
         int nMutations = rand1.nextInt(minMutations, maxMutations);
         for (int i=0; i<nMutations; i++) {
             if (shouldApplyMutation()) {
                 // Mutate element by randomly choosing one mutation operator among 'operators' and applying the mutation:
                 String operator = getOperator();
+
+                mutationOperatorResult = new MutationOperatorResult(operator, null, null);
 
                 // If node is empty and an operator that will make no changes is selected
                 if (jsonNode.size() == 0 && (operator.equals(REMOVE_ELEMENT) || operator.equals(REMOVE_OBJECT_ELEMENT) || operator.equals(DISORDER_ELEMENTS) || operator.equals(EMPTY))) {
@@ -224,6 +232,8 @@ public abstract class AbstractObjectOrArrayMutator extends AbstractMutator {
         }
         resetOperators(); // After all mutations are applied, reset operators to have all of them in the map again
 
-        return jsonNode;
+        // mutatedPropertyDatatype is always array in this case
+        ElementMutationResult elementMutationResult = new ElementMutationResult(mutationOperatorResult, mutatedPropertyDatatype, "");
+        return new MutationResult(elementMutationResult, jsonNode, "");
     }
 }

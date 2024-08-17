@@ -213,11 +213,12 @@ public class JsonMutator {
             singleOrderActive = true; // ... and keep track of this update for next function call
             return singleOrderMutation(jsonNode, null, new TreeNode("root"));
         } else {
-            if (singleOrderActive) // If the last call to this function was with singleOrder=true, then...
-                resetMutators(); // ... set up parameters for multiple order mutation
-            singleOrderActive = false; // ... and keep track of this update for next function call
-            // TODO: IMPLEMENT IN THE FUTURE (IF REQUIRED)
-            return new MutationResult(null, multipleOrderMutation(jsonNode), null);
+            throw new RuntimeException("Multiple order mutation is not currently supported");
+//            if (singleOrderActive) // If the last call to this function was with singleOrder=true, then...
+//                resetMutators(); // ... set up parameters for multiple order mutation
+//            singleOrderActive = false; // ... and keep track of this update for next function call
+//            // TODO: IMPLEMENT IN THE FUTURE (IF REQUIRED)
+//            return new MutationResult(null, multipleOrderMutation(jsonNode), null);
         }
     }
 
@@ -314,7 +315,7 @@ public class JsonMutator {
      */
     private MutationResult singleOrderMutation(JsonNode jsonNode, ElementMutationResult elementMutationResult, TreeNode treeNode) {
 
-        String variableHierarchy = null;        // Complete variable hierarchy of the mutated JSON property, starting from the root
+        String variableHierarchy = "";        // Complete variable hierarchy of the mutated JSON property, starting from the root
         boolean firstIterationOccurred = false; // Used to reset the state of firstIteration attribute
         JsonNode jsonNodeCopy = jsonNode;
         int currentJsonProgress = 0; // Used to locate object property or array element to mutate (within current jsonNode)
@@ -328,10 +329,17 @@ public class JsonMutator {
         }
 
         if (elementIndex != null && elementIndex == -1 && !mutationApplied) { // If what has to be mutated is the actual first-level JSON
-            if (objectMutator != null && jsonNodeCopy.isObject())
-                jsonNodeCopy = objectMutator.getMutatedNode(jsonNodeCopy);
-            else if (arrayMutator != null && jsonNodeCopy.isArray())
-                jsonNodeCopy = arrayMutator.getMutatedNode(jsonNodeCopy);
+            if (objectMutator != null && jsonNodeCopy.isObject()) {
+                MutationResult objectMutationResult = objectMutator.getMutatedNode(jsonNodeCopy, "object");
+                jsonNodeCopy = objectMutationResult.getMutatedJsonNode();
+                variableHierarchy = objectMutationResult.getVariableHierarchy();
+                elementMutationResult = objectMutationResult.getElementMutationResult();
+            } else if (arrayMutator != null && jsonNodeCopy.isArray()) {
+                MutationResult arrayMutationResult = arrayMutator.getMutatedNode(jsonNodeCopy, "array");
+                jsonNodeCopy = arrayMutationResult.getMutatedJsonNode();
+                variableHierarchy = arrayMutationResult.getVariableHierarchy();
+                elementMutationResult = arrayMutationResult.getElementMutationResult();
+            }
             mutationApplied = true;
         }
 
@@ -405,40 +413,40 @@ public class JsonMutator {
      * @param jsonNode The JSON to mutate
      * @return The mutated JSON
      */
-    private JsonNode multipleOrderMutation(JsonNode jsonNode) {
-        boolean firstIterationOccurred = false; // Used to reset the state of firstIteration attribute
-        JsonNode jsonNodeCopy = jsonNode;
-        if (firstIteration) {
-            firstIteration = false; // Set to false so that this block is not entered again when recursively calling the function
-            firstIterationOccurred = true; // Set to true so that firstIteration is reset to true at the end of this call
-            jsonNodeCopy = jsonNode.deepCopy(); // Make a deep copy so that the input object is not altered
-            if (objectMutator != null && jsonNodeCopy.isObject())
-                jsonNodeCopy = objectMutator.getMutatedNode(jsonNodeCopy);
-            else if (arrayMutator != null && jsonNodeCopy.isArray())
-                jsonNodeCopy = arrayMutator.getMutatedNode(jsonNodeCopy);
-        }
-
-        if (jsonNodeCopy.isObject()) { // If node is object
-            Iterator<String> keysIterator = jsonNodeCopy.fieldNames();
-            String propertyName;
-            while (keysIterator.hasNext()) { // Iterate over each object property
-                propertyName = keysIterator.next();
-                mutateElement(jsonNodeCopy, propertyName, null); // (Possibly) mutate each property and...
-                if (jsonNodeCopy.get(propertyName).isObject() || jsonNodeCopy.get(propertyName).isArray()) // ...if property is object or array...
-                    ((ObjectNode)jsonNodeCopy).replace(propertyName, multipleOrderMutation(jsonNodeCopy.get(propertyName))); // ...recursively call this function
-            }
-        } else if (jsonNodeCopy.isArray()) { // If node is array
-            for (int arrayIndex=0; arrayIndex<jsonNodeCopy.size(); arrayIndex++) { // Iterate over each array element
-                mutateElement(jsonNodeCopy, null, arrayIndex); // (Possibly) mutate each element and...
-                if (jsonNodeCopy.get(arrayIndex).isObject() || jsonNodeCopy.get(arrayIndex).isArray()) // ...if element is object or array...
-                    ((ArrayNode)jsonNodeCopy).set(arrayIndex, multipleOrderMutation(jsonNodeCopy.get(arrayIndex))); // ...recursively call this function
-            }
-        }
-
-        if (firstIterationOccurred)
-            firstIteration = true; // Reset for the next time this function will be called
-        return jsonNodeCopy;
-    }
+//    private JsonNode multipleOrderMutation(JsonNode jsonNode) {
+//        boolean firstIterationOccurred = false; // Used to reset the state of firstIteration attribute
+//        JsonNode jsonNodeCopy = jsonNode;
+//        if (firstIteration) {
+//            firstIteration = false; // Set to false so that this block is not entered again when recursively calling the function
+//            firstIterationOccurred = true; // Set to true so that firstIteration is reset to true at the end of this call
+//            jsonNodeCopy = jsonNode.deepCopy(); // Make a deep copy so that the input object is not altered
+//            if (objectMutator != null && jsonNodeCopy.isObject())
+//                jsonNodeCopy = objectMutator.getMutatedNode(jsonNodeCopy);
+//            else if (arrayMutator != null && jsonNodeCopy.isArray())
+//                jsonNodeCopy = arrayMutator.getMutatedNode(jsonNodeCopy);
+//        }
+//
+//        if (jsonNodeCopy.isObject()) { // If node is object
+//            Iterator<String> keysIterator = jsonNodeCopy.fieldNames();
+//            String propertyName;
+//            while (keysIterator.hasNext()) { // Iterate over each object property
+//                propertyName = keysIterator.next();
+//                mutateElement(jsonNodeCopy, propertyName, null); // (Possibly) mutate each property and...
+//                if (jsonNodeCopy.get(propertyName).isObject() || jsonNodeCopy.get(propertyName).isArray()) // ...if property is object or array...
+//                    ((ObjectNode)jsonNodeCopy).replace(propertyName, multipleOrderMutation(jsonNodeCopy.get(propertyName))); // ...recursively call this function
+//            }
+//        } else if (jsonNodeCopy.isArray()) { // If node is array
+//            for (int arrayIndex=0; arrayIndex<jsonNodeCopy.size(); arrayIndex++) { // Iterate over each array element
+//                mutateElement(jsonNodeCopy, null, arrayIndex); // (Possibly) mutate each element and...
+//                if (jsonNodeCopy.get(arrayIndex).isObject() || jsonNodeCopy.get(arrayIndex).isArray()) // ...if element is object or array...
+//                    ((ArrayNode)jsonNodeCopy).set(arrayIndex, multipleOrderMutation(jsonNodeCopy.get(arrayIndex))); // ...recursively call this function
+//            }
+//        }
+//
+//        if (firstIterationOccurred)
+//            firstIteration = true; // Reset for the next time this function will be called
+//        return jsonNodeCopy;
+//    }
 
     /**
      * Tells whether a given JSON element (object, array, object property or array
