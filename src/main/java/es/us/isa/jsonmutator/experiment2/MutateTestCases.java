@@ -93,6 +93,12 @@ public class MutateTestCases {
 
                 mutatedIsEqual = responseBody.equals(mutatedJsonString);
 
+                // This happens when JSON mutator unsuccessfully tries to mutate an empty array and fails because
+                // the addElement mutator is disabled
+                if (elementMutationResult.getMutationOperatorResult().getMutationOperatorName() == null) {
+                    mutatedIsEqual = true;
+                }
+
             }
 
             // Rewrite as a separate file
