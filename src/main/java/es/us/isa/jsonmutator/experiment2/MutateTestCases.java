@@ -116,11 +116,13 @@ public class MutateTestCases {
             String originalValue = elementMutationResult.getMutationOperatorResult().getOriginalValue();
             if (originalValue != null) {
                 originalValue = originalValue.replace("\n", "\\n");
+                originalValue = originalValue.replace("\r", "\\r");
             }
 
             String mutatedValue = elementMutationResult.getMutationOperatorResult().getMutatedValue();
             if (mutatedValue != null) {
                 mutatedValue = mutatedValue.replace("\n", "\\n");
+                mutatedValue = mutatedValue.replace("\r", "\\r");
             }
 
             row = row + "," + elementMutationResult.getMutatedPropertyDatatype() +
