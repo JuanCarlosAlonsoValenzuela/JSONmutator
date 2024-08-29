@@ -116,8 +116,8 @@ public class MutateTestCases {
             row = row + "," + elementMutationResult.getMutatedPropertyDatatype() +
                     "," + variableHierarchy +
                     "," + elementMutationResult.getMutationOperatorResult().getMutationOperatorName() +
-                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getOriginalValue()) +
-                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getMutatedValue());
+                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getOriginalValue().replace("\n", "\\n")) +
+                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getMutatedValue().replace("\n", "\\n"));
 
             // Write the test case as csv row
             csvBuffer.newLine();
