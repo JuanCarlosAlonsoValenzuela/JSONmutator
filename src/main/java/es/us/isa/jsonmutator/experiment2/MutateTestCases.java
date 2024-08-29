@@ -113,11 +113,21 @@ public class MutateTestCases {
                 }
             }
 
+            String originalValue = elementMutationResult.getMutationOperatorResult().getOriginalValue();
+            if (originalValue != null) {
+                originalValue = originalValue.replace("\n", "\\n");
+            }
+
+            String mutatedValue = elementMutationResult.getMutationOperatorResult().getMutatedValue();
+            if (mutatedValue != null) {
+                mutatedValue = mutatedValue.replace("\n", "\\n");
+            }
+
             row = row + "," + elementMutationResult.getMutatedPropertyDatatype() +
                     "," + variableHierarchy +
                     "," + elementMutationResult.getMutationOperatorResult().getMutationOperatorName() +
-                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getOriginalValue().replace("\n", "\\n")) +
-                    "," + escapeCsv(elementMutationResult.getMutationOperatorResult().getMutatedValue().replace("\n", "\\n"));
+                    "," + escapeCsv(originalValue) +
+                    "," + escapeCsv(mutatedValue);
 
             // Write the test case as csv row
             csvBuffer.newLine();
