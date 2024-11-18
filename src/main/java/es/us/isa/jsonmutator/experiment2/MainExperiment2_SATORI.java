@@ -34,11 +34,6 @@ public class MainExperiment2_SATORI {
             mutatedTestCasesDirectory = args[2];
         }
 
-        // Delete previous mutants (if any) and create an empty one
-        File mutatedTestCasesFile = new File(mutatedTestCasesDirectory);
-        FileUtils.deleteDirectory(mutatedTestCasesFile);
-        mutatedTestCasesFile.mkdir();
-
         // Generate mutated test suite, a total of nExecutions times
         Path mutatedTestCasesPath = Paths.get(mutatedTestCasesDirectory, String.format("mutants_%04d.csv", nTestSuite));
 
