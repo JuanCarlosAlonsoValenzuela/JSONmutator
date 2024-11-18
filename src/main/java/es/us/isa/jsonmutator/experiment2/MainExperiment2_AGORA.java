@@ -11,8 +11,9 @@ import static es.us.isa.jsonmutator.experiment2.MutateTestCases.mutateTestCases;
 
 /**
  * @author Juan C. Alonso
+ * JSONMutator main method used in the AGORA paper, generates nExecutions mutated test suites.
  */
-public class MainExperiment2 {
+public class MainExperiment2_AGORA {
 
     // Number of mutated versions of the original test suite to generate
     private static int nExecutions = 1;
